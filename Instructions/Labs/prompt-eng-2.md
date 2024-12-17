@@ -182,7 +182,6 @@ In this task, you will examine how prompt engineering improves model responses i
 10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Example** from the dropdown of **+ Add section** button. Add the following example.
 
-
     **User:**
 
     ```code

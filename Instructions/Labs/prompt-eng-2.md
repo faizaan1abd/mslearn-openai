@@ -149,7 +149,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/17-12-24(11).png)
 
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(1)**. Click **Save button** **(2)** and subsequently click on **Continue**.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(1)**. Click **Apply changes** **(2)** and subsequently click on **Continue**.
 
    ![](../media/17-12-24(12).png)
 
@@ -165,7 +165,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 7. The model should correctly respond with complete Python code doing what the comments requested.
 
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on Save button and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on Apply changes and subsequently click on **Continue**. This will create a new chat session.
 
 9. Send the following prompt to the model.
 

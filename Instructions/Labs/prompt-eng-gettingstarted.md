@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this hands-on-lab, you will explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips. The way developers shape their prompts significantly impacts the generative AI model's responses, allowing for tailored and formatted content when requested clearly and concisely. You'll learn how different prompts for similar content can shape the AI model's response to better satisfy your requirements.
+In this hands-on lab, you will explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips. The way developers shape their prompts significantly impacts the generative AI model's responses, allowing for tailored and formatted content when requested clearly and concisely. You'll learn how different prompts for similar content can shape the AI model's response to better satisfy your requirements.
 
 You will explore how to use generative AI to improve advertising emails and categorize articles for your team. The prompt engineering techniques used in the exercise are applicable to various use cases. Tuning prompts to achieve the desired results is the core idea behind prompt engineering.
 
@@ -36,7 +36,7 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 The architecture for this lab involves the following key components:
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrates with your data, enabling customized and secure interactions.
+1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrate with your data, enabling customized and secure interactions.
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
 1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
    
@@ -72,7 +72,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](../media/inline-validation.png)
 
@@ -124,7 +124,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
-This hands-on-lab will help you to master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
+This hands-on lab will help you master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
 
 ## Support Contact
 

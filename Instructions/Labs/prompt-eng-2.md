@@ -26,22 +26,22 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/search_openai.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/create.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
-    - **Region**: Select **France Central** (3)
-    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
-    -  Click on **Next** (6)
+    - **Subscription**: Default - Pre-assigned subscription **(1)**.
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
+    - **Region**: Select **France Central** **(3)**
+    - **Name**: OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+    - **Pricing tier**: Standard S0 **(5)**
+    -  Click on **Next** **(6)**
   
-   ![](../media/azopenai123.png "Create Azure OpenAI resource")
+       ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
->**Note**: **Please deploy Openai resource in France Central Region**
+       >**Note**: **Please deploy Openai resource in France Central Region**
 
 4. Click on **Next** again and subsequently click on **Create** 
 
@@ -57,7 +57,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-   ![](../media/keys.png "Keys and Endpoints")
+        ![](../media/keys.png "Keys and Endpoints")
 
 #### Validation
 
@@ -104,17 +104,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota**: Enabled (5)
     - Click on **Deploy** (6)
 
->**Note**: click on customize and collapse button to expand the other options.
+        >**Note**: click on customize and collapse button to expand the other options.
 
-   ![](../media/promptsc11.png)
+        ![](../media/promptsc11.png)
 
- >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
+        >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
- >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+        >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
- > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
-   
- > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+        > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+        
+        > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
    
 #### Validation
 
@@ -183,59 +183,59 @@ In this task, you will examine how prompt engineering improves model responses i
 11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
 
 
- **User:**
+    **User:**
 
- ```code
-New York Baseballers Wins Big Against Chicago
+    ```code
+    New York Baseballers Wins Big Against Chicago
 
-New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
 
-Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
- ```
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
+    ```
 
- **Assistant:**
+    **Assistant:**
 
- ```code
-Sports
- ```
+    ```code
+    Sports
+    ```
 
    ![](../media/promptsc10.png)
 
 
 12. Add another example with the following text.
 
- **User:**
+    **User:**
 
- ```code
-Joyous moments at the Oscars
+    ```code
+    Joyous moments at the Oscars
 
-The Oscars this past week were quite something!
+    The Oscars this past week were quite something!
 
-Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+    These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
- ```
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
+    ```
 
- **Assistant:**
+    **Assistant:**
 
- ```code
-Entertainment
- ```
+    ```code
+    Entertainment
+    ```
 
 13. Save those changes to the assistant setup, click continue, and send the same prompt about the California drought, provided here again for convenience.
 
- ```code
-Severe drought likely in California
+    ```code
+    Severe drought likely in California
 
-Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
 
-In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
 
-Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
- ```
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    ```
 
 14. This time the model should respond with an appropriate classification, even without instructions.
 
@@ -261,15 +261,15 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 5. Within the **Advanced settings** pane, enter the following details:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select **Use existing**.(2)
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab **(1)**.
+    - **Resource group**: Select **Use existing** **(2)**
       - openai-<inject key="Deployment-ID" enableCopy="false"></inject>  
-    - **Region**: <inject key="Region" enableCopy="false" />(3)
-    - **Storage account**: Create a new Stroage account named storage<inject key="Deployment-ID" enableCopy="false"></inject>.(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    - **Region**: <inject key="Region" enableCopy="false" /> **(3)**
+    - **Storage account**: Create a new Stroage account named storage<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+    - **File share**: Create a new file share named **none** **(5)**
+    - Click **Create** **(6)**
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
    
 7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -285,7 +285,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/03-prompt-engineering
+    cd azure-openai/Labfiles/03-prompt-engineering
     ```
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
@@ -296,9 +296,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     code .     
     ```
 
->**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
+    >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
 
-   ![](../media/classic-cloudshell-prompt.png) 
+    ![](../media/classic-cloudshell-prompt.png) 
    
 #### Validation
 
@@ -598,7 +598,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
        asyncio.run(main())
       ```
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
 
 ### Task 6: Run your application
 

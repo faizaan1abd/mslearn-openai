@@ -24,11 +24,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/17-12-24(1).png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/create.png)
+   ![](../media/17-12-24(2).png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -74,45 +74,41 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
-   ![](../media/search_openai.png)
+   ![](../media/17-12-24(1).png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/openai_new.png)
+   ![](../media/17-12-24(3).png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal**. It will navigate to the **Azure AI Foundry portal**.
 
-   ![](../media/openai_goto.png)
-   
-4. In the prompt click on **Close** to proceed.
+   ![](../media/17-12-24(4).png)
 
-   ![](../media/promptsc3.png)
+5. In the **Deployments (1)** page, click on **+ Deploy model (2)** , Choose **Deploy base Model (3)**.
 
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+   ![](../media/17-12-24(5).png)
 
-   ![](../media/promptsc4.png)
+6. Search for **GPT-35-TURBO-16K (1)**, select it **(2)**, and click on **Confirm (3)**.
 
-6. Search for **GPT-35-TURBO-16K (1)**, click on **Confirm (2)**.
-
-   ![](../media/promptsc5.png)
+   ![](../media/17-12-24(6).png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: text-turbo (1)
-    - **Deployment type**: Standard (2)
-    - **Model version**: Keep it to default (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
+    - **Deployment name**: text-turbo **(1)**
+    - **Deployment type**: Standard **(2)**
+    - **Model version**: Keep it to default **(3)**
+    - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
+    - **Enable dynamic quota**: Enabled **(5)**
+    - Click on **Deploy** **(6)**
 
         >**Note**: click on customize and collapse button to expand the other options.
 
-        ![](../media/promptsc11.png)
+        ![](../media/17-12-24(7).png)
 
         >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
         >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
-        > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
+        > **Note**: You can ignore the "Failed to fetch deployments quota information" notification.
         
         > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
    
@@ -129,13 +125,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
+1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
 
-   ![](../media/promptsc6.png)
+   ![](../media/17-12-24(8).png)
 
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` **(1)** as the system message, click on the **Save button (2)**, and subsequently click on **Continue**.
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` **(1)** as the Give the model instructions and context, click on the **Apply changes (2)**, and subsequently click on **Continue**.
 
-   ![](../media/promptsc7.png)
+   ![](../media/17-12-24(9).png)
+
+   ![](../media/17-12-24(10).png)
 
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
@@ -149,11 +147,13 @@ In this task, you will examine how prompt engineering improves model responses i
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-   ![](../media/promptsc8.png)
+   ![](../media/17-12-24(11).png)
 
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`(1). Click **Save button**(2) and subsequently click on **Continue**.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(1)**. Click **Save button** **(2)** and subsequently click on **Continue**.
 
-   ![](../media/promptsc9.png)
+   ![](../media/17-12-24(12).png)
+
+   ![](../media/17-12-24(10).png)
 
 6. Format the instructions as Python comments. Send the following prompt to the model.
 
@@ -180,7 +180,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
+11. In the **Setup** section near the system message, select the **Example** from the dropdown of **+ Add section** button. Add the following example.
 
 
     **User:**
@@ -201,7 +201,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Sports
     ```
 
-   ![](../media/promptsc10.png)
+    ![](../media/17-12-24(13).png)
 
 
 12. Add another example with the following text.

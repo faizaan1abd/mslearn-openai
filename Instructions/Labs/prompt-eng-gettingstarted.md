@@ -30,14 +30,16 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 ## Architecture Diagram
 
-![](./Lab-Scenario-Preview/media/lab-03-ad.PNG)
+![](../media/lab-03-new-ad.png)
 
 ## Explanation of Components
 
 The architecture for this lab involves the following key components:
 
 1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrate with your data, enabling customized and secure interactions.
+
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
+
 1. **Azure CloudShell**: Azure CloudShell offers an integrated, browser-based shell experience for managing Azure resources. It provides a ready-to-use environment with pre-installed tools and access to both Bash and PowerShell.
    
 ## Getting Started with the Lab
@@ -80,7 +82,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Lab Validation](../media/lab-validation.png)
 
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## Lab Duration Extension
 
@@ -120,7 +122,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    >**NOTE:** Do not enable MFA, select **Ask Later**.
     
-1. If prompted to stay signed in, you can click "No."
+1. If prompted to stay signed in, you can click "No".
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 

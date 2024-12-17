@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
-In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+In the scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
 
@@ -47,15 +47,15 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/promptsc1.png)
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button .
+5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
 
    ![](../media/promptsc2.png)
 
 6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as Notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
+      - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
+      - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
    ![](../media/keys.png "Keys and Endpoints")
 
@@ -67,7 +67,6 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ### Task 2: Deploy a model
 
@@ -93,7 +92,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/promptsc4.png)
 
-6. Search for **GPT-35-TURBO-16K**(1), click on **Confirm**(2)
+6. Search for **GPT-35-TURBO-16K (1)**, click on **Confirm (2)**.
 
    ![](../media/promptsc5.png)
 
@@ -109,13 +108,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/promptsc11.png)
 
- >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once its deployed.
+ >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
  >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
  > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
- > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
+ > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
    
 #### Validation
 
@@ -126,7 +125,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
 ### Task 3: Apply prompt engineering in chat playground
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
@@ -135,18 +133,19 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/promptsc6.png)
 
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant`(1) as the system message and click on **Save button**(2) and subsequently click on **Continue**.
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` **(1)** as the system message, click on the **Save button (2)**, and subsequently click on **Continue**.
 
    ![](../media/promptsc7.png)
 
 3. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 
-    ```code
+   ```code
    1. Create a list of animals
    2. Create a list of whimsical names for those animals
    3. Combine them randomly into a list of 25 animal and name pairs
-    ```
-    >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
+   ```
+   
+   >**Note:** Kindly refresh the screen in case you encounter any error message and perform the above step again.
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
@@ -156,7 +155,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/promptsc9.png)
 
-6. Format the instructions as python comments. Send the following prompt to the model.
+6. Format the instructions as Python comments. Send the following prompt to the model.
 
     ```code
    # 1. Create a list of animals
@@ -164,8 +163,10 @@ In this task, you will examine how prompt engineering improves model responses i
    # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and click on save button and subsequently click on **Continue**. This will create a new chat session.
+7. The model should correctly respond with complete Python code doing what the comments requested.
+
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on Save button and subsequently click on **Continue**. This will create a new chat session.
+
 9. Send the following prompt to the model.
 
     ```code
@@ -178,7 +179,7 @@ In this task, you will examine how prompt engineering improves model responses i
    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
+10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, select the **Example** from the dropdown of **Add section** button. Add the following example.
 
 
@@ -187,11 +188,11 @@ In this task, you will examine how prompt engineering improves model responses i
  ```code
 New York Baseballers Wins Big Against Chicago
 
-New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
 
 Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
+The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
  ```
 
  **Assistant:**
@@ -210,12 +211,12 @@ Sports
  ```code
 Joyous moments at the Oscars
 
-The Oscars this past week where quite something!
+The Oscars this past week were quite something!
 
 Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
 These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
  ```
 
  **Assistant:**
@@ -224,7 +225,7 @@ From Robin Kline's history-making win to a full performance by none other than C
 Entertainment
  ```
 
-13. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
+13. Save those changes to the assistant setup, click continue, and send the same prompt about the California drought, provided here again for convenience.
 
  ```code
 Severe drought likely in California
@@ -298,7 +299,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
 
    ![](../media/classic-cloudshell-prompt.png) 
-
    
 #### Validation
 
@@ -749,13 +749,11 @@ In this task, you will run your configured app to send a request to your model a
     What animal is the favorite of children at Contoso?
     ```
 
-   
-
 ## Summary
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
 -   Deploy an OpenAI model within the Azure OpenAI studio
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+-   Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.

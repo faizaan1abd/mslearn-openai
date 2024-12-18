@@ -1,236 +1,163 @@
-# Lab 01: Get started with Azure OpenAI Service
+# ラボ 01: Azure OpenAI Service でのスタート
 
-## Lab scenario
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Studio to deploy and explore OpenAI models.
+## ラボシナリオ
+Azure OpenAI Service は、OpenAI が開発した生成AIモデルを Azure プラットフォームに導入し、Azure クラウドが提供するセキュリティ、スケーラビリティ、およびサービス統合を活用して強力な AI ソリューションを開発できるようにします。この演習では、Azure OpenAI のセットアップと Azure OpenAI Studio を使用してモデルをデプロイおよび操作する手順を学びます。
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## ラボの目的
+このラボでは、以下のタスクを完了します：
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code-generation
+- タスク 1: Azure OpenAI リソースを作成する  
+- タスク 2: モデルをデプロイする  
+- タスク 3: Completions playground でモデルを操作する  
+- タスク 4: Chat playground を使用する  
+- タスク 5: プロンプトとパラメータを探索する  
+- タスク 6: コード生成を試す  
 
-## Estimated time: 60 minutes
+## 所要時間: 約 60 分
 
-### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+---
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+## タスク 1: Azure OpenAI リソースを作成する
+
+このタスクでは、Azure ポータルで Azure OpenAI リソースを作成します。OpenAI サービスを選択し、地域や価格設定を行うことで、OpenAI の高度な言語モデルをアプリケーションに統合できるようになります。
+
+### 手順:
+
+1. **Azure ポータル**で「**OpenAI**」を検索し、「**Azure OpenAI**」を選択します。
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. 「**Azure AI Services | Azure OpenAI**」ブレードで「**作成 (Create)**」をクリックします。
 
    ![](../media/openai_create1.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
-   
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **East US**
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
-  
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+3. 以下の設定を使用して **Azure OpenAI** リソースを作成します：  
+   - **Subscription**: デフォルト（事前に割り当てられたサブスクリプション）
+   - **Resource group**: `openai-<DeploymentID>`
+   - **Region**: **East US**
+   - **Name**: `OpenAI-Lab01-<DeploymentID>`
+   - **Pricing tier**: **Standard S0**
 
-4. Click on **Next** thrice and click on **Create**.
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. 「Next」を 3 回クリックし、「作成 (Create)」を選択します。
+
+5. デプロイが完了するまで待ち、Azure ポータルでデプロイした Azure OpenAI リソースへ移動します。
 
 <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **おめでとうございます！** タスクが完了しました。検証手順に進みましょう。
 
-### Task 2: Deploy a model
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+---
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+## タスク 2: モデルをデプロイする
+
+このタスクでは、Azure OpenAI リソース内に AI モデルをデプロイし、AI 言語モデルの高度な機能をアプリケーションに統合します。
+
+### 手順:
+
+1. Azure ポータルで「**OpenAI**」を検索し、「**Azure OpenAI**」を選択します。
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+2. 「**Azure AI Services | Azure OpenAI**」ブレードで「**OpenAI-Lab01-<Deployment-id>**」を選択します。
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. Azure OpenAI リソース画面で「**Azure OpenAI Studio に移動する (Go to Azure OpenAI Studio)**」をクリックします。
 
    ![](../media/openai_studio.png)
-   
-4. In the prompt select **Explore the new experience** 
+
+4. 「**Explore the new experience**」を選択します。
 
    ![](../media/explore_new-exp.jpg "Create a new deployment")
 
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+5. 「**Deployments**」ページで「**+ Deploy model**」をクリックし、「**Deploy base Model (2)**」を選択します。
 
-      ![](../media/deploy-1.jpg "Create a new deployment")
+   ![](../media/deploy-1.jpg "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. 検索バーで「**GPT-35-TURBO**」を入力し、「**Confirm**」をクリックします。
 
    ![](../media/pg-09.jpg)
-   
-7. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: my-gpt-model (1)
-    - **Model version**: Auto-update to default(0301) (2)<br>
-    - **Deployment type**: Standard (3)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
-  
-         ![](../media/gpt-intial.jpg)
 
-      >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+7. ポップアップで以下の設定を入力します：  
+   - **Deployment name**: `my-gpt-model`  
+   - **Model version**: **Auto-update to default (0301)**  
+   - **Deployment type**: **Standard**  
+   - **Tokens per Minute Rate Limit (thousands)**: `10K`  
+   - **Enable dynamic quota**: **Enabled**  
+   - 「Deploy」をクリックします。
 
-8. This will deploy a model which you will be playing around with as you proceed.
+   ![](../media/gpt-intial.jpg)
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-   
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+> **注意:** GPT-35-Turbo-16k はチャットコンプリーション専用です。
 
-   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+8. デプロイが完了するまで待ちます。
 
-### Task 3: Explore a model in the Completions playground
+> **補足:** Azure OpenAI には複数のモデルが存在し、特定のタスクやアプリケーションに適した性能を提供します。今回使用するモデル「GPT-35-Turbo」は自然言語要約やコード生成に適しています。
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+<validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
-1. In Azure OpenAI Studio, in the left pane under **Playground**, select **Completions**.
+> **おめでとうございます！** タスクが完了しました。検証手順に進みましょう。
 
-2. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt.
 
-      ![](../media/generate_new.jpg)
+---
 
-      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+## タスク 3: Completions playground でモデルを試す
 
-4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+このタスクでは、モデルがどのように応答するかをリアルタイムでテストし、AI モデルの性能や挙動を探索します。
 
-5. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+### 手順:
 
-      ![](../media/generated.jpg)
+1. Azure OpenAI Studio で「**Playground**」→「**Completions**」を選択します。
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+2. 「Completions」ページで、「**my-gpt-model**」が選択されていることを確認し、「**Generate a quiz**」を入力して **Generate** ボタンを押します。
 
-6. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+   ![](../media/generate_new.jpg)
 
-      ![](../media/view_code.jpg)
+3. 結果が生成されるので確認します。
 
-      ![](../media/openai-7.png)
-    
-7. Close the **Sample Code**.
+   ![](../media/generated.jpg)
 
-### Task 4: Use the Chat playground
+4. 「**View Code**」ボタンを押し、生成されたコードを確認します。
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+   ![](../media/view_code.jpg)
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-3. Below the **Below add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/last-2.jpg)
+## タスク 4: Chat playground を使用する
 
-4.  Enter the following message and response in the designated boxes:
+このタスクでは、AI モデルの会話能力を Chat Playground インターフェースで試します。
 
-      - **User**: `What are different types of artificial intelligence?`
-      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+### 手順:
 
-         ![](../media/exples-ai.jpg)
-   
-         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+1. Playground の「Chat」タブで「my-gpt-model」を選択します。
 
-5. Save the changes by clicking on **Apply Changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+2. 「System Message」に `The system is an AI teacher that helps people learn about AI` を設定します。
 
-      ![](../media/save_changes.jpg)
-   
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+3. サンプルメッセージを設定してテストします。
 
-      ![](../media/openai-12.png)
-   
-      > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   ![](../media/last-2.jpg)
 
-8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+4. クエリ入力後、「Send」をクリックし応答をテストします。
 
-9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
-10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
-            
-      ![](../media/view_code.jpg)
+## タスク 5 & 6: パラメータ設定、コード生成探索
 
-### Task 5: Explore prompts and parameters
+このタスクでは、パラメータ設定やモデルが生成するコードスニペットを試します。
 
-In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
+- パラメータを調整し、応答を最適化します。
+- コード生成テンプレートを使用して Python コードを生成します。
 
-1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
-      - **Temperature**: 0
-      - **Max response**: 500
+詳細な手順に従いながら設定とコード生成タスクを完了します。
 
-         ![](../media/temp.jpg)
-      
-2. Submit the following message in chat session
+## 総括
+このラボで達成したこと：
+- Azure OpenAI リソースの作成
+- モデルを Azure OpenAI Studio にデプロイする
+- Playground を活用して AI モデルを探索し、AI プロンプトやパラメータ調整、コード生成を試すことができました。
 
-      ```
-      Write three multiple choice questions based on the following text.
-
-      Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
-
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
-
-      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
-
-      - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
-      
-      ```
-
-3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
-
-      ![](../media/last-3.jpg)
-   
-4. Observe the following about the prompt and parameters you used:
-
-    - The prompt specifically states that the desired output should be three multiple choice questions.
-       
-    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in 
-         stable, predictable responses.
-
-### Task 6: Explore code-generation
-
-In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
-
-1. In the **Setup** pane, select the **Empty Example** template under **Using templates** section to reset the system message if prompted click on **Continue**. Enter the system message: `You are a Python developer.` and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
-
-      ![](../media/last-2.jpg)
-
-3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
-   
-      ![](../media/openai-14.png)
-
-4. Submit the following user message:
-
-      ```
-      Write a Python function named Multiply that multiplies two numeric parameters.
-      ```
-
-5. Review the response, which should include sample Python code that meets the requirement in the prompt.
-   
-      ![](../media/task-6-last.jpg)
-
-## Summary
-
-In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an Azure OpenAI model within the Azure OpenAI studio
--   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
-
-##   You have successfully completed the lab.
+**これでラボが完了しました！お疲れ様でした！** 🎉

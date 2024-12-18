@@ -26,7 +26,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
    ![](../media/tel-10.png)
 
@@ -41,7 +41,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
   
          ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-4. Click on **Next** again and subsequently click on **Create** 
+4. Click on **Next** twice and subsequently click on **Create** 
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -69,7 +69,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
+2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
 
    ![](../media/update07.png)
 
@@ -77,8 +77,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    **Overview (1)** from the left-hand menu, then click on **Go to Azure AI Foundry portal (2)**. This will navigate you to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
-
-   >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
 4. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
@@ -89,17 +87,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
+      - Deployment type: Standard(2)
+      - Click on customize
+      - Model version: 0613(Default)(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
            ![](../media/i2.png)
-
-           >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
-
-           ![](../media/imagecustomize.png)
 
            >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
@@ -120,7 +115,8 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` as the system message and click on **Save** and subsequently click on **Continue**.
+
+2. In the **Setup** section at the top, enter `You are a helpful AI assistant` under Give the model instructions and context and click on **Apply changes** and subsequently click on **Continue**.
 
     ![](../media/openai1.png)
 
@@ -136,7 +132,7 @@ In this task, you will examine how prompt engineering improves model responses i
     >**Note:** Kindly refresh the screen incase you encounter any error message and perform the above step again.
 
 4. The model will probably provide a satisfactory response to the prompt, presented as a numbered list. While this is a decent answer, it doesn't meet our specific needs.
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Save** and subsequently click on **Continue**.
+5. Next, update the Give the model instructions and context to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments`. Click **Apply changes** and subsequently click on **Continue**.
 6. Format the instructions as python comments. Send the following prompt to the model.
 
     ```code
@@ -146,7 +142,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 7. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, and enter `You are a helpful AI assistant` again, and **save** your changes and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the Give the model instructions and context and enter `You are a helpful AI assistant` again, and **Apply changes** your changes and subsequently click on **Continue**. This will create a new chat session.
 9. Send the following prompt to the model.
 
     ```code
@@ -161,7 +157,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 10. The response will likely be some information about drought in California. While not a bad response, it's not the classification we're looking for.
 
-11. In the **Setup** section near the system message, select the **+ Add section** button. then click on **Examples** Add the following example.
+11. In the **Setup** section near the Give the model instructions and context, select the **+ Add section** button. then click on **Examples** Add the following example.
 
     ![](../media/example1.png)
 
@@ -257,6 +253,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
+8. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
 8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
@@ -277,10 +277,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
        ```bash
       code .
        ```
-
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png) 
 
 <validation step="b83818f3-0527-485b-85c5-57c7f0149fe1" />
 

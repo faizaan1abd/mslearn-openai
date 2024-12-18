@@ -119,7 +119,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-7. Once the terminal is opened Click on **Settings** and then select **Go to Classic verion**
+7. Once the terminal is opened Click on **Settings** and then select **Go to Classic version**
 
    ![](../media/n9.png "Create storage advanced settings")
 

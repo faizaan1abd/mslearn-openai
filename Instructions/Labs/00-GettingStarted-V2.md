@@ -76,6 +76,12 @@ Siéntase libre de iniciar, detener o reiniciar su máquina virtual cuando lo ne
 
 3. Si no ha extendido la duración antes de que el laboratorio esté por terminar, aparecerá una ventana emergente que le dará la opción de extenderla. Haga clic en **Aceptar** para continuar.
 
+## Guía de laboratorio Acercar/alejar
+
+1. Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
+
+   ![Manage Your Virtual Machine](../media/labzoom-1.png)
+
 ## Comenzando con el Portal de Azure
  
 1. En su máquina virtual, haga clic en el icono de Azure Portal como se muestra a continuación:

@@ -78,8 +78,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-4. Click on **Deployments (1)** under **Shared 
-   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
+4. Click on **Deployments (1)**, click on **+ Deploy Model**, choose **Deploy Base Model (2).**
 
       ![](../media/ui1.png "Create a new deployment")
 
@@ -87,19 +86,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/new04.png)
 
-6. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: text-turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
-      - Tokens per Minute Rate Limit (thousands): 10K (4)
-      - Enable dynamic quota: Enabled (5)
-      - Click on Deploy (6)
+6. Within the **Deploy model** pop-up interface, enter the following details:
+      - **Deployment name**: text-turbo(1)
+      - **Deployment type**: Standard(2)
+      - **Click on Customize**
+      - **Model version**: 0613 (Default)(3)      
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
   
-           ![](../media/i2.png)
-
-           >**Note:** If the options shown in the screenshot is not visible, click on **Customize**.
-
-           ![](../media/imagecustomize.png)
+           ![](../media/i2-1.png)
 
            >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
@@ -151,6 +147,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
          > **Note**: Ensure that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+    ![](../media/switch-classic-version.png)
+
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
@@ -172,11 +172,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       code .
       ```
  
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 5 and 7** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png) 
-   
-
 <validation step="4eb72f2c-5f15-42b7-9637-abdaf9e30be5" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:

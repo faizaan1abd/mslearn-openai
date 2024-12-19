@@ -19,11 +19,11 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
    ![](../media/tel-10.png)
 
@@ -38,7 +38,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
   
          ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
-4. Click on **Next** again and subsequently click on **Create** 
+4. Click on **Next** twice and subsequently click on **Create** 
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -48,11 +48,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-           ![](../media/ui3.png "Keys and Endpoints")
-
-   > **Note**: If you dont see the Left side Navigation pane, click on the three horizontal line in the top left corner.
-
-   ![](../media/code1.png "Keys and Endpoints")           
+           ![](../media/ui3.png "Keys and Endpoints")        
 
 <validation step="b2bea034-1f21-46f4-9d53-c1def354425e" />
 
@@ -66,26 +62,23 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
+1.  On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then select **OpenAI-Lab04-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/update07.png)
+    ![](../media/update07.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
    
 
-1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+1. Click on **Deployments (1)** under **Shared 
+   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
-      ![](../media/ui1.png "Create a new deployment")
-
-   > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
-
-   ![](../media/code2.png "Keys and Endpoints")           
+      ![](../media/ui1.png "Create a new deployment")         
    
 
 1. Search for **GPT-35-TURBO-16K (1)**, click on **Confirm (2)**
@@ -94,17 +87,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: **35turbo (1)**
-      - Model version: **0613(Default) (2)**
-      - Deployment type: **Standard (3)**
+      - Deployment type: **Standard (2)**
+      - Click on **Customize**
+      - Model version: **0613(Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **10K (4)**
       - Enable dynamic quota: **Enabled (5)**
       - Click on Deploy **(6)**
   
-           ![](../media/i3.png)
-
-   > **Note**: If you see the interface like the below screenshot, Click on **Customize** and provide the details.
-
-   ![](../media/code10.png "Keys and Endpoints")           
+           ![](../media/i3.png)     
         
 
    > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
@@ -187,8 +177,8 @@ In this task, you will use a short command-line application running in Cloud She
 
 1. Within the **Create storage account** pane, enter the following details:
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
-    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(3)
+    - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>(2)
+    - **CloudShell region**: East US (3)
     - **Storage Account Name**: Enter storage<inject key="Deployment-ID" enableCopy="false"></inject>(4)
     - **File share**: Enter **none** (5)
     - Click **Create** (6)
@@ -196,6 +186,10 @@ In this task, you will use a short command-line application running in Cloud She
        ![](../media/lab04-storage.png "Create storage advanced settings")
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+    ![](../media/classic-cloudshell.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -218,9 +212,6 @@ In this task, you will use a short command-line application running in Cloud She
    code .
     ```
 
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png)
 
 <validation step="8cfc3b23-a18d-413a-a749-b7a1e70de45a" />
 

@@ -21,16 +21,16 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **Create**.
+2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
    ![](../media/tel-10.png)
 
 
-3. Create an **Azure OpenAI** resource with the following settings click on **Next** twice and subsequently click on **Create**:
+3. Create an **Azure OpenAI** resource with the following settings click on **Next** three times and subsequently click on **Create**:
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject>
@@ -39,12 +39,10 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Pricing tier**: Standard S0
 
       ![](../media/azopenai123.png "Create Azure OpenAI resource")
-    
-4. Click on **Next** twice and click on **Create**.
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+4. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+5. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -64,7 +62,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
    ![](../media/tel-11.png)
 
@@ -76,11 +74,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-4. In the prompt select the **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (1)** resource that you have created and click on **Use this resource(2)**.
 
-      ![](../media/new03.png)
-
-5. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+5. Click on **Deployments (1)** under **Shared 
+   Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
       ![](../media/ui1.png "Create a new deployment")
 
@@ -89,14 +85,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/new04.png)
    
 7. Within the Deploy model pop-up interface, enter the following details:
-      - Deployment name: 35turbo(1)
-      - Model version: 0613(Default)(2)
-      - Deployment type: Standard(3)
+      - Deployment name: text-turbo(1)
+      - Deployment type: Standard(2)
+      - Click on Customize
+      - Model version: 0613(Default)(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i3.png)
+           ![](../media/i3u.png)
 
            >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
      
@@ -116,13 +113,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
 1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
-
-     - **Setup** - used to set the context for the model's responses.
+     - **Setup** - used to configure settings for the model deployment.
+     - **Give the model instructions and context** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
-    - **Configuration** - used to configure settings for the model deployment.
 
-2. In the **Configuration** section, ensure that your model deployment `text-turbo` is selected.
-3. In the **Setup** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
+2. In the **Setup** section, ensure that your model deployment `text-turbo` is selected.
+3. In the **Give the model instructions and context** area, select the default system message template to set the context for the chat session. The default system message is *You are an AI assistant that helps people find information*.
 4. In the **Chat session**, submit the following queries, and review the responses:
 
     ```
@@ -142,7 +138,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
    
-2. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
+2. In the **Azure portal**, search for **Storage Account** and select **Storage accounts**.
 
    ![](../media/1.png)
 
@@ -160,7 +156,7 @@ In this task, you will observe how the base model responds to queries without an
   
       ![](../media/openai-lab06_t4_s4.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
+    - **Allow enable anonymous access on individual containers**: check in the box to enable under **Advanced** section. Click on **Review + Create**  and subsequently click on **Create**
 
       ![](../media/image4.5.png "allow blob access")
 
@@ -174,11 +170,12 @@ In this task, you will observe how the base model responds to queries without an
 
      ![](../media/4.png "upload files")
 
-8. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
+8. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 
-9. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+9. Click on the container you just created and 
+ upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
 
       ![](../media/image4.7.png "upload files")
 
@@ -204,7 +201,7 @@ In this task, you will observe how the base model responds to queries without an
 
        ![](../media/x689.png)
 
-15. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+15. From the left navigation pane,click on **Keys** under Settings and copy the primary key or secondary key and paste it in a notepad file for later use.
 
       ![](../media/x690.png)
 
@@ -214,15 +211,16 @@ In this task, you will observe how the base model responds to queries without an
    
 17. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
-    - **Select data source**: Azure Blob Storage
+    - **Select data source**: Azure Blob Storage(preview)
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
+    - **Select storage container**: *Choose the storage container you created*
     - **Select Azure AI Search resource**: *Choose the search resource you created*
     - **Enter the index name**: margiestravel
     - **Indexer schedule**: Once
    
        ![](../media/image4.8.png "Add data configurations")
 
-18. Click on next to proceed with "Data Management"
+18. Click on next to proceed with **Data Management**
    
 19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
@@ -232,7 +230,7 @@ In this task, you will observe how the base model responds to queries without an
 
        ![](../media/API_key.jpg "Add data")
    
-22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **setup** pane.
 
        ![](../media/review.jpg "Add data")
 
@@ -259,8 +257,6 @@ You'll notice a very different response this time, with specifics about certain 
 
 Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
-> **Note**: **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
-
 ### Task 6: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate integration with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
@@ -282,24 +278,28 @@ In this task, you will use a short command-line application running in Cloud She
 5. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Region**: Select <inject key="Region" enableCopy="false" /> (2)
-    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
+    - **Resource group**: openai-<inject key="Deployment-ID" enableCopy="false"></inject> (2)
+    - **Region**: Select <inject key="Region" enableCopy="false" /> (3)
     - **Storage account name**: str<inject key="Deployment-ID" enableCopy="false"></inject> (4)
     - **File share**: Create a new file share named **none** (5)
     - Click **Create** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/lab04-storage.png)
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+7. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
+8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -307,15 +307,11 @@ In this task, you will use a short command-line application running in Cloud She
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-9. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+10. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
-   code .
-    ```
-
-      > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to and make sure you are in the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png) 
+    code .
+    ```  
 
 ### Task 7: Configure your application
 
@@ -388,6 +384,7 @@ In this task, you will complete key parts of the application to enable it to use
             }]
         )
     ```
+    > **Note**: Ensure that the indentation is correct when copying and pasting the Python code.
 
 7. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
 

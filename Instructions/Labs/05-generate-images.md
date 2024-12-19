@@ -75,8 +75,20 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
+
+1. From left pane click on **Deployments (1)** under Shared resources then click on **+ Deploy model (2)** and select **Deploy base model (3)**.
+
+   ![](../media/n10.png)
+
+1. In select a model pop up search and select **dall-e-3** then click on **Confirm**.
+
+1. In Deploy model dall-e-3 Provide the following details and click on **Deploy**.
+
+   - **Deployment name**: Dalle3
+   - **Deployment Type**: Standard
+   - leave the other details default
               
-1. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
+1. Now ,From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
       ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
 
@@ -149,8 +161,8 @@ In this task, you will use a simple Python or C# app to generate images by calli
 10. Use the following command to open the built-in code editor and see the code files you will be working with.
 
     ```bash
-   code .
-    ```
+    code .
+      ```
    
 #### Task 3.2: Configure your application
 
@@ -250,19 +262,7 @@ In this task, you will run the reviewed code to generate some images.
 
 2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
 
-    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
-
-     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old look**. click on **Skip** when **Feedback** window prompted.
-
-        ![](../media/iss1.png)
-
-     - In **Deployment**, ensure that **Dalle 3** is selected.
-
-        ![](../media/iss2.png)
-
-     - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
-
-       >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
+   >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
 
      - Navigate back to CloudShell and reperform step no 3. 
 
@@ -270,7 +270,7 @@ In this task, you will run the reviewed code to generate some images.
 
    ![](../media/link.jpg "Keys and Endpoints")
    
-5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+4. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary
 

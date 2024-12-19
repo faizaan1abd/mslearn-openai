@@ -53,7 +53,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
       ![](../media/tel-1.png)
 
@@ -75,8 +75,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
-      - **Model version**: 0301(Default)(2)
-      - **Deployment type**: Standard(3)
+      - **Deployment type**: Standard (2)
+      - **Click on Customize**      
+      - **Model version**: 0301 (Default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
@@ -84,11 +85,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
            ![](../media/i1.png)
 
            >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-           
-           > **Note**: If you see the interface like the below screenshot, Click on **Customize** and provide the details.
-
-           ![](../media/code10.png "Keys and Endpoints")           
-
+          
 1. This will deploy a model which you will be playing around with as you proceed.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
@@ -106,7 +103,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
+1. In **Azure AI Foundry portal**, in the left pane under **Playground**, select **Completions**.
 
 1. In the **Completions (1)** page, ensure your **my-gpt-model (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt and then click on **Generate (4)**
 
@@ -140,24 +137,23 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/open-ai2.png)
 
-1. In the **Setup** section, in the **System message** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
 1. Below the **+ Add section** box, click on **Examples**. enter the following message and response in the designated boxes:
 
-      ![](../media/last-2.jpg)
+      ![](../media/last-2.png)
 
 1.  Enter the following message and response in the designated boxes:
 
        - **User**: `What are different types of artificial intelligence?`
     
-       - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
-perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+       - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
             ![](../media/exples-ai.jpg)
    
             > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-1. Save the changes by clicking on **Save (1)** and subsequently click on **Continue (2)** to start a new session and set the behavioral context of the chat system.
+1. Save the changes by clicking on **Apply changes (1)** and subsequently click on **Continue (2)** to start a new session and set the behavioral context of the chat system.
 
       ![](../media/open-ai3.png)   
 
@@ -181,13 +177,14 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. On the **Setup** page select **Parameter (1)** , set the following parameter values:
+1. On the **Setup** page select **Parameters (1)** , set the following parameter values:
     
     - **Temperature**: 0 **(2)**
     
     - **Max response**: 500 **(3)**
 
-         ![](../media/open-ai5.png)
+         ![](../media/open-ai5-1.png)
+         ![](../media/open-ai5-2.png)
       
 2. Submit the following message in chat session
 
@@ -218,7 +215,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** pane, under the **System message**, enter the system message: `You are a Python developer.` **(1)** then save the changes by clicking on **Save (2)** when prompted click on **Continue (3)**.
+1. In the **Setup** section, in the **Give the model instructions and context** box, enter the text: `You are a Python developer.` **(1)** then save the changes by clicking on **Apply Changes (2)** when prompted click on **Continue (3)**.
 
       ![](../media/open-ai7.png)
 

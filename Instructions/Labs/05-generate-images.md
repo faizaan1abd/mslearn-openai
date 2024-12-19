@@ -1,5 +1,7 @@
 # Lab 05: Generate images with a DALL-E model
 
+## Estimated Duration: 60 minutes
+
 ## Lab scenario
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
 
@@ -15,8 +17,6 @@ In this lab, you will complete the following tasks:
 - Task 3.2: Configure your application
 - Task 3.3: View application code
 - Task 4: Run the app
-
-## Estimated time: 60 minutes
 
 ### Task 1:  Provision an Azure OpenAI resource
 

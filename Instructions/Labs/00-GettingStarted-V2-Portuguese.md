@@ -64,6 +64,13 @@ Sinta-se à vontade para iniciar, parar ou reiniciar sua máquina virtual confor
 
 ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(4).png)
 
+## Guia de laboratório Aumentar/diminuir zoom
+
+1. Para ajustar o nível de zoom da página do ambiente, clique no ícone **A↕ : 100%** localizado junto ao temporizador no ambiente de laboratório.
+
+   ![Manage Your Virtual Machine](../media/labzoom-1.png)
+
+
 ## Vamos Começar com o Portal do Azure
 
 1. Na sua máquina virtual, clique no ícone do Portal do Azure conforme mostrado abaixo:

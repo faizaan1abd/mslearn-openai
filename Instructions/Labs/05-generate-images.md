@@ -80,7 +80,7 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
    ![](../media/n10.png)
 
-1. In select a model pop up search and select **dall-e-3** then click on **Confirm**.
+1. In select a model pop up, search and select **dall-e-3** then click on **Confirm**.
 
 1. In Deploy model dall-e-3 Provide the following details and click on **Deploy**.
 

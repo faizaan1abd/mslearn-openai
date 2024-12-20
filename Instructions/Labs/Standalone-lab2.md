@@ -649,7 +649,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
 11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow-up questions referencing previous answers, and each time the history provides context for the model to answer.
 
-    > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the respective language files and replace the entire code with the one provided in Task 6, Step 6.
+    > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the given below respective language files and replace the entire code with the one provided in Task 6, Step 6.
        - Python: test-openai-model.py and 
        - C#: Program.cs
 

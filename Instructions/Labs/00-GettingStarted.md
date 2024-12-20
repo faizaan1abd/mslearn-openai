@@ -1,5 +1,3 @@
-<div style="font-family: 'Meiryo'">
-   
 # Develop Generative AI solutions with Azure OpenAI Service
 ### Overall Estimated Duration: 8 Hours
 ### Overview
@@ -112,5 +110,3 @@ Learner Support Contacts:
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 ### Happy learning !
-
-</div>

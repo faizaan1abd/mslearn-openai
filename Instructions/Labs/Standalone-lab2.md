@@ -102,7 +102,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-         ![](../media/imageq.png)
+         ![](../media/CustomiseModel.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 

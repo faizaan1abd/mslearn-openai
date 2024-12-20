@@ -84,9 +84,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/imagef.png "Create a new deployment")
 
-1. On the **Select a Model** pane, search for **gpt-35-turbo-16k (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
+1. On the **Select a Model** pane, search for **gpt-35-turbo (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
 
-    ![](../media/28-08-2024(1).png "Create a new deployment")
+    ![](../media/turboselection.png "Create a new deployment")
+
+     >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
@@ -96,13 +98,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-        ![](../media/imagex.png)
+        ![](../media/createModel.png)
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
          ![](../media/imageq.png)
-
-      >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
@@ -162,6 +162,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ```bash
    rm -r azure-openai -f
+    ```
+    
+    ```bash
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
@@ -204,9 +207,9 @@ In this task, you will complete key parts of the application to enable it to use
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane hit **Save** and close the editor.
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created and saved in Task 1, as well as the model name that you deployed, text-turbo. Then, save the file by right-clicking on the file in the left pane and clicking **Save**, and minimize the lab files in the code editor using &#8595;.
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+5. Navigate to the folder for your preferred language and install the necessary packages
 
     **C#** : 
 
@@ -223,7 +226,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+6. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -239,7 +242,7 @@ In this task, you will complete key parts of the application to enable it to use
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+7.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
@@ -271,7 +274,7 @@ In this task, you will complete key parts of the application to enable it to use
 
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+8. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
 
@@ -319,7 +322,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
+9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
 
 ### Task 5: Test your application
 

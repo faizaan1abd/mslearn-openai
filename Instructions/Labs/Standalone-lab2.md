@@ -93,12 +93,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
     - **Deployment type (3)**: Standard
-    - **Model version (2)**: Auto-update to default
+    - **Model version (2)**: Choose **0125 version** from the dropdown.
     - **Tokens per Minute Rate Limit (thousands) (4)**: 10K
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-        ![](../media/createModel.png)
+        ![](../media/DeployModel.png)
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 

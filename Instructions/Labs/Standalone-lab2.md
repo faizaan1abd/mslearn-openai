@@ -84,25 +84,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/imagef.png "Create a new deployment")
 
-1. On the **Select a Model** pane, search for **gpt-35-turbo-16k (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
+1. On the **Select a Model** pane, search for **gpt-35-turbo (1)** and select it from the results. Then, click **Confirm (3)** to proceed.
 
-    ![](../media/28-08-2024(1).png "Create a new deployment")
+    ![](../media/turboselection.png "Create a new deployment")
+
+     >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name (1)**: text-turbo
     - **Deployment type (3)**: Standard
-    - **Model version (2)**: Auto-update to default
+    - **Model version (2)**: Choose **0125 version** from the dropdown.
     - **Tokens per Minute Rate Limit (thousands) (4)**: 10K
     - **Enable dynamic quota (5)**: Enabled
     - Click on **Deploy (6)**
   
-        ![](../media/imagex.png)
+        ![](../media/DeployModel.png)
 
       >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
 
-         ![](../media/imageq.png)
-
-      >**Note** : if the **gpt-35-turbo-16k** model isn't available, choose **gpt-35-turbo**
+         ![](../media/CustomiseModel.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
@@ -162,6 +162,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ```bash
    rm -r azure-openai -f
+    ```
+    
+    ```bash
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
@@ -204,14 +207,21 @@ In this task, you will complete key parts of the application to enable it to use
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane hit **Save** and close the editor.
+3. Update the configuration values to include the **endpoint** and **key** **(1)** from the Azure OpenAI resource you created and saved in Task 1, as well as the model name that you deployed, text-turbo. Then, save the file by right-clicking on the file in the left pane and clicking **Save**, and minimize the lab files in the code editor using ↕ (2).
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+   ![](../media/EditorMin.png "Minimise the editor")
+
+   > **Note:** The above image shows the example for the Python folder. For further steps, you can use ↕ to minimize and maximize the editor.
+
+5. Navigate to the folder for your preferred language and install the necessary packages
 
     **C#** : 
 
     ```bash
     cd CSharp
+    ```
+    
+    ```bash
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
@@ -219,11 +229,17 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```bash
     cd Python
+    ```
+    
+    ```bash
     pip install python-dotenv
+    ```
+    
+    ```bash
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+6. Navigate to your preferred language folder, select the code file given below, replace the comment ***Add Azure OpenAI package*** with the following code to add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -239,7 +255,7 @@ In this task, you will complete key parts of the application to enable it to use
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+7.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
@@ -271,7 +287,7 @@ In this task, you will complete key parts of the application to enable it to use
 
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+8. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
 
@@ -319,7 +335,7 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
+9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
 
 ### Task 5: Test your application
 
@@ -362,10 +378,18 @@ In this task, you will run your configured app to send a request to your model a
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
+   ![](../media/OpenPython.png) 
+
+    > **Note:** The above image shows the example for the Python.  
+
 4. When prompted, enter the text `What hike should I do near Rainier?`.
 5. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
 6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
 7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+
+   > C#: Program.cs
+   > Python: test-openai-model.py
+
 8. Run the application again using the prompts above, and observe the output.
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
@@ -375,9 +399,9 @@ Increasing the temperature often causes the response to vary, even when provided
 In this task, you will provide a history of the conversation in your prompt to enable the Azure OpenAI model to reference past messages, enhancing the realism of interactions despite the API's stateless design.
 
 1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-2. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have past conversation messages for reference.
-4. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+1. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
+1. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have past conversation messages for reference.
+1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
 
     **C#**: Program.cs
 
@@ -396,7 +420,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in Python with the following code then save the file. The code is mostly the same, but now the messages array stores the conversation history.
+1. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in Python with the following code then save the file. The code is mostly the same, but now the messages array stores the conversation history.
 
     **C#**: Program.cs
 
@@ -452,7 +476,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-6. The final code should look like as shown below:
+1. The final code should look like as shown below:
 
    **C#**: Program.cs
 
@@ -624,6 +648,10 @@ In this task, you will provide a history of the conversation in your prompt to e
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
 11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow-up questions referencing previous answers, and each time the history provides context for the model to answer.
+
+    > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the given below respective language files and replace the entire code with the one provided in Task 6, Step 6.
+       - Python: test-openai-model.py and 
+       - C#: Program.cs
 
     > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
 

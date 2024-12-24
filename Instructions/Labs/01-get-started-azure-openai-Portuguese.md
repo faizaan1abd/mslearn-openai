@@ -31,7 +31,7 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
    
     - **Assinatura**: Padrão - Assinatura pré-atribuída.
     - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Região**: **FranceCentral**
+    - **Região**: **Swedencentral**
     - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Tipo de preço**: Standard S0
   
@@ -72,9 +72,9 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
    ![](../media/portugesemodel.png)
 
-5. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo** e clique em **Confirmar**.
+5. Na janela **Selecionar um modelo**, selecione **gpt-4o-mini** e clique em **Confirmar**.
 
-   ![](../media/8-10-24(18).png)
+   ![](../media/gpt-4-portuguese.png)
 
 6. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
@@ -82,11 +82,11 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Nome da implantação: **my-gpt-model (1)**
 
-    - Tipo de implantação: **Standard (2)**
+    - Tipo de implantação: **Padrão Global (2)**
   
     - Clique em **Recolher**
     
-    - Versão do modelo: **0301 (padrão) (3)**
+    - Versão do modelo: **(3)**
     
     - Limite de Taxa de Tokens por Minuto: **10K (4)**
     
@@ -94,14 +94,42 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Clique em **Implantar (6)**
       
+      ![](../media/my-gpt-portuguese.png)
 
-      ![](../media/8-10-24(19)-1.png)
+5. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
-7. Isso irá implementar um modelo que você explorará nas próximas etapas.
+   ![](../media/portugesemodel.png)
+
+7. Na janela **Selecionar um modelo**, selecione **babbage-002** e clique em **Confirmar**.
+
+   ![](../media/babbage1.2portuguese.png)
+   
+8. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
+    
+    - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
+    
+    - Nome da implantação: **babbage-002 (1)**
+
+    - Tipo de implantação: **Standard (2)**
+  
+    - Clique em **Recolher**
+    
+    - Versão do modelo: **1 (3)**
+    
+    - Limite de Taxa de Tokens por Minuto: **10K (4)**
+    
+    - Habilitar cota dinâmica: **Habilitado (5)**
+    
+    - Clique em **Implantar (6)**
+      
+      ![](../media/babbage-02-portugues.png)
+
+9. Isso irá implementar um modelo que você explorará nas próximas etapas.
 
    > **Observação**: Você pode ignorar qualquer erro relacionado à atribuição de papéis para visualizar os limites de cota.
-
-   > **Observação**: O Azure OpenAI inclui vários modelos, cada um otimizado para um equilíbrio diferente entre capacidades e desempenho. Neste exercício, você usará o modelo **GPT-35-Turbo**, que é um bom modelo geral para resumir e gerar linguagem natural e código. Para mais informações sobre os modelos disponíveis no Azure OpenAI, consulte [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) na documentação do Azure OpenAI.
+   
+   > **Observação**: o Azure OpenAI oferece uma variedade de modelos, cada um otimizado para diferentes equilíbrios de características e desempenho. Neste exercício, irá utilizar **gpt-4o-mini** e **babbage -002** um modelo de conclusão, que é adequado para tarefas como resumir e gerar linguagem natural e código. Para mais detalhes sobre os modelos disponíveis no Azure OpenAI, consulte a página [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) na documentação do Azure OpenAI.
+   
 
 #### Validação
 

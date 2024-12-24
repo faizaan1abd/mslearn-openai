@@ -34,7 +34,7 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
       - Copie a **CHAVE 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
       - Finalmente, copie a URL da API do **Ponto de extremidade (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
 
-        ![](../media/8-10-24(38).png)
+        ![](../media/8-10-24(38)-1.png)
 
 
 ## Tarefa 2: Configurar uma aplicação no Cloud Shell

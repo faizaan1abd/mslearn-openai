@@ -159,7 +159,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in  **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-      ![](../media/setup.png)
+      ![](../media/setup-1.png)
 
 3. Click on **+ Add Section** drop-down menu and select **Examples**. Now enter the following message and response in the designated boxes:
 
@@ -176,7 +176,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 5. Save the changes by clicking on **Apply changes** 
 
-   ![](../media/image7u.png)
+   ![](../media/image7u-1.png)
 
 6. On Update system message? pop-up, click on **Continue**.
 
@@ -242,7 +242,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-      ![](../media/imag8.png)
+      ![](../media/imag8-1.png)
       
 
 3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.

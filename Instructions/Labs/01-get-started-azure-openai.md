@@ -30,13 +30,13 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
    
     - **Subscription**: Default - Pre-assigned subscription.
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **Francecentral**
+    - **Region**: Select **Swedencentral**
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Pricing tier**: Standard S0
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-      >**Note** : **Please deploy Openai resource in Francecentral Region**.
+      >**Note** : **Please deploy Openai resource in Swedencentral Region**.
 
 4. Click on **Next** thrice by keeping others default and click on **Create**.
 
@@ -71,28 +71,47 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png)
 
-6. Search for **gpt-35-turbo (1)**, click on **Confirm (2)**
+6. Search for **gpt-4o-mini**, click on **Confirm**
 
-   ![](../media/ui4.png)
+   ![](../media/gpt-4-mini.png)
    
 7. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
-      - **Model version**: 0301(Default)(3)
+      - **Model version**:2024-07-18(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/image1.png)
+           ![](../media/gpt-4omini.png)
 
-           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
+           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
-8. This will deploy a model which you will be playing around with as you proceed.
+8. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+
+      ![](../media/ui1.png)
+
+9. Search for **Babbage-002**, click on **Confirm**
+
+   ![](../media/babbage-02.png)
+   
+10. Within the **Deploy model** pop-up interface, enter the following details:
+      - **Deployment name**: babbage-002 (1)
+      - **Deployment type**: Standard(2)
+      - Click on **Customize**
+      - **Model version**:1 (3)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Enable dynamic quota**: Enabled (5)
+      - Click on **Deploy** (6)
+  
+           ![](../media/babbage-2.1.png)
+
+8. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
+     > **Note**: Azure OpenAI offers a variety of models, each optimized for different balances of capabilities and performance. In this exercise, you'll be using the **gpt-4o-mini** and a completion model, which is well-suited for tasks like summarizing and generating natural language and code. For more details on the available models in Azure OpenAI, refer to the [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) page in the Azure OpenAI documentation.
 
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps

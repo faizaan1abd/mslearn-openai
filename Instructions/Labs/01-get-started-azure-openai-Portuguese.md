@@ -86,7 +86,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
   
     - Clique em **Recolher**
     
-    - Versão do modelo: **(3)**
+    - Versão do modelo: **2024-07-18(default) (3)**
     
     - Limite de Taxa de Tokens por Minuto: **10K (4)**
     

@@ -6,7 +6,7 @@
 
 - Have updated the Azure OpenAI Studio to **Azure AI Foundry Portal**.
 
-- Model version of gpt-35-turbo; 0134 will be deprecated. New default based on region availability before Jan 12. 
+- Model version of gpt-35-turbo; 0134 will be deprecated. New default based on region availability after Jan 12, 2025. 
 
 - Updated the UI changes in Azure Cloudshell.
 

@@ -296,7 +296,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```bash
     cd Python
     pip install python-dotenv
-    pip install openai==1.13.3
+    pip install openai==1.55.3
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.

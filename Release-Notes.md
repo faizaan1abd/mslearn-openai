@@ -1,5 +1,9 @@
 # Release Notes
 
+### 3 January 2025
+
+- Updated pip openai version from **1.13.3** to **1.55.3**.
+
 ### 31 December 2024
 
 - Updated the Azure OpenAI Studio to Azure AI Foundry Portal.

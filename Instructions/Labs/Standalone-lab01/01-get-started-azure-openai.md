@@ -120,25 +120,15 @@ In this task, you'll Explore a model in the Completions playground that involves
 
    >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
    
-   >**Note**: If you don't receive the expected output in the new experience, please follow the steps below:
+   >**Note**: You can click on generate again , if the response is incomplete .
 
-6. From the right top corner toggle bar to switch to old experience.
-    
-      ![](./media/openai_toggle.png)
-
-7. In the old experience, go to the completion page and select "Generate a Quiz" from the examples, then click on generate
-    
-      ![](./media/generate_a_quiz.png)
-   
-      >**Note**: You can click on generate again , if the response is incomplete .
-
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
       ![](./media/NO-3.png)
 
-      ![](./media/openai-7.png)
+      ![](./media/openai-7a.png)
     
 9. Close the **Sample Code**.
 

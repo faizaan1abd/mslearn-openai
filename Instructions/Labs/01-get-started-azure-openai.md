@@ -65,17 +65,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/update08.png)
 
-   >**Note** : With a recent UI update, you may see an option labeled **Go to Azure AI Studio**, which will navigate to the **Azure AI Foundry portal**.
-
-5. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
       ![](../media/ui1.png)
 
-6. Search for **gpt-4o-mini**, click on **Confirm**
+5. Search for **gpt-4o-mini**, click on **Confirm**
 
    ![](../media/gpt-4-mini.png)
    
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
@@ -88,15 +86,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
            >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
-8. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
       ![](../media/ui1.png)
 
-9. Search for **Babbage-002**, click on **Confirm**
+8. Search for **Babbage-002**, click on **Confirm**
 
    ![](../media/babbage-02.png)
    
-10. Within the **Deploy model** pop-up interface, enter the following details:
+9. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: babbage-002 (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
@@ -107,7 +105,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
            ![](../media/babbage-2.1.png)
 
-8. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
+10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
    

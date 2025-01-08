@@ -79,8 +79,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on **Customize**
       - **Model version**:2024-07-18(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
   
            ![](../media/gpt-4omini.png)
 

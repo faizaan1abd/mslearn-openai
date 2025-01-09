@@ -158,11 +158,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`, click on **Apply changes** and subsequently click on **Continue**.
 
-      ![](../media/apply-changesa.png)
+      ![](../media/nls201.png)
    
 4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-      ![](../media/add-sectiona.png)
+      ![](../media/nls200.png)
 
 5. Enter the following message and response in the designated boxes:
 
@@ -178,7 +178,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](../media/NO-7a.png)
+      ![](../media/nls202.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -233,7 +233,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** and click on **Continue** when prompted.
 
-      ![](../media/python-developer-system-msga.png)
+      ![](../media/nls203.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 

@@ -10,7 +10,7 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Get started with Azure OpenAI Service** - Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., GPT-35-Turbo), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
+- **Get started with Azure OpenAI Service** - Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-35-turbo-instruct), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
 
 ## Pre-Requisites
 

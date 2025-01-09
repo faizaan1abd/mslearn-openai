@@ -164,7 +164,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
 4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-      ![](./media/add-sectiona.png)
+      ![](../media/add-sectiona.png)
 
 5. Enter the following message and response in the designated boxes:
 
@@ -172,17 +172,17 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
     
       - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](./media/NO-5.png)
+         ![](../media/NO-5.png)
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-      ![](./media/image7a.png)
+      ![](../media/image7a.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](./media/NO-7a.png)
+      ![](../media/NO-7a.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -192,7 +192,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
-      ![](./media/image5a.png)
+      ![](../media/image5a.png)
 
 ### Task 5: Explore prompts and parameters
 
@@ -204,7 +204,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
      
       - **Temperature**: 0
    
-          ![](./media/image6.png)
+          ![](../media/image6.png)
       
 2. Submit the following message in a chat session
 
@@ -223,7 +223,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](./media/last-3.jpg)
+      ![](../media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
@@ -237,11 +237,11 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
-      ![](./media/python-developer-system-msga.png)
+      ![](../media/python-developer-system-msga.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-      ![](./media/openai-14a.png)
+      ![](../media/openai-14a.png)
 
 3. Submit the following user message:
 
@@ -251,7 +251,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 4. Review the response, which should include sample Python code that meets the requirement in the prompt.
 
-     ![](./media/task-6-lasta.png)
+     ![](../media/task-6-lasta.png)
 
 ## Summary
 

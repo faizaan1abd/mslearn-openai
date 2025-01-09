@@ -114,7 +114,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     > **Note**: You can get the Azure OpenAI endpoint and key values from Azure openai resource's **Key and Endpoint** section under **Resource Management**.
 
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+4. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
     **C#** : 
 
@@ -416,6 +416,9 @@ Now that your app has been configured, run it to send your request to your model
 4. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
 
 5. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+
+- **C#**: Program.cs
+- **Python**: test-openai-model.py
 
 6. Run the application again using the prompts above, and observe the output.
 

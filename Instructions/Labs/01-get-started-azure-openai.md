@@ -1,6 +1,6 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-### Estimated time: 60 minutes
+### Estimated Duration: 60 minutes
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
 
@@ -91,20 +91,20 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png)
 
-8. Search for **Babbage-002**, click on **Confirm**
+9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
 
-   ![](../media/babbage-02.png)
+   ![](./media/ui4b.png)
    
 9. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name**: babbage-002 (1)
+      - **Deployment name**: gpt-35-turbo-instruct (1)
       - **Deployment type**: Standard(2)
-      - Click on **Customize**
-      - **Model version**:1 (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - click on **Customize**.
+      - **Model version**: 0914 (Default) (3)
+      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/babbage-2.1.png)
+        ![](./media/image1b.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
@@ -124,31 +124,33 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure AI Foundry Portal, in the left pane under **Playground**, select **Completions**.
+1. In Azure OpenAI Foundry, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions playground** page, ensure your **my-gpt-model** deployment is selected , Copy paste this `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
-      ![](../media/generate_01.png)
+      ![](./media/generate_01a.png)
 
-      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+      >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
-3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
-
-      ![](../media/gnrttoken.png)
+3. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/generated.png)
+    ![](./media/generated(1)a.png)
 
-      >**Note**: Sometime it can happen the OpenAI wont provide you the exact output, in that case you can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+   >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
+   
+   >**Note**: You can click on generate again , if the response is incomplete .
 
-5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
-      ![](../media/imag01.png)
+8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/openai-7u.png)
+      ![](./media/NO-3a.png)
+
+      ![](./media/openai-7a.png)
     
-6. Close the **Sample Code**.
+9. Close the **Sample Code**.
 
 ## Task 4: Use the Chat playground
 
@@ -156,34 +158,31 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in  **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes** and subsequently click on **Continue**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-      ![](../media/setup-1.png)
+      ![](./media/apply-changesa.png)
+   
+4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-3. Click on **+ Add Section** drop-down menu and select **Examples**. Now enter the following message and response in the designated boxes:
+      ![](./media/add-sectiona.png)
 
-      ![](../media/imag8u.png)
-
-4.  Enter the following message and response in the designated boxes:
+5. Enter the following message and response in the designated boxes:
 
       - **User**: `What are different types of artificial intelligence?`
+    
       - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
-         ![](../media/exples-ai.jpg)
+         ![](./media/NO-5.png)
    
-         > **Note**: Few-shot examples are used to demonstrate the desired tone, style, and type of responses expected from the model. These examples guide the model to generate responses that align with the provided patterns.
+         > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply changes** 
+6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-   ![](../media/image7u-1.png)
-
-6. On Update system message? pop-up, click on **Continue**.
-
-   ![](../media/image4.png)
+      ![](./media/image7a.png)
    
-7. In the query box on the left side at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Click the **Send (2)** button to submit the prompt and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
-      ![](../media/openai-12.png)
+      ![](./media/NO-7a.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -192,24 +191,22 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 
 10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
-            
-      ![](../media/image5.png)
 
-## Task 5: Explore prompts and parameters
+      ![](./media/image5a.png)
+
+### Task 5: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Setup** pane select **Parameters (1)** , set the following parameter values:
+1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
       
-      > **Note**: You may need to scrolldown to see the parameters option
+      - **Max response**: 500
+     
+      - **Temperature**: 0
+   
+          ![](./media/image6.png)
       
-      - **Max response**: 500 **(2)**
-      - **Temperature**: 0 **(3)**
-      
-
-         ![](../media/image6.png)
-      
-2. Submit the following message in chat session
+2. Submit the following message in a chat session
 
       ```
       Write three multiple choice questions based on the following text.
@@ -226,43 +223,38 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
-      ![](../media/last-3.jpg)
+      ![](./media/last-3.jpg)
    
 4. Observe the following about the prompt and parameters you used:
 
-    - The prompt specifically states that the desired output should be three multiple choice questions.
+      - The prompt specifically states that the desired output should be three multiple choice questions.
        
-    - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in 
-         stable, predictable responses.
+      - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-## Task 6: Explore code-generation
+### Task 6: Explore code-generation
 
-In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
+In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
-      ![](../media/imag8-1.png)
-      
+      ![](./media/python-developer-system-msga.png)
 
-3. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
-   
-      ![](../media/openai-14u.png)
+2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 
-4. Submit the following user message:
+      ![](./media/openai-14a.png)
+
+3. Submit the following user message:
 
       ```
       Write a Python function named Multiply that multiplies two numeric parameters.
       ```
 
-5. Review the response, which should include sample Python code that meets the requirement in the prompt.
-   
-      ![](../media/task-6-last.jpg)
+4. Review the response, which should include sample Python code that meets the requirement in the prompt.
+
+     ![](./media/task-6-lasta.png)
 
 ## Summary
 
-In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an Azure OpenAI model within the Azure AI Foundry portal
--   Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
+In this lab, you have provisiond an Azure OpenAI resource, deployed a model, explored a model in the Completions playground, used the Chat playground, explored prompts, parameters and code-generation.
 
-##   You have successfully completed the lab.
+### You have successfully completed the lab.

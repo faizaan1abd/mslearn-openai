@@ -154,9 +154,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the configuration pane.
+1. In the **Playground** section, select the **Chat** , and ensure that the **my-gpt-model** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes** and subsequently click on **Continue**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`, click on **Apply changes** and subsequently click on **Continue**.
 
       ![](../media/apply-changesa.png)
    
@@ -175,8 +175,6 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
-
-      ![](../media/image7a.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -233,7 +231,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
+1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** and click on **Continue** when prompted.
 
       ![](../media/python-developer-system-msga.png)
 

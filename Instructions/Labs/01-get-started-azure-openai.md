@@ -93,7 +93,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
 
-   ![](./media/ui4b.png)
+   ![](../media/ui4b.png)
    
 9. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: gpt-35-turbo-instruct (1)
@@ -104,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-        ![](./media/image1b.png)
+        ![](../media/image1b.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
@@ -128,7 +128,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 2. In the **Completions** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt.
 
-      ![](./media/generate_01a.png)
+      ![](../media/generate_01a.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -136,7 +136,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 4. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-    ![](./media/generated(1)a.png)
+    ![](../media/generated(1)a.png)
 
    >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
    
@@ -146,9 +146,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 8. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](./media/NO-3a.png)
+      ![](../media/NO-3a.png)
 
-      ![](./media/openai-7a.png)
+      ![](../media/openai-7a.png)
     
 9. Close the **Sample Code**.
 
@@ -160,7 +160,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes** and subsequently click on **Continue**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-      ![](./media/apply-changesa.png)
+      ![](../media/apply-changesa.png)
    
 4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 

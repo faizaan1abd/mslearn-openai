@@ -146,7 +146,7 @@ Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pod
 
 1. No Azure AI Foundry portal, no painel esquerdo, em **Playgrounds**, selecione **conclusões**.
 
-2. Na página **Conclusões**, certifique-se de que sua implantação **my-gpt-model** esteja selecionada. Digite `Gerar um questionário de 5 perguntas. Para cada pergunta, forneça-me as opções de resposta e a resposta correta` no prompt.
+2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct** esteja selecionada. Digite `Gere um questionário de 5 perguntas. Para cada pergunta, forneça as opções de resposta e a resposta correta` no prompt.
 
    > **Observação:** O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
@@ -188,7 +188,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
 1. Na seção **Playgrounds**, selecione a página **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
 
-2. Na seção **Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, substitua o texto atual pela seguinte declaração: `The system is an AI teacher that helps people learn about AI`.
+2. Na seção **Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, substitua o texto atual pela seguinte declaração: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`.
 
 3. Abaixo da caixa **+ adicionar seção**, clique em **Exemplos**. Insira a seguinte mensagem e resposta nas caixas designadas:
 
@@ -196,9 +196,9 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
 4. Digite a seguinte mensagem e resposta nas caixas designadas:
 
-    - **Usuário**: `What are different types of artificial intelligence?`
+    - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?`
     
-    - **Assistente**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+    - **Assistente**: `Existem três tipos principais de inteligência artificial: IA estreita ou fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA geral ou forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo da IA ​​não existe atualmente e é puramente teórica) e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórica e ainda não foi desenvolvida) .`
 
       ![](../media/8-10-24(26).png)
 
@@ -208,7 +208,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
    ![](../media/imag5.png)
 
-7. Na caixa de consulta na parte inferior da página, insira o texto `What is artificial intelligence?`
+7. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
 
 8. Use o botão **Enviar** para submeter a mensagem e visualizar a resposta.
 
@@ -216,7 +216,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
     > **Nota**: Você pode receber uma resposta informando que a implantação da API ainda não está pronta. Caso isso aconteça, aguarde alguns minutos e tente novamente.
 
-9. Revise a resposta e, em seguida, envie a seguinte mensagem para continuar a conversa: `How is it related to machine learning?`
+9. Revise a resposta e, em seguida, envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
 
 10. Revise a resposta, observando que o contexto da interação anterior é mantido (portanto, o modelo entende que "isso" se refere à inteligência artificial).
 
@@ -238,15 +238,15 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 2. Envie a seguinte mensagem na sessão de chat 
 
       ```
-      Write three multiple choice questions based on the following text.
-
-      Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.
-
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.
-
-      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.
-
-      - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+      Escreva três questões de múltipla escolha com base no texto a seguir.
+      
+      A maioria das soluções de visão computacional é baseada em modelos de aprendizado de máquina que podem ser aplicados à entrada visual de câmeras, vídeos ou imagens.
+      
+      - A classificação de imagens envolve o treinamento de um modelo de aprendizado de máquina para classificar imagens com base em seu conteúdo. Por exemplo, em uma solução de monitoramento de tráfego você pode usar um modelo de classificação de imagens para classificar imagens com base no tipo de veículo que elas contêm, como táxis, ônibus, ciclistas e assim por diante.
+      
+      - Os modelos de aprendizado de máquina para detecção de objetos são treinados para classificar objetos individuais em uma imagem e identificar sua localização com uma caixa delimitadora. Por exemplo, uma solução de monitoramento de tráfego pode usar a detecção de objetos para identificar a localização de diferentes classes de veículos.
+      
+      - A segmentação semântica é uma técnica avançada de aprendizado de máquina na qual pixels individuais da imagem são classificados de acordo com o objeto ao qual pertencem. Por exemplo, uma solução de monitoramento de tráfego pode sobrepor imagens de tráfego com camadas de “máscara” para destacar diferentes veículos usando cores específicas.
       ```
 
 3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
@@ -263,7 +263,7 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
 
-1. No painel **Configuração**, selecione o **Exemplo** na seção **+ Adicionar Seção** para redefinir a mensagem, se solicitado, clique em **Continuar**. Insira `You are a Python developer.` para Dar instruções e contexto ao modelo e salvar as alterações clicando em **Aplicar Alterações** quando solicitado, clique em **Continuar**.
+1. No painel **Configuração**, selecione o **Exemplo** na seção **+ Adicionar Seção** para redefinir a mensagem, se solicitado, clique em **Continuar**. Insira `Você é um desenvolvedor Python.` para Dar instruções e contexto ao modelo e salvar as alterações clicando em **Aplicar Alterações** quando solicitado, clique em **Continuar**.
   
    ![](../media/imag9.png)
 

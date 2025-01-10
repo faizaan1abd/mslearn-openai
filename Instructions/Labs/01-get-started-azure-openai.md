@@ -107,7 +107,7 @@ Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure AI Foundry p
 
 1. En Azure AI Foundry portal, en el panel izquierdo, bajo **Patios de juego**, seleccione **Finalizaciones**.
 
-2. En la página **Finalizaciones**, asegúrese de que su implementación **my-gpt-model** esté seleccionada y, luego, en la lista **Ejemplos**, seleccione **Generar un cuestionario**.
+2. En la página Finalizaciones, asegúrese de que su implementación gpt-35-turbo-instruct esté seleccionada, escriba `Generar un cuestionario de 5 preguntas. Para cada pregunta, proporcione las opciones de respuesta y la respuesta correcta` en el mensaje y haga clic en **Generar**.
 
     ![](../media/gene-01.png)
 
@@ -136,15 +136,16 @@ El patio de juegos de *Chat* proporciona una interfaz de chatbot para los modelo
 
 1. En la sección **Patios de juego**, seleccione la página **Chat** y asegúrese de que el modelo **my-gpt-model** esté seleccionado en el panel de configuración.
 
-2. En la sección **Configuración**, en el cuadro **Mensaje del sistema**, reemplace el texto actual con la siguiente oración: `The system is an AI teacher that helps people learn about AI`.
+2. En la sección **Configuración**, en el cuadro **Mensaje del sistema**, reemplace el texto actual con la siguiente oración: `
+El sistema es un profesor de IA que ayuda a las personas a aprender sobre la IA.`.
 
 3. Debajo del cuadro Mensaje del sistema, haga clic en + Agregar sección, seleccione ejemplos e ingrese el siguiente mensaje y respuesta en los cuadros designados:
 
    ![](../media/example.png)
 
-    - **Usuario**: `What are different types of artificial intelligence?`
+    - **Usuario**: `¿Cuáles son los diferentes tipos de inteligencia artificial?`
     
-    - **Asistente**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+    - **Asistente**: `Hay tres tipos principales de inteligencia artificial: IA estrecha o débil (como asistentes virtuales como Siri o Alexa, software de reconocimiento de imágenes y filtros de spam), IA general o fuerte (IA diseñada para ser tan inteligente como un ser humano. Este tipo de IA no existe actualmente y es puramente teórica), y la Superinteligencia Artificial (IA que es más inteligente que cualquier ser humano y puede realizar tareas que están más allá de la comprensión humana. Este tipo de IA también es puramente teórica y aún no se ha desarrollado) .`
 
         ![](../media/apply_changes.png)
   
@@ -179,15 +180,15 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
 3. Envíe el siguiente mensaje en la sesión de chat
 
     ```
-    Write three multiple choice questions based on the following text.
+   Escribe tres preguntas de opción múltiple basadas en el siguiente texto.
 
-    Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
-
-    - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
-
-    - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
-
-    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
+   La mayoría de las soluciones de visión por computadora se basan en modelos de aprendizaje automático que se pueden aplicar a la información visual de cámaras, videos o imágenes.*
+   
+   - La clasificación de imágenes implica entrenar un modelo de aprendizaje automático para clasificar imágenes en función de su contenido. Por ejemplo, en una solución de monitoreo de tráfico, podría usar un modelo de clasificación de imágenes para clasificar imágenes según el tipo de vehículo que contienen, como taxis, autobuses, ciclistas, etc.*
+   
+   - Los modelos de aprendizaje automático de detección de objetos están entrenados para clasificar objetos individuales dentro de una imagen e identificar su ubicación con un cuadro delimitador. Por ejemplo, una solución de monitoreo de tráfico podría utilizar la detección de objetos para identificar la ubicación de diferentes clases de vehículos.*
+   
+   - La segmentación semántica es una técnica avanzada de aprendizaje automático en la que los píxeles individuales de la imagen se clasifican según el objeto al que pertenecen. Por ejemplo, una solución de monitoreo de tráfico podría superponer imágenes de tráfico con capas de "máscara" para resaltar diferentes vehículos usando colores específicos.
     ```
 
     ![](../media/last-3.jpg)
@@ -206,7 +207,7 @@ Además de generar respuestas en lenguaje natural, puede utilizar modelos GPT pa
 
 1. En el panel **Configuración**, seleccione la plantilla **Ejemplo vacío** y luego haga clic en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema** para restablecer el mensaje del sistema.
 
-2. Ingrese el mensaje del sistema: `You are a Python developer.` y haga clic en **Aplicar cambios** y luego haga clic en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema**.
+2. Ingrese el mensaje del sistema: `Eres un desarrollador de Python.` y haga clic en **Aplicar cambios** y luego haga clic en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema**.
 
 3. En el panel **Sesión de chat**, seleccione **Borrar chat** y luego haga clic en **Borrar** en la pestaña Borrar chat para borrar el historial de chat e iniciar una nueva sesión.
 

@@ -18,11 +18,14 @@ En este laboratorio, completará las siguientes tareas:
 
 ### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
-Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
+1. Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
 
    ![](../media/openai_1.png)
+
 2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
+
    ![](../media/create.png)
+
 3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
     - **Suscripción**: Predeterminada - Suscripción preasignada (1).
     - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)

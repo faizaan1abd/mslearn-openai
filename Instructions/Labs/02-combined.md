@@ -11,10 +11,9 @@ En el escenario de este ejercicio, desempeñará el papel de un desarrollador de
 En este laboratorio, completará las siguientes tareas:
 
 - Tarea 1: Aprovisionar un recurso Azure OpenAI
-- Tarea 2: Implementar un modelo
-- Tarea 3: Configurar una aplicación en Cloud Shell
-- Tarea 4: Configurar su aplicación
-- Tarea 5: Ejecutar su aplicación
+- Tarea 2: Configurar una aplicación en Cloud Shell
+- Tarea 3: Configurar su aplicación
+- Tarea 4: Ejecutar su aplicación
 
 ### Tarea 1: Aprovisionar un recurso de Azure OpenAI
 
@@ -45,61 +44,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
    <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
 
-### Tarea 2: Implementar un modelo
-
-Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a través de **Azure AI Foundry portal**. Una vez implementado, haremos referencia a ese modelo en nuestra aplicación.
-
-1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
-
-   ![](../media/openai_1.png)
-
-2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
-
-   ![](../media/openai_2_1.png)
-
-3. En el panel de recursos de Azure OpenAI, haga clic en **Go to Azure AI Foundry portal** para navegar a **Azure AI Foundry portal.**.
-
-   ![](../media/spanish_foundry.png)
-
->**Note**: Antes de implementar un modelo, asegúrese de estar en OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> marcando la esquina superior derecha. Si no es así, haga clic en el menú desplegable y selecciónelo.
-
-   ![](../media/swap_model.png)
-
-5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**. 
-
-   ![](../media/spansih_model.png)
-
-6. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo-16k (1)** y haga clic en **Confirmar (2)**.
-
-   ![](../media/new4.png)
-
-7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
-    
-    - **Nombre de implementación**: text-turbo (1) 
-    - **Tipo de implementación**: Standard (2)
-    - **Versión de modelo**: 0613(Default) (3)
-    - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
-    - **Habilitar cuota dinámica**: Habilitado (5)
-    - Haga clic en **Implementar** (6)
-  
-      ![](../media/new2-1.png)
-
-8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
-
-   > **Nota**: Puede ignorar la notificación "No se pudo obtener información de la cuota de implementaciones"
-   
-   > **Nota**: Cada modelo de Azure OpenAI está optimizado para un equilibrio diferente de capacidades y rendimiento. En este ejercicio, utilizaremos la serie de modelos **3.5 Turbo** de la familia de modelos **GPT-3**, que tiene una gran capacidad de comprensión del lenguaje. Este ejercicio solo utiliza un modelo único; sin embargo, la implementación y el uso de otros modelos que implemente funcionarán de la misma manera.
-
-#### Validación
-
-> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
-> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
-> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
-> - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
-
-   <validation step="d1610911-47ae-44ef-a286-4f4961a4b36d" />
-
-### Tarea 3: Configurar una aplicación en Cloud Shell
+### Tarea 2: Configurar una aplicación en Cloud Shell
 
 Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicación de línea de comandos breve que se ejecuta en Cloud Shell en Azure. Abra una nueva pestaña del navegador para trabajar con Cloud Shell.
 

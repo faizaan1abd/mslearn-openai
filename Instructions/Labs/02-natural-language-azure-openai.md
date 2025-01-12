@@ -20,15 +20,24 @@ En este laboratorio, completará las siguientes tareas:
 
 Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
 
-1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
+   ![](../media/openai_1.png)
+2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
+   ![](../media/create.png)
+3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
+    - **Suscripción**: Predeterminada - Suscripción preasignada (1).
+    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Región**: **UKsouth**(3)
+    - **Nombre**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **Plan de tarifa**: Standard S0 (5)
+    -  Haga clic en **Siguiente** (6)
+  
+        ![](../media/azopenai123.png "Create Azure OpenAI resource")
 
-   ![](../media/nls300.png)
+4. Haga clic en **Siguiente** dos veces y haga clic en **Crear**.
 
-2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+5. Espere a que se complete la implementación. Luego, vaya al recurso de Azure OpenAI implementado en el Portal de Azure.
 
-   ![](../media/nls303.png)
-
-3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
+6. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.

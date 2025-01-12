@@ -150,7 +150,7 @@ Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure AI Foundry p
 
     ![](../media/nls311.png)
 
-    ![](../media/nls312.png)
+    ![](../media/nls312-1.png)
 
 6. Cierre el código de muestra.
 
@@ -201,7 +201,7 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
     - **Temperatura**: 0
     - **Longitud máxima (tokens)**: 500
 
-        ![](../media/nls318png)
+        ![](../media/nls318.png)
    
 2. Envíe el siguiente mensaje en la sesión de chat
 

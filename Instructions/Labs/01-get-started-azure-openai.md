@@ -109,8 +109,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-   
-     > **Note**: Azure OpenAI offers a variety of models, each optimized for different balances of capabilities and performance. In this exercise, you'll be using the **gpt-4o-mini** and a completion model, which is well-suited for tasks like summarizing and generating natural language and code. For more details on the available models in Azure OpenAI, refer to the [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) page in the Azure OpenAI documentation.
 
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps

@@ -79,7 +79,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
 7. Una vez que se abra la terminal, haga clic en **Configuración** y seleccione **Ir a la versión clásica**.
 
-   ![](../media/nls322.png)
+   ![](../media/nls323.png)
 
 8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
 

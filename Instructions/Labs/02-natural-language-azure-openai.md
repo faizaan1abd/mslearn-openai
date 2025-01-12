@@ -22,7 +22,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/nls301.png)
+   ![](../media/nls300.png)
 
 2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 

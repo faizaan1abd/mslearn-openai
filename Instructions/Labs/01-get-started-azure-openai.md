@@ -35,7 +35,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
     - **Nombre**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
     - **Plan de tarifa**: Standard S0 (5)
   
-      ![](../media/nls302-1")
+      ![](../media/nls302-1.png)
 
 4. Haga clic en **Siguiente** tres veces y haga clic en **Crear**.
 

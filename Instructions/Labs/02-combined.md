@@ -77,14 +77,18 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
 6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-7. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
+7. Una vez que se abra la terminal, haga clic en **Configuración** y seleccione **Ir a la versión clásica**.
+
+   ![](../media/nls322.png)
+
+8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. Los archivos se descargan en una carpeta llamada **azure-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
+9. Los archivos se descargan en una carpeta llamada **azure-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
@@ -92,14 +96,11 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
     Se han proporcionado aplicaciones para C# y Python, así como un archivo de texto de ejemplo que utilizará para probar el resumen. Ambas aplicaciones cuentan con la misma funcionalidad.
 
-9. Abra el editor de código integrado y observe el archivo de texto que resumirá con su modelo ubicado en `text-files/sample-text.txt`. Use el siguiente comando para abrir los archivos de laboratorio en el editor de código.
+10. Abra el editor de código integrado y observe el archivo de texto que resumirá con su modelo ubicado en `text-files/sample-text.txt`. Use el siguiente comando para abrir los archivos de laboratorio en el editor de código.
 
     ```bash
     code .
     ```
-    > **NOTA:** Si se le solicita que **Cambie a la versión clásica de Cloud Shell** después de ejecutar el comando **code .**, haga clic en **Confirmar** y vuelva a realizar los pasos 8 y 9.
-
-   ![](../media/classic-cloudshell-prompt.png) 
    
 #### Validación
 
@@ -110,7 +111,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-### Tarea 4: Configurar su aplicación
+### Tarea 3: Configurar su aplicación
 
 Para este ejercicio, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
 
@@ -379,7 +380,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
    >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
-### Tarea 5: Ejecutar su aplicación
+### Tarea 4: Ejecutar su aplicación
 
 Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitud a su modelo y observe la respuesta.
 

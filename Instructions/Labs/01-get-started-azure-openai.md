@@ -21,21 +21,21 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai_1.png)
+   ![](../media/nls300.png)
 
 2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
 
-   ![](../media/create.png)
+   ![](../media/nls301.png)
 
 3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
    
-    - **Suscripción**: Predeterminada - Suscripción preasignada.
-    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Región**: Seleccione <inject key="Region" enableCopy="false" />
-    - **Nombre**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Plan de tarifa**: Standard S0
+    - **Suscripción**: Predeterminada - Suscripción preasignada (1)
+    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Región**: Seleccione <inject key="Region" enableCopy="false" /> (3)
+    - **Nombre**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **Plan de tarifa**: Standard S0 (5)
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/nls302-1")
 
 4. Haga clic en **Siguiente** tres veces y haga clic en **Crear**.
 
@@ -56,40 +56,63 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
 
-   ![](../media/openai_1.png)
+   ![](../media/nls301.png)
 
 2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/openai_2_1.png)
+   ![](../media/nls303.png)
 
 3. En el panel de recursos de Azure OpenAI, haga clic en **Go to Azure AI Foundry portal** para navegar a **Azure AI Foundry portal**.
 
-    ![](../media/spanish_foundry.png)
+    ![](../media/nls304.png)
 
 5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
     ![](../media/spansih_model.png)
 
-6. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo (1)** y haga clic en **Confirmar (2)**.
+6. En la ventana **Seleccionar un modelo**, seleccione **gpt-4o-mini** y haga clic en **Confirmar**.
 
-   ![](../media/mew5.png)
+   ![](../media/nls305.png)
 
 7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - **Nombre de implementación**: my-gpt-model (1) 
     - **Tipo de implementación**: Standard (2)
-    - **Versión de modelo**: 0301(default) (3)
+    - **Versión de modelo**: 2024-07-18 (Padrao) (3)
     - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
-    - **Habilitar cuota dinámica**: Habilitado (5)
-    - Haga clic en **Implementar** (6)
+    - **Filtro de conteudo**: DefaultV2 (5)
+    - **Habilitar cuota dinámica**: Habilitado (6)
+    - Haga clic en **Implementar** (7)
   
-      ![](../media/new3-1.png)
+      ![](../media/nls322.png)
 
-8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
+         > **Note**: gpt-4o-mini solo se admite para la finalización del chat y no para la API de finalización.
 
-   > **Nota**: Puede ignorar cualquier error relacionado con la asignación de roles para ver los límites de cuota.
+8.  Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-   > **Nota**: Azure OpenAI incluye varios modelos, cada uno optimizado para un equilibrio diferente de capacidades y rendimiento. En este ejercicio, usará el modelo **GPT-35-Turbo**, que es un buen modelo general para resumir y generar lenguaje natural y código. Para obtener más información sobre los modelos disponibles en Azure OpenAI, consulte [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) en la documentación de Azure OpenAI.
+    ![](../media/spansih_model.png)
+
+9. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo-instruct** y haga clic en **Confirmar**.
+
+    ![](../media/nls307.png)
+
+10. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
+    
+    - **Nombre de implementación**: gpt-35-turbo-instruct (1) 
+    - **Tipo de implementación**: Estendar (2)
+    - **Versión de modelo**: 0914 (3)
+    - **Tokens por límite de velocidad por minuto (miles)**: 20K (4)
+    - **Filtro de conteudo**: DefaultV2 (5)
+    - **Habilitar cuota dinámica**: Habilitado (6)
+    - Haga clic en **Implementar** (7)
+
+       ![](../media/nls308.png)
+
+
+11. Estos implementarán modelos con los que puede experimentar tanto para el chat como para completar tareas a medida que avanza.
+
+      > **Note**: Puede ignorar cualquier error relacionado con la asignación de roles para ver los límites de cuota.
+
 
 #### Validación
 
@@ -105,30 +128,31 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 Los *Playgrounds* (Patios de juego) son interfaces útiles en Azure AI Foundry portal que puede usar para experimentar con sus modelos implementados sin necesidad de desarrollar su propia aplicación cliente.
 
-1. En Azure AI Foundry portal, en el panel izquierdo, bajo **Patios de juego**, seleccione **Finalizaciones**.
+1. En Azure OpenAI Foundry, en el panel izquierdo, debajo de **Playgrounds**, seleccione **Finalizaciones**.
 
 2. En la página Finalizaciones, asegúrese de que su implementación gpt-35-turbo-instruct esté seleccionada, escriba `Generar un cuestionario de 5 preguntas. Para cada pregunta, proporcione las opciones de respuesta y la respuesta correcta` en el mensaje y haga clic en **Generar**.
 
-    ![](../media/gene-01.png)
+    ![](../media/nls309.png)
 
-    El ejemplo de texto resumido consta de un *prompt* que proporciona un texto para indicar al modelo qué tipo de respuesta se requiere e incluye información contextual.
+     > **Note**: La muestra de texto resumido consta de un mensaje que proporciona texto para indicarle al modelo qué tipo de respuesta se requiere e incluye información contextual.
 
-4. En la parte inferior de la página, observe la cantidad de *tokens* detectados en el texto. Los tokens son las unidades básicas de un prompt - esencialmente palabras o partes de palabras en el texto.
+3. La respuesta consiste en una prueba basada en el ejemplo del mensaje.
 
-5. Use el botón **Generar** para enviar el prompt al modelo y obtener una respuesta.
+    ![](../media/nls310.png)
 
-   ![](../media/generate_aquiz.png)
+      > **Nota**: El resultado del chat puede variar. La captura de pantalla se proporciona solo como referencia y es posible que no refleje exactamente el mismo resultado.
 
-    La respuesta consta de un cuestionario basado en el ejemplo del prompt.
+      > **Nota**: Puede utilizar el botón Regenerar para volver a enviar el mensaje (se han realizado nuevos cambios) y tenga en cuenta que la respuesta puede variar de la original. Un modelo de IA generativa puede producir un nuevo lenguaje cada vez que se llama.
 
-    >**Nota**: Puede usar el botón **Regenerar** para volver a enviar el prompt (se han realizado nuevos cambios) y tenga en cuenta que la respuesta puede variar con respecto a la original. Un modelo de IA generativa puede producir un nuevo lenguaje cada vez que es llamado.
+4. En la parte inferior de la página, anote la cantidad de tokens detectados en el texto. Los tokens son las unidades básicas de una indicación: esencialmente palabras o partes de palabras en el texto.
 
-7. Use el botón **Ver código** para ver el código que usaría una aplicación cliente para enviar el prompt. Puede seleccionar su lenguaje de programación preferido. El aviso contiene el texto que envió al modelo. La solicitud se envía a la API *Completions* para su servicio Azure OpenAI.
+5. Utilice el botón **Ver código** para ver el código que una aplicación cliente usaría para enviar el mensaje. Puede seleccionar su lenguaje de programación preferido. El mensaje contiene el texto que envió al modelo. La solicitud se envía a la API de finalización de su servicio Azure OpenAI.
 
-   ![](../media/view_code_1.png)
+    ![](../media/nls311.png)
 
-   ![](../media/viewed_code.png)
-   
+    ![](../media/nls312.png)
+
+6. Cierre el código de muestra.
 
 ### Tarea 4: Utilizar el Área de juegos Chat
 
@@ -139,33 +163,35 @@ El patio de juegos de *Chat* proporciona una interfaz de chatbot para los modelo
 2. En la sección **Configuración**, en el cuadro **Mensaje del sistema**, reemplace el texto actual con la siguiente oración: `
 El sistema es un profesor de IA que ayuda a las personas a aprender sobre la IA.`.
 
+    ![](../media/nls313.png)
+
 3. Debajo del cuadro Mensaje del sistema, haga clic en + Agregar sección, seleccione ejemplos e ingrese el siguiente mensaje y respuesta en los cuadros designados:
 
-   ![](../media/example.png)
+    ![](../media/nls314.png)
 
     - **Usuario**: `¿Cuáles son los diferentes tipos de inteligencia artificial?`
     
     - **Asistente**: `Hay tres tipos principales de inteligencia artificial: IA estrecha o débil (como asistentes virtuales como Siri o Alexa, software de reconocimiento de imágenes y filtros de spam), IA general o fuerte (IA diseñada para ser tan inteligente como un ser humano. Este tipo de IA no existe actualmente y es puramente teórica), y la Superinteligencia Artificial (IA que es más inteligente que cualquier ser humano y puede realizar tareas que están más allá de la comprensión humana. Este tipo de IA también es puramente teórica y aún no se ha desarrollado) .`
 
-        ![](../media/apply_changes.png)
+       ![](../media/nls315.png)
   
     > **Nota**: Se utilizan algunos ejemplos para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
   
-5. Haga clic en **Guardar** y luego en **Continuar** en la pestaña emergente **Actualizar mensaje del sistema** para iniciar una nueva sesión y configurar el contexto de comportamiento del sistema de chat.
+5. Guarde los cambios haciendo clic en **Aplicar cambios** y posteriormente haga clic en **Continuar** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
 
-6. En el cuadro de consulta en la parte inferior de la página, ingrese el texto `What is artificial intelligence?`
+   ![](../media/nls316.png)
 
-    ![](../media/chat_prompt.png)
+6. En el cuadro de consulta en la parte inferior de la página, ingrese el texto `¿Qué es la inteligencia artificial?`. Utilice el botón **Enviar** para enviar el mensaje y ver la respuesta.
 
-8. Use el botón **Enviar** para enviar el mensaje y ver la respuesta.
+      > **Nota**: Es posible que reciba una respuesta indicando que la implementación de API aún no está lista. Si es así, espera unos minutos y vuelve a intentarlo.
 
-    > **Nota**: Es posible que reciba una respuesta que indique que la implementación de la API aún no está lista. Si es así, espere unos minutos e intente nuevamente.
+7. Revise la respuesta y luego envíe el siguiente mensaje para continuar la conversación: `¿Cómo se relaciona con el aprendizaje automático?`
 
-9. Revise la respuesta y luego envíe el siguiente mensaje para continuar la conversación: `How is it related to machine learning?`
+8. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo entienda que "eso" se refiere a inteligencia artificial).
 
-10. Revise la respuesta y observe que se conserva el contexto de la interacción anterior (para que el modelo comprenda que "it" se refiere a la inteligencia artificial).
+9. Utilice el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los ejemplos breves de mensajes de *usuario* y *asistente*, y la secuencia de mensajes de *usuario* y *asistente* en la sesión de chat hasta el momento.
 
-11. Use el botón **Ver código** para ver el código de la interacción. El mensaje consta del mensaje del *sistema*, los pocos ejemplos de mensajes del *usuario* y del *asistente*, y la secuencia de mensajes del *usuario* y del *asistente* en la sesión de chat hasta el momento.
+      ![](../media/nls317.png)
 
 ### Tarea 5: Explorar prompts y parámetros 
 
@@ -175,9 +201,9 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
     - **Temperatura**: 0
     - **Longitud máxima (tokens)**: 500
 
-     ![](../media/param.png)
+        ![](../media/nls318png)
    
-3. Envíe el siguiente mensaje en la sesión de chat
+2. Envíe el siguiente mensaje en la sesión de chat
 
     ```
    Escribe tres preguntas de opción múltiple basadas en el siguiente texto.
@@ -191,7 +217,9 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
    - La segmentación semántica es una técnica avanzada de aprendizaje automático en la que los píxeles individuales de la imagen se clasifican según el objeto al que pertenecen. Por ejemplo, una solución de monitoreo de tráfico podría superponer imágenes de tráfico con capas de "máscara" para resaltar diferentes vehículos usando colores específicos.
     ```
 
-    ![](../media/last-3.jpg)
+3. Revise los resultados, que deben consistir en preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión por computadora en el mensaje. La respuesta total debe ser menor que la longitud máxima especificada como parámetro.
+
+      ![](../media/nls319.png)
 
 4. Revise los resultados, los cuales deben consistir de preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión artificial en el prompt. La respuesta total debe ser menor que la longitud máxima que especificó como parámetro.
 
@@ -205,21 +233,21 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
 
 Además de generar respuestas en lenguaje natural, puede utilizar modelos GPT para generar código.
 
-1. En el panel **Configuración**, seleccione la plantilla **Ejemplo vacío** y luego haga clic en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema** para restablecer el mensaje del sistema.
+1. En el **panel de configuración**, bajo **Mensaje del sistema**, ingrese el mensaje del sistema: `Usted es un desarrollador de Python`. Luego guarde los cambios haciendo clic en **Aplicar cambios** y haga clic en **Continuar** cuando se le solicite.
 
-2. Ingrese el mensaje del sistema: `Eres un desarrollador de Python.` y haga clic en **Aplicar cambios** y luego haga clic en **Continuar** en la pestaña emergente **Actualizar mensaje de sistema**.
+      ![](../media/nls320.png)
 
-3. En el panel **Sesión de chat**, seleccione **Borrar chat** y luego haga clic en **Borrar** en la pestaña Borrar chat para borrar el historial de chat e iniciar una nueva sesión.
+2. En el panel **Sesión de chat**, seleccione **Borrar chat** para borrar el historial de chat e iniciar una nueva sesión.
 
-   ![](../media/clear_chat.png)
+      ![](../media/nls321.png)  
 
-2. Envíe el siguiente mensaje de usuario:
+3. Envíe el siguiente mensaje de usuario:
 
     ```
     Write a Python function named Multiply that multiplies two numeric parameters.
     ```
 
-5. Revise la respuesta, que debe incluir un código de Python de ejemplo que cumple con el requisito en el prompt.
+4. Revise la respuesta, que debe incluir un código de Python de ejemplo que cumple con el requisito en el prompt.
 
    ![](../media/task-6-last.jpg)
 

@@ -80,7 +80,7 @@ In this task, you will observe how the base model responds to queries without an
 
      ![](../media/4.png "upload files")
 
-8. Create a container with the name "openaidatasource" and enable Anonymous access level for container.
+8. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
 
       ![](../media/image4.6.png "create container")
 

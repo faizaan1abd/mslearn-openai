@@ -122,9 +122,9 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions playground** page, ensure your **my-gpt-model** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
-   ![](../media/lab1-g1u.png)
+   ![](../media/aicompletionmodel.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -136,7 +136,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code.jpg)
+      ![](../media/codeviewcompletion.jpg)
 
       ![](../media/openai-7uu.png)
     

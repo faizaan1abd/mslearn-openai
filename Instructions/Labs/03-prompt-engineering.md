@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **my-gpt-model** model is selected in the Deployment pane.
 
 1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 
@@ -176,7 +176,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 

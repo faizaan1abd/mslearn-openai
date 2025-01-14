@@ -130,7 +130,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 3. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/lab1-g2.png)
+      ![](../media/lab1-g2upd.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 

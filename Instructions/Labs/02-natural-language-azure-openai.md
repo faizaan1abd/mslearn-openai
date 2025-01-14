@@ -96,7 +96,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
-### Task 4: Configure your application
+### Task 3: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
@@ -225,7 +225,7 @@ In this task, you will complete key parts of the application to enable it to use
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-### Task 5: Test your application
+### Task 4: Test your application
 
 In this task, you will run your configured app to send a request to your model and observe the response.
 
@@ -274,7 +274,7 @@ In this task, you will run your configured app to send a request to your model a
 
 Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
 
-### Task 6: Maintain conversation history
+### Task 5: Maintain conversation history
 
 In this task, you will provide a history of the conversation in your prompt to enable the Azure OpenAI model to reference past messages, enhancing the realism of interactions despite the API's stateless design.
 

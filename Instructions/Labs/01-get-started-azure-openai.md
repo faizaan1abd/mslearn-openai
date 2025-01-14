@@ -136,7 +136,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/codeviewcompletionupd.jpg)
+      ![](../media/codeviewcompletionupd.png)
 
       ![](../media/openai-7uu.png)
     

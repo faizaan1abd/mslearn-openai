@@ -82,54 +82,49 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Nome da implantação: **my-gpt-model (1)**
 
-    - Tipo de implantação: **Padrão Global (2)**
-  
-    - Clique em **Recolher**
+    - Tipo de implantação: **Standard (2)**
     
     - Versão do modelo: **2024-07-18(default) (3)**
     
     - Limite de Taxa de Tokens por Minuto: **10K (4)**
+
+    - Filtro de conteudo: **DefaultV2 (5)** 
     
-    - Habilitar cota dinâmica: **Habilitado (5)**
+    - Habilitar cota dinâmica: **Habilitado (6)**
     
-    - Clique em **Implantar (6)**
+    - Clique em **Implantar (7)**
       
-      ![](../media/my-gpt-portuguese.png)
+      ![](../media/nls600.png)
 
 5. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
    ![](../media/portugesemodel.png)
 
-7. Na janela **Selecionar um modelo**, selecione **babbage-002** e clique em **Confirmar**.
+7. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-instruct** e clique em **Confirmar**.
 
-   ![](../media/babbage1.2portuguese.png)
+      ![](../media/nls601.png)
    
 8. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
-    - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
-    
-    - Nome da implantação: **babbage-002 (1)**
+    - Nome da implantação: **gpt-35-turbo-instruct (1)**
 
     - Tipo de implantação: **Standard (2)**
-  
-    - Clique em **Recolher**
     
-    - Versão do modelo: **1 (3)**
+    - Versão do modelo: **0914 (Padrao) (3)**
     
-    - Limite de Taxa de Tokens por Minuto: **10K (4)**
+    - Limite de Taxa de Tokens por Minuto: **20K (4)**
+
+    - Filtro de conteudo: **DefaultV2 (5)**  
     
-    - Habilitar cota dinâmica: **Habilitado (5)**
+    - Habilitar cota dinâmica: **Habilitado (6)**
     
-    - Clique em **Implantar (6)**
+    - Clique em **Implantar (7)**
       
-      ![](../media/babbage-02-portugues.png)
+         ![](../media/nls602.png)
 
-9. Isso irá implementar um modelo que você explorará nas próximas etapas.
+10. Eles implantarão modelos que você pode experimentar tanto para tarefas de bate-papo quanto para tarefas de conclusão à medida que avança.
 
-   > **Observação**: Você pode ignorar qualquer erro relacionado à atribuição de papéis para visualizar os limites de cota.
-   
-   > **Observação**: o Azure OpenAI oferece uma variedade de modelos, cada um otimizado para diferentes equilíbrios de características e desempenho. Neste exercício, irá utilizar **gpt-4o-mini** e **babbage -002** um modelo de conclusão, que é adequado para tarefas como resumir e gerar linguagem natural e código. Para mais detalhes sobre os modelos disponíveis no Azure OpenAI, consulte a página [Modelos](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) na documentação do Azure OpenAI.
-   
+      > **Observação**: você pode ignorar qualquer erro relacionado à atribuição de funções para visualizar os limites de cota.
 
 #### Validação
 
@@ -144,43 +139,31 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
 Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pode usar para experimentar seus modelos implementados sem precisar desenvolver a sua aplicação cliente.
 
-1. No Azure AI Foundry portal, no painel esquerdo, em **Playgrounds**, selecione **conclusões**.
+1. No Azure OpenAI Foundry, no painel esquerdo em **Playgrounds**, selecione **Conclusões**.
 
-2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct** esteja selecionada. Digite `Gere um questionário de 5 perguntas. Para cada pergunta, forneça as opções de resposta e a resposta correta` no prompt.
+2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct** esteja selecionada, digite `Gerar um questionário de 5 perguntas Para cada pergunta, forneça as opções de resposta e a resposta correta` no campo prompt e clique em **Gerar**.
 
-   > **Observação:** O texto resumido consiste em um *prompt* que fornece algum texto para dizer ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
+      ![](../media/nls603.png)
 
-3. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt - essencialmente palavras ou partes de palavras no texto.
+      > **Observação:** O exemplo de texto resumido consiste em um *prompt* que fornece algum texto para informar ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
-4. Use o botão **Generate** para enviar o prompt ao modelo e recuperar uma resposta (talvez seja necessário rolar para baixo). A resposta consiste em um quiz baseado no exemplo no prompt.
+3. A resposta consiste em um questionário baseado no exemplo do prompt.
 
-   ![](../media/imag1.png)
+      ![](../media/nls604.png)
 
-   >**Observação**: Se você não receber a saída esperada na nova experiência, siga as etapas abaixo:
+>**Nota** : O resultado do chat pode variar. A captura de tela é fornecida apenas para referência e pode não refletir exatamente o mesmo resultado.
 
-5. No canto superior direito, alterne a barra para alternar para a experiência antiga.
+   >**Observação**: Você pode usar o botão **Regenerar** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode ser diferente da original. Um modelo generativo de IA pode produzir uma nova linguagem cada vez que é chamado.
 
-   ![](../media/imag2.png)
+4. Na parte inferior da página, anote o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt – essencialmente palavras ou partes de palavras no texto.
 
-5. Na página **Completações**, certifique-se de que sua implementação **my-gpt-model** esteja selecionada e, na lista **Exemplos**, selecione **Gerar um questionário (1)**.
+5. Use o botão **Visualizar código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completions* do seu serviço Azure OpenAI.
 
-6. Use o botão **Gerar (2)** para enviar o prompt ao modelo e obter uma resposta.
+      ![](../media/nls605.png)
 
-   ![](../media/8-10-24(21).png)
+      ![](../media/8-10-24(23).png)
 
-   A resposta consiste em um questionário baseado no exemplo no prompt.
-
-   >**Observação**: Você pode clicar em gerar novamente, se a resposta estiver incompleta.
-
-   >**Observação**: Você pode usar o botão **Regenerate** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode variar da original. Um modelo de IA generativo pode produzir uma nova linguagem cada vez que for chamado.
-
-7. Use o botão **Ver Código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completações* para o seu serviço Azure OpenAI.
-
-   ![](../media/8-10-24(22).png)
-   
-   ![](../media/8-10-24(23).png)
-
-9. Feche o **Código de amostra**.
+6. Feche o **Código de Amostra**.
 
 ## Tarefa 4: Use o playground de Chat
 

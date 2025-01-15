@@ -169,11 +169,11 @@ Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pod
 
 O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e superiores. Ele usa a API *ChatCompletions* em vez da antiga API *Completions*.
 
-1. Na seção **Playgrounds**, selecione a página **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
+1. Na seção **Playground**, selecione **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
 
-2. Na seção **Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, substitua o texto atual pela seguinte declaração: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`.
+2. Na seção **Configuração**, na caixa **Forneça instruções e contexto ao modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`, clique em * *Aplique as alterações** e clique em **Continuar**.
 
-3. Abaixo da caixa **+ adicionar seção**, clique em **Exemplos**. Insira a seguinte mensagem e resposta nas caixas designadas:
+3. Na seção **Configuração**, clique na caixa **Adicionar seção** e, em seguida, clique em **Exemplos**.
 
    ![](../media/imag4.png)
 
@@ -187,25 +187,19 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
       > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-5. Salve as alterações clicando em **Salvar** e na mensagem pop-up Atualizar sistema?, clique em **Continuar**.
+5. Salve as alterações clicando em **Aplicar alterações** e posteriormente clique em **Continuar** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
    ![](../media/imag5.png)
 
-7. Na caixa de consulta na parte inferior da página, insira o texto `O que é inteligência artificial?`
+7. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial?`. Use o botão **Enviar** para enviar a mensagem e visualizar a resposta.
 
-8. Use o botão **Enviar** para submeter a mensagem e visualizar a resposta.
+      > **Observação**: você pode receber uma resposta informando que a implantação da API ainda não está pronta. Nesse caso, aguarde alguns minutos e tente novamente.
 
-     ![](../media/8-10-24(28).png)
+8. Revise a resposta e envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
 
-    > **Nota**: Você pode receber uma resposta informando que a implantação da API ainda não está pronta. Caso isso aconteça, aguarde alguns minutos e tente novamente.
+9. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que “isso” se refere à inteligência artificial).
 
-9. Revise a resposta e, em seguida, envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
-
-10. Revise a resposta, observando que o contexto da interação anterior é mantido (portanto, o modelo entende que "isso" se refere à inteligência artificial).
-
-11. Use o botão **Exibir Código** para visualizar o código da interação. O prompt consiste na mensagem *system*, os exemplos de poucos-tiros de mensagens *user* e *assistant*, e a sequência de mensagens *user* e *assistant* na sessão de chat até o momento.
-
-    ![](../media/8-10-24(29).png)
+10. Use o botão **Ver código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens do *usuário* e do *assistente* e na sequência de mensagens do *usuário* e do *assistente* na sessão de bate-papo até o momento.
 
 ## Tarefa 5: Explore prompts e parâmetros
 
@@ -246,11 +240,11 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
 
-1. No painel **Configuração**, selecione o **Exemplo** na seção **+ Adicionar Seção** para redefinir a mensagem, se solicitado, clique em **Continuar**. Insira `Você é um desenvolvedor Python.` para Dar instruções e contexto ao modelo e salvar as alterações clicando em **Aplicar Alterações** quando solicitado, clique em **Continuar**.
+1. No **painel Configuração**, em **Mensagem do sistema**, insira a mensagem do sistema: `Você é um desenvolvedor Python.` e salve as alterações clicando em **Aplicar alterações** e clique em **Continuar ** quando solicitado.
   
    ![](../media/imag9.png)
 
-3. No painel **Sessão de Chat**, selecione **Limpar chat** e, em seguida, clique em **Limpar** na aba de limpeza de chat para limpar o histórico de chat e iniciar uma nova sessão.
+3. No painel **Sessão de chat**, selecione **Limpar chat** para limpar o histórico de chat e iniciar uma nova sessão.
 
    ![](../media/8-10-24(34).png)
 

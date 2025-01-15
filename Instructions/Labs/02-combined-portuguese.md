@@ -70,16 +70,20 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
 
         ![](../media/8-10-24(48).png)
 
-6. Note que você pode redimensionar o cloud shell arrastando a barra separadora na parte superior da página, ou usando os ícones **&#8212;**, **&#9723;**, e **X** no canto superior direito da página para minimizar, maximizar e fechar o painel. Para mais informações sobre como usar o Azure Cloud Shell, consulte a [documentação do Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). 
+6. Note que você pode redimensionar o cloud shell arrastando a barra separadora na parte superior da página, ou usando os ícones **&#8212;**, **&#9723;**, e **X** no canto superior direito da página para minimizar, maximizar e fechar o painel. Para mais informações sobre como usar o Azure Cloud Shell, consulte a [documentação do Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-7. Uma vez que o terminal inicie, insira o seguinte comando para baixar a aplicação de demonstração e salvá-la em uma pasta chamada `azure-openai`.
+7. Assim que o terminal abrir, clique em **Configurações** e selecione **Ir para a versão clássica**.
+
+      ![](../media/nls615.png)
+
+8. Uma vez que o terminal inicie, insira o seguinte comando para baixar a aplicação de demonstração e salvá-la em uma pasta chamada `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. Os arquivos são baixados para uma pasta chamada **azure-openai**. Navegue até os arquivos do laboratório para este exercício usando o seguinte comando.
+9. Os arquivos são baixados para uma pasta chamada **azure-openai**. Navegue até os arquivos do laboratório para este exercício usando o seguinte comando.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
@@ -87,16 +91,12 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
 
     Aplicações para C# e Python foram fornecidos, bem como um arquivo de texto de amostra que você pode usar para testar a sumarização. Ambas as aplicações apresentam a mesma funcionalidade.
 
-9. Abra o editor de código integrado e observe o arquivo de texto que você estará resumindo com seu modelo localizado em `text-files/sample-text.txt`. Use o seguinte comando para abrir os arquivos do laboratório no editor de código.
+10. Abra o editor de código integrado e observe o arquivo de texto que você estará resumindo com seu modelo localizado em `text-files/sample-text.txt`. Use o seguinte comando para abrir os arquivos do laboratório no editor de código.
 
     ```bash
     code .
     ```
 
-    > **Nota:** Se você for solicitado a **Alternar para o Cloud Shell Clássico** após executar o comando **code .**, clique em **Confirmar** e execute os passos 8 e 9 novamente.
-
-    ![](../media/8-10-24(49).png)
-   
 #### Validação
 
 > **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:

@@ -19,7 +19,7 @@ In this task, you will observe how the model behaves in a conversational interac
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** playground in the left pane.
 
-2. In the **Setup** section at the top, ensure the deployment is set to **text-turbo** and model instructions is set to **You are an AI assistant that helps people find information.**
+2. In the **Setup** section at the top, ensure the deployment is set to **my-gpt-model** and model instructions is set to **You are an AI assistant that helps people find information.**
 
 3. In the **Chat session** section, enter the following prompt.
 
@@ -49,9 +49,9 @@ In this task, you will observe how the model behaves in a conversational interac
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.
 
-1. In Azure AI Foundry portal, view the **Content filters** page from the left navigation menu.
+1. In Azure AI Foundry portal, view the **Safety + Security** page from the left navigation menu.
 
-2. Select **Create customized content filter** and review the default settings for a content filter.
+2. Select **+ Create content filter** and review the default settings for a content filter.
 
     Content filters are based on restrictions for four categories of potentially harmful content:
 

@@ -32,6 +32,18 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
+
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+
+      ![](../media/ui1.png)
+
+5. Search for **dall-e-3**, click on **Confirm**
+
+      ![](../media/dalle31.png)
+
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3**, and leave the rest of the settings as default and click on **Deploy**.
+
+      ![](../media/dalle32.png)
               
 4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    

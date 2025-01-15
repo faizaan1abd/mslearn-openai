@@ -30,7 +30,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 3. Create an **Azure OpenAI** resource with the following settings:
       - **Subscription**: Default - Pre-assigned subscription.
       - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Region**: **East US**
+      - **Region**: **Swedencentral**
       - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
       - **Pricing tier**: Standard S0
   
@@ -65,30 +65,48 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
-      ![](../media/ui1u.png)
+      ![](../media/ui1.png)
 
-5. Search for **GPT-35-TURBO**, click on **Confirm**
+5. Search for **gpt-4o-mini**, click on **Confirm**
 
-      ![](../media/pg-09u.png)
+   ![](../media/gpt-4-mini.png)
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
-      - **Model version**: 0301(Default)(3)
+      - **Model version**:2024-07-18(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
+  
+           ![](../media/gpt-4omini.png)
+
+           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+
+7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+
+      ![](../media/ui1.png)
+
+9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+
+   ![](../media/ui4b.png)
+   
+9. Within the **Deploy model** pop-up interface, enter the following details:
+      - **Deployment name**: gpt-35-turbo-instruct (1)
+      - **Deployment type**: Standard(2)
+      - Click on **Customize**.
+      - **Model version**: 0914 (Default) (3)
+      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/my-gpt-model-1u.png)
+        ![](../media/image1b.png)
 
-           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-
-7. This will deploy a model which you will be playing around with as you proceed.
+10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-   
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
@@ -104,21 +122,21 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
 
-2. In the **Completions playground** page, ensure your **my-gpt-model** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
-   ![](../media/lab1-g1u.png)
+   ![](../media/aicompletionmodel.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
 3. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/lab1-g2.png)
+      ![](../media/lab1-g2upd.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
 4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](../media/view_code.jpg)
+      ![](../media/codeviewcompletionupd.png)
 
       ![](../media/openai-7uu.png)
     

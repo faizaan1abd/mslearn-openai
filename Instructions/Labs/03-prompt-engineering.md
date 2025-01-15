@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **text-turbo** model is selected in the Deployment pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **my-gpt-model** model is selected in the Deployment pane.
 
 1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 
@@ -176,7 +176,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -377,78 +377,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
    
      **Python**
    
-```python
-import os
-import asyncio
-from dotenv import load_dotenv
-from openai import AsyncAzureOpenAI
 
-# Set to True to print the full response from OpenAI for each call
-printFullResponse = False
-
-async def main():
-    try:
-        # Get configuration settings
-        load_dotenv()
-        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-        azure_oai_key = os.getenv("AZURE_OAI_KEY")
-        azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-
-        # Configure the Azure OpenAI client
-        client = AsyncAzureOpenAI(
-            azure_endpoint=azure_oai_endpoint,
-            api_key=azure_oai_key,
-            api_version="2024-02-15-preview"
-        )
-
-        while True:
-            # Pause the app to allow the user to enter the system prompt
-            print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
-            input()
-
-            # Read in system message and prompt for user message
-            system_text = open(file="system.txt", encoding="utf8").read().strip()
-            user_text = input("Enter user message: ")
-            if user_text.lower() == 'quit' or system_text.lower() == 'quit':
-                print('Exiting program...')
-                break
-
-            await call_openai_model(
-                system_message=system_text,
-                user_message=user_text,
-                model=azure_oai_deployment,
-                client=client
-            )
-
-    except Exception as ex:
-        print(ex)
-
-async def call_openai_model(system_message, user_message, model, client):
-    # Format and send the request to the model
-    messages = [
-        {"role": "system", "content": system_message},
-        {"role": "user", "content": user_message},
-    ]
-
-    print("\nSending request to Azure OpenAI model...\n")
-
-    # Call the Azure OpenAI model
-    response = await client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800
-    )
-
-    if printFullResponse:
-        print(response)
-
-    print("Response:\n" + response.choices[0].message.content + "\n")
-
-if __name__ == '__main__':
-    asyncio.run(main())
-
-```
 
 >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 

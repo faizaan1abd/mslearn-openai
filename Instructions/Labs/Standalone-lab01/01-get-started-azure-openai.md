@@ -74,13 +74,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](./media/ui4a.png)
    
 1. Within the **Deploy model** pop-up interface, enter the following details:
+
       - **Deployment name**: my-gpt-model (1)
+
       - **Deployment type**: Standard(2)
+
       - Click on **Customize**
+
       - **Model version**:2024-07-18(default) (3)
+
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+
       - **Content Filter**: DefaultV2 (5)
+
       - **Enable dynamic quota**: Enabled (6)
+
       - Click on **Deploy** (7)
   
       ![](./media/gpt-4omini.png)

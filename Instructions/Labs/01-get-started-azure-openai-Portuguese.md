@@ -173,9 +173,11 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
 2. Na seção **Configuração**, na caixa **Forneça instruções e contexto ao modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`, clique em * *Aplique as alterações** e clique em **Continuar**.
 
+      ![](../media/nls607.png)
+
 3. Na seção **Configuração**, clique na caixa **Adicionar seção** e, em seguida, clique em **Exemplos**.
 
-   ![](../media/imag4.png)
+      ![](../media/nls608.png)
 
 4. Digite a seguinte mensagem e resposta nas caixas designadas:
 
@@ -183,13 +185,13 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
     
     - **Assistente**: `Existem três tipos principais de inteligência artificial: IA estreita ou fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA geral ou forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo da IA ​​não existe atualmente e é puramente teórica) e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórica e ainda não foi desenvolvida) .`
 
-      ![](../media/8-10-24(26).png)
+      ![](../media/nls609.png)
 
       > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
 5. Salve as alterações clicando em **Aplicar alterações** e posteriormente clique em **Continuar** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
-   ![](../media/imag5.png)
+      ![](../media/nls610.png)
 
 7. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial?`. Use o botão **Enviar** para enviar a mensagem e visualizar a resposta.
 
@@ -200,6 +202,8 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 9. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que “isso” se refere à inteligência artificial).
 
 10. Use o botão **Ver código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens do *usuário* e do *assistente* e na sequência de mensagens do *usuário* e do *assistente* na sessão de bate-papo até o momento.
+
+      ![](../media/nls611.png)
 
 ## Tarefa 5: Explore prompts e parâmetros
 
@@ -228,13 +232,13 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
 
+      ![](../media/nls612.png)
+
 4. Observe o seguinte sobre o prompt e os parâmetros que você usou:
 
     - O prompt especifica que a saída desejada deve ser três perguntas de múltipla escolha.
     
     - Os parâmetros incluem *Temperatura*, que controla o grau em que a geração de resposta inclui um elemento de aleatoriedade. O valor de **0** usado na sua submissão minimiza a aleatoriedade, resultando em respostas estáveis e previsíveis.
-
-      ![](../media/8-10-24(32).png)
 
 ## Tarefa 6: Explore a geração de código
 
@@ -242,11 +246,11 @@ Além de gerar respostas em linguagem natural, você pode usar modelos GPT para 
 
 1. No **painel Configuração**, em **Mensagem do sistema**, insira a mensagem do sistema: `Você é um desenvolvedor Python.` e salve as alterações clicando em **Aplicar alterações** e clique em **Continuar ** quando solicitado.
   
-   ![](../media/imag9.png)
+      ![](../media/nls613.png)
 
 3. No painel **Sessão de chat**, selecione **Limpar chat** para limpar o histórico de chat e iniciar uma nova sessão.
 
-   ![](../media/8-10-24(34).png)
+      ![](../media/nls614.png)
 
 4. Envie a seguinte mensagem do usuário:
 

@@ -24,7 +24,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
 
 ## Diagrama de Arquitectura
 
- ![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/arch20-3.png)
+ ![Acceda a su Máquina Virtual y Guía de Laboratorio](./media/arch20-3.png)
 
 ## Explicación de los Componentes
 

@@ -24,7 +24,7 @@ The architecture flow for this task begins with provisioning an Azure OpenAI res
 
 ## Architecture Diagram
 
- ![Access Your VM and Lab Guide](../media/arch20.png)
+ ![Access Your VM and Lab Guide](../media/arch20-1.png)
 
 ## Explanation of Components
 

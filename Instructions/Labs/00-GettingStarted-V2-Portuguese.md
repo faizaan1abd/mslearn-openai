@@ -24,7 +24,7 @@ O fluxo de arquitetura para esta tarefa começa com o provisionamento de um recu
 
 ## Diagrama de Arquitetura
 
-![Acesse sua VM e Guia do Laboratório](../media/arch20-2.png)
+![Acesse sua VM e Guia do Laboratório](../media/arch20-1.png)
 
 ## Explicação dos Componentes
 

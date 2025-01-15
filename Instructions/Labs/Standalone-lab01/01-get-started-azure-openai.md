@@ -76,15 +76,16 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 1. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
-      - click on **Customize**.
-      - **Model version**: 2024-07-18 (Default) (3)
+      - Click on **Customize**
+      - **Model version**:2024-07-18(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
   
-        ![](./media/image1a.png)
+      ![](./media/gpt-4omini.png)
         
-        >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+      >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
         
 1. This will deploy a model which you will be playing around with as you proceed.
 
@@ -129,11 +130,11 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 3. The response consists of a quiz based on the example in the prompt.
 
-    ![](./media/nls101.png)
+      ![](./media/nls101.png)
 
-   >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
+      >**Note** : The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
 
-   >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
+      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
 
 4. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
@@ -153,11 +154,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 2. In the **Setup** section, in the **Give the model instructions and context** box and click on **Apply changes** and subsequently click on **Continue**, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
 
-      ![](./media/apply-changesa.png)
+      ![](./media/nls201.png)
    
 4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
-      ![](./media/add-sectiona.png)
+      ![](./media/nls200.png)
 
 5. Enter the following message and response in the designated boxes:
 
@@ -171,7 +172,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-      ![](./media/image7a.png)
+      ![](./media/nls202.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
 
@@ -230,7 +231,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** when prompted click on Continue.
 
-      ![](./media/python-developer-system-msga.png)
+      ![](./media/nls203.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 

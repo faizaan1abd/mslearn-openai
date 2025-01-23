@@ -29,28 +29,30 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/openai_create.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings and then click on **Next (6)** thrice.
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - Subscription: **Default - Pre-assigned subscription (1)**.
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Region: Select **East US 2 (3)**
+    - Name: **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/u1.png "Create Azure OpenAI resource")
     
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Create**.
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. Wait for deployment to complete. Then click on **Go to resource group**.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+   ![](../media/u2.png)
+
+6. To capture the Keys and Endpoints values, on **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
    
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
       - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
 
-      ![](../media/keys_endpoints-1.png "Keys and Endpoints")
+      ![](../media/u4.png "Keys and Endpoints")
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
@@ -64,15 +66,15 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 To chat with the Azure OpenAI, you must first deploy a model to use through the **Azure AI Foundry portal**. Once deployed, we will use the model with the playground and use our data to ground its responses.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
       ![](../media/search.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
       ![](../media/openai.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
+3. In the Azure OpenAI resource pane, **Overview (1)** section, click on **Go to Azure AI Foundry portal (2)** it will navigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
 
@@ -88,15 +90,17 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     
-    - **Deployment name**: text-turbo (1)
-    - **Deployment type**: Standard (2)
-    - **Model version**: 0301(Default) (3)
-    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - Click on **Deploy** (5)
+    - **Deployment name**: **text-turbo (1)**
+    - **Deployment type**: **Standard (2)**
+    - **Model version**: **0125 (3)** ( Check the Deployement name after changing the model version, if it is changed please update it to **text-turbo**)
+    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: **10K (4)**
+    - Click on **Deploy (5)**
   
-      ![](../media/text-turbo-01.png)
+      ![](../media/u5.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
+
+   ![](../media/u6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
@@ -110,21 +114,25 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
+1. In the **Playground** section, select the **Chat** page. 
+
+   ![](../media/u7.png)
+
+2. The **Chat** playground page consists of three main sections:
 
     - **Setup** - used to set the context for the model's responses.
     - **Chat session** - used to submit chat messages and view responses.
     - **Configuration** - used to configure settings for the model deployment.
 
-3. In the **Configuration** section, ensure that your model deployment **`text-turbo`(1)** is selected.
+3. In the **Configuration** section, ensure that your model deployment **`text-turbo(version:0125)`(1)** is selected.
 
 4. In the **Setup** area, select the Default system message to set the context for the chat session. The default system message is **`You are an AI assistant that helps people find information`(2)**.
 
-      ![](../media/context-1.png)
+      ![](../media/u8.png)
    
       >**Note:** On the **Update system message?** pop-up, select **Continue**.
 
-6. In the **Chat session**, submit the following queries, and review the responses:
+6. In the **Chat session**, submit the following queries **(1)**, click the send button **(2)** and review the responses:
 
       ```
       I'd like to take a trip to New York. Where should I stay?
@@ -134,6 +142,10 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
       What are some facts about New York?
       ```
 
+      ![](../media/u9.png)   
+
+      ![](../media/u10.png)   
+
       >**Note:** Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
 
 
@@ -142,16 +154,28 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 Next, add your data in the chat playground to see how it responds with your data as grounding
 
 1. Copy the URL (https://aka.ms/own-data-brochures) and paste it in the browser. Extract the PDFs in the `.zip` that get downloaded.
-   
+
+      - Click on the **File Explorer**, from the bottom taskbar.
+      - Navigate to `C:\Users\azureuser\Downloads\` press **Enter**.
+      - Right click on **brochures (1)** file and then click on **Extract all (2)**
+
+        ![](../media/u11.png)
+
+      - Click on **Extract**.
+
+        ![](../media/u12.png)      
+
+        ![](../media/u13.png)
+
 1. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
       ![](../media/1.png)
 
-2. On **Storage Account** page, click on **+ Create**.
+1. On **Storage Account** page, click on **+ Create**.
 
       ![](../media/2.png)
 
-3. Create a **Storage Account** resource with the following settings:
+1. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>

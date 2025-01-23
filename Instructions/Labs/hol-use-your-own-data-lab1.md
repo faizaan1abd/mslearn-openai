@@ -418,6 +418,8 @@ For this exercise, you'll complete some key parts of the application to enable u
 
    ```
 
+    ![](../media/u47.png )   
+
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
      **C#**:
@@ -528,15 +530,20 @@ Now that your app has been configured, run it to send your request to your model
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
+
+      ![](../media/u48.png )   
+
+       >**Note:** If you get any warnings, please ignore.  
+
     - **Python**: `python ownData.py`
 
-     ![](../media/python-output-1.png)
+      ![](../media/python-output-1.png)
 
-   >**Note:** If you get any warnings please ignore.  
+       >**Note:** If you get any warnings please ignore.  
 
-   > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+       > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-2. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
+1. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
 ### Summary
 

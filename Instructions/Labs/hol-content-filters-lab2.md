@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 As you have already deployed OpenAI services in the previous exercise, you're ready to deploy a model to use through the **Azure AI Foundry portal**. Once deployed, you will use the model to generate natural language content.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/search.png)
 
@@ -29,7 +29,7 @@ As you have already deployed OpenAI services in the previous exercise, you're re
 
    ![](../media/update08.png)
 
-1. After navigating to Azure AI Studio, click on **Close** on the pop-up.
+1. After navigating to Azure AI Studio, If prompted click on **Close** on the pop-up.
 
 1. Click on **Deployments (1)** from the left navigation pane, click on **+ Deploy model** , select **Deploy base Model (2)**.  
 

@@ -177,25 +177,27 @@ Next, add your data in the chat playground to see how it responds with your data
 
 1. Create a **Storage Account** resource with the following settings:
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Redundancy**: Locally-redundant storage (LRS)
+    - Subscription: **Default - Pre-assigned subscription (1)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+    - Region: Select **<inject key="Region" enableCopy="false" /> (4)**
+    - Redundancy: **Locally-redundant storage (LRS) (5)**
 
-    - Select **Next**
+    - Select **Next (6)**
   
-         ![](../media/openai-lab06_t4_s4.png "Create storage account")
+         ![](../media/u14.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
+    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section **(1)**. Click on **Review + Create (2)**.  
 
-         ![](../media/image4.5.png "allow blob access")
+         ![](../media/u15.png "allow blob access")
+
+1. Click on **Create**         
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
 1. On the deployment blade, click **Go to resource**.
 
-      ![](../media/3.png "upload files")
+      ![](../media/u16.png "upload files")
 
 1. On the **Storage Account** blade, from the left navigation, select **Containers (1)**.
 
@@ -203,41 +205,55 @@ Next, add your data in the chat playground to see how it responds with your data
 
       ![](../media/storage-container.png "upload files")
 
-1. Create a container with the name "**openaidatasource**", and under **Anonymous access level** select **Container**. Select **Create**.
+1. Create a container with the name **openaidatasource (1)**, and under **Anonymous access level** select **Container (2)**. Select **Create (3)**.
 
-      ![](../media/image4.6.png "create container")
+      ![](../media/u17.png "create container")
 
 1. Select the **openaidatasource** container, and select **Upload**.
 
-1. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+      ![](../media/u18.png)
 
-      ![](../media/image4.7.png "upload files")
+1. Click on **Browse for files**.
 
-1. In the **Azure portal**, search for **AI search** and select **AI search**.
+      ![](../media/u19.png)
+
+1. Navigate to `C:\Users\azureuser\Downloads\brochures`, press **Enter** **(1)**. Select all the files that you have extracted **(2)** and then click on **Open (3)**.
+
+      ![](../media/u20.png "upload files")
+
+1. Click on **Upload**.
+
+      ![](../media/u21.png)
+
+1. In the **Azure portal**, search for **AI search (1)** and select **AI search (2)**.
+
+      ![](../media/u22.png)
 
 2.  On **Azure AI services | AI search (1)** blade, click on **Create (2)**.
 
       ![](../media/ai_search_create.png "upload files")
 
-3. Create an **AI Search** resource with the following settings and click on **Review + create** and subsequenly click on **Create**
+3. Create an **AI Search** resource with the following settings and click on **Review + create (6)**. 
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
-    - **Service name**: **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>**
-    - **Location**: Select **<inject key="Region" enableCopy="false" />**
-    - **Pricing tier**: Basic
+    - Subscription: **Default - Pre-assigned subscription (1)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Service name: **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+    - Location: Select **<inject key="Region" enableCopy="false" /> (4)**
+    - Pricing tier: **Basic (5)** (Click on **Change Pricing Tier**, click on **Basic** and then click **Select**).
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/u23.png "Create cognitive search resource")
+
+1. Click on **Create**.      
 
 1. Wait until your search resource has been deployed. Select **Go to resources**.
 
-1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+1. Navigate to the **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** and in the overview page **copy the URL and paste it in a text editor such as notepad for later use.**
 
-      ![](../media/x689.png)
+      ![](../media/u24.png)
 
-1. From the left navigation pane, under **Settings**, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+1. From the left navigation pane, under **Settings**, click on **Keys (1)** and copy the **primary key (2)** or secondary key and paste it in a notepad file for later use.
 
-      ![](../media/keys-cognitive.png)
+      ![](../media/u25.png)
 
 1. Navigate to the **Chat (1)** playground followed by select **Add your data(2)** in the setup pane and click on **+ Add a data source (3)**.
 
@@ -245,19 +261,17 @@ Next, add your data in the chat playground to see how it responds with your data
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
-    - **Select data source (1)**: Azure Blob Storage
-    - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
-    - **Select storage container (3)**: *Choose the storage container you created*
-    - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
-    - **Enter the index name (5)**: margiestravel
-    - **Indexer schedule (6)**: Once
+    - Select data source: **Azure Blob Storage (1)**
+    - Select Azure Blob storage resouce: **Choose the storage resource you created (2)**
+    - Select storage container: **Choose the storage container you created (3)**
+    - Select Azure AI Search resource: **Choose the search resource you created (4)**
+    - Enter the index name: **margiestravel (5)**
+    - Indexer schedule: **Once (6)**
     - Click on **Next (7)**
-
       
-     ![](../media/data_source-1.png "Add data configurations")
+      ![](../media/u26.png "Add data configurations")
    
-   
-1. On the **Data management** page select the **1024(default)** search type from the drop-down, and then select **Next**.
+  1. On the **Data management** page select the **1024(default)** search type from the drop-down, and then select **Next**.
 
       ![](../media/data_management-1.png "Add data")
 
@@ -265,9 +279,13 @@ Next, add your data in the chat playground to see how it responds with your data
    
       ![](../media/api_key.png "Add data")
    
-1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
+1. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. 
    
-      ![](../media/save&close.png "Add data")
+      ![](../media/u27.png "Add data")
+
+1. Once completed, verify if the data source, **search resource**, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
+
+      ![](../media/u29.png)
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:      
 - If you receive a success message, you can proceed to the next task.
@@ -305,39 +323,39 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
       ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
 
       ![](../media/cloudshell-mount-strg-account.png)
 
 
-4. Within the **Advanced settings** pane, enter the following details:
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **CloudShell region**: East US (2)
-    - **Resource group**: Select **Use existing**.(3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account**: Select **Create new**.(4)
-      - str<inject key="DeploymentID" enableCopy="false"></inject>
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create storage** (6)
+1. Within the **Create Storage account** pane, enter the following details:
+    - Subscription: **Default- Choose the only existing subscription assigned for this lab (1)**.
+    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**    
+    - CloudShell region: **East US (3)**
+    - **Storage account**: **str<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **File share**: Enter **none (5)**
+    - Click **Create (6)**
 
-      ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+      ![](../media/u28.png "Create storage advanced settings")
 
-5. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to **Bash**. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
-6. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-7. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+    ![](../media/u30.png "Create storage advanced settings")
+
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/06-use-own-data
@@ -345,7 +363,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-8. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
 
     ```bash
    code .
@@ -354,6 +372,8 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 7 and 8** to and make sure you are in the correct project path.
 
       ![](../media/classic-cloudshell-prompt.png)
+
+      ![](../media/u31.png "Create storage advanced settings")      
    
 ### Task 7: Configure your application
 

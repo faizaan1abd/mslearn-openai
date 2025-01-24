@@ -337,7 +337,6 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
       ![](../media/cloudshell-mount-strg-account.png)
 
-
 1. Within the **Create Storage account** pane, enter the following details:
     - Subscription: **Default- Choose the only existing subscription assigned for this lab (1)**.
     - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**    

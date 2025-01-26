@@ -1,10 +1,10 @@
-# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service Workshop
- 
-Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
- 
-## Accessing Your Lab Environment
- 
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+# Azure OpenAI サービスを使用して生成 AI ソリューションを開発するためのワークショップの始め方
+
+Azure OpenAI サービスを使用して生成 AI ソリューションを開発するためのワークショップへようこそ！人工知能（AI）、責任ある AI、テキスト、コード、および画像生成の関係について探求し、学ぶためのシームレスな環境を用意しました。この体験を最大限に活用するために始めましょう：
+
+## ラボ環境へのアクセス
+
+準備が整ったら、ブラウザ内で仮想マシンとラボガイドに簡単にアクセスできます。
 
    ![](../media/labguide-1.png)
 
@@ -30,35 +30,35 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
    ![ラボ環境](Images/jp4.png)
 
-## Lab Validation
+## ラボ検証
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. タスク完了後、ラボガイド内の検証タブにある **Validate** ボタンを押します。成功メッセージを受信した場合は、次のタスクに進むことができます。失敗した場合は、エラーメッセージをよく読み、ラボガイドの指示に従って再試行してください。
 
    ![Inline Validation](../media/inline-validation.png)
 
-1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
+1. タスクを検証するために、ラボガイドセクションの右上にある **Lab Validation** タブに移動することでも検証できます。
 
    ![Lab Validation](../media/lab-validation.png)
 
-1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
+1. 何か支援が必要な場合は、labs-support@spektrasystems.com にお問い合わせください。
 
-## Lab Duration Extension
+## ラボ期間の延長
 
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
+1. ラボの期間を延長するには、ラボ環境の右上にある **砂時計** アイコンをクリックしてください。
 
     ![Manage Your Virtual Machine](../media/gext.png)
 
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
+    >**注意:** ラボの残り時間が10分になると **砂時計** アイコンが表示されます。
 
-2. Click **OK** to extend your lab duration.
+2. 期間を延長するには **OK** をクリックしてください。
  
    ![Manage Your Virtual Machine](../media/gext2.png)
 
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+3. ラボの終了間際に延長していない場合、ポップアップが表示され、延長のオプションが提示されます。延長するには **OK** をクリックしてください。
 
-## Lab Guide Zoom In/Zoom Out
+## ラボガイドのズームイン/ズームアウト
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+1. 環境ページのズームレベルを調整するには、ラボ環境内のタイマーの横にある **A↕ : 100%** アイコンをクリックしてください。
 
    ![Manage Your Virtual Machine](../media/labzoom-1.png)
 
@@ -83,11 +83,12 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 5. ポップアップ「**You have free Azure Advisor recommendations!**」が表示された場合は閉じます。  
 
 6. 「**Microsoft Azureへようこそ**」が表示された場合は「後で行う」をクリックしてツアーをスキップします。
-7. Click "Next" from the bottom right corner to embark on your Lab journey!
+7. ラボの旅を始めるには、右下の「Next」をクリックしてください！
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
+これで技術の強力な世界を探求する準備が整いました。道中で質問があれば、いつでもお問い合わせください。
+
 ## サポート連絡先  
 
 クラウドラボサポートチームは、24時間365日対応しており、メールやライブチャットでサポートを提供します。

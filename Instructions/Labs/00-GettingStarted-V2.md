@@ -65,7 +65,7 @@ Azure OpenAI サービスを使用して生成 AI ソリューションを開発
 
 ## Azure ポータルにアクセスする  
 
-1. **LabVM/ARCHost VM 内のAzure ポータルのショートカットをダブルクリックし、 Microsoft Edge を起動します。**  
+1. **LabVM内のAzure ポータルのショートカットをダブルクリックし、 Microsoft Edge を起動します。**  
    ![Launch Azure Portal](../media/AOAIjp-10.png)
    
 2. サインイン画面が表示されたら以下の情報を入力します。  

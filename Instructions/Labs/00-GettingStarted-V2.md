@@ -8,27 +8,27 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
    ![](../media/labguide-1.png)
 
-### Virtual Machine & Lab Guide
+### 仮想マシンとラボガイド
+
+仮想マシンはワークショップ全体での作業の要です。ラボガイドは成功への道しるべです。
+
+## ラボリソースの探索
+
+ラボリソースとアカウント情報を確認するために、**「環境」** タブに移動します。
+
+   ![環境詳細](Images/jp2.png)
  
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+## 分割ウィンドウ機能の利用
+
+便利なように、右上隅の **「Split Window」** ボタンを選択して、ラボガイドを別のウィンドウで開くことができます。
+
+   ![ラボ環境](Images/jp3.png)
  
-## Exploring Your Lab Resources
- 
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
- 
-   ![Explore Lab Resources](../media/env-1.png)
- 
-## Utilizing the Split Window Feature
- 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
- 
- ![Use the Split Window Feature](../media/spl.png)
- 
-## Managing Your Virtual Machine
- 
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
- 
-![Manage Your Virtual Machine](../media/res.png)
+## 仮想マシンの管理
+
+必要に応じて、**「リソース」** タブから仮想マシンを開始、停止、または再起動できます。体験はあなたの手の中にあります！
+
+   ![ラボ環境](Images/jp4.png)
 
 ## Lab Validation
 
@@ -63,40 +63,37 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    ![Manage Your Virtual Machine](../media/labzoom-1.png)
 
 
-## Let's Get Started with Azure Portal
+## Azure ポータルにアクセスする  
 
-1. On your virtual machine, click on the Azure Portal icon as shown below:
-
-   ![Launch Azure Portal](../media/sc900-image(1).png)
+1. **LabVM/ARCHost VM 内のAzure ポータルのショートカットをダブルクリックし、 Microsoft Edge を起動します。**  
+   ![Launch Azure Portal](../media/AOAIjp-10.png)
    
-1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-       ![Enter Your Username](../media/sc900-image-1.png)
- 
-1. Next, provide your password:
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-       ![Enter Your Password](../media/sc900-image-2.png)
- 
-1. If prompted to stay signed in, you can click "No."
- 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+2. サインイン画面が表示されたら以下の情報を入力します。  
+   - **メール/ユーザー名:** `<inject key="AzureAdUserEmail">`  
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
+   ![サインイン情報入力](Images/AOAIjp-11.png)  
+3. サインイン画面が表示されたら以下の情報を入力します。  
+   - **パスワード:** `<inject key="AzureAdUserPassword">`  
+
+   ![パスワード入力](Images/AOAIjp-12.png)  
+4. ポップアップ「**Stay Signed in?**」が表示されたら **「いいえ」** を選択します。  
+   ![Azure ポータルのショートカット](Images/AOAIjp-13.png)  
+
+
+5. ポップアップ「**You have free Azure Advisor recommendations!**」が表示された場合は閉じます。  
+
+6. 「**Microsoft Azureへようこそ**」が表示された場合は「後で行う」をクリックしてツアーをスキップします。
+7. Click "Next" from the bottom right corner to embark on your Lab journey!
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
+## サポート連絡先  
 
-### Support Contact
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
- 
-Learner Support Contacts:
- 
-- Email Support: cloudlabs-support@spektrasystems.com
-- Live Chat Support: https://cloudlabs.ai/labs-support
- 
-### Happy learning !
+クラウドラボサポートチームは、24時間365日対応しており、メールやライブチャットでサポートを提供します。
+
+### サポート連絡先  
+- **メールサポート:** [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)  
+- **ライブチャットサポート:** [CloudLabs サポート](https://cloudlabs.ai/labs-support)  
+
+**ハッピーラーニング！🎉**  

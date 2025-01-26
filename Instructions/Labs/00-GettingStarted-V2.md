@@ -71,13 +71,13 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 2. サインイン画面が表示されたら以下の情報を入力します。  
    - **メール/ユーザー名:** `<inject key="AzureAdUserEmail">`  
 
-   ![サインイン情報入力](Images/AOAIjp-11.png)  
+   ![サインイン情報入力](../media/AOAIjp-11.png)  
 3. サインイン画面が表示されたら以下の情報を入力します。  
    - **パスワード:** `<inject key="AzureAdUserPassword">`  
 
-   ![パスワード入力](Images/AOAIjp-12.png)  
+   ![パスワード入力](../media/AOAIjp-12.png)  
 4. ポップアップ「**Stay Signed in?**」が表示されたら **「いいえ」** を選択します。  
-   ![Azure ポータルのショートカット](Images/AOAIjp-13.png)  
+   ![Azure ポータルのショートカット](../media/AOAIjp-13.png)  
 
 
 5. ポップアップ「**You have free Azure Advisor recommendations!**」が表示された場合は閉じます。  

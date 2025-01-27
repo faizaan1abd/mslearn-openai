@@ -1,205 +1,218 @@
-# Lab 01: Get started with Azure OpenAI Service
+# ラボ 01: Azure OpenAI サービスの使い方を始める
 
-## Lab scenario
-Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
+## ラボシナリオ
+Azure OpenAI サービスは、OpenAI によって開発された生成AIモデルをAzureプラットフォームに導入し、Azureクラウドプラットフォームが提供するセキュリティ、スケーラビリティ、およびサービスの統合を利用した強力なAIソリューションの開発を可能にします。この演習では、Azureリソースとしてサービスをプロビジョニングし、Azure AI Foundryポータルを使用してOpenAIモデルをデプロイおよび探索する方法を学びます。
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## ラボの目的
+このラボでは、次のタスクを完了します：
 
-- Task 1: Provision an Azure OpenAI resource
-- Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code-generation
+- タスク 1: Azure OpenAI リソースをプロビジョニングする
+- タスク 2: モデルをデプロイする
+- タスク 3: Completions プレイグラウンドでモデルを探索する
+- タスク 4: Chat プレイグラウンドを使用する
+- タスク 5: プロンプトとパラメータを探索する
+- タスク 6: コード生成を探索する
 
-## Estimated time: 60 minutes
+## 推定時間: 60 分
 
-### Task 1: Provision an Azure OpenAI resource
+### タスク 1: Azure OpenAI リソースをプロビジョニングする
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+このタスクでは、AzureポータルでAzureリソースを作成し、OpenAIサービスを選択し、リージョンや価格帯などの設定を構成します。このセットアップにより、OpenAIの高度な言語モデルをアプリケーションに統合できるようになります。
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. **Azure ポータル** で **Azure OpenAI** を検索し、**Azure OpenAI** を選択します。
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. **Azure AI Services | Azure OpenAI** ブレードで、**Create** をクリックします。
 
    ![](../media/tel-10.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
-      - **Subscription**: Default - Pre-assigned subscription.
+3. 次の設定で **Azure OpenAI** リソースを作成します：
+      - **Subscription**: デフォルト - 事前割り当てのサブスクリプション。
       - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
       - **Region**: **Swedencentral**
       - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
       - **Pricing tier**: Standard S0
   
-           ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+           ![](../media/openai-lab01_01.png "Azure OpenAI リソースの作成")
 
-4. Click on **Next** thrice and click on **Create**.
+4. **Next** を3回クリックし、**Create** をクリックします。
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. デプロイメントが完了するのを待ちます。その後、AzureポータルでデプロイされたAzure OpenAIリソースに移動します。
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **おめでとうございます** タスクを完了しました！次は、それを検証する時です。以下の手順に従ってください：
+   > - 対応するタスクの Validate ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
+   > - そうでない場合は、エラーメッセージを注意深く読み、ラボガイドの指示に従ってステップを再試行してください。
+   > - サポートが必要な場合は、cloudlabs-support@spektrasystems.com にお問い合わせください。24 時間年中無休でお手伝いします。
 
    <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
-### Task 2: Deploy a model
+### タスク 2: モデルをデプロイする
 
-In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
+このタスクでは、アプリケーションに高度な言語機能を統合するために、Azure OpenAIリソース内に特定のAIモデルインスタンスをデプロイします。
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. **Azure ポータル** で **Azure OpenAI** を検索し、**Azure OpenAI** を選択します。
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+2. **Azure AI Services** ページで、左側のブレードから **Azure OpenAI (1)** が選択されていることを確認します。その後、OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> を選択します。
 
       ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**
+3. Azure OpenAI リソースペインで、**Go to Azure AI Foundry portal** をクリックすると、**Azure AI Foundry portal** に移動します。
 
       ![](../media/update08.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+4. **Azure AI Foundry portal** ページで、左側のペインから **Shared Resources** の下にある **Deployments (1)** を選択します。その後、**+ Deploy Model** をクリックし、**Deploy Base Model (2)** を選択します。
 
       ![](../media/ui1.png)
 
-5. Search for **gpt-4o-mini**, click on **Confirm**
+5. **gpt-4o-mini** を検索し、**Confirm** をクリックします。
 
    ![](../media/gpt-4-mini.png)
    
-6. Within the **Deploy model** pop-up interface, enter the following details:
+6. **Deploy model** ポップアップインターフェイス内で、次の詳細を入力します：
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
-      - Click on **Customize**
-      - **Model version**:2024-07-18(default) (3)
+      - **Customize** をクリックします。
+      - **Model version**:2024-07-18(デフォルト) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Content Filter**: DefaultV2 (5)
       - **Enable dynamic quota**: Enabled (6)
-      - Click on **Deploy** (7)
+      - **Deploy** をクリックします (7)
   
            ![](../media/gpt-4omini.png)
 
-           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+           >**注意** : gpt-4o-mini はチャット補完にのみ対応しており、補完APIには対応していません。
 
-7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+7. 新しく作成されたモデルのバックアローをクリックし、左側のペインの **Shared Resources** の下にある **Deployments (1)** を選択します。その後、**+ Deploy Model** をクリックし、**Deploy Base Model (2)** を選択します。
 
       ![](../media/ui1.png)
 
-9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+9. **gpt-35-turbo-instruct** を検索し、**Confirm** をクリックします。
 
    ![](../media/ui4b.png)
    
-9. Within the **Deploy model** pop-up interface, enter the following details:
+9. **Deploy model** ポップアップインターフェイス内で、次の詳細を入力します：
       - **Deployment name**: gpt-35-turbo-instruct (1)
       - **Deployment type**: Standard(2)
-      - Click on **Customize**.
-      - **Model version**: 0914 (Default) (3)
+      - **Customize** をクリックします。
+      - **Model version**: 0914 (デフォルト) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
       - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Deploy** をクリックします (6)
   
         ![](../media/image1b.png)
 
-10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
+10. これにより、チャットおよび補完タスクの両方で試すことができるモデルがデプロイされます。
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+      > **注意**: クォータ制限を表示するためのロールの割り当てに関するエラーは無視して構いません。 
 
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **おめでとうございます** タスクを完了しました！次は、それを検証する時です。以下の手順に従ってください：
+   > - 対応するタスクの Validate ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
+   > - そうでない場合は、エラーメッセージを注意深く読み、ラボガイドの指示に従ってステップを再試行してください。
+   > - サポートが必要な場合は、cloudlabs-support@spektrasystems.com にお問い合わせください。24 時間年中無休でお手伝いします。
 
    <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
-### Task 3: Explore a model in the Completions playground
+### タスク 3: Completions プレイグラウンドでモデルを探索する
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+このタスクでは、AIモデルと対話し、リアルタイムの入力と出力の例を使用してその応答をテストおよび調整します。
 
-1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
+1. Azure AI Foundry ポータルで、左側のペインの **Playground** の下にある **Completions** を選択します。
 
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. **Completions プレイグラウンド** ページで、**gpt-35-turbo-instruct** デプロイメントが選択されていることを確認し、プロンプトに `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` をコピー＆ペーストします。
+   >**任意:** 日本語訳のプロンプトは`5つの質問からなるクイズを作成してください。各質問について、回答の選択肢と正解を教えてください。`
 
    ![](../media/aicompletionmodel.png)
 
-      >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
+      >**注意:** 要約テキストのサンプルは、モデルにどのような応答が必要かを指示するためのテキスト（プロンプト）であり、いくつかのコンテキスト情報を含みます。
 
-3. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
+3. **Generate** ボタンを使用してプロンプトをモデルに送信し、応答を取得します（スクロールする必要があるかもしれません）。応答には、プロンプトの例に基づいたクイズが含まれています。
 
       ![](../media/lab1-g2upd.png)
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+      >**注意**: **Regenerate** ボタンを使用して、プロンプトを再送信し（新しい変更が加えられた場合）、応答が元のものと異なる可能性があることを確認します。生成AIモデルは、呼び出されるたびに新しい言語を生成することがあります。ページの下部で、テキスト内の *トークン* 数を確認します。トークンは、プロンプトの基本単位で、基本的にはテキスト内の単語または単語の一部を指します。
 
-4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
+4. **View Code** ボタンを使用して、クライアントアプリケーションがプロンプトを送信するために使用するコードを表示します。好みのプログラミング言語を選択できます。プロンプトには、モデルに送信したテキストが含まれています。リクエストは、Azure OpenAI サービスの *Completions* API に送信されます。
 
       ![](../media/codeviewcompletionupd.png)
 
       ![](../media/openai-7uu.png)
     
-5. Close the **Sample Code**.
+5. **Sample Code** を閉じます。
 
-### Task 4: Use the Chat playground
+### タスク 4: Chat プレイグラウンドを使用する
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+このタスクでは、Chat プレイグラウンドを使用して、AIモデルの対話能力をテストし、シミュレートされたチャットインターフェースを通じて対話します。
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the Deployment pane.
+1. **Playground** セクションで **Chat** ページを選択し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. **Setup** セクションで、**Give the model instructions and context** ボックスにある現在のテキストを以下の文に置き換えます：`The system is an AI teacher that helps people learn about AI`。
+   >**任意:** 日本語訳のプロンプトは`システムは、AIについて学ぶのを助けるAI教師です`
 
-      ![](../media/setup.png)
+   ![](../media/setup.png)
 
-3. Below the **+ Add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. **+ Add section** ボックスの下で、**Examples** をクリックします。指定されたボックスに次のメッセージと応答を入力します：
 
       ![](../media/imag8u.png)
 
-4.  Enter the following message and response in the designated boxes:
+4. 指定されたボックスに次のメッセージと応答を入力します：
 
     - **User**: `What are different types of artificial intelligence?`
     
     - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
 perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
+   >**任意:** 日本語訳の例は
+   >
+   >**ユーザー**: `人工知能にはどのような種類がありますか？`
+   >
+   >**アシスタント**: `人工知能には三つの主要な種類があります。狭義または弱いAI（SiriやAlexaのようなバーチャルアシスタント、画像認識ソフトウェア、スパムフィルターなど）、汎用または強いAI（人間と同じくらい知的であることを目指したAI。このタイプのAIは現在存在せず、理論上のものです）、そして人工超知能（人間よりも知的で、人間の理解を超えたタスクを実行できるAI。このタイプのAIも理論上のものであり、まだ開発されていません）。`
+
+
       ![](../media/lab1-g4.png)
 
-   >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+   >**メモ**: 少数ショットの例は、モデルに期待される応答の種類の例を提供するために使用されます。モデルはその例のトーンとスタイルを反映しようとします。
 
-6. Save the changes by clicking on **Apply changes** and On Update system message? pop-up, click on **Continue**.
+6. **Apply changes** をクリックして変更を保存し、**Update system message?** のポップアップで **Continue** をクリックします。
 
     ![](../media/image7u.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. ページ下部のクエリボックスに `What is artificial intelligence?` と入力します。**Send** ボタンを使用してメッセージを送信し、応答を確認します。
+
+    >**任意:** 日本語訳のプロンプトは`人工知能とは？`
 
    ![](../media/openai-12.png)
 
-   > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   > **メモ**: APIデプロイメントがまだ準備ができていないという応答を受け取ることがあります。その場合は、数分待ってから再試行してください。
 
-9. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+9. 応答を確認し、その後、会話を続けるために次のメッセージを送信します：`How is it related to machine learning?`
 
-10. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+    >**任意:** 日本語訳のプロンプトは`機械学習との関係は？`
 
-11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *model instruction* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+10. 応答を確認し、前のやり取りからのコンテキストが保持されていることを確認します（モデルは「it」が人工知能を指していることを理解します）。
+
+11. **View Code** ボタンを使用して、対話のコードを表示します。プロンプトは *model instruction* メッセージ、少数ショットの *user* と *assistant* メッセージの例、およびこれまでのチャットセッションの *user* と *assistant* メッセージのシーケンスで構成されます。
 
     ![](../media/lab1-g5.png)
 
-### Task 5: Explore prompts and parameters
+### タスク 5: プロンプトとパラメータを探索する
 
-In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
+このタスクでは、異なる入力や設定を試して、AIモデルの応答と動作を微調整することで、プロンプトとパラメータを探索します。
 
-1. In the **Setup** pane select **Parameters** , set the following parameter values:
+1. **Setup** ペインで **Parameters** を選択し、次のパラメータ値を設定します：
     
    - **Temperature**: 0
     
    - **Max response**: 500
 
-   >Note: You may need to scrolldown to see the parameters option
+   >メモ: パラメータオプションを表示するには、スクロールダウンが必要な場合があります。
 
    ![](../media/lab1-g6.png)
       
-2. Submit the following message in chat session
+2. チャットセッションで次のメッセージを送信します
 
    ```
    Write three multiple choice questions based on the following text.
@@ -212,42 +225,61 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors. 
    ```
+    >**任意:** 日本語訳のプロンプトは
+   ```
+   次のテキストに基づいて、3つの選択式質問を作成してください。
 
-3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
+   ほとんどのコンピュータビジョンソリューションは、カメラ、ビデオ、または画像からの視覚入力に適用できる機械学習モデルに基づいています。
+
+   - 画像分類には、画像の内容に基づいて画像を分類するための機械学習モデルのトレーニングが含まれます。例えば、交通監視ソリューションでは、タクシー、バス、自転車などの車両の種類に基づいて画像を分類するために、画像分類モデルを使用することが考えられます。
+
+   - オブジェクト検出機械学習モデルは、画像内の個々のオブジェクトを分類し、その位置をバウンディングボックスで特定するようにトレーニングされています。例えば、交通監視ソリューションでは、異なる種類の車両の位置を特定するためにオブジェクト検出を使用することが考えられます。
+
+   - セマンティックセグメンテーションは、画像内の個々のピクセルをそれが属するオブジェクトに応じて分類する高度な機械学習技術です。例えば、交通監視ソリューションでは、特定の色を使用して異なる車両を強調表示するために、交通画像に「マスク」レイヤーを重ねることが考えられます。
+   ```
+
+3. 結果を確認し、プロンプトのコンピュータビジョンのトピックに基づいて、教師が学生をテストするために使用できる選択式の質問で構成されていることを確認します。全体の応答は、パラメータとして指定した最大長よりも短くなるはずです。
 
    ![](../media/last-3.jpg)
    
-4. Observe the following about the prompt and parameters you used:
-   - The prompt specifically states that the desired output should be three multiple choice questions.
-   - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
+4. 使用したプロンプトとパラメータについて次の点を観察します：
+   - プロンプトは、望ましい出力が3つの選択式質問であることを具体的に述べています。
+   - パラメータには*Temperature*が含まれており、応答生成にランダム要素を含める度合いを制御します。提出した値 **0** はランダム性を最小限に抑え、安定した予測可能な応答をもたらします。
 
-### Task 6: Explore code-generation
+### タスク 6: コード生成を探索する
 
-In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
+このタスクでは、AIモデルのコーディングプロンプトや要求に基づいてコードスニペットを生成および提案する能力をテストして、コード生成を探索します。
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. **Setup** セクションで、**Give the model instructions and context** ボックスに次の文を入力して現在のテキストを置き換えます：`You are a Python developer.`（あなたはPython開発者です）。**Apply Changes** をクリックして変更を保存し、**Continue** をクリックします。
+
+    >**任意:** 日本語訳の入力は`あなたはPythonの開発者です。`
+
 
    ![](../media/lab1-g7u.png)
 
-2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
+2. **Chat session** ペインで、**Clear chat** を選択してチャット履歴をクリアし、新しいセッションを開始します。
 
    ![](../media/openai-14u.png)
 
-3. Submit the following user message:
+3. 次のユーザーメッセージを送信します：
 
    ```
    Write a Python function named Multiply that multiplies two numeric parameters.
    ```
+    >**任意:** 日本語訳のメッセージは
+   ```
+   2つの数値パラメータを掛け合わせる Python 関数 「Multiply」 を書いてください。
+   ```
 
-4. Review the response, which should include sample Python code that meets the requirement in the prompt.
+4. プロンプトの要件を満たすサンプルのPythonコードが含まれた応答を確認します。
 
-   ![](../media/task-6-last.jpg)
+![](../media/task-6-last.jpg)
 
-## Summary
+## まとめ
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an Azure OpenAI model within the Azure AI Foundry portal
-- Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
+このラボでは、以下を達成しました：
+- Azure OpenAI リソースのプロビジョニング
+- Azure AI Foundry ポータル内での Azure OpenAI モデルのデプロイ
+- Chat プレイグラウンドを使用して、プロンプト、パラメータ、およびコード生成の機能を利用する
 
-## You have successfully completed the lab.
+## ラボを無事に完了しました。

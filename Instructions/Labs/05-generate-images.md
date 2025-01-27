@@ -185,7 +185,7 @@ Azure OpenAI サービスは、DALL-E モデルによって生成された画像
        </Project>
       ```
 
-3. In the console prompt pane, enter the appropriate command to run your application:
+3. コンソールプロンプトペインで、アプリケーションを実行するための適切なコマンドを入力します：
 
     **Python**
 
@@ -200,36 +200,36 @@ Azure OpenAI サービスは、DALL-E モデルによって生成された画像
    dotnet run
     ```
 
-2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
+2. プロンプトが表示されたら、画像の説明を入力します。例えば、*A giraffe flying a kite*（凧を飛ばすキリン）など。
 
-    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
+    >**注意**: プロンプトの入力後に問題が発生した場合は、次の手順に従ってください。
 
-     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old look**. click on **Skip** when **Feedback** window prompted.
+     - **Azure AI Foundry portal** に戻ります。トップメニューバーから **Switch to the old look** のトグルをオンにします。**Feedback** ウィンドウが表示された場合は **Skip** をクリックします。
 
         ![](../media/iss1.png)
 
-     - In **Deployment**, ensure that **Dalle 3** is selected.
+     - **Deployment** で **Dalle 3** が選択されていることを確認します。
 
         ![](../media/iss2.png)
 
-     - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
+     - **Prompt** ボックスに生成したい画像の説明を入力し（例えば *An elephant on a skateboard*）、**Generate** を選択して生成された画像を表示します。
 
-       >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
+       >**注意**: **The API deployment for this resource does not exist** エラーが発生した場合は、2 分間待ってから再試行してください。 
        
-       >**Note**: It might take 10–15 minutes for the old version to come up.
+       >**注意**: 旧バージョンの起動には 10～15 分かかることがあります。
 
-     - Navigate back to CloudShell and reperform step no 3. 
+     - CloudShell に戻り、ステップ 3 を再実行します。
     
-3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
+3. 画像が生成されるのを待ちます。ハイパーリンクがコンソールペインに表示されます。その後、ハイパーリンクを選択して新しいブラウザタブを開き、生成された画像を確認します。
 
    ![](../media/link.jpg "Keys and Endpoints")
    
-5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+5. 生成された画像を含むタブを閉じて、別のプロンプトで新しい画像を生成するためにアプリを再実行します。
 
-## Summary
+## まとめ
 
-In this lab, you have accomplished the following:
--   understand the concepts of image generation via the DALL-E model.
--   Implement image-generation into your applications using this model
+このラボでは、以下を達成しました:
+-   DALL-E モデルによる画像生成の概念を理解する。
+-   このモデルを使用してアプリケーションに画像生成を実装する。
 
-### You have successfully completed the lab.
+### ラボの完了

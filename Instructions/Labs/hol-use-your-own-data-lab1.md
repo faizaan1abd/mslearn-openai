@@ -397,7 +397,8 @@ For this exercise, you'll complete some key parts of the application to enable u
     <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings> <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
@@ -407,11 +408,13 @@ For this exercise, you'll complete some key parts of the application to enable u
     </ItemGroup>
 
     <ItemGroup>
-    <None Update="appsettings.json">     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    </ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</ 
+        CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
 
-    </Project> 
+    </Project>
     ```    
 
      ![](../media/u47.png)    

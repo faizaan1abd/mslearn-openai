@@ -353,7 +353,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ```bash
    rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   git clone https://github.com/CloudLabs-Azure/mslearn-openai azure-openai
     ```
 
     ![](../media/u30.png "Create storage advanced settings")

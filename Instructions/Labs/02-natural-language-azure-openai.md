@@ -1,115 +1,115 @@
-# Lab 02: Use Azure OpenAI SDKs in your app
+# ラボ 02: Azure OpenAI SDK をアプリで使用する
 
-## Lab scenario
-With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
+## ラボシナリオ
+Azure OpenAI サービスを使用すると、開発者はチャットボット、言語モデル、およびその他の自然な人間の言語を理解するアプリケーションを作成できます。Azure OpenAI では、事前にトレーニングされた AI モデルへのアクセスと、これらのモデルをカスタマイズおよび微調整してアプリケーションの特定の要件を満たすための一連の API およびツールが提供されます。この演習では、Azure OpenAI でモデルをデプロイし、それを自分のアプリケーションで使用する方法を学びます。
 
-In the scenario for this exercise, you will perform the role of a software developer who has been tasked to implement an app that can use generative AI to help provide hiking recommendations. The techniques used in the exercise can be applied to any app that wants to use Azure OpenAI APIs.
+この演習のシナリオでは、生成 AI を使用してハイキングの推薦を提供するアプリを実装するように指示されたソフトウェア開発者の役割を果たします。演習で使用される技術は、Azure OpenAI API を使用するアプリに適用できます。
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## ラボの目的
+このラボでは、次のタスクを完了します：
 
-- Task 1: Retrieve the keys and Endpoint of Azure OpenAI resource
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Test your application
-- Task 5: Maintain conversation history
+- タスク 1: Azure OpenAI リソースのキーとエンドポイントを取得する
+- タスク 2: Cloud Shell でアプリケーションをセットアップする
+- タスク 3: アプリケーションを構成する
+- タスク 4: アプリケーションをテストする
+- タスク 5: 会話履歴を維持する
 
-## Estimated time: 60 minutes
+## 推定時間: 60 分
 
-### Task 1: Retrieve the keys and Endpoint of Azure OpenAI resource
+### タスク 1: Azure OpenAI リソースのキーとエンドポイントを取得する
 
-In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
+このタスクでは、Azure OpenAI リソースのキーとエンドポイントを取得します
 
-1. In the Azure portal, search for **Azure OpenAI** and select Azure OpenAI.
+1. Azure ポータルで **Azure OpenAI** を検索し、Azure OpenAI を選択します。
 
-1. Select the existing Azure OpenAI resource and follow the below steps to copy the keys and Endpoint of the OpenAI resource.
+1. 既存の Azure OpenAI リソースを選択し、以下の手順に従って OpenAI リソースのキーとエンドポイントをコピーします。
 
-      - Select **Keys and Endpoint (1)** under **Resource Management**.
-      - Click on **Show Keys (2)**.
-      - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Finally copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as notepad for later use.
+      - **Resource Management** の下にある **Keys and Endpoint (1)** を選択します。
+      - **Show Keys (2)** をクリックします。
+      - **Key 1 (3)** をコピーし、将来の参照のためにメモ帳などのテキストエディタに貼り付けます。
+      - 最後に、クリップボードにコピーするために **Endpoint (4)** API URL をコピーします。後で使用するためにメモ帳などのテキストエディタに貼り付けます。
 
            ![](../media/ui3e.png "Keys and Endpoints")
 
-### Task 2: Set up an application in Cloud Shell
+### タスク 2: Cloud Shell でアプリケーションをセットアップする
 
-In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
+このタスクでは、Azure の Cloud Shell で実行される短いコマンドラインアプリケーションを使用して Azure OpenAI モデルと統合します。Cloud Shell を使用するために新しいブラウザタブを開きます。
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. [Azure ポータル](https://portal.azure.com?azure-portal=true) で、ページの上部の検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。Cloud Shell ペインがポータルの下部に開きます。
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![検索ボックスの右側のアイコンをクリックして Cloud Shell を起動するスクリーンショット。](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+2. Cloud Shell を初めて開くときに、使用するシェルの種類（*Bash* または *PowerShell*）を選択するように求められる場合があります。**Bash** を選択します。このオプションが表示されない場合は、手順をスキップします。
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+3. Getting Started ペインで **Mount storage account** を選択し、ドロップダウンから **Storage account subscription** を選択して **Apply** をクリックします。
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+4. **Mount storage account** ペインで、**I want to create a storage account** を選択し、**Next** をクリックします。
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+5. **Advanced settings** ペインで、次の詳細を入力します：
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
+    - **Subscription**: デフォルト - このラボに割り当てられた唯一のサブスクリプションを選択します (1)。
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> を選択します (2)
     - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
-    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **File share**: **none** という名前の新しいファイル共有を作成します (5)
+    - **Create** をクリックします (6)
 
-    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+    ![](../media/cloudshell-advanced-settings.png "ストレージの高度な設定を作成する")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Cloud Shell ペインの左上に表示されているシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* の場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
-7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+7. Cloud Shell のサイズを変更するには、ペインの上部のセパレーターバーをドラッグするか、ペインの右上にある **&#8212;**, **&#9723;**, および **X** アイコンを使用して、最小化、最大化、および閉じることができます。Azure Cloud Shell の使用に関する詳細については、[Azure Cloud Shell ドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview) を参照してください。 
 
-8. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+8. ターミナルが開いたら、**Settings** をクリックし、**Go to Classic Version** を選択します。
 
    ![](../media/classic-cloudshell.png)
 
-9. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+9. ターミナルが開始したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダに保存します。
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+10. ファイルは **azure-openai** というフォルダにダウンロードされます。次のコマンドを使用して、この演習のラボファイルに移動します。
 
     ```bash
     cd azure-openai/Labfiles/02-azure-openai-api
     ```
 
-   Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
-   
-11. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
+      C# と Python の両方のアプリケーションが提供されており、要約をテストするためのサンプルテキストファイルも含まれています。どちらのアプリも同じ機能を備えています。
+
+11. 組み込みのコードエディタを開き、モデルで要約するテキストファイルが `text-files/sample-text.txt` にあることを確認します。次のコマンドを使用して、コードエディタでラボファイルを開きます。
    
    ```bash
    code .
    ```
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **おめでとうございます** タスクの完了です！次に、それを検証する時です。手順は以下の通りです：
+> - 該当するタスクの [Validate] ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
+> - そうでない場合、エラーメッセージを注意深く読み、ラボガイドの指示に従って手順を再試行します。
+> - 支援が必要な場合は、cloudlabs-support@spektrasystems.com にご連絡ください。24時間365日対応しています。
 
    <validation step="fc003b3d-0ba1-468e-9271-917c42e5eabb" />
 
-### Task 3: Configure your application
+### タスク 3: アプリケーションを構成する
 
-In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
+このタスクでは、Azure OpenAI リソースを使用できるように、アプリケーションの主要部分を完成させます。
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+1. コードエディタで、言語の好みに応じて **CSharp** または **Python** フォルダを展開します。
 
-2. Open the configuration file for your language
+2. 使用している言語の設定ファイルを開きます
 
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Azure OpenAI リソースから取得した **endpoint** と **key**、およびデプロイしたモデル名 `my-gpt-model` を含めるように構成値を更新します。次に、左ペインのファイルを右クリックして **Save** をクリックしてファイルを保存します。
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+4. 使用する言語のフォルダに移動し、必要なパッケージをインストールします
 
     **C#** : 
 
@@ -126,7 +126,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. 好みの言語のフォルダに移動し、コードファイルを選択して必要なライブラリを追加します。
 
     **C#**: Program.cs
 
@@ -142,7 +142,7 @@ In this task, you will complete key parts of the application to enable it to use
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+6. 使用する言語のアプリケーションコード内で、コメント ***Initialize the Azure OpenAI client...*** を次のコードに置き換えて、クライアントを初期化し、システムメッセージを定義します。
 
     **C#**: Program.cs
 
@@ -172,9 +172,17 @@ In this task, you will complete key parts of the application to enable it to use
         """
     ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**任意:** 日本語訳のシステムメッセージは
+    ```
+      私はフォレストという名前のハイキング愛好家で、人々が自分の地域でハイキングコースを見つけるのを助けます。
+      特定の地域が指定されていない場合、デフォルトでレーニア国立公園の近くを提案します。
+      その後、長さが異なる3つの近くのハイキングコースを提案します。
+      また、推薦する際には、地元の自然についての興味深い事実も共有します。
+    ```
+
+      >**メモ**: コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+8. コメント ***Add code to send request...*** を必要なコードに置き換え、リクエストを構築し、`messages` や `temperature` などのモデルのさまざまなパラメータを指定します。
 
     **C#**: Program.cs
 
@@ -221,17 +229,17 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+9. ファイルに加えた変更を保存するには、コードウィンドウの左ペインからファイルを右クリックし、**Save** をクリックします。
 
-   >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**メモ:** コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
 
-### Task 4: Test your application
+### タスク 4: アプリケーションをテストする
 
-In this task, you will run your configured app to send a request to your model and observe the response.
+このタスクでは、構成済みのアプリを実行してモデルにリクエストを送信し、応答を確認します。
 
-1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. Cloud Shell bash ターミナルで、使用する言語のフォルダに移動します。
 
-2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+2. **C#** 言語を使用している場合は、**CSharp.csproj** ファイルを開き、次のコードに置き換えてファイルを保存します。
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -259,29 +267,29 @@ In this task, you will run your configured app to send a request to your model a
 
    ```
    
-3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+3. インタラクティブなターミナルペインで、フォルダーコンテキストが好みの言語のフォルダーであることを確認します。次に、アプリケーションを実行するための次のコマンドを入力します。
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+       > **ヒント**: ターミナルのツールバーにある **Maximize panel size** (**^**) アイコンを使用して、コンソールのテキストをより多く表示できます。
 
-4. When prompted, enter the text `What hike should I do near Rainier?`.
-5. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
-6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
-7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
-8. Run the application again using the prompts above, and observe the output.
+4. 指示されたら、`What hike should I do near Rainier?`（レーニアの近くでどのハイキングをすべきですか？）というテキストを入力します。
+5. 応答を確認し、応答が*messages*配列に追加されたシステムメッセージのガイドラインに従っていることを確認します。
+6. `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.`（ボイジーの近くでどこでハイキングすべきですか？簡単な難易度で、2～3マイルの距離で、適度な高低差のハイキングを探しています。）というプロンプトを入力し、出力を確認します。
+7. お好みの言語のコードファイルで、リクエスト内の*temperature*パラメータ値を**1.0**に変更し、ファイルを保存します。
+8. 上記のプロンプトを使用してアプリケーションを再度実行し、出力を確認します。
 
-Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values for your temperature with the same input.
+温度を上げると、ランダム性が増し、同じテキストを提供しても応答が変わることがよくあります。同じ入力で温度の異なる値を試して、出力の変化を確認してください。
 
-### Task 5: Maintain conversation history
+### タスク 5: 会話履歴を維持する
 
-In this task, you will provide a history of the conversation in your prompt to enable the Azure OpenAI model to reference past messages, enhancing the realism of interactions despite the API's stateless design.
+このタスクでは、会話の履歴をプロンプトに提供して、Azure OpenAI モデルが過去のメッセージを参照できるようにし、API のステートレスな設計にもかかわらず、やり取りのリアリズムを高めます。
 
-1. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-2. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-3. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have the past conversation messages for reference.
-4. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+1. アプリを再度実行し、`Where is a good hike near Boise?`（ボイジーの近くで良いハイキングはどこですか？）というプロンプトを提供します。
+2. 出力を確認し、その後 `How difficult is the second hike you suggested?`（提案した2番目のハイキングはどれくらい難しいですか？）というプロンプトを入力します。
+3. モデルからの応答は、おそらく参照しているハイキングがわからないことを示すでしょう。それを修正するために、過去の会話メッセージを参照するようにモデルを有効にできます。
+4. アプリケーションで、今後送信するプロンプトに前のプロンプトと応答を追加する必要があります。**system message** の定義の下に次のコードを追加します。
 
     **C#**: Program.cs
 
@@ -300,7 +308,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     messages_array = [{"role": "system", "content": system_message}]
     ```
 
-5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+5. コメント ***Add code to send request...*** の下にあるコード全体を、C# の場合は**while**ループコマンドの最後まで、Python の場合は **except** コマンドの最後まで次のコードに置き換えてからファイルを保存します。コードはほとんど同じですが、会話履歴を保存するために今度はメッセージ配列を使用します。
 
     **C#**: Program.cs
 
@@ -355,7 +363,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     print("Summary: " + generated_text + "\n")
     ```
 
-6. The final code should look like as shown below:
+6. 最終にコードは次のようになります：
 
    **C#**: Program.cs
 
@@ -516,25 +524,25 @@ In this task, you will provide a history of the conversation in your prompt to e
    if __name__ == '__main__': 
        main()
    ```
-   **Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+      >**メモ**: コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
 
-7. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
-8. In the terminal pane, enter the following command to run the application.
+7. ファイルを保存します。追加したコード内で、以前の入力と応答をプロンプト配列に追加するようになったことに気づいてください。これにより、モデルは会話の履歴を理解できるようになります。
+8. ターミナルペインで、アプリケーションを実行するための次のコマンドを入力します。
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
-9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
-10. Observe the output, and then prompt `How difficult is the second hike you suggested?`.
-11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow up questions referencing previous answers, and each time the history provides context for the model to answer.
+9. アプリを再度実行し、`Where is a good hike near Boise?`（ボイジーの近くで良いハイキングはどこですか？）というプロンプトを提供します。
+10. 出力を確認し、その後 `How difficult is the second hike you suggested?`（提案した2番目のハイキングはどれくらい難しいですか？）というプロンプトを入力します。
+11. モデルが提案した2番目のハイキングについての応答を得ることができ、おそらくより現実的な会話になります。以前の回答を参照して追加のフォローアップ質問をすることができ、その際、履歴がコンテキストを提供してモデルが回答するのに役立ちます。
 
-    > **Tip**: The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.
+    > **ヒント**: トークンカウントは1200に設定されているため、会話が長引くと利用可能なトークンが不足し、不完全なプロンプトになります。本番環境で使用する場合は、履歴の長さを最新の入力と応答に制限することで、必要なトークン数を制御するのに役立ちます。
 
-## Summary
+## まとめ
 
-In this lab, you have accomplished the following:
--   Retrive the keys and endpoint of Azure OpenAI resource.
--   Deploy an OpenAI model within the Azure AI Foundry portal
--   Integrate Azure OpenAI models into your applications
+このラボでは、以下を達成しました：
+-   Azure OpenAI リソースのキーとエンドポイントを取得しました。
+-   Azure AI Foundry ポータル内で OpenAI モデルをデプロイしました。
+-   Azure OpenAI モデルをアプリケーションに統合しました。
 
-### You have successfully completed the lab.
+### ラボを無事に完了しました。

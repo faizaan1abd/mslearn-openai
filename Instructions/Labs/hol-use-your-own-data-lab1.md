@@ -401,17 +401,17 @@ For this exercise, you'll complete some key parts of the application to enable u
     <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
-    </ItemGroup>
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
 
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</ 
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</ 
         CopyToOutputDirectory>
-       </None>
+        </None>
      </ItemGroup>
 
     </Project>

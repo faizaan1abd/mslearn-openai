@@ -45,11 +45,11 @@ Azure OpenAI サービスには、DALL-E という名前の画像生成モデル
 
       ![](../media/dalle32.png)
               
-4. 左側のナビゲーションペインから **Images (1)** を選択し、**Prompt (2)** ボックスに生成したい画像の説明（例えば *An elephant on a skateboard*）を入力し、**Generate (3)** を選択して生成された画像を表示します。
+4. 左側のナビゲーションペインから **Images (1)** を選択し、**Prompt (2)** ボックスに生成したい画像の説明（例えば *An elephant on a skateboard*（スケボーを乗る象））を入力し、**Generate (3)** を選択して生成された画像を表示します。
    
       ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
 
-5. プロンプトを変更して、より具体的な説明を提供します。例えば *An elephant on a skateboard in the style of Picasso*。その後、新しい画像を生成し、結果を確認します。
+5. プロンプトを変更して、より具体的な説明を提供します。例えば *An elephant on a skateboard in the style of Picasso*（ピカソのスタイルで、スケボーを乗る象）。その後、新しい画像を生成し、結果を確認します。
 
       ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
 
@@ -212,7 +212,7 @@ Azure OpenAI サービスは、DALL-E モデルによって生成された画像
 
         ![](../media/iss2.png)
 
-     - **Prompt** ボックスに生成したい画像の説明を入力し（例えば *An elephant on a skateboard*）、**Generate** を選択して生成された画像を表示します。
+     - **Prompt** ボックスに生成したい画像の説明を入力し（例えば *An elephant on a skateboard*（スケボーを乗る象））、**Generate** を選択して生成された画像を表示します。
 
        >**注意**: **The API deployment for this resource does not exist** エラーが発生した場合は、2 分間待ってから再試行してください。 
        

@@ -409,8 +409,7 @@ For this exercise, you'll complete some key parts of the application to enable u
 
      <ItemGroup>
        <None Update="appsettings.json">
-         <CopyToOutputDirectory>PreserveNewest</ 
-        CopyToOutputDirectory>
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
      </ItemGroup>
 

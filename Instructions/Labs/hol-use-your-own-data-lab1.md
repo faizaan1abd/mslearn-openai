@@ -353,7 +353,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ```bash
    rm -r azure-openai -f
-   git clone https://github.com/CloudLabs-MOC/mslearn-openai azure-openai
+   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
     ![](../media/u30.png "Create storage advanced settings")
@@ -388,6 +388,36 @@ For this exercise, you'll complete some key parts of the application to enable u
 
     - **C#**: `appsettings.json`
     - **Python**: `.env`
+
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</ 
+        CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+     ![](../media/u47.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 

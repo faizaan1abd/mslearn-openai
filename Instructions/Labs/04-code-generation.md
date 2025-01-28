@@ -1,33 +1,39 @@
-# Lab 04: Generate and improve code with Azure OpenAI Service
+# ラボ 04: Azure OpenAI サービスを使用してコードを生成および改善する
 
-## Lab scenario
-The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
+## ラボのシナリオ
+Azure OpenAI サービスモデルは、自然言語のプロンプトを使用してコードを生成し、完成したコードのバグを修正し、コードコメントを提供することができます。これらのモデルは、既存のコードを説明し、簡素化して、コードの機能と改善方法を理解するのにも役立ちます。
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## ラボの目的
+このラボでは、次のタスクを完了します：
 
-- Task 1: Generate code in chat playground
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Run your application
+- タスク 1: チャットプレイグラウンドでコードを生成する
+- タスク 2: Cloud Shell にアプリケーションをセットアップする
+- タスク 3: アプリケーションを構成する
+- タスク 4: アプリケーションを実行する
 
-## Estimated time: 60 minutes
+## 推定時間: 60 分
 
-### Task 1: Generate code in chat playground
+### タスク 1: チャットプレイグラウンドでコードを生成する
 
-In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
+このタスクでは、アプリケーションで使用する前に、Azure OpenAI がチャットプレイグラウンドでコードを生成および説明する方法を検討します。
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane.
+1. [Azure AI Foundry ポータル](https://oai.azure.com/?azure-portal=true) で、左ペインの **Chat** プレイグラウンドに移動します。
    
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. 下にスクロールし、**Chat session** セクションに次のプロンプトを入力し、*Enter* キーを押します。
 
     ```code
    Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
     ```
-1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
-1. Next, send the prompt `Do the same thing, but this time write it in C#`.
-1. Observe the output. The model likely responded very similarly as the first time, but this time coding in C#. You can ask it again for a different language of your choice, or a function to complete a different task such as reversing the input string.
-1. Next, let's explore using AI to understand code with this example of a random function you saw written in Ruby. Send the following prompt as the user message.
+   >**任意:** 日本語訳のプロンプトは
+
+   ```code
+   文字と文字列を入力として受け取り、その文字が文字列に何回現れるかを返すPython関数を書いてください
+    ```
+
+1. モデルはおそらく、関数とその関数が何をするか、そしてそれをどのように呼び出すかの説明を含めた応答を返すでしょう。
+1. 次に、プロンプト`Do the same thing, but this time write it in C#`(`同じことをしてください。ただし、今回はC#で書いてください`) を送信します。
+1. 出力を確認します。モデルはおそらく最初と非常に似た応答を返しますが、今回はC#でコーディングします。別の言語を選択するか、入力文字列を逆にするなど、別のタスクを完了する関数を尋ねることができます。
+1. 次に、AIを使用してコードを理解する方法を探ります。見たランダムなRubyで書かれた関数の例を使用します。次のプロンプトをユーザーメッセージとして送信します。
 
     ```code
     What does the following function do?  
@@ -42,65 +48,65 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
       end
     end
     ```
+    >**任意:** 日本語訳のプロンプトは`次の関数は何をしますか？`
 
-8. Observe the output, which explains what the function does in natural language.
+1. 出力を確認し、その関数が自然言語で何をするかを説明します。
 
-9. Submit the prompt `Can you simplify the function?`. The model should write a simpler version of the function.
+9. プロンプト `Can you simplify the function?`（`関数を簡素化できますか？`） を送信します。モデルは関数のより簡単なバージョンを書きます。
 
-10. Submit the prompt: `Add some comments to the function.` The model adds comments to the code.
+10. プロンプト `Add some comments to the function.`（`関数にコメントを追加してください。`） を送信します。モデルはコードにコメントを追加します。
     
-### Task 2: Set up an application in Cloud Shell
+### タスク 2: Cloud Shell にアプリケーションをセットアップする
 
-In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
+このタスクでは、Azure の Cloud Shell 上で実行される短いコマンドラインアプリケーションを使用して、Azure OpenAI モデルとの統合方法を示します。Cloud Shell にアクセスするために新しいブラウザタブを開きます。
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. [Azure ポータル](https://portal.azure.com?azure-portal=true) で、ページの右上にある検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。Cloud Shell ペインがポータルの下部に開きます。
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![検索ボックスの右側にあるアイコンをクリックしてCloud Shellを起動するスクリーンショット](../media/cloudshell-launch-portal.png#lightbox)
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+2. Cloud Shell ペインの左上に表示されるシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* の場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
-   > **Note**: If a **Cloud Shell timed out** pop-up 
-   appears, click **Reconnect**.
+   > **メモ**: **Cloud Shell timed out** ポップアップが表示された場合は、**Reconnect** をクリックします。
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+3. ターミナルが開いたら、**設定** をクリックし、**クラシックバージョンに移動** を選択します。
 
    ![](../media/classic-cloudshell.png)
 
-4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+4. ターミナルが起動したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダーに保存します。
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. ファイルは **azure-openai** という名前のフォルダーにダウンロードされます。次のコマンドを使用して、この演習のためのラボファイルに移動します。
 
     ```bash
    cd azure-openai/Labfiles/04-code-generation
     ```
 
-   > **Note**: Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
+   > **メモ**: このラボでは、C# と Python の両方のアプリケーションと、使用するサンプルコードが提供されています。
 
-6. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+6. 組み込みのコードエディタを開き、`sample-code` で使用するコードファイルを確認できます。次のコマンドを使用して、コードエディタでラボファイルを開きます。
 
       ```bash
      code .
       ```
 
-### Task 3: Configure your application
+### タスク 3: アプリケーションを構成する
 
-In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
+このタスクでは、Azure OpenAI リソースを使用するためにアプリケーションの重要な部分を完成させます。
 
-1. In the code editor, expand the language folder for your preferred language.
+1. コードエディタで、希望する言語のフォルダを展開します。
 
-2. Open the configuration file for your language.
+2. 言語の設定ファイルを開きます。
 
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+3. Azure OpenAI リソースから取得した **エンドポイント** と **キー**、およびデプロイメント名 `my-gpt-model` を含めるように設定値を更新します。次に、左ペインからファイルを右クリックして **保存** をクリックしてファイルを保存します。
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+4. 使用する言語のフォルダーに移動し、必要なパッケージをインストールします。
 
     **C#**
 
@@ -117,7 +123,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
+5. 使用する言語のアプリケーションコードで、コメント **Format and send the request to the model..** を次のクライアント構成コードに置き換えます。
 
     **C#**
     `Program.cs`
@@ -161,21 +167,21 @@ In this task, you will complete key parts of the application to enable it to use
         max_tokens=1000
     )
     ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**メモ**: コードエディタに貼り付けた後、余分な空白を削除してコードをインデントするようにしてください。
 
-6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+6. ファイルに加えた変更を保存するには、左ペインからファイルを右クリックして **保存** をクリックします。
 
-### Task 4: Run your application
+### タスク 4: アプリケーションを実行する
 
-In this task, you will run your configured app to generate code for each use case, which is numbered in the app and can be executed in any order.
+このタスクでは、アプリケーションを構成して各ユースケースのコードを生成します。ユースケースはアプリ内で番号が付けられており、任意の順序で実行できます。
 
-> **Note**: Some users may experience rate limiting if calling the model too frequently. If you hit an error about a token rate limit, wait for a minute then try again.
+> **注意**: モデルの呼び出し頻度が高すぎると、一部のユーザーはレート制限に遭遇することがあります。トークンのレート制限エラーが発生した場合は、1分待ってから再試行してください。
 
-1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
+1. コードエディタで `sample-code` フォルダーを展開し、関数と言語のアプリを簡単に確認します。これらのファイルはアプリ内のタスクに使用されます。
    
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+2. Cloud Shell bash ターミナルで、希望する言語のフォルダーに移動します。
 
-3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+3. **C#** 言語を使用している場合は、**CSharp.csproj** ファイルを開き、次のコードに置き換えてファイルを保存します。
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -201,54 +207,70 @@ In this task, you will run your configured app to generate code for each use cas
       
    </Project>
    ```  
-4. Run the application.
+4. アプリケーションを実行します。
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-
-5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+5. コメントをコードに追加するオプション **1** を選択し、次のプロンプトを入力します。これらのタスクの応答には数秒かかることがあります。
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-6. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+   >**任意:** 日本語訳のプロンプトは
+
+   ```prompt
+   次の関数にコメントを追加してください。コメント付きのコードのみを返します。\n---\n
+    ```
+
+6. 次に、オプション **2** を選択して、同じ関数のユニットテストを書き、次のプロンプトを入力します。
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
+   >**任意:** 日本語訳のプロンプトは
 
-7. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+   ```prompt
+   次の関数にコメントを追加してください。コメント付きのコードのみを返します。\n---\n
+    ```
+
+7. 次に、オプション **3** を選択して Go Fish をプレイするアプリのバグを修正します。次のプロンプトを入力します。
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-8. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+   >**任意:** 日本語訳のプロンプトは
+
+   ```prompt
+   次のコードを修正して、ユーザーと一緒に Go Fish をプレイするアプリを作成してください。修正されたコードのみを返します。\n---\n
+    ```
+
+8. 結果は `result/app.txt` 内の内容を置き換え、いくつかの修正がされた非常に似たコードを含むはずです。
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-9. To check the results paste the following code in the terminal:
+9. 結果を確認するには、次のコードをターミナルに貼り付けます。
 
     ```
    cd result
     ```
 
-10. Copy the below command in the terminal to see the contents of the app.txt file.
+10. 次のコマンドをターミナルにコピーして、app.txt ファイルの内容を確認します。
 
-      ```
+     ```
      cat app.txt
      ```
 
-The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
+`sample-code` 内の Go Fish アプリは、Azure OpenAI の応答でバグのある行を置き換えると実行できます。修正なしで実行すると、正しく動作しません。
 
-It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
+この Go Fish アプリのコードは一部の構文が修正されたにもかかわらず、ゲームの正確な表現ではないことに注意してください。詳しく見ると、カードを引くときにデッキが空であるかどうかを確認しない、ペアを取得したときにプレイヤーの手からペアを取り除かない、その他いくつかのバグがあることがわかります。これは、コード生成を支援する生成AIモデルがどれほど有用であるかを示す優れた例ですが、正しいとは限らないため、開発者による検証が必要です。
 
-If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
+Azure OpenAI からの完全な応答を確認したい場合は、`printFullResponse` 変数を `True` に設定して、アプリを再実行してください。
 
-## Summary
+## まとめ
 
-In this lab, you have accomplished the following:
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+このラボでは、以下のことを達成しました：
+-   Azure OpenAI の機能を使用して、プロダクションアプリケーションのコードを生成および改善しました。
 
-### You have successfully completed the lab.
+### ラボを正常に完了しました。

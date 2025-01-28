@@ -75,6 +75,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     
     >**任意:** 日本語訳のプロンプトは
+
    **User:**
     ```prompt
    この記事はどのような種類のものですか？
@@ -92,7 +93,8 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     スポーツ
       ```
 
-7. 次のテキストで別の例を追加します。
+8. 次のテキストで別の例を追加します。
+
     **User:**
     ```prompt
     Categorize this article:
@@ -113,6 +115,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     
     >**任意:** 日本語訳のプロンプトは
+
    **User:** 
     ```prompt
     この記事はどのような種類のものですか？
@@ -129,9 +132,9 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     ```prompt
     エンターテインメント
       ```
-8. **Apply changes** ボタンを使用して、変更を保存します。
+10. **Apply changes** ボタンを使用して、変更を保存します。
 
-9. **Chat session** セクションで、次のプロンプトを再送信します：
+11. **Chat session** セクションで、次のプロンプトを再送信します：
 
     ```prompt
     What kind of article is this?
@@ -145,7 +148,8 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
     >**任意:** 日本語訳のプロンプトは
-   **User:**
+
+    **User:**
     ```prompt
     この記事はどのような種類のものですか？
     ---
@@ -160,9 +164,9 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     より具体的なシステムメッセージと期待されるクエリと応答の例を組み合わせることで、一貫した形式の結果を得ることができます。
 
-10. **Give the model instructions and context** を `You are an AI assistant that helps people find information.`（あなたは人々が情報を見つけるのを助けるAIアシスタントです。）に設定し、例は設定しません。**Apply changes** をクリックして変更を保存し、その後 **Continue** をクリックして新しいセッションを開始し、チャットシステムの動作コンテキストを設定します。
+13. **Give the model instructions and context** を `You are an AI assistant that helps people find information.`（あなたは人々が情報を見つけるのを助けるAIアシスタントです。）に設定し、例は設定しません。**Apply changes** をクリックして変更を保存し、その後 **Continue** をクリックして新しいセッションを開始し、チャットシステムの動作コンテキストを設定します。
 
-11. **Chat session** セクションで、次のプロンプトを送信します：
+14. **Chat session** セクションで、次のプロンプトを送信します：
 
     ```prompt
     # 1. Create a list of animals
@@ -179,8 +183,8 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     モデルは、プロンプトを満たすための回答を番号付きリストに分割して返す可能性があります。これは適切な応答ですが、実際に求めていたのは、モデルに指定したタスクを実行するPythonプログラムを記述してもらうことだと仮定します。
 
-12. **Give the model instructions and context** を `You are a coding assistant helping write python code.`（あなたはPythonコードの作成を支援するコーディングアシスタントです）に変更し、変更を適用します。
-13. モデルに次のプロンプトを再送信します：
+15. **Give the model instructions and context** を `You are a coding assistant helping write python code.`（あなたはPythonコードの作成を支援するコーディングアシスタントです）に変更し、変更を適用します。
+16. モデルに次のプロンプトを再送信します：
 
     ```
     # 1. Create a list of animals
@@ -448,19 +452,19 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
    
 
 
->**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+>**メモ**: コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+9. ファイルに加えた変更を保存するには、左ペインからファイルを右クリックして **Save** をクリックします。
 
-### Task 4: Run your application
+### タスク 4: アプリケーションを実行する
 
-In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
+このタスクでは、構成したアプリケーションを実行してモデルにリクエストを送り、応答を観察します。オプション間の唯一の違いはプロンプトの内容であり、トークンカウントや温度などの他のパラメータはリクエストごとに一貫していることに気づくでしょう。
 
-1. In the folder of your preferred language, open **system.txt** in Cloudshell code editor. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. 使用する言語のフォルダで、Cloudshell コードエディタの **system.txt** を開きます。各反復ごとに、このファイルに **System message** を入力して保存します。各反復は最初にシステムメッセージを変更するために一時停止します。
 
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+2. Cloud Shell の bash ターミナルで、使用する言語のフォルダに移動します。
 
-3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+3. **C#** 言語を使用している場合は、**CSharp.csproj** ファイルを開き、次のコードに置き換えてファイルを保存します。
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -486,14 +490,14 @@ In this task, you will run your configured app to send a request to your model a
    
     </Project> 
    ```  
-4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+4. インタラクティブターミナルペインで、フォルダコンテキストが使用する言語のフォルダであることを確認します。その後、次のコマンドを入力してアプリケーションを実行します。
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+    > **ヒント**: ターミナルツールバーの **Maximize panel size** (**^**) アイコンを使用すると、コンソールテキストをより多く表示できます。
 
-5. For the first iteration, enter the following prompts:
+5. 最初の反復のために、次のプロンプトを入力します：
 
     **System message**
 
@@ -501,61 +505,90 @@ In this task, you will run your configured app to send a request to your model a
     You are an AI assistant
     ```
      ![](../media/system-1.png)
-
+    >**任意:** 日本語訳のプロンプトは
+    ```prompt
+    あなたAIのアシスタントです
+    ```
     **User message:**
-
     ```prompt
     Write an intro for a new wildlife Rescue
     ```
      ![](../media/x233.png)
-
-6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-7. Next, enter the following prompts which specify a format for the response:
+    >**任意:** 日本語訳のプロンプトは
+    ```prompt
+    新しい野生動物救護施設の紹介文を書いてください
+    ```
+6. 出力を確認します。AIモデルはおそらく、野生動物救護施設の一般的な紹介文を作成します。
+7. 次に、応答の形式を指定する次のプロンプトを入力します：
 
     **System message**
-
     ```prompt
     You are an AI assistant helping to write emails
     ```
     **User message:**
-
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, and a call for donations to be given at our website.
     ```
-8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-9. Next, enter the following prompts that additionally specify the content:
+   >**任意:** 日本語訳のプロンプトは
+
+   **System message**
+    ```prompt
+    あなたはメールの作成を支援するAIアシスタントです
+    ```
+    **User Message:**
+    ```prompt
+    新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象を専門に扱い、寄付を求める呼びかけがウェブサイトで行われる。
+    ```
+
+8. 出力を確認します。この時点で、特定の動物が含まれ、寄付の呼びかけが含まれたメールの形式が表示されるはずです。
+9. 次に、内容をさらに指定する次のプロンプトを入力します：
 
     **System message**
-
     ```prompt
     You are an AI assistant helping to write emails
     ```
-
     **User message:**
-
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
-
-10. Observe the output, and see how the email has changed based on your clear instructions.
-11. Next, enter the following prompts where we add details about tone to the system message:
+    >**任意:** 日本語訳のプロンプトは
+    
+    **System message**
+    ```prompt
+    あなたはメールの作成を支援するAIアシスタントです
+    ```
+    **User message:**
+    ```prompt
+    新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象、シマウマ、キリンを専門に扱い、寄付の呼びかけがウェブサイトで行われる。署名の後に現在の救護施設にいる動物のリストを表形式で含めます。これらの動物には象、シマウマ、ゴリラ、トカゲ、ジャックラビットが含まれます。
+    ```
+    
+10. 出力を確認し、明確な指示に基づいてメールがどのように変化したかを確認します。
+11. 次に、システムメッセージにトーンに関する詳細を追加する次のプロンプトを入力します。
 
     **System message**
-
     ```prompt
     You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
     ```
-
     **User message:**
-
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+    >**任意:** 日本語訳のプロンプトは
+
+     **System message**
+    ```prompt
+    あなたは新しいビジネスに興味を持ってもらうための宣伝メール作成を支援するAIアシスタントです。トーンは軽く、おしゃべりをするような感じで、必ず少なくとも2つのジョークを含めます。
+    ```
+    **User message:**
+    ```prompt
+    新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象、シマウマ、キリンを専門に扱い、寄付の呼びかけがウェブサイトで行われる。署名の後に現在の救護施設にいる動物のリストを表形式で含めます。これらの動物には象、シマウマ、ゴリラ、トカゲ、ジャックラビットが含まれます。
+    ```
+
+13. 出力を確認します。この時点で、メールは同じ形式ですが、よりカジュアルなトーンで、ジョークが含まれることもあるでしょう。
+14. 最終反復では、メール生成から逸脱し、*グラウンディングコンテキスト* を探索します。ここでは、単純なシステムメッセージを提供し、アプリケーションがユーザープロンプトの先頭にグラウンディングコンテキストを提供するように変更します。アプリケーションはその後、ユーザー入力を追加し、グラウンディングコンテキストから情報を抽出してユーザープロンプトに応答します。
+15. `grounding.txt` ファイルを開いて、挿入するグラウンディングコンテキストを簡単に読みます。
+16. コメント ***Format and send the request to the model*** の直後で、既存のコードの前に、`grounding.txt` からテキストを読み取り、グラウンディングコンテキストでユーザープロンプトを補強するための次のコードスニペットをアプリケーションに追加します。
 
     **C#**: Program.cs
 
@@ -575,27 +608,33 @@ In this task, you will run your configured app to send a request to your model a
     user_message = grounding_text + user_message
     ```
 
-16. Save the file and rerun your app.
-17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+17. ファイルを保存してアプリを再実行します。
+18. 次のプロンプトを入力します（**system.txt** に保存されている **system message** も入力します）。
 
     **System message**
-
     ```prompt
     You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
     ```
-
     **User message:**
-
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
-   
+    >**任意:** 日本語訳のプロンプトは
+  
+    **System message**
+    ```prompt
+    あなたは情報を見つけるのを手助けするAIアシスタントです。プロンプトに提供されたテキストから答えを提供し、簡潔に答えます。
+    ```
+    **User message:**
+    ```prompt
+    コンタソで子供たちに人気のある動物は何ですか？
+    ```
 
-## Summary
+## まとめ
 
-In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure AI Foundry portal
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+このラボでは、以下のことを達成しました：
+-   Azure OpenAI リソースのプロビジョニング
+-   Azure AI Foundry ポータル内での OpenAI モデルのデプロイ
+-   Azure OpenAI の機能を使用して、プロダクションアプリケーションのコードを生成および改善
 
-### You have successfully completed the lab.
+### ラボを正常に完了しました。

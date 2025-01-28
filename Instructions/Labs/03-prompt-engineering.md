@@ -1,31 +1,30 @@
-# Lab 03: Utilize prompt engineering in your app
+# ラボ 03: アプリでプロンプトエンジニアリングを活用する
 
-## Lab scenario
+## ラボシナリオ
 
-When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
+Azure OpenAI サービスを使用する際、開発者がプロンプトをどのように形作るかが、生成AIモデルの応答に大きく影響します。Azure OpenAI モデルは、明確かつ簡潔な方法でリクエストされた場合に、コンテンツを調整および形式化することができます。この演習では、似たようなコンテンツに対して異なるプロンプトが AI モデルの応答をどのように形作り、要求を満たすためにどのように役立つかを学びます。
 
-In scenario for this exercise, you will perform the role of a software developer working on a wildlife marketing campaign. You are exploring how to use generative AI to improve advertising emails and categorize articles that might apply to your team. The prompt engineering techniques used in the exercise can be applied similarly for a variety of use cases.
+この演習のシナリオでは、野生動物マーケティングキャンペーンに取り組んでいるソフトウェア開発者の役割を果たします。生成AIを活用して広告メールを改善し、チームに適用できる可能性のある記事を分類する方法を模索しています。演習で使用されるプロンプトエンジニアリングの技術は、さまざまなユースケースに同様に適用できます。
 
-## Lab objectives
-In this lab, you will complete the following tasks:
+## ラボの目的
+このラボでは、次のタスクを完了します：
 
-- Task 1: Apply prompt engineering in chat playground
-- Task 2: Set up an application in Cloud Shell
-- Task 3: Configure your application
-- Task 4: Run your application
+- タスク 1: チャットプレイグラウンドでプロンプトエンジニアリングを適用する
+- タスク 2: Cloud Shell でアプリケーションをセットアップする
+- タスク 3: アプリケーションを構成する
+- タスク 4: アプリケーションを実行する
 
-## Estimated time: 60 minutes
+## 推定時間: 60 分
 
-### Task 1: Apply prompt engineering in chat playground
+### タスク 1: チャットプレイグラウンドでプロンプトエンジニアリングを適用する
 
-In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
+このタスクでは、プロンプトエンジニアリングがプレイグラウンドでモデルの応答をどのように改善するかを、動物の名前を使った楽しい名前の Python アプリの作成など、さまざまなプロンプトを試すことで検証します。
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and and that the **my-gpt-model** model is selected in the Deployment pane.
+1. [Azure AI Foundry ポータル](https://oai.azure.com/?azure-portal=true) で、左ペインの **Chat** プレイグラウンドに移動し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
 
-1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
+1. デフォルトの **Give the model instructions and context** を確認し、それが *You are an AI assistant that helps people find information.*（あなたは、人々が情報を見つけるのを助けるAIアシスタントです。）であることを確認します。
 
-1. In the **Chat session**, submit the following query:
-
+1. **Chat session** で次のクエリを送信します：
     ```prompt
     What kind of article is this?
     ---
@@ -37,15 +36,27 @@ In this task, you will examine how prompt engineering improves model responses i
     
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
+    
+    >**任意:** 日本語訳のプロンプトは
+    ```prompt
+    この記事はどのような種類のものですか？
+    ---
+    カリフォルニアで深刻な干ばつの可能性
 
-    The response provides a description of the article. However, suppose you want a more specific format for article categorization.
+    干ばつが地域の広範囲にわたる水不足をもたらす恐れがあるため、カリフォルニア州の何百万人もの住民は水不足と乾燥した芝生に備えています。
 
-1. In the **Setup** section change the **Give the model instructions and context** to `You are a news aggregator that categorizes news articles.`
+    干ばつの深刻さを示す驚くべき兆候として、南カリフォルニアの当局者は、約800万人の住民に対して、屋外での水の使用を週に1日に制限するという初めての措置を宣言しました。
 
-6. Under the new system message, select the **Add section** button, and choose **Examples**. Then add the following example.
+    人々が乾燥した日常に適応する中で、日常生活がどのように変わるかについては、多くが未確定です。しかし、当局者は状況が深刻であり、今年後半にはさらに厳しい制限に至る可能性があると警告しています。
+    ```
+
+応答は記事の説明を提供します。ただし、記事の分類のためのより具体的な形式が必要な場合を考えます。
+
+1. **Setup** セクションで、**Give the model instructions and context** を `You are a news aggregator that categorizes news articles.`（あなたはニュース記事を分類するニュースアグリゲーターです）に変更します。
+
+6. 新しいシステムメッセージの下で、**Add section** ボタンを選択し、**Examples** を選びます。次に次の例を追加します。
 
     **User:**
-    
     ```prompt
     What kind of article is this?
     ---
@@ -57,17 +68,32 @@ In this task, you will examine how prompt engineering improves model responses i
     
     The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
     ```
-    
     **Assistant:**
-    
     ```prompt
     Sports
       ```
 
-7. Add another example with the following text.
-
-    **User:**
     
+    >**任意:** 日本語訳のプロンプトは
+   **User:**
+    ```prompt
+   この記事はどのような種類のものですか？
+    ---
+    ニューヨーク・ベースボールズがシカゴに大勝
+
+    昨夜、ニューヨーク・ベースボールズはシカゴ・サイクロンズに対して5-0の大勝を収め、第7回裏の終盤に3ランホームランで勝利を確定させました。
+
+    投手のマリオ・ロジャースは、ニューヨークのために96球を投げてわずか2安打を許し、今年の最高のパフォーマンスを記録しました。
+
+    シカゴ・サイクロンズの2安打は第2回と第5回に出ましたが、ランナーをホームに戻すことができませんでした。
+    ```
+    **Assistant:**
+    ```prompt
+    スポーツ
+      ```
+
+7. 次のテキストで別の例を追加します。
+    **User:**
     ```prompt
     Categorize this article:
     ---
@@ -80,16 +106,32 @@ In this task, you will examine how prompt engineering improves model responses i
     
     From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
     ```
-    
     **Assistant:**
-    
     ```prompt
     Entertainment
     ```
 
-8. Use the **Apply changes** button to save your changes.
+    
+    >**任意:** 日本語訳のプロンプトは
+   **User:** 
+    ```prompt
+    この記事はどのような種類のものですか？
+    ---
+    ニューヨーク・ベースボールズがシカゴに大勝
 
-9. In the **Chat session** section, resubmit the following prompt:
+    昨夜、ニューヨーク・ベースボールズはシカゴ・サイクロンズに対して5-0の大勝を収め、第7回裏の終盤に3ランホームランで勝利を確定させました。
+
+    投手のマリオ・ロジャースは、ニューヨークのために96球を投げてわずか2安打を許し、今年の最高のパフォーマンスを記録しました。
+
+    シカゴ・サイクロンズの2安打は第2回と第5回に出ましたが、ランナーをホームに戻すことができませんでした。
+    ``` 
+    **Assistant:**
+    ```prompt
+    エンターテインメント
+      ```
+8. **Apply changes** ボタンを使用して、変更を保存します。
+
+9. **Chat session** セクションで、次のプロンプトを再送信します：
 
     ```prompt
     What kind of article is this?
@@ -102,12 +144,25 @@ In this task, you will examine how prompt engineering improves model responses i
     
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
+    >**任意:** 日本語訳のプロンプトは
+   **User:**
+    ```prompt
+    この記事はどのような種類のものですか？
+    ---
+    カリフォルニアで深刻な干ばつの可能性
 
-    The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
+    干ばつが地域の広範囲にわたる水不足をもたらす恐れがあるため、カリフォルニア州の何百万人もの住民は水不足と乾燥した芝生に備えています。
 
-10. Set the **Give the model instructions and context to** `You are an AI assistant that helps people find information.` with no examples. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioral context of the chat system.
+    干ばつの深刻さを示す驚くべき兆候として、南カリフォルニアの当局者は、約800万人の住民に対して、屋外での水の使用を週に1日に制限するという初めての措置を宣言しました。
 
-11. In the **Chat session** section, submit the following prompt:
+    人々が乾燥した日常に適応する中で、日常生活がどのように変わるかについては、多くが未確定です。しかし、当局者は状況が深刻であり、今年後半にはさらに厳しい制限に至る可能性があると警告しています。
+    ```
+
+    より具体的なシステムメッセージと期待されるクエリと応答の例を組み合わせることで、一貫した形式の結果を得ることができます。
+
+10. **Give the model instructions and context** を `You are an AI assistant that helps people find information.`（あなたは人々が情報を見つけるのを助けるAIアシスタントです。）に設定し、例は設定しません。**Apply changes** をクリックして変更を保存し、その後 **Continue** をクリックして新しいセッションを開始し、チャットシステムの動作コンテキストを設定します。
+
+11. **Chat session** セクションで、次のプロンプトを送信します：
 
     ```prompt
     # 1. Create a list of animals
@@ -115,70 +170,84 @@ In this task, you will examine how prompt engineering improves model responses i
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-    The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is an appropriate response, but suppose what you actually wanted was for the model to write a Python program that performs the tasks you described?
+    >**任意:** 日本語訳のプロンプトは
+    ```prompt
+    # 1. 動物のリストを作成する
+    # 2. それらの動物に対して風変わりな名前のリストを作成する
+    # 3. ランダムに組み合わせて、25組の動物と名前のペアを作成する
+    ```
 
-12. Change the **Give the model instructions and context** to `You are a coding assistant helping write python code.` and apply the changes.
-13. Resubmit the following prompt to the model:
+    モデルは、プロンプトを満たすための回答を番号付きリストに分割して返す可能性があります。これは適切な応答ですが、実際に求めていたのは、モデルに指定したタスクを実行するPythonプログラムを記述してもらうことだと仮定します。
+
+12. **Give the model instructions and context** を `You are a coding assistant helping write python code.`（あなたはPythonコードの作成を支援するコーディングアシスタントです）に変更し、変更を適用します。
+13. モデルに次のプロンプトを再送信します：
 
     ```
     # 1. Create a list of animals
     # 2. Create a list of whimsical names for those animals
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
+    >**任意:** 日本語訳のプロンプトは
+    ```prompt
+    # 1. 動物のリストを作成する
+    # 2. それらの動物に対して風変わりな名前のリストを作成する
+    # 3. ランダムに組み合わせて、25組の動物と名前のペアを作成する
+    ```
 
-    The model should correctly respond with python code doing what the comments requested.
 
-### Task 2: Set up an application in Cloud Shell
+    モデルはコメントに基づいて Python コードで正しく応答するはずです。
 
-In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
+### タスク 2: Cloud Shell にアプリケーションをセットアップする
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+このタスクでは、Azure で Cloud Shell 上で動作する短いコマンドラインアプリケーションを使用して Azure OpenAI モデルと統合します。新しいブラウザタブを開いて Cloud Shell を操作します。
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+1. [Azure ポータル](https://portal.azure.com?azure-portal=true)で、検索ボックス右側にある **[>_]** （*Cloud Shell*）ボタンを選択します。ポータルの下部に Cloud Shell ペインが開きます。
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+    ![検索ボックスの右側にあるアイコンをクリックして Cloud Shell を開始するスクリーンショット。](../media/cloudshell-launch-portal.png#lightbox)
+
+2. Cloud Shell を初めて開いたときに、使用するシェルの種類（*Bash* または *PowerShell*）を選択するように求められる場合があります。**Bash** を選択します。このオプションが表示されない場合は、このステップをスキップします。
 
    ![](../media/cloudshell-bash.png)
 
-3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+3. ターミナルが開いたら、**Settings** をクリックして **Go to Classic Version** を選択します。
 
    ![](../media/classic-cloudshell.png)
 
-4. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+4. ターミナルが起動したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダに保存します。
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
 
-5. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+5. ファイルは **azure-openai** フォルダにダウンロードされます。この演習のためのラボファイルに移動するには、次のコマンドを使用します。
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering
     ```
 
-    Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
+    アプリケーションは C# と Python の両方が提供されており、プロンプトを提供するテキストファイルもあります。どちらのアプリも同じ機能を備えています。
 
-6. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+6. 組み込みのコードエディタを開き、`prompts` で使用するプロンプトファイルを確認します。次のコマンドを使用して、コードエディタでラボファイルを開きます。
 
    ```bash
       code .
     ```
 
-### Task 3: Configure your application
+### タスク 3: アプリケーションを構成する
 
-In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
+このタスクでは、提供された C# または Python アプリケーションの重要な部分を完成させ、非同期 API コールを使用して Azure OpenAI リソースを利用できるようにします。両方のアプリは同じ機能を備えています。
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
+1. コードエディタで、使用する言語に応じて **CSharp** または **Python** フォルダを展開します。各フォルダには、Azure OpenAI 機能を統合するための言語固有のファイルが含まれています。
 
-2. Open the configuration file for your language.
+2. 使用する言語の構成ファイルを開きます。
 
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. 作成した Azure OpenAI リソースから **endpoint** と **key** を含むように構成値を更新し、デプロイしたモデル名 `my-gpt-model` を含めます。次に、左ペインからファイルを右クリックして **Save** をクリックし、ファイルを保存します。
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+4. 使用する言語のフォルダに移動して、必要なパッケージをインストールします。
 
     **C#**
 
@@ -195,7 +264,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+5. 使用する言語のフォルダに移動し、コードファイルを選択して必要なライブラリを追加します。
 
     **C#**: Program.cs
 
@@ -211,7 +280,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and Replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
+6. 使用する言語のアプリケーションコードを開き、コメント ***Configure the Azure OpenAI client*** を次のように置き換え、クライアントを構成するための必要なコードを追加します。
 
     **C#**: Program.cs
 
@@ -230,9 +299,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**メモ**: コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+7. Azure OpenAI モデルを呼び出す関数で、リクエストをフォーマットしてモデルに送信するためのコードを追加します。
 
     **C#**: Program.cs
 
@@ -273,9 +342,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
         max_tokens=800
     )
     ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**メモ**: コードエディタに貼り付けた後、余分なスペースを削除してインデントを確認してください。
 
-8. The  modified code should look like as shown below:
+8. 修正されたコードは次のようになります：
 
     **C#**
       

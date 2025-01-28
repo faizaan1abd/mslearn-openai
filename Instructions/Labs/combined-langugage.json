@@ -1,0 +1,79 @@
+[
+  {
+    "Name": "Develop Generative AI solutions with Azure OpenAI Service",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/00-GettingStarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/01-get-started-azure-openai.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/02-natural-language-azure-openai.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/03-prompt-engineering.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/04-code-generation.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/05-generate-images.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/06-use-own-data.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/07-content-filters-azureOpenAI.md",
+        "Order": 8
+      },
+  
+    {
+    "Name": "Develop Generative AI solutions with Azure OpenAI Service",
+    "Language": "Japanese",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/00-GettingStarted.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/01-get-started-azure-openai.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/02-natural-language-azure-openai.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/03-prompt-engineering.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/04-code-generation.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/05-generate-images.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/06-use-own-data.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/07-content-filters-azureOpenAI.md",
+        "Order": 8
+      }
+    ]
+  }
+]       
+        

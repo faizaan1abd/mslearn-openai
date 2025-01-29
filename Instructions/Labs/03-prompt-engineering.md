@@ -20,9 +20,9 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
 このタスクでは、プロンプトエンジニアリングがプレイグラウンドでモデルの応答をどのように改善するかを、動物の名前を使った楽しい名前の Python アプリの作成など、さまざまなプロンプトを試すことで検証します。
 
-1. [Azure AI Foundry ポータル](https://oai.azure.com/?azure-portal=true) で、左ペインの **Chat** プレイグラウンドに移動し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
+1. [Azure AI Foundry ポータル](https://oai.azure.com/?azure-portal=true) で、左ペインの **チャット** プレイグラウンドに移動し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
 
-1. デフォルトの **Give the model instructions and context** を確認し、それが *You are an AI assistant that helps people find information.*（あなたは、人々が情報を見つけるのを助けるAIアシスタントです。）であることを確認します。
+1. デフォルトの **モデルに指示とコンテキストを与える** を確認し、それが *You are an AI assistant that helps people find information.*（あなたは、人々が情報を見つけるのを助けるAIアシスタントです。）であることを確認します。
 
 1. **Chat session** で次のクエリを送信します：
     ```prompt
@@ -52,11 +52,11 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
 応答は記事の説明を提供します。ただし、記事の分類のためのより具体的な形式が必要な場合を考えます。
 
-1. **Setup** セクションで、**Give the model instructions and context** を `You are a news aggregator that categorizes news articles.`（あなたはニュース記事を分類するニュースアグリゲーターです）に変更します。
+1. **セットアップ** セクションで、**モデルに指示とコンテキストを与える** を `You are a news aggregator that categorizes news articles.`（あなたはニュース記事を分類するニュースアグリゲーターです）に変更します。
 
-6. 新しいシステムメッセージの下で、**Add section** ボタンを選択し、**Examples** を選びます。次に次の例を追加します。
+6. 新しいシステムメッセージの下で、**セクションの追加** ボタンを選択し、**例** を選びます。次に次の例を追加します。
 
-    **User:**
+    **ユーザー:**
     ```prompt
     What kind of article is this?
     ---
@@ -68,7 +68,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     
     The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
     ```
-    **Assistant:**
+    **アシスタント:**
     ```prompt
     Sports
       ```
@@ -76,7 +76,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     
     >**任意:** 日本語訳のプロンプトは
 
-   **User:**
+   **ユーザー:**
     ```prompt
    この記事はどのような種類のものですか？
     ---
@@ -88,14 +88,14 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     シカゴ・サイクロンズの2安打は第2回と第5回に出ましたが、ランナーをホームに戻すことができませんでした。
     ```
-    **Assistant:**
+    **アシスタント:**
     ```prompt
     スポーツ
       ```
 
 8. 次のテキストで別の例を追加します。
 
-    **User:**
+    **ユーザー:**
     ```prompt
     Categorize this article:
     ---
@@ -108,7 +108,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     
     From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
     ```
-    **Assistant:**
+    **アシスタント:**
     ```prompt
     Entertainment
     ```
@@ -116,7 +116,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     
     >**任意:** 日本語訳のプロンプトは
 
-   **User:** 
+   **ユーザー:** 
     ```prompt
     この記事はどのような種類のものですか？
     ---
@@ -128,13 +128,13 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     シカゴ・サイクロンズの2安打は第2回と第5回に出ましたが、ランナーをホームに戻すことができませんでした。
     ``` 
-    **Assistant:**
+    **アシスタント:**
     ```prompt
     エンターテインメント
       ```
-10. **Apply changes** ボタンを使用して、変更を保存します。
+10. **変更の通用** ボタンを使用して、変更を保存します。
 
-11. **Chat session** セクションで、次のプロンプトを再送信します：
+11. **チャット** セクションで、次のプロンプトを再送信します：
 
     ```prompt
     What kind of article is this?
@@ -149,7 +149,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     ```
     >**任意:** 日本語訳のプロンプトは
 
-    **User:**
+    **ユーザー:**
     ```prompt
     この記事はどのような種類のものですか？
     ---
@@ -164,9 +164,9 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     より具体的なシステムメッセージと期待されるクエリと応答の例を組み合わせることで、一貫した形式の結果を得ることができます。
 
-13. **Give the model instructions and context** を `You are an AI assistant that helps people find information.`（あなたは人々が情報を見つけるのを助けるAIアシスタントです。）に設定し、例は設定しません。**Apply changes** をクリックして変更を保存し、その後 **Continue** をクリックして新しいセッションを開始し、チャットシステムの動作コンテキストを設定します。
+13. **モデルに指示とコンテキストを与える** を `You are an AI assistant that helps people find information.`（あなたは人々が情報を見つけるのを助けるAIアシスタントです。）に設定し、例は設定しません。**変更の通用** をクリックして変更を保存し、その後 **Continue** をクリックして新しいセッションを開始し、チャットシステムの動作コンテキストを設定します。
 
-14. **Chat session** セクションで、次のプロンプトを送信します：
+14. **チャット** セクションで、次のプロンプトを送信します：
 
     ```prompt
     # 1. Create a list of animals
@@ -183,7 +183,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
     モデルは、プロンプトを満たすための回答を番号付きリストに分割して返す可能性があります。これは適切な応答ですが、実際に求めていたのは、モデルに指定したタスクを実行するPythonプログラムを記述してもらうことだと仮定します。
 
-15. **Give the model instructions and context** を `You are a coding assistant helping write python code.`（あなたはPythonコードの作成を支援するコーディングアシスタントです）に変更し、変更を適用します。
+15. **モデルに指示とコンテキストを与える** を `You are a coding assistant helping write python code.`（あなたはPythonコードの作成を支援するコーディングアシスタントです）に変更し、変更を適用します。
 16. モデルに次のプロンプトを再送信します：
 
     ```
@@ -207,15 +207,15 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
 1. [Azure ポータル](https://portal.azure.com?azure-portal=true)で、検索ボックス右側にある **[>_]** （*Cloud Shell*）ボタンを選択します。ポータルの下部に Cloud Shell ペインが開きます。
 
-    ![検索ボックスの右側にあるアイコンをクリックして Cloud Shell を開始するスクリーンショット。](../media/cloudshell-launch-portal.png#lightbox)
+    ![検索ボックスの右側にあるアイコンをクリックして Cloud Shell を開始するスクリーンショット。](../media/jai-40.png#lightbox)
 
 2. Cloud Shell を初めて開いたときに、使用するシェルの種類（*Bash* または *PowerShell*）を選択するように求められる場合があります。**Bash** を選択します。このオプションが表示されない場合は、このステップをスキップします。
 
-   ![](../media/cloudshell-bash.png)
+   ![](../media/jai-45.png)
 
-3. ターミナルが開いたら、**Settings** をクリックして **Go to Classic Version** を選択します。
+3. ターミナルが開いたら、**設定** をクリックして **クラシック バージョンへ移動** を選択します。
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/jai-44.png)
 
 4. ターミナルが起動したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダに保存します。
 
@@ -249,7 +249,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. 作成した Azure OpenAI リソースから **endpoint** と **key** を含むように構成値を更新し、デプロイしたモデル名 `my-gpt-model` を含めます。次に、左ペインからファイルを右クリックして **Save** をクリックし、ファイルを保存します。
+3. 作成した Azure OpenAI リソースから **エンドポイント** と **キー** を含むように構成値を更新し、デプロイしたモデル名 `my-gpt-model` を含めます。次に、左ペインからファイルを右クリックして **Save** をクリックし、ファイルを保存します。
 
 4. 使用する言語のフォルダに移動して、必要なパッケージをインストールします。
 
@@ -587,7 +587,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 
 5. 最初の反復のために、次のプロンプトを入力します：
 
-    **System message**
+    **システムメッセージ**
 
     ```prompt
     You are an AI assistant
@@ -597,7 +597,7 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
     ```prompt
     あなたAIのアシスタントです
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     Write an intro for a new wildlife Rescue
     ```
@@ -609,21 +609,21 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 6. 出力を確認します。AIモデルはおそらく、野生動物救護施設の一般的な紹介文を作成します。
 7. 次に、応答の形式を指定する次のプロンプトを入力します：
 
-    **System message**
+    **システムメッセージ**
     ```prompt
     You are an AI assistant helping to write emails
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, and a call for donations to be given at our website.
     ```
    >**任意:** 日本語訳のプロンプトは
 
-   **System message**
+   **システムメッセージ**
     ```prompt
     あなたはメールの作成を支援するAIアシスタントです
     ```
-    **User Message:**
+    **ユーザーメッセージ:**
     ```prompt
     新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象を専門に扱い、寄付を求める呼びかけがウェブサイトで行われる。
     ```
@@ -631,21 +631,21 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 8. 出力を確認します。この時点で、特定の動物が含まれ、寄付の呼びかけが含まれたメールの形式が表示されるはずです。
 9. 次に、内容をさらに指定する次のプロンプトを入力します：
 
-    **System message**
+    **システムメッセージ**
     ```prompt
     You are an AI assistant helping to write emails
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
     >**任意:** 日本語訳のプロンプトは
     
-    **System message**
+    **システムメッセージ**
     ```prompt
     あなたはメールの作成を支援するAIアシスタントです
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象、シマウマ、キリンを専門に扱い、寄付の呼びかけがウェブサイトで行われる。署名の後に現在の救護施設にいる動物のリストを表形式で含めます。これらの動物には象、シマウマ、ゴリラ、トカゲ、ジャックラビットが含まれます。
     ```
@@ -653,22 +653,22 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 10. 出力を確認し、明確な指示に基づいてメールがどのように変化したかを確認します。
 11. 次に、システムメッセージにトーンに関する詳細を追加する次のプロンプトを入力します。
 
-    **System message**
+    **システムメッセージ**
     ```prompt
     You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
     >**任意:** 日本語訳のプロンプトは
 
-     **System message**
+     **システムメッセージ**
     ```prompt
     あなたは新しいビジネスに興味を持ってもらうための宣伝メール作成を支援するAIアシスタントです。トーンは軽く、おしゃべりをするような感じで、必ず少なくとも2つのジョークを含めます。
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     新しい野生動物救護施設のための宣伝メールを書いてください。以下を含めます：救護施設の名前はコンタソで、象、シマウマ、キリンを専門に扱い、寄付の呼びかけがウェブサイトで行われる。署名の後に現在の救護施設にいる動物のリストを表形式で含めます。これらの動物には象、シマウマ、ゴリラ、トカゲ、ジャックラビットが含まれます。
     ```
@@ -699,21 +699,21 @@ Azure OpenAI サービスを使用する際、開発者がプロンプトをど�
 17. ファイルを保存してアプリを再実行します。
 18. 次のプロンプトを入力します（**system.txt** に保存されている **system message** も入力します）。
 
-    **System message**
+    **システムメッセージ**
     ```prompt
     You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
     >**任意:** 日本語訳のプロンプトは
   
-    **System message**
+    **システムメッセージ**
     ```prompt
     あなたは情報を見つけるのを手助けするAIアシスタントです。プロンプトに提供されたテキストから答えを提供し、簡潔に答えます。
     ```
-    **User message:**
+    **ユーザーメッセージ:**
     ```prompt
     コンタソで子供たちに人気のある動物は何ですか？
     ```

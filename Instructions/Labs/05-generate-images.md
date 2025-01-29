@@ -23,35 +23,35 @@ Azure OpenAI サービスには、DALL-E という名前の画像生成モデル
 
 1. **Azure portal** で **Azure OpenAI** を検索し、**Azure OpenAI** を選択します。
 
-      ![](../media/tel-11.png)
+      ![](../media/jai-14.png)
 
 2. **Azure AI Services** ページで、左側のブレードから **Azure OpenAI (1)** が選択されていることを確認します。その後、OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> を選択します。
 
-      ![](../media/update07.png)
+      ![](../media/jai-17.png)
 
 3. Azure OpenAI リソースペインで、**Go to Azure AI Foundry portal** をクリックすると、**Azure AI Foundry portal** に移動します。
 
-      ![](../media/update08.png)
+      ![](../media/jai-18.png)
 
-4. **Azure AI Foundry portal** ページで、左側のペインから **Shared Resources** の下にある **Deployments (1)** を選択します。その後、**+ Deploy Model** をクリックし、**Deploy Base Model (2)** を選択します。
+4. **Azure AI Foundry portal** ページで、左側のペインから **共有リソース** の下にある **デプロイ** を選択します。その後、**+モデルのデプロイ** をクリックし、**基本モデルをデプロイする** を選択します。
 
-      ![](../media/ui1.png)
+      ![](../media/jai-19.png)
 
-5. **dall-e-3** を検索し、**Confirm** をクリックします。
+5. **dall-e-3** を検索し、**確認** をクリックします。
 
-      ![](../media/dalle31.png)
+      ![](../media/jai-46.png)
 
-6. **Deploy model** ポップアップインターフェイス内で、*Deployment name* に **Dalle3** を入力し、その他の設定はデフォルトのままにして **Deploy** をクリックします。
+6. **モデルをデプロイする** ポップアップインターフェイス内で、*デプロイ名* に **Dalle3** を入力し、その他の設定はデフォルトのままにして **デプロイ** をクリックします。
 
-      ![](../media/dalle32.png)
+      ![](../media/jai-47.png)
               
-4. 左側のナビゲーションペインから **Images (1)** を選択し、**Prompt (2)** ボックスに生成したい画像の説明（例えば *An elephant on a skateboard*（スケボーを乗る象））を入力し、**Generate (3)** を選択して生成された画像を表示します。
+4. 左側のナビゲーションペインから **イメージ (1)** を選択し、**プロンプト (2)** ボックスに生成したい画像の説明（例えば *An elephant on a skateboard*（スケボーを乗る象））を入力し、**生成 (3)** を選択して生成された画像を表示します。
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/jai-48.png)
 
 5. プロンプトを変更して、より具体的な説明を提供します。例えば *An elephant on a skateboard in the style of Picasso*（ピカソのスタイルで、スケボーを乗る象）。その後、新しい画像を生成し、結果を確認します。
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/jai-49.png)
 
       > **注意**: 画像はスクリーンショットと異なる場合があります。
 
@@ -65,15 +65,15 @@ Azure OpenAI サービスは、DALL-E モデルによって生成された画像
 
 1. [Azure portal](https://portal.azure.com?azure-portal=true) で、上部の検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。Cloud Shell ペインがポータルの下部に開きます。
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/jai-40.png#lightbox)
 
     > **注意**: **Cloud Shell timed out** のポップアップが表示された場合は、**Reconnect** をクリックします。
 
 2. Cloud Shell ペインの左上に表示されているシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* の場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
-3. ターミナルが開いたら、**Settings** をクリックし、**Go to Classic Version** を選択します。
+3. ターミナルが開いたら、**設定** をクリックし、**クラシックバージョンに移動** を選択します。
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/jai-44.png)
 
 4. ターミナルが開始したら、次のコマンドを入力して作業するアプリケーションコードをダウンロードします。
 
@@ -204,13 +204,11 @@ Azure OpenAI サービスは、DALL-E モデルによって生成された画像
 
     >**注意**: プロンプトの入力後に問題が発生した場合は、次の手順に従ってください。
 
-     - **Azure AI Foundry portal** に戻ります。トップメニューバーから **Switch to the old look** のトグルをオンにします。**Feedback** ウィンドウが表示された場合は **Skip** をクリックします。
+     - **Azure AI Foundry portal** に戻ります。左側メニューからイメージ プレイグラウンドを開きます。
 
-        ![](../media/iss1.png)
+     - **デプロイ** で **Dalle 3** が選択されていることを確認します。
 
-     - **Deployment** で **Dalle 3** が選択されていることを確認します。
-
-        ![](../media/iss2.png)
+        ![](../media/jai-50.png)
 
      - **Prompt** ボックスに生成したい画像の説明を入力し（例えば *An elephant on a skateboard*（スケボーを乗る象））、**Generate** を選択して生成された画像を表示します。
 

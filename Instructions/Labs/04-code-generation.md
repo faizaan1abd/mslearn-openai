@@ -62,7 +62,7 @@ Azure OpenAI サービスモデルは、自然言語のプロンプトを使用�
 
 1. [Azure ポータル](https://portal.azure.com?azure-portal=true) で、ページの右上にある検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。Cloud Shell ペインがポータルの下部に開きます。
 
-    ![検索ボックスの右側にあるアイコンをクリックしてCloud Shellを起動するスクリーンショット](../media/cloudshell-launch-portal.png#lightbox)
+    ![検索ボックスの右側にあるアイコンをクリックしてCloud Shellを起動するスクリーンショット](../media/jai-40.png#lightbox)
 
 2. Cloud Shell ペインの左上に表示されるシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* の場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
@@ -70,7 +70,7 @@ Azure OpenAI サービスモデルは、自然言語のプロンプトを使用�
 
 3. ターミナルが開いたら、**設定** をクリックし、**クラシックバージョンに移動** を選択します。
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/jai-44.png)
 
 4. ターミナルが起動したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダーに保存します。
 

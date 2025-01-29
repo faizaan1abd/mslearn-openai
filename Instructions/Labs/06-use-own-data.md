@@ -120,7 +120,7 @@ Azure OpenAI を独自のデータに接続する前に、基礎モデルがデ�
 
       ![](../media/image4.7.png "ファイルをアップロードする")
 
-10. **Azure ポータル**で、**Azure AI search** を検索し、**Azure AI search** を選択します。
+10. **Azure ポータル**で、**Azure AI search** を検索し、**Azure AI Services** を選択します。
 
 11.  **Azure AI services | AI search** ブレードで、**Create** をクリックします。
 

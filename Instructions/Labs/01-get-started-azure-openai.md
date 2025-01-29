@@ -21,27 +21,27 @@ Azure OpenAI サービスは、OpenAI によって開発された生成AIモデ�
 
 1. **Azure ポータル** で **Azure OpenAI** を検索し、**Azure OpenAI** を選択します。
 
-   ![](../media/tel-11.png)
+   ![](../media/jai-14.png)
 
-2. **Azure AI Services | Azure OpenAI** ブレードで、**Create** をクリックします。
+2. **Azure AI Services | Azure OpenAI** ブレードで、**作成** をクリックします。
 
-   ![](../media/tel-10.png)
+   ![](../media/jai-15.png)
 
 3. 次の設定で **Azure OpenAI** リソースを作成します：
-      - **Subscription**: デフォルト - 事前割り当てのサブスクリプション。
-      - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Region**: **Swedencentral**
-      - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
+      - **サブスクリプション**: デフォルト - 事前割り当てのサブスクリプション。
+      - **リソース グループ**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **リージョン**: **Swedencentral**
+      - **名前**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **価格レベル**: Standard S0
   
-           ![](../media/openai-lab01_01.png "Azure OpenAI リソースの作成")
+           ![](../media/jai-16.png "Azure OpenAI リソースの作成")
 
-4. **Next** を3回クリックし、**Create** をクリックします。
+4. **次へ** を3回クリックし、**作成** をクリックします。
 
 5. デプロイメントが完了するのを待ちます。その後、AzureポータルでデプロイされたAzure OpenAIリソースに移動します。
 
-   > **おめでとうございます** タスクを完了しました！次は、それを検証する時です。以下の手順に従ってください：
-   > - 対応するタスクの Validate ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
+   > **おめでとうございます** タスクを完了しました！次は、それを検証する時間です。以下の手順に従ってください：
+   > - 対応するタスクの 「検証」 ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
    > - そうでない場合は、エラーメッセージを注意深く読み、ラボガイドの指示に従ってステップを再試行してください。
    > - サポートが必要な場合は、cloudlabs-support@spektrasystems.com にお問い合わせください。24 時間年中無休でお手伝いします。
 
@@ -53,64 +53,64 @@ Azure OpenAI サービスは、OpenAI によって開発された生成AIモデ�
 
 1. **Azure ポータル** で **Azure OpenAI** を検索し、**Azure OpenAI** を選択します。
 
-      ![](../media/tel-11.png)
+      ![](../media/jai-14.png)
 
 2. **Azure AI Services** ページで、左側のブレードから **Azure OpenAI (1)** が選択されていることを確認します。その後、OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> を選択します。
 
-      ![](../media/update07.png)
+      ![](../media/jai-17.png)
 
 3. Azure OpenAI リソースペインで、**Go to Azure AI Foundry portal** をクリックすると、**Azure AI Foundry portal** に移動します。
 
-      ![](../media/update08.png)
+      ![](../media/jai-18.png)
 
-4. **Azure AI Foundry portal** ページで、左側のペインから **Shared Resources** の下にある **Deployments (1)** を選択します。その後、**+ Deploy Model** をクリックし、**Deploy Base Model (2)** を選択します。
+4. **Azure AI Foundry portal** ページで、左側のペインから **共有リソース** の下にある **デプロイ** を選択します。その後、**+モデルのデプロイ** をクリックし、**基本モデルをデプロイする** を選択します。
 
-      ![](../media/ui1.png)
+      ![](../media/jai-19.png)
 
-5. **gpt-4o-mini** を検索し、**Confirm** をクリックします。
+5. **gpt-4o-mini** を検索し、**確認** をクリックします。
 
-   ![](../media/gpt-4-mini.png)
+   ![](../media/jai-20.png)
    
-6. **Deploy model** ポップアップインターフェイス内で、次の詳細を入力します：
-      - **Deployment name**: my-gpt-model (1)
-      - **Deployment type**: Standard(2)
-      - **Customize** をクリックします。
-      - **Model version**:2024-07-18(デフォルト) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Content Filter**: DefaultV2 (5)
-      - **Enable dynamic quota**: Enabled (6)
-      - **Deploy** をクリックします (7)
+6. **モデルをデプロイする** ポップアップインターフェイス内で、次の詳細を入力します：
+      - **デプロイ名**: my-gpt-model (1)
+      - **デプロイの種類**: Standard(2)
+      - **カスタマイズ** をクリックします。
+      - **モデル バージョン**:2024-07-18(デフォルト) (3)
+      - **1分あたりのトーケン数レート制限 (千)**: 10K (4)
+      - **コンテンツ フィルター**: DefaultV2 (5)
+      - **動的クォータを有効にする**: 有効 (6)
+      - **デプロイ** をクリックします (7)
   
-           ![](../media/gpt-4omini.png)
+           ![](../media/jai-21.png)
 
            >**注意** : gpt-4o-mini はチャット補完にのみ対応しており、補完APIには対応していません。
 
-7. 新しく作成されたモデルのバックアローをクリックし、左側のペインの **Shared Resources** の下にある **Deployments (1)** を選択します。その後、**+ Deploy Model** をクリックし、**Deploy Base Model (2)** を選択します。
+7. 新しく作成されたモデルのバックアローをクリックし、左側のペインの **共有リソース** の下にある **デプロイ** を選択します。その後、**+モデルのデプロイ** をクリックし、**基本モデルをデプロイする** を選択します。
 
-      ![](../media/ui1.png)
+      ![](../media/jai-19.png)
 
-9. **gpt-35-turbo-instruct** を検索し、**Confirm** をクリックします。
+9. **gpt-35-turbo-instruct** を検索し、**確認** をクリックします。
 
-   ![](../media/ui4b.png)
+   ![](../media/jai-22.png)
    
 9. **Deploy model** ポップアップインターフェイス内で、次の詳細を入力します：
-      - **Deployment name**: gpt-35-turbo-instruct (1)
-      - **Deployment type**: Standard(2)
-      - **Customize** をクリックします。
-      - **Model version**: 0914 (デフォルト) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - **Deploy** をクリックします (6)
+      - **デプロイ名**: gpt-35-turbo-instruct (1)
+      - **デプロイ種類**: Standard(2)
+      - **カスタマイズ** をクリックします。
+      - **モデル バージョン**: 0914 (デフォルト) (3)
+      - **1分あたりのトーケン数レート制限 (千)**: 20K (4)
+      - **動的クォータを有効にする**: 有効 (5)
+      - **デプロイ** をクリックします (6)
   
-        ![](../media/image1b.png)
+        ![](../media/jai-23.png)
 
 10. これにより、チャットおよび補完タスクの両方で試すことができるモデルがデプロイされます。
 
       > **注意**: クォータ制限を表示するためのロールの割り当てに関するエラーは無視して構いません。 
 
    
-   > **おめでとうございます** タスクを完了しました！次は、それを検証する時です。以下の手順に従ってください：
-   > - 対応するタスクの Validate ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
+   > **おめでとうございます** タスクを完了しました！次は、それを検証する時間です。以下の手順に従ってください：
+   > - 対応するタスクの 検証 ボタンを押します。成功メッセージが表示された場合、次のタスクに進むことができます。
    > - そうでない場合は、エラーメッセージを注意深く読み、ラボガイドの指示に従ってステップを再試行してください。
    > - サポートが必要な場合は、cloudlabs-support@spektrasystems.com にお問い合わせください。24 時間年中無休でお手伝いします。
 
@@ -120,49 +120,49 @@ Azure OpenAI サービスは、OpenAI によって開発された生成AIモデ�
 
 このタスクでは、AIモデルと対話し、リアルタイムの入力と出力の例を使用してその応答をテストおよび調整します。
 
-1. Azure AI Foundry ポータルで、左側のペインの **Playground** の下にある **Completions** を選択します。
+1. Azure AI Foundry ポータルで、左側のペインの **プレイグラウンド** の下にある **入力候補** を選択します。
 
-2. **Completions プレイグラウンド** ページで、**gpt-35-turbo-instruct** デプロイメントが選択されていることを確認し、プロンプトに `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` をコピー＆ペーストします。
+2. **入力候補 プレイグラウンド** ページで、**gpt-35-turbo-instruct** デプロイメントが選択されていることを確認し、プロンプトに `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` をコピー＆ペーストします。
    >**任意:** 日本語訳のプロンプトは`5つの質問からなるクイズを作成してください。各質問について、回答の選択肢と正解を教えてください。`
 
-   ![](../media/aicompletionmodel.png)
+   ![](../media/jai-24.png)
 
       >**注意:** 要約テキストのサンプルは、モデルにどのような応答が必要かを指示するためのテキスト（プロンプト）であり、いくつかのコンテキスト情報を含みます。
 
 3. **Generate** ボタンを使用してプロンプトをモデルに送信し、応答を取得します（スクロールする必要があるかもしれません）。応答には、プロンプトの例に基づいたクイズが含まれています。
 
-      ![](../media/lab1-g2upd.png)
+      ![](../media/jai-25.png)
 
       >**注意**: **Regenerate** ボタンを使用して、プロンプトを再送信し（新しい変更が加えられた場合）、応答が元のものと異なる可能性があることを確認します。生成AIモデルは、呼び出されるたびに新しい言語を生成することがあります。ページの下部で、テキスト内の *トークン* 数を確認します。トークンは、プロンプトの基本単位で、基本的にはテキスト内の単語または単語の一部を指します。
 
-4. **View Code** ボタンを使用して、クライアントアプリケーションがプロンプトを送信するために使用するコードを表示します。好みのプログラミング言語を選択できます。プロンプトには、モデルに送信したテキストが含まれています。リクエストは、Azure OpenAI サービスの *Completions* API に送信されます。
+4. **コードの表示** ボタンを使用して、クライアントアプリケーションがプロンプトを送信するために使用するコードを表示します。好みのプログラミング言語を選択できます。プロンプトには、モデルに送信したテキストが含まれています。リクエストは、Azure OpenAI サービスの *Completions* API に送信されます。
 
-      ![](../media/codeviewcompletionupd.png)
+      ![](../media/jai-26.png)
 
-      ![](../media/openai-7uu.png)
+      ![](../media/jai-27.png)
     
 5. **Sample Code** を閉じます。
 
-### タスク 4: Chat プレイグラウンドを使用する
+### タスク 4: チャット プレイグラウンドを使用する
 
-このタスクでは、Chat プレイグラウンドを使用して、AIモデルの対話能力をテストし、シミュレートされたチャットインターフェースを通じて対話します。
+このタスクでは、チャット プレイグラウンドを使用して、AIモデルの対話能力をテストし、シミュレートされたチャットインターフェースを通じて対話します。
 
-1. **Playground** セクションで **Chat** ページを選択し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
+1. **プレイグラウンド** セクションで **チャット** ページを選択し、デプロイメントペインで **my-gpt-model** モデルが選択されていることを確認します。
 
-2. **Setup** セクションで、**Give the model instructions and context** ボックスにある現在のテキストを以下の文に置き換えます：`The system is an AI teacher that helps people learn about AI`。
+2. **セットアップ** セクションで、**モデルに指示とコンテキストを与える** ボックスにある現在のテキストを以下の文に置き換えます：`The system is an AI teacher that helps people learn about AI`。
    >**任意:** 日本語訳のプロンプトは`システムは、AIについて学ぶのを助けるAI教師です`
 
-   ![](../media/setup.png)
+   ![](../media/jai-28.png)
 
-3. **+ Add section** ボックスの下で、**Examples** をクリックします。指定されたボックスに次のメッセージと応答を入力します：
+3. **+ セクションの追加** ボックスの下で、**例** をクリックします。指定されたボックスに次のメッセージと応答を入力します：
 
-      ![](../media/imag8u.png)
+      ![](../media/jai-29.png)
 
 4. 指定されたボックスに次のメッセージと応答を入力します：
 
-    - **User**: `What are different types of artificial intelligence?`
+    - **ユーザー**: `What are different types of artificial intelligence?`
     
-    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+    - **アシスタント**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
 perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
    >**任意:** 日本語訳の例は
@@ -172,19 +172,19 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
    >**アシスタント**: `人工知能には三つの主要な種類があります。狭義または弱いAI（SiriやAlexaのようなバーチャルアシスタント、画像認識ソフトウェア、スパムフィルターなど）、汎用または強いAI（人間と同じくらい知的であることを目指したAI。このタイプのAIは現在存在せず、理論上のものです）、そして人工超知能（人間よりも知的で、人間の理解を超えたタスクを実行できるAI。このタイプのAIも理論上のものであり、まだ開発されていません）。`
 
 
-      ![](../media/lab1-g4.png)
+      ![](../media/jai-30.png)
 
    >**メモ**: 少数ショットの例は、モデルに期待される応答の種類の例を提供するために使用されます。モデルはその例のトーンとスタイルを反映しようとします。
 
-6. **Apply changes** をクリックして変更を保存し、**Update system message?** のポップアップで **Continue** をクリックします。
+6. **変更の通用** をクリックして変更を保存し、**システムメッセージをアップデートしますか?** のポップアップで **次へ** をクリックします。
 
-    ![](../media/image7u.png)
+    ![](../media/jai-31.png)
    
-7. ページ下部のクエリボックスに `What is artificial intelligence?` と入力します。**Send** ボタンを使用してメッセージを送信し、応答を確認します。
+7. ページ下部のクエリボックスに `What is artificial intelligence?` と入力します。**送信** ボタンを使用してメッセージを送信し、応答を確認します。
 
     >**任意:** 日本語訳のプロンプトは`人工知能とは？`
 
-   ![](../media/openai-12.png)
+   ![](../media/jai-32.png)
 
    > **メモ**: APIデプロイメントがまだ準備ができていないという応答を受け取ることがあります。その場合は、数分待ってから再試行してください。
 
@@ -194,23 +194,23 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 10. 応答を確認し、前のやり取りからのコンテキストが保持されていることを確認します（モデルは「it」が人工知能を指していることを理解します）。
 
-11. **View Code** ボタンを使用して、対話のコードを表示します。プロンプトは *model instruction* メッセージ、少数ショットの *user* と *assistant* メッセージの例、およびこれまでのチャットセッションの *user* と *assistant* メッセージのシーケンスで構成されます。
+11. **コードの表示** ボタンを使用して、対話のコードを表示します。プロンプトは *model instruction* メッセージ、少数ショットの *user* と *assistant* メッセージの例、およびこれまでのチャットセッションの *user* と *assistant* メッセージのシーケンスで構成されます。
 
-    ![](../media/lab1-g5.png)
+    ![](../media/jai-33.png)
 
 ### タスク 5: プロンプトとパラメータを探索する
 
 このタスクでは、異なる入力や設定を試して、AIモデルの応答と動作を微調整することで、プロンプトとパラメータを探索します。
 
-1. **Setup** ペインで **Parameters** を選択し、次のパラメータ値を設定します：
+1. **セットアップ** ペインで **パラメータ** を選択し、次のパラメータ値を設定します：
     
-   - **Temperature**: 0
+   - **温度**: 0
     
-   - **Max response**: 500
+   - **最大応答**: 500
 
    >メモ: パラメータオプションを表示するには、スクロールダウンが必要な場合があります。
 
-   ![](../media/lab1-g6.png)
+   ![](../media/jai-34.png)
       
 2. チャットセッションで次のメッセージを送信します
 
@@ -240,26 +240,26 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 3. 結果を確認し、プロンプトのコンピュータビジョンのトピックに基づいて、教師が学生をテストするために使用できる選択式の質問で構成されていることを確認します。全体の応答は、パラメータとして指定した最大長よりも短くなるはずです。
 
-   ![](../media/last-3.jpg)
+   ![](../media/jai-35.jpg)
    
 4. 使用したプロンプトとパラメータについて次の点を観察します：
    - プロンプトは、望ましい出力が3つの選択式質問であることを具体的に述べています。
-   - パラメータには*Temperature*が含まれており、応答生成にランダム要素を含める度合いを制御します。提出した値 **0** はランダム性を最小限に抑え、安定した予測可能な応答をもたらします。
+   - パラメータには*温度*が含まれており、応答生成にランダム要素を含める度合いを制御します。提出した値 **0** はランダム性を最小限に抑え、安定した予測可能な応答をもたらします。
 
 ### タスク 6: コード生成を探索する
 
 このタスクでは、AIモデルのコーディングプロンプトや要求に基づいてコードスニペットを生成および提案する能力をテストして、コード生成を探索します。
 
-1. **Setup** セクションで、**Give the model instructions and context** ボックスに次の文を入力して現在のテキストを置き換えます：`You are a Python developer.`（あなたはPython開発者です）。**Apply Changes** をクリックして変更を保存し、**Continue** をクリックします。
+1. **セットアップ** セクションで、**モデルに指示とコンテキストを与える** ボックスに次の文を入力して現在のテキストを置き換えます：`You are a Python developer.`（あなたはPython開発者です）。**変更の通用** をクリックして変更を保存し、**次へ** をクリックします。
 
     >**任意:** 日本語訳の入力は`あなたはPythonの開発者です。`
 
 
-   ![](../media/lab1-g7u.png)
+   ![](../media/jai-36.png)
 
-2. **Chat session** ペインで、**Clear chat** を選択してチャット履歴をクリアし、新しいセッションを開始します。
+2. **チャットの履歴** ペインで、**チャットの削除** を選択してチャット履歴をクリアし、新しいセッションを開始します。
 
-   ![](../media/openai-14u.png)
+   ![](../media/jai-37.png)
 
 3. 次のユーザーメッセージを送信します：
 
@@ -273,7 +273,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 4. プロンプトの要件を満たすサンプルのPythonコードが含まれた応答を確認します。
 
-![](../media/task-6-last.jpg)
+![](../media/jai-38.png)
 
 ## まとめ
 

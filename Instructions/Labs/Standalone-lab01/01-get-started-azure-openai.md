@@ -26,23 +26,26 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](./media/tel-10.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings and click on **Next (6)** thrice by keeping others default.
     
-    - **Subscription**: **Default - Pre-assigned subscription (1)**.
-    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - **Region**: Select **East US** **(3)**
-    - **Name**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    - **Pricing tier**: **Standard S0 (5)**
+    - Subscription: **Default - Pre-assigned subscription (1)**.
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Region: Select **East US** **(3)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](./media/g21.png "Create Azure OpenAI resource")
       
       >**Note** : **Please deploy Openai resource in EAST US Region**.
 
-4. Click on **Next** thrice by keeping others default and click on **Create**.
+4. Click on **Create**.
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+5. Wait for deployment to complete. Click on **Go to resource** to navigate to the deployed Azure OpenAI resource in the Azure portal.
+
+   ![](./media/g2.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - Hit the Validate button for the corresponding task.
    - If you receive a success message, you can proceed to the next task.
    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -53,9 +56,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-    ![](./media/tel-11.png)
+    ![](./media/g1.png)
 
 1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
@@ -65,33 +68,35 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/go-to-foundry.png)
 
-1. In the **Deployments (1)** page, click on **+ Deploy model**, Choose **Deploy base Model (2)**.
+1. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
-    ![](./media/foundry-deployments.png "Create a new deployment")
+    ![](./media/g3.png "Create a new deployment")
 
-1. Search for **gpt-4o-mini**, click on **Confirm**.
+1. Search for **gpt-4o-mini (1)**, select **gpt-4o-mini (2)** click on **Confirm (3)**.
 
-   ![](./media/ui4a.png)
+   ![](./media/g4.png)
    
-1. Within the **Deploy model** pop-up interface, enter the following details:
+1. Within the **Deploy model gpt-4o-mini** pop-up interface, click on **Customize**.
 
-      - **Deployment name**: my-gpt-model (1)
+   ![](./media/g5.png)
 
-      - **Deployment type**: Standard(2)
+1. Within the **Deploy model gpt-4o-mini** pop-up interface, Enter the following details:
 
-      - Click on **Customize**
+      - Deployment type: **Standard(1)**
 
-      - **Model version**:2024-07-18(default) (3)
+      - Deployment name: **my-gpt-model (2)**
 
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - Model version:**2024-07-18(default) (3)**
 
-      - **Content Filter**: DefaultV2 (5)
+      - Tokens per Minute Rate Limit (thousands): **10K (4)**
 
-      - **Enable dynamic quota**: Enabled (6)
+      - Content Filter: **DefaultV2 (5)**
 
-      - Click on **Deploy** (7)
+      - Enable dynamic quota: **Enabled (6)**
+
+      - Click on **Deploy (7)**
   
-      ![](./media/gpt-4omini.png)
+      ![](./media/g22.png)
         
       >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
         
@@ -101,7 +106,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
     > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-1. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct** click on **Confirm**.
 
    ![](./media/ui4b.png)
    

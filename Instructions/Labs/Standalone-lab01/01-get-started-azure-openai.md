@@ -18,9 +18,9 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](./media/tel-11.png)
+   ![](./media/g1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
@@ -28,11 +28,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 3. Create an **Azure OpenAI** resource with the following settings:
     
-    - **Subscription**: Default - Pre-assigned subscription (1).
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Region**: Select **East US** (3)
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Pricing tier**: Standard S0 (5)
+    - **Subscription**: **Default - Pre-assigned subscription (1)**.
+    - **Resource group**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Region**: Select **East US** **(3)**
+    - **Name**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Pricing tier**: **Standard S0 (5)**
   
       ![](./media/openai-lab01_01.png "Create Azure OpenAI resource")
       

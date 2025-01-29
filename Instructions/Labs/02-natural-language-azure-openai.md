@@ -24,12 +24,12 @@ Azure OpenAI サービスを使用すると、開発者はチャットボット�
 
 1. 既存の Azure OpenAI リソースを選択し、以下の手順に従って OpenAI リソースのキーとエンドポイントをコピーします。
 
-      - **Resource Management** の下にある **Keys and Endpoint (1)** を選択します。
-      - **Show Keys (2)** をクリックします。
-      - **Key 1 (3)** をコピーし、将来の参照のためにメモ帳などのテキストエディタに貼り付けます。
-      - 最後に、クリップボードにコピーするために **Endpoint (4)** API URL をコピーします。後で使用するためにメモ帳などのテキストエディタに貼り付けます。
+      - **リソース管理** の下にある **キーとエンドポイント (1)** を選択します。
+      - **キーの表示 (2)** をクリックします。
+      - **キー 1 (3)** をコピーし、将来の参照のためにメモ帳などのテキストエディタに貼り付けます。
+      - 最後に、クリップボードにコピーするために **エンドポイント (4)** API URL をコピーします。後で使用するためにメモ帳などのテキストエディタに貼り付けます。
 
-           ![](../media/ui3e.png "Keys and Endpoints")
+           ![](../media/jai-39.png "Keys and Endpoints")
 
 ### タスク 2: Cloud Shell でアプリケーションをセットアップする
 
@@ -37,36 +37,36 @@ Azure OpenAI サービスを使用すると、開発者はチャットボット�
 
 1. [Azure ポータル](https://portal.azure.com?azure-portal=true) で、ページの上部の検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。Cloud Shell ペインがポータルの下部に開きます。
 
-    ![検索ボックスの右側のアイコンをクリックして Cloud Shell を起動するスクリーンショット。](../media/cloudshell-launch-portal.png#lightbox)
+    ![検索ボックスの右側のアイコンをクリックして Cloud Shell を起動するスクリーンショット。](../media/jai-40.png#lightbox)
 
 2. Cloud Shell を初めて開くときに、使用するシェルの種類（*Bash* または *PowerShell*）を選択するように求められる場合があります。**Bash** を選択します。このオプションが表示されない場合は、手順をスキップします。
 
-3. Getting Started ペインで **Mount storage account** を選択し、ドロップダウンから **Storage account subscription** を選択して **Apply** をクリックします。
+3. 作業の開始 ペインで **ストレージ アカウントをマウントする** を選択し、ドロップダウンから **ストレージアカウントのサブスクリプション** を選択して **通用** をクリックします。
 
-   ![](../media/cloudshell-getting-started.png)
+   ![](../media/jai-41.png)
 
-4. **Mount storage account** ペインで、**I want to create a storage account** を選択し、**Next** をクリックします。
+4. **ストレージアカウントをマウントする** ペインで、**ストレージアカウントの作成を希望する** を選択し、**次へ** をクリックします。
 
-   ![](../media/cloudshell-mount-strg-account.png)
+   ![](../media/jai-42.png)
 
-5. **Advanced settings** ペインで、次の詳細を入力します：
+5. **ストレージアカウントの作成** ペインで、次の詳細を入力します：
 
-    - **Subscription**: デフォルト - このラボに割り当てられた唯一のサブスクリプションを選択します (1)。
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> を選択します (2)
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
-    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **File share**: **none** という名前の新しいファイル共有を作成します (5)
-    - **Create** をクリックします (6)
+    - **サブスクリプション**: デフォルト - このラボに割り当てられた唯一のサブスクリプションを選択します (1)。
+    - **リソースグループ**: openai-<inject key="DeploymentID" enableCopy="false"></inject> を選択します (2)
+    - **リージョン**: <inject key="Region" enableCopy="false" /> (3)
+    - **ストレージアカウント名**: storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
+    - **共有ファイル**: **none** という名前の新しいファイル共有を作成します (5)
+    - **作成** をクリックします (6)
 
-    ![](../media/cloudshell-advanced-settings.png "ストレージの高度な設定を作成する")
+    ![](../media/jai-43.png "ストレージの高度な設定を作成する")
 
 6. Cloud Shell ペインの左上に表示されているシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* の場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
 7. Cloud Shell のサイズを変更するには、ペインの上部のセパレーターバーをドラッグするか、ペインの右上にある **&#8212;**, **&#9723;**, および **X** アイコンを使用して、最小化、最大化、および閉じることができます。Azure Cloud Shell の使用に関する詳細については、[Azure Cloud Shell ドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview) を参照してください。 
 
-8. ターミナルが開いたら、**Settings** をクリックし、**Go to Classic Version** を選択します。
+8. ターミナルが開いたら、**設定** をクリックし、**クラシックバージョンに移動** を選択します。
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/jai-44.png)
 
 9. ターミナルが開始したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダに保存します。
 

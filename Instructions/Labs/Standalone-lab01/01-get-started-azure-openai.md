@@ -161,13 +161,13 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 4. At the bottom of the page, note the number of **tokens** detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
-     ![](./media/g11.png)  
+      ![](./media/g11.png)  
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-     ![](./media/NO-3a.png)
+      ![](./media/NO-3a.png)
 
-     ![](./media/openai-7a.png)
+      ![](./media/openai-7a.png)
     
 6. Close the **Sample Code**.
 

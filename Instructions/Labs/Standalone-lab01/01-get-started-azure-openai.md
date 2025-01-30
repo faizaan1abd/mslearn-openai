@@ -137,14 +137,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
   <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
-
 ## Task 3: Explore a model in the Completions playground
 
 In this task, you'll Explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure OpenAI Foundry, in the left pane under **Playground (1)**, select **Completions (2)**.
 
-   ![](./media/g9.png)  
+      ![](./media/g9.png)  
 
 2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected , type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt **(2)** and click on **Generate (3)**.
 
@@ -162,13 +161,13 @@ In this task, you'll Explore a model in the Completions playground that involves
 
 4. At the bottom of the page, note the number of **tokens** detected in the text. Tokens are the basic units of a prompt - essentially words or word parts in the text.
 
-   ![](./media/g11.png)  
+     ![](./media/g11.png)  
 
 5. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
-      ![](./media/NO-3a.png)
+     ![](./media/NO-3a.png)
 
-      ![](./media/openai-7a.png)
+     ![](./media/openai-7a.png)
     
 6. Close the **Sample Code**.
 
@@ -178,7 +177,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. In the **Playground** section, select the **Chat (1)** page, and ensure that the **my-gpt-model (2)** model is selected in the configuration pane.
 
-   ![](./media/g12.png)  
+      ![](./media/g12.png)  
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI` **(1)** and click on **Apply changes (2)**. 
 

@@ -43,7 +43,7 @@ Welcome to your Get started with Azure OpenAI Service Workshop! We've prepared a
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](./media/labguide-1.png)
+![Access Your VM and Lab Guide](./media/labguide.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -51,21 +51,21 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./media/env-1.png)
+![Explore Lab Resources](./media/env.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](./media/spl.png)
+![Use the Split Window Feature](./media/split.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](./media/res.png)
+![Manage Your Virtual Machine](./media/resource.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -93,9 +93,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
        ![Enter Your Password](./media/sc900-image-2.png)
  
-4. If prompted to stay signed in, you can click "No."
+4. If prompted to stay signed in, you can click **No**.
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe Later** to skip the tour.
  
 ## Support Contact
 
@@ -107,7 +107,7 @@ Learner Support Contacts:
 
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![Start Your Azure Journey](./media/sc900-image(3).png)
 

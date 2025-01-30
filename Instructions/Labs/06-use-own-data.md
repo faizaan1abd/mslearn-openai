@@ -65,14 +65,14 @@ Azure OpenAI サービスを使用すると、基礎となる LLM の知性を�
 
 Azure OpenAI を独自のデータに接続する前に、基礎モデルがデータなしでクエリにどのように応答するかを観察します。
 
-1. **Playground** セクションで、**Chat** ページを選択します。**Chat** プレイグラウンドページは、次の3つの主要セクションで構成されています：
+1. **プレイグラウンド** セクションで、**チャット** ページを選択します。**チャット** プレイグラウンドページは、次の3つの主要セクションで構成されています：
 
-   - **Setup** - モデルの応答のコンテキストを設定するために使用されます。
-   - **Chat session** - チャットメッセージを送信し、応答を表示するために使用されます。
+   - **セットアップ** - モデルの応答のコンテキストを設定するために使用されます。
+   - **チャット** - チャットメッセージを送信し、応答を表示するために使用されます。
 
-2. **deployment** セクションで、モデルのデプロイメント **my-gpt-model** が選択されていることを確認します。
+2. **デプロイ** セクションで、モデルのデプロイメント **my-gpt-model** が選択されていることを確認します。
 
-3. **Setup** エリアでは、デフォルトのシステムメッセージが *You are an AI assistant that helps people find information* に設定されています。
+3. **セットアップ** エリアでは、デフォルトのシステムメッセージが *You are an AI assistant that helps people find information* に設定されています。
 
 ### タスク 2: チャットプレイグラウンドにデータを接続する
 
@@ -80,100 +80,100 @@ Azure OpenAI を独自のデータに接続する前に、基礎モデルがデ�
 
 1. URL (https://aka.ms/own-data-brochures) をコピーしてブラウザに貼り付けます。ダウンロードされた `.zip` の PDF を抽出します。
    
-2. **Azure ポータル**で、**Storage Account** を検索し、**Storage Account** を選択します。
+2. **Azure ポータル**で、**ストレージアカウント** を検索し、**ストレージアカウント** を選択します。
 
-   ![](../media/1.png)
+   ![](../media/jai-51.png)
 
-3. **Storage Account** ページで、**Create** をクリックします。
+3. **ストレージアカウント** ページで、**作成** をクリックします。
 
-   ![](../media/2.png)
+   ![](../media/jai-52.png)
 
-4. 次の設定で**Storage Account**リソースを作成します：
+4. 次の設定で**ストレージアカウント**リソースを作成します：
 
-    - **Subscription**: デフォルト - 事前割り当て済みサブスクリプション
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: <inject key="Region" enableCopy="false" /> を選択
-    - **Redundancy**: Locally-redundant storage (LRS)
+    - **サブスクリプション**: デフォルト - 事前割り当て済みサブスクリプション
+    - **リソースグループ**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **ストレージアカウント名**: storage1<inject key="DeploymentID" enableCopy="false"></inject>
+    - **リージョン**: <inject key="Region" enableCopy="false" /> を選択
+    - **冗長性**: ローカル冗長ストレージ (LRS)
   
-      ![](../media/openai-lab06_t4_s4.png "ストレージアカウントを作成する")
+      ![](../media/jai-53.png "ストレージアカウントを作成する")
 
-    - **Allow enable anonymous access on individual containers**: 詳細セクションでボックスにチェックを入れて有効にします。**Review + Create** をクリックし、その後 **Create** をクリックします。
+    - **個々のコンテナーでの匿名アクセスの有効化を許可する**: 詳細セクションでボックスにチェックを入れて有効にします。**レビューと作成** をクリックし、その後 **作成** をクリックします。
 
-      ![](../media/image4.5.png "blob アクセスを許可する")
+      ![](../media/jai-54.png "blob アクセスを許可する")
 
 5. ストレージアカウントが作成されるまで待ち、次のタスクに進む前に1分ほどかかります。
 
-6. デプロイメントブレードで、**Go to resource** をクリックします。
+6. デプロイメントブレードで、**リソースに移動** をクリックします。
 
-    ![](../media/3.png "ファイルをアップロードする")
+    ![](../media/jai-55.png "ファイルをアップロードする")
 
-7. **Storage Account | Container** ブレードで、**Create** をクリックします。
+7. **データストレージ | コンテナー** クリックし、**作成** をクリックします。
 
-     ![](../media/4.png "ファイルをアップロードする")
+     ![](../media/jai-56.png "ファイルをアップロードする")
 
 8. **openaidatasource** という名前のコンテナを作成し、コンテナの匿名アクセスレベルを有効にします。
 
-      ![](../media/image4.6.png "コンテナを作成する")
+      ![](../media/jai-57.png "コンテナを作成する")
 
 9. タスク2の最初のステップでダウンロードおよび抽出されたすべてのファイルをコンテナにアップロードします。
-
+      ![](../media/jai-58.png "ファイルをアップロードする")
       ![](../media/image4.7.png "ファイルをアップロードする")
 
 10. **Azure ポータル**で、**Azure AI search** を検索し、**Azure AI Services** を選択します。
 
-11.  **Azure AI services | AI search** ブレードで、**Create** をクリックします。
+11.  **Azure AI services | AI search** オプションを選択し、**作成** をクリックします。
 
-     ![](../media/5.png "ファイルをアップロードする")
+     ![](../media/jai-59.png "ファイルをアップロードする")
 
-12. 次の設定で **AI Search** リソースを作成し、**Review + Create** をクリックしてから **Create** をクリックします。
+12. 次の設定で **AI Search** リソースを作成し、**レビューと作成** をクリックしてから **作成** をクリックします。
 
-    - **Subscription**: デフォルト - 事前割り当て済みサブスクリプション
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Location**: <inject key="Region" enableCopy="false" /> を選択
-    - **Pricing tier**: **Basic** に変更
+    - **サブスクリプション**: デフォルト - 事前割り当て済みサブスクリプション
+    - **リソースグループ**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **サービス名**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **場所**: <inject key="Region" enableCopy="false" /> を選択
+    - **価格レベル**: **基本** に変更
 
-      ![](../media/openai-lab06_t4_s5.png "認知検索リソースを作成する")
+      ![](../media/jai-60.png "認知検索リソースを作成する")
 
 13. 検索リソースがデプロイされるまで待ちます。
 
 14. **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** に移動し、概要ページでURLをコピーして、後で使用するためにメモ帳などのテキストエディタに貼り付けます。
 
-       ![](../media/x689.png)
+       ![](../media/jai-61.png)
 
-15. 左のナビゲーションペインから**Keys** をクリックし、プライマリキーまたはセカンダリキーをコピーして、後で使用するためにメモ帳に貼り付けます。
+15. 左のナビゲーションペインから**キー** をクリックし、プライマリキーまたはセカンダリキーをコピーして、後で使用するためにメモ帳に貼り付けます。
 
-      ![](../media/x690.png)
+      ![](../media/jai-62.png)
 
-16. **Azure AI Foundry ポータル**で、**Chat** プレイグラウンドに移動し、セットアップペインで *Add your data* を選択し、**+ Add a data source** をクリックします。
+16. **Azure AI Foundry ポータル**で、**チャット** プレイグラウンドに移動し、セットアップペインで *データを追加する* を選択し、**+ データソースの追加** をクリックします。
 
-    ![](../media/chat_playground.png)
+    ![](../media/jai-63.png)
    
-17. **Add data** で次の値をデータソースに入力し、**Next** をクリックします。
+17. **データの追加** で次の値をデータソースに入力し、**次へ** をクリックします。
 
-    - **Select data source**: Azure Blob Storage
-    - **Select Azure Blob storage resouce**: 作成したストレージリソースを選択
-    - **Select Storage container**: openaidatasource
-    - **Select Azure AI Search resource**: 作成した検索リソースを選択
-    - **Enter the index name**: margiestravel
-    - **Indexer schedule**: Once
+    - **データソースの選択**: Azure Blob Storage
+    - **Azure Blobストレージ リソースの選択**: 作成したストレージリソースを選択
+    - **ストレージ コンテナーを選択してください**: openaidatasource
+    - **Azure AI Searchリソースを選択する**: 作成した検索リソースを選択
+    - **インデックス名を入力してください**: margiestravel
+    - **インデクサーのスケジュール**: Once
    
-       ![](../media/image4.8.png "データの設定を追加する")
+       ![](../media/jai-64.png "データの設定を追加する")
 
-18. 次に進むには、"Data Management" をクリックします。
+18. 次に進むには、"データ管理" をクリックします。
    
-19. **Data management** ページで、ドロップダウンから **Keyword** 検索タイプを選択し、**Next** を選択します。
+19. **データ管理** ページで、ドロップダウンから **キーワード** 検索タイプを選択し、**次へ** を選択します。
 
-      ![](../media/lab6-g4.png "データを追加")
+      ![](../media/jai-65.png "データを追加")
 
-20. **Data connection** ページで **API key** を選択し、**Next** をクリックします。
+20. **データ接続** ページで **API キー** を選択し、**次へ** をクリックします。
 
-       ![](../media/API_key.jpg "データを追加")
+       ![](../media/jai-66.png "データを追加")
    
-22. **Review and finish** ページで **Save and close** を選択してデータを追加します。これには数分かかる場合があります。その間、ウィンドウを開いたままにしておく必要があります。完了したら、**Assistant setup** ペインの **Add your data(preview)** タブに、指定されたデータソース、検索リソース、およびインデックス **margiestravel** が存在することを確認します。
+22. **確認して終了** ページで **保存して閉じる** を選択してデータを追加します。これには数分かかる場合があります。その間、ウィンドウを開いたままにしておく必要があります。完了したら、**アシスタントセットアップ** ペインの **データを追加する(preview)** タブに、指定されたデータソース、検索リソース、およびインデックス **margiestravel** が存在することを確認します。
 
-       ![](../media/review.jpg "データを追加")
+       ![](../media/jai-67.png "データを追加")
 
 ### タスク 3: 独自のデータに基づいたモデルでチャットする
 
@@ -207,13 +207,13 @@ I'd like to take a trip to New York. Where should I stay?
 
 1. [Azure ポータル](https://portal.azure.com?azure-portal=true)で、検索ボックスの右側にある **[>_]** (*Cloud Shell*) ボタンを選択します。ポータルの下部に Cloud Shell ペインが開きます。
 
-   ![検索ボックスの右側のアイコンをクリックして Cloud Shell を開始するスクリーンショット。](../media/cloudshell-launch-portal.png)
+   ![検索ボックスの右側のアイコンをクリックして Cloud Shell を開始するスクリーンショット。](../media/jai-40.png)
 
 2. Cloud Shell ペインの左上に表示されるシェルの種類が *Bash* に切り替わっていることを確認します。*PowerShell* になっている場合は、ドロップダウンメニューを使用して *Bash* に切り替えます。
 
-3. ターミナルが開いたら、**設定** をクリックし、**クラシック バージョンに戻す** を選択します。
+3. ターミナルが開いたら、**設定** をクリックし、**クラシック バージョンに移動** を選択します。
 
-   ![](../media/classic-cloudshell.png)
+   ![](../media/jai-44.png)
 
 4. ターミナルが起動したら、次のコマンドを入力してサンプルアプリケーションをダウンロードし、`azure-openai` というフォルダーに保存します。
 

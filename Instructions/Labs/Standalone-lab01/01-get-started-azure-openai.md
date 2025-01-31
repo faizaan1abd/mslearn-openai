@@ -4,7 +4,7 @@
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Foundry to deploy and explore OpenAI models.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
@@ -28,7 +28,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 3. Create an **Azure OpenAI** resource with the following settings and click on **Next (6)** thrice by keeping others default.
     
-    - Subscription: **Default - Pre-assigned subscription (1)**.
+    - Subscription: **Default - Pre-assigned subscription (1)**
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Region: Select **East US** **(3)**
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
@@ -60,7 +60,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](./media/g1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
 
     ![](./media/update07.png)
 

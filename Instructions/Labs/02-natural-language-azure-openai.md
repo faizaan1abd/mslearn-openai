@@ -10,37 +10,18 @@ En el escenario de este ejercicio, desempeñará el papel de un desarrollador de
 ## Objetivos del laboratorio
 En este laboratorio, completará las siguientes tareas:
 
-- Tarea 1: Aprovisionar un recurso Azure OpenAI
-- Tarea 2: Implementar un modelo
-- Tarea 3: Configurar una aplicación en Cloud Shell
-- Tarea 4: Configurar su aplicación
-- Tarea 5: Ejecutar su aplicación
+- Tarea 1: Recuperar las claves y el punto final del recurso Azure OpenAI
+- Tarea 2: Configurar una aplicación en Cloud Shell
+- Tarea 3: Configurar su aplicación
+- Tarea 4: Ejecutar su aplicación
 
-### Tarea 1: Aprovisionar un recurso de Azure OpenAI
+### Tarea 1: Recuperar las claves y el punto final del recurso Azure OpenAI
 
-1. Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
+1. En Azure Portal, busque Azure OpenAI y seleccione Azure OpenAI.
 
-   ![](../media/openai_1.png)
+1. Seleccione el recurso Azure OpenAI existente y siga los pasos a continuación para copiar las claves y el punto final del recurso OpenAI.
 
-2. En la hoja **Servicios de IA de Azure | Azure OpenAI**, haga clic en **+ Crear**.
-
-   ![](../media/create.png)
-
-3. Cree un recurso **Azure OpenAI** con la siguiente configuración:
-    - **Suscripción**: Predeterminada - Suscripción preasignada (1).
-    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Región**: **UKsouth**(3)
-    - **Nombre**: OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Plan de tarifa**: Standard S0 (5)
-    -  Haga clic en **Siguiente** (6)
-  
-        ![](../media/azopenai123.png "Create Azure OpenAI resource")
-
-4. Haga clic en **Siguiente** dos veces y haga clic en **Crear**.
-
-5. Espere a que se complete la implementación. Luego, vaya al recurso de Azure OpenAI implementado en el Portal de Azure.
-
-6. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
+1. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
@@ -48,70 +29,7 @@ En este laboratorio, completará las siguientes tareas:
 
         ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-#### Validación
-
-> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
-> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
-> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
-> - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
-
-   <validation step="da528603-6b5d-4fe4-9cb2-ad3f86e2ea48" />
-
-### Tarea 2: Implementar un modelo
-
-Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a través de **Azure AI Foundry portal**. Una vez implementado, haremos referencia a ese modelo en nuestra aplicación.
-
-1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
-
-   ![](../media/openai_1.png)
-
-2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
-
-   ![](../media/openai_2_1.png)
-
-3. En el panel de recursos de Azure OpenAI, haga clic en **Go to Azure AI Foundry portal** para navegar a **Azure AI Foundry portal.**.
-
-   ![](../media/spanish_foundry.png)
-
->**Note**: Antes de implementar un modelo, asegúrese de estar en OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> marcando la esquina superior derecha. Si no es así, haga clic en el menú desplegable y selecciónelo.
-
-   ![](../media/swap_model.png)
-
-5. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**. 
-
-   ![](../media/spansih_model.png)
-
-6. En la ventana **Seleccionar un modelo**, seleccione **gpt-35-turbo-16k (1)** y haga clic en **Confirmar (2)**.
-
-   ![](../media/new4.png)
-
-7. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
-    
-    - **Nombre de implementación**: text-turbo (1) 
-    - **Tipo de implementación**: Standard (2)
-    - **Versión de modelo**: 0613(Default) (3)
-    - **Tokens por límite de velocidad por minuto (miles)**: 10K (4)
-    - **Habilitar cuota dinámica**: Habilitado (5)
-    - Haga clic en **Implementar** (6)
-  
-      ![](../media/new2-1.png)
-
-8. Esto implementará un modelo con el que podrá experimentar a medida que avanza.
-
-   > **Nota**: Puede ignorar la notificación "No se pudo obtener información de la cuota de implementaciones"
-   
-   > **Nota**: Cada modelo de Azure OpenAI está optimizado para un equilibrio diferente de capacidades y rendimiento. En este ejercicio, utilizaremos la serie de modelos **3.5 Turbo** de la familia de modelos **GPT-3**, que tiene una gran capacidad de comprensión del lenguaje. Este ejercicio solo utiliza un modelo único; sin embargo, la implementación y el uso de otros modelos que implemente funcionarán de la misma manera.
-
-#### Validación
-
-> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
-> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
-> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
-> - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
-
-   <validation step="826e7659-f527-46d7-9d87-56f89b0f6bf2" />
-
-### Tarea 3: Configurar una aplicación en Cloud Shell
+### Tarea 2: Configurar una aplicación en Cloud Shell
 
 Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicación de línea de comandos breve que se ejecuta en Cloud Shell en Azure. Abra una nueva pestaña del navegador para trabajar con Cloud Shell.
 
@@ -177,7 +95,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-### Tarea 4: Configurar su aplicación
+### Tarea 3: Configurar su aplicación
 
 Para este ejercicio, completará algunas partes clave de la aplicación para habilitar el uso de su recurso de Azure OpenAI.
 
@@ -189,7 +107,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     
     - Python: `.env`
     
-3. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `text-turbo`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**
+3. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**
 
 4. Navegue hasta la carpeta de su lenguaje preferido e instale los paquetes necesarios.
 
@@ -446,7 +364,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
    >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
-### Tarea 5: Ejecutar su aplicación
+### Tarea 4: Ejecutar su aplicación
 
 Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitud a su modelo y observe la respuesta.
 

@@ -55,7 +55,7 @@ En este laboratorio, completará las siguientes tareas:
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-   <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
+   <validation step="da528603-6b5d-4fe4-9cb2-ad3f86e2ea48" />
 
 ### Tarea 2: Implementar un modelo
 
@@ -109,7 +109,7 @@ Para usar la API de Azure OpenAI, primero debe implementar un modelo para usar a
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-   <validation step="d1610911-47ae-44ef-a286-4f4961a4b36d" />
+   <validation step="826e7659-f527-46d7-9d87-56f89b0f6bf2" />
 
 ### Tarea 3: Configurar una aplicación en Cloud Shell
 
@@ -170,7 +170,7 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
    
 #### Validación
 
-   <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
+   <validation step="70709b10-e808-4a39-b3bb-fbd92279c789" />
 
 > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
 > - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 

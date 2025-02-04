@@ -74,11 +74,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/openai8.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/OpenAI_select.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal** it will navigate to **Azure AI Foundry**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry**.
 
     ![](../media/imagee.png)
 
@@ -86,7 +86,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/pop-upclose.png)
 
-1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
+1. Select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
     ![](../media/04022025(1).png "Create a new deployment")
 
@@ -118,7 +118,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 8. This will deploy a model that you will be playing around with as you proceed.
 
-   > **Note**: You can ignore the "Failed to fetch deployments quota information" notification.
+   > **Note**: You can ignore the **Failed to fetch deployments quota information** notification.
    
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model, however, deployment and usage of other models you deploy will work in the same way.
 
@@ -139,7 +139,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis** button and select **Cloud Shell**.
+    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis (...)** button and select **Cloud Shell**.
 
     ![](../media/open1.png)
 
@@ -221,7 +221,7 @@ In this task, you will complete key parts of the application to enable it to use
     
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
+3. Update the configuration values to include the **Endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
 
    ![](../media/EditorMin.png "Minimise the editor")
 
@@ -417,9 +417,9 @@ In this task, you will run your configured app to send a request to your model a
    
 3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
-    - **C#**: `dotnet run`
+    - **C#:** `dotnet run`
     
-    - **Python**: `python test-openai-model.py`
+    - **Python:** `python test-openai-model.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
@@ -433,11 +433,11 @@ In this task, you will run your configured app to send a request to your model a
 
 6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
 
-7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and Save the file.
 
-   > **C#:** Program.cs
+   - **C#:** Program.cs
    
-   > **Python:** test-openai-model.py
+   - **Python:** test-openai-model.py
 
 8. Run the application again using the prompts above, and observe the output.
 
@@ -453,7 +453,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 1. The response from the model will likely indicate can't understand the hike you're referring to. To fix that, we can enable the model to have past conversation messages for reference.
 
-1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **system message**, add the following code.
+1. In your application, we need to add the previous prompt and response to the future prompt we are sending. Below the definition of the **System message**, add the following code.
 
     **C#**: Program.cs
 
@@ -476,7 +476,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
     ![](../media/04022025(3).png)
 
-1. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in Python with the following code then save the file. The code is mostly the same, but now the messages array stores the conversation history.
+1. Under the comment ***Add code to send request...***, replace all the code from the comment until the **while** loop command at the end for C# and until the **except** command in Python with the following code then save the file. The code is mostly the same, but now the messages array stores the conversation history.
 
     **C#**: Program.cs
 

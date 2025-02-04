@@ -74,7 +74,13 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-   ![Manage Your Virtual Machine](../media/IMG5.png)
+![Manage Your Virtual Machine](../media/IMG5.png)
+
+## Lab Guide Zoom In/Zoom Out
+ 
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![Manage Your Virtual Machine](../media/ZOOMINOUT.png)
 
 ## Lab Validation
 
@@ -97,12 +103,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    ![Manage Your Virtual Machine](../media/gext2.png)
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
-
-## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![Manage Your Virtual Machine](../media/ZOOMINOUT.png)
 
 ## Let's Get Started with Azure Portal
  

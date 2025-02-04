@@ -30,7 +30,7 @@ You should have basic knowledge and understanding of the following:
 
 ## Architecture
 
-This architecture allows users to leverage advanced AI capabilities by starting with provisioning an Azure OpenAI resource in the Azure portal. You will then deploy a model and set up a sample application using Cloud Shell. The application will be integrated with the Azure OpenAI model for text-based tasks. You'll test the application by sending prompts and reviewing responses. Finally, you'll enhance the application to manage conversation history for a more interactive experience.
+This architecture allows users to leverage advanced AI capabilities by starting with the provision of an Azure OpenAI resource in the Azure portal. You will then deploy a model and set up a sample application using Cloud Shell. The application will be integrated with the Azure OpenAI model for text-based tasks. You'll test the application by sending prompts and reviewing responses. Finally, you'll enhance the application to manage conversation history for a more interactive experience.
 
 ## Architecture Diagram
 
@@ -46,7 +46,7 @@ This architecture allows users to leverage advanced AI capabilities by starting 
 
 ## Getting Started with the Lab
 
-Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different lab guide exercises.
 
 ## Accessing Your Lab Environment
  
@@ -121,7 +121,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
   
    ![Click on cancel](../media/imageae.png)
- 
 
 ## Support Contact
  

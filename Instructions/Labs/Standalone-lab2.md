@@ -48,7 +48,8 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
-6. On the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** blade to capture the Keys and Endpoint values:  
+6. On the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** blade to capture the Keys and Endpoint values:
+
    - Go to **Keys and Endpoint (1)** under **Resource Management**.  
    
    - Click **Show Keys (2)** and copy **Key 1 (3)**. Save it in a text editor like Notepad.  
@@ -112,7 +113,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
         ![](../media/DeployModel.png)
 
-      >**Note:** If the options shown in the above screenshot is not visible, click on **Customize**.
+      >**Note:** If the options shown in the above screenshot are not visible, click on **Customize**.
 
          ![](../media/CustomiseModel.png)
 
@@ -139,7 +140,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-    >**Note :** If you don't see the Cloud Shell icon, click on the **ellipsis (...)** button and select **Cloud Shell**.
+    >**Note:** If you don't see the Cloud Shell icon, click on the **ellipsis (...)** button and select **Cloud Shell**.
 
     ![](../media/open1.png)
 
@@ -169,7 +170,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
        ![](../media/openai2.png "Create storage advanced settings")
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -217,9 +218,9 @@ In this task, you will complete key parts of the application to enable it to use
 
 2. Open the configuration file for your language
 
-    - C#: `appsettings.json`
+    - **C#:** `appsettings.json`
     
-    - Python: `.env`
+    - **Python:** `.env`
     
 3. Update the configuration values to include the **Endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
 
@@ -238,13 +239,13 @@ In this task, you will complete key parts of the application to enable it to use
     mkdir -p $DOTNET_ROOT
     ```
 
-    >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+    >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here You're creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      
     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      
     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      
-    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+    - `mkdir -p $DOTNET_ROOT` creates the directory where the .NET runtime and SDK will be installed.
 
 1.  Run the following command to install the required SDK version locally:     
 
@@ -254,7 +255,7 @@ In this task, you will complete key parts of the application to enable it to use
     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
     ```
 
-    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -284,7 +285,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-6. Navigate to your preferred language folder, select the code file given below, replace the comment ***Add Azure OpenAI package*** with the following code to add the necessary libraries.
+6. Navigate to your preferred language folder, select the code file given below, and replace the comment ***Add Azure OpenAI package*** with the following code to add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -309,7 +310,7 @@ In this task, you will complete key parts of the application to enable it to use
     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     
     // System message to provide context to the model
-    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
+    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature of the hikes when making a recommendation.";
     ```
 
     **Python**: test-openai-model.py
@@ -323,11 +324,10 @@ In this task, you will complete key parts of the application to enable it to use
             )
     
     # Create a system message
-    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+    system_message = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
         If no area is specified, I will default to near Rainier National Park. 
         I will then provide three suggestions for nearby hikes that vary in length. 
-        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-        """
+        I will also share an interesting fact about the local nature on the hikes when making a recommendation".
     ```
 
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
@@ -378,6 +378,7 @@ In this task, you will complete key parts of the application to enable it to use
     # Print the response
     print("Response: " + generated_text + "\n")
     ```
+
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
@@ -530,6 +531,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     # Print generated text
     print("Summary: " + generated_text + "\n")
     ```
+
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 1. The final code should look like as shown below:
@@ -698,6 +700,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 8. In the terminal pane, enter the following command to run the application.
 
     - **C#:** `dotnet run`
+    
     - **Python:** `python test-openai-model.py`
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
@@ -706,9 +709,10 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 11. You'll likely get a response about the second hike the model suggested, which provides a much more realistic conversation. You can ask additional follow-up questions referencing previous answers, and each time the history provides context for the model to answer.
 
-    > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the given below respective language files and replace the entire code with the one provided in Task 6, Step 6.
+    > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the given below language files and replace the entire code with the one provided in Task 6, Step 6.
        
     - **Python:** test-openai-model.py and 
+
     - **C#:** Program.cs
 
     > **Tip:** The token count is only set to 1200, so if the conversation continues too long the application will run out of available tokens, resulting in an incomplete prompt. In production uses, limiting the length of the history to the most recent inputs and responses will help control the number of required tokens.

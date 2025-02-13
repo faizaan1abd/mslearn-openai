@@ -1,0 +1,18 @@
+[
+    {
+      "Name": "Lab 01: Use Your Own Data and Explore Content Filter with Azure OpenAI Services",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/use-your-own-data-and-explore-content-filter-with-azure-openai-services.md",
+          "Order": 2
+        }
+      ]
+    }
+  ]
+  

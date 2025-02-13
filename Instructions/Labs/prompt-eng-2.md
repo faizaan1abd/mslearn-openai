@@ -22,11 +22,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
+2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/17-12-24(2).png)
 
@@ -39,11 +39,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier**: Standard S0 **(5)**
     -  Click on **Next** **(6)**
   
-       ![](../media/azopenai123.png "Create Azure OpenAI resource")
+       ![](../media/1302024(6).png "Create Azure OpenAI resource")
 
        >**Note**: **Please deploy Openai resource in France Central Region**
 
-4. Click on **Next** again and subsequently click on **Create** 
+4. Click on **Next** again and subsequently click on **Create**.
 
    ![](../media/promptsc1.png)
 
@@ -74,19 +74,19 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/17-12-24(3).png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Portal**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/17-12-24(4).png)
 
-5. In the **Deployments (1)** page, click on **+ Deploy model (2)** , Choose **Deploy base Model (3)**.
+5. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
    ![](../media/17-12-24(5).png)
 
@@ -171,7 +171,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 9. Send the following prompt to the model.
 
-    ```code
+   ```code
    Severe drought likely in California
 
    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
@@ -179,7 +179,7 @@ In this task, you will examine how prompt engineering improves model responses i
    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
    
    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-    ```
+   ```
 
 10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
 11. In the **Setup** section near the system message, click **+ Add section (1)**, select **Example (2)** from the dropdown, and add the following example.
@@ -320,6 +320,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 2. Open the configuration file for your language.
 
     - C#: `appsettings.json`
+    
     - Python: `.env`
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
@@ -554,7 +555,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
    from dotenv import load_dotenv
    
    # Add Azure OpenAI package
-   # Add Azure OpenAI package
    from openai import AsyncAzureOpenAI
    
    # Set to True to print the full response from OpenAI for each call
@@ -665,6 +665,7 @@ In this task, you will run your configured app to send a request to your model a
 4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
+    
     - **Python**: `python prompt-engineering.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
@@ -678,14 +679,16 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     You are an AI assistant
     ```
-     ![](../media/system-1.png)
+     
+    ![](../media/system-1.png)
 
     **User message:**
 
     ```prompt
     Write an intro for a new wildlife Rescue
     ```
-     ![](../media/x233.png)
+    
+    ![](../media/x233.png)
 
 6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 7. Next, enter the following prompts which specify a format for the response:
@@ -764,7 +767,7 @@ In this task, you will run your configured app to send a request to your model a
     user_message = grounding_text + user_message
     ```
 
-16. Save the file and rerun your app.
+16. Save the file with **CTRL+S** and rerun your app.
 17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message**
@@ -782,8 +785,8 @@ In this task, you will run your configured app to send a request to your model a
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
--   Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure OpenAI studio
+- Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.

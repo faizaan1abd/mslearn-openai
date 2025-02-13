@@ -78,10 +78,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Inline Validation](../media/inline-validation.png)
 
-1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
-
-   ![Lab Validation](../media/lab-validation.png)
-
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 ## Lab Duration Extension

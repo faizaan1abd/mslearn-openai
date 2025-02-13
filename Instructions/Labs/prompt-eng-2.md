@@ -51,7 +51,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/promptsc2.png)
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
@@ -157,11 +157,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
 6. Format the instructions as Python comments. Send the following prompt to the model.
 
-    ```code
+   ```code
    # 1. Create a list of animals
    # 2. Create a list of whimsical names for those animals
    # 3. Combine them randomly into a list of 25 animal and name pairs
-    ```
+   ```
 
 7. The model should correctly respond with complete Python code doing what the comments requested.
 

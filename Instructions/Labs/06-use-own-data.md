@@ -15,7 +15,6 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
-
 ### Task 1: Observe normal chat behavior without adding your own data
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.

@@ -463,7 +463,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
          using Azure;
          
          // Add Azure OpenAI package
-         // Add Azure OpenAI package
          using Azure.AI.OpenAI;
          
          // Build a config object and retrieve user settings.
@@ -573,7 +572,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
            azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
            
            # Configure the Azure OpenAI client
-           # Configure the Azure OpenAI client
            client = AsyncAzureOpenAI(
                azure_endpoint = azure_oai_endpoint, 
                api_key=azure_oai_key,  
@@ -602,7 +600,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
            print(ex)
    
    async def call_openai_model(system_message, user_message, model, client):
-       # Format and send the request to the model
        # Format and send the request to the model
        messages =[
            {"role": "system", "content": system_message},
@@ -664,13 +661,16 @@ In this task, you will run your configured app to send a request to your model a
      </ItemGroup>
    
     </Project> 
-   ```  
+   ``` 
+
 4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python prompt-engineering.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+
+    >**Note:** If you see a message like *"Press any key to continue..."*, please press **Enter**.
 
 5. For the first iteration, enter the following prompts:
 

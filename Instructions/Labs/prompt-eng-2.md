@@ -51,6 +51,8 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/promptsc2.png)
 
+1. In the **OpenAI-<inject key="Deployment-ID" enableCopy="false"></inject>** resource group, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** to access Azure OpenAI.
+
 6. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
@@ -165,7 +167,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 7. The model should correctly respond with complete Python code doing what the comments requested.
 
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on Apply changes and subsequently click on **Continue**. This will create a new chat session.
+8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes** and subsequently click on **Continue**. This will create a new chat session.
 
 9. Send the following prompt to the model.
 
@@ -180,7 +182,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, select the **Example** from the dropdown of **+ Add section** button. Add the following example.
+11. In the **Setup** section near the system message, click **+ Add section (1)**, select **Example (2)** from the dropdown, and add the following example.
 
     **User:**
 
@@ -202,8 +204,9 @@ In this task, you will examine how prompt engineering improves model responses i
 
     ![](../media/17-12-24(13).png)
 
+12. Click **+ Add section (1)** again, select **Example (2)** from the dropdown, and add another example with the provided text.
 
-12. Add another example with the following text.
+    ![](../media/17-12-24(13).png)
 
     **User:**
 
@@ -224,7 +227,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-13. Save those changes to the assistant setup, click continue, and send the same prompt about the California drought, provided here again for convenience.
+13. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
 
     ```code
     Severe drought likely in California
@@ -321,13 +324,44 @@ In this task, you will complete key parts of the provided C# or Python applicati
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages.
 
-    **C#**
+     **C#**:
 
-    ```bash
-   cd CSharp
-   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    ```
+    cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+1.  Run the following command to install the required SDK version locally:     
+
+     ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+     ```
+
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+1. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+    
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+    ```
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**

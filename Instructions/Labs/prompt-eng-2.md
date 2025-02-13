@@ -315,7 +315,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
+1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
 
@@ -515,10 +515,8 @@ In this task, you will complete key parts of the provided C# or Python applicati
              }
              
              // Configure the Azure OpenAI client
-             // Initialize the Azure OpenAI client
              OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
          
-             // Format and send the request to the model
              // Format and send the request to the model
              var chatCompletionsOptions = new ChatCompletionsOptions()
              {
@@ -631,7 +629,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
        asyncio.run(main())
       ```
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**.
+9. To save the changes made to the file, right-click on the file and hit **Save** or press **CTRL+S**.
 
 ### Task 6: Run your application
 
@@ -641,7 +639,7 @@ In this task, you will run your configured app to send a request to your model a
 
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
+3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file with **CTRL+S**.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">

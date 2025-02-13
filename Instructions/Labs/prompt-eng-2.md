@@ -543,8 +543,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
          
              // Write response to console
              Console.WriteLine($"\nResponse:\n{completion}\n\n");
-         }  
-            
+         }      
       ```
    
      **Python**

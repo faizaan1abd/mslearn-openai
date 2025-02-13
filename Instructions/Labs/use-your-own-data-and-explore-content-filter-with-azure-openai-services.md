@@ -21,25 +21,25 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/openai8.png)
 
-2. On **Azure OpenAI services | Azure OpenAI** blade, click on **+ Create**.
+2. On **Azure OpenAI services | Azure OpenAI (1)** blade, click on **+ Create (2)**.
 
    ![](../media/openai_create.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - **Subscription**: Default - Pre-assigned subscription. **(1)**
+    - **Resource group**: Enter openai-<inject key="DeploymentID	" enableCopy="false"></inject> **(2)**
+    - **Region**: Select <inject key="Region" enableCopy="false" /> **(3)**
+    - **Name**: OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject> **(4)**
+    - **Pricing tier**: Standard S0 **(5)**
   
       ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
     
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Next (6)** thrice and click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -68,11 +68,11 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/openai8.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject>**
+2. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab06-<inject key="DeploymentID	" enableCopy="false"></inject> (2)**
 
    ![](../media/OpenAI_select.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navaigate to **Azure AI Studio**.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry Studio** it will navaigate to **Azure AI Foundry Studio**.
 
    ![](../media/gotoresources.png)
 

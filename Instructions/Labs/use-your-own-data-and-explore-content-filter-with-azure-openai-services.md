@@ -76,28 +76,26 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
    ![](../media/gotoresources.png)
 
-4. In **Welcome to Azure OpenAI Service** page, click on **Create new deployment**.
+4. On the Azure AI Foundry portal page, select **Deployments (1)** under Shared Resources from the left pane. Then, click + Deploy Model and choose **Deploy Base Model (2)**.
 
-   ![](../media/openai-lab01_t2_s2.png "Create a new deployment")
+   ![](../media/ui1.png)
+   
+5. Search for **gpt-4**, click on **Confirm**.
 
-5. In the **Deployments** page, click on **+ Create new deployment**.
+   ![](../media/T2S5.png)
 
-   ![](../media/openai-lab01_t2_s3.png "Deploy model configurations")  
+   > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Select a Model**: gpt-4 (1)
-      
-      > **Note**: gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-      
-    - **Model version**: 1106-Preview (2)
-    - **Deployment type**: Standard (3)
-    - **Deployment name**: text-turbo (4)
-    - Click on **Advanced Settings** (5)
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (6)
-    - **Enable dynamic quota**: Enabled (7)
-    - Click on **Create** (8)
+    - **Deployment name**: text-turbo (1)
+    - **Deployment type**: Standard (2)    
+    - **Model version**: 1106-Preview (3)
+      > **Note**: If you are unable to edit the version please click on the **Customize** button.
+    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+    - **Enable dynamic quota**: Enabled (5)
+    - Click on **Create** (6)
   
-      ![](../media/demoss.png)
+      ![](../media/T2S6.png)
 
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
 

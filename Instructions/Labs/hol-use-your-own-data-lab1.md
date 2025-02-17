@@ -317,7 +317,6 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
    code .
     ```
 
-### Task 7: Configure your application
 
 ### Task 7: Configure your application
 

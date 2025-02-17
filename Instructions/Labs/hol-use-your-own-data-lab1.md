@@ -34,7 +34,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
     - Subscription: **Default - Pre-assigned subscription (1)**.
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Region: Select **East US 2 (3)**
-    - Name: **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Pricing tier: **Standard S0 (5)**
   
       ![](../media/u1.png "Create Azure OpenAI resource")
@@ -45,7 +45,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
    ![](../media/u2.png)
 
-6. To capture the Keys and Endpoints values, on **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
    
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
@@ -70,7 +70,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
 
       ![](../media/search.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab06-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
+1. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
       ![](../media/openai.png)
 

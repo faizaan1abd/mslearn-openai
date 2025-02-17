@@ -90,25 +90,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(5).png)
 
-6. Search for **GPT-35-TURBO-16K (1)**, select it **(2)**, and click on **Confirm (3)**.
+6. Search for **gpt-35-turbo (1)**, select it **(2)**, and click on **Confirm (3)**.
 
-   ![](../media/17-12-24(6).png)
+   ![](../media/17022025(6).png)
 
 7. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo **(1)**
     - **Deployment type**: Standard **(2)**
-    - **Model version**: Keep it to default **(3)**
+    - **Model version**: 0125 (Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
     - **Enable dynamic quota**: Enabled **(5)**
     - Click on **Deploy** **(6)**
 
-        >**Note**: click on customize and collapse button to expand the other options.
+        >**Note**: Click on customize and collapse button to expand the other options.
 
-        ![](../media/17-12-24(7).png)
+        ![](../media/17022025(7).png)
 
         >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
-
-        >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
 
         > **Note**: You can ignore the "Failed to fetch deployments quota information" notification.
         
@@ -129,11 +127,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. In [Azure AI Foundry](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** under Playgrounds section in the left pane.
 
-   ![](../media/17-12-24(8).png)
+   ![](../media/17022025(3).png)
 
-2. In the **Setup** section at the top, enter `You are a helpful AI assistant` **(1)** as the Give the model instructions and context, click on the **Apply changes (2)**, and subsequently click on **Continue**.
+1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue**.
 
-   ![](../media/17-12-24(9).png)
+   ![](../media/17022025(9).png)
 
    ![](../media/17-12-24(10).png)
 
@@ -149,11 +147,11 @@ In this task, you will examine how prompt engineering improves model responses i
 
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
-   ![](../media/17-12-24(11).png)
+   ![](../media/17022025(10).png)
 
-5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(1)**. Click **Apply changes** **(2)** and subsequently click on **Continue**.
+5. Next, update the system message to include instructions `You are an AI assistant helping write python code. Complete the app based on provided comments` **(2)**. Click **Apply changes** **(3)** and subsequently click on **Continue**.
 
-   ![](../media/17-12-24(12).png)
+   ![](../media/17022025(11).png)
 
    ![](../media/17-12-24(10).png)
 
@@ -202,11 +200,9 @@ In this task, you will examine how prompt engineering improves model responses i
     Sports
     ```
 
-    ![](../media/17-12-24(13).png)
+    ![](../media/17022025(12).png)
 
 12. Click **+ Add section (1)** again, select **Example (2)** from the dropdown, and add another example with the provided text.
-
-    ![](../media/17-12-24(13).png)
 
     **User:**
 
@@ -226,6 +222,8 @@ In this task, you will examine how prompt engineering improves model responses i
     ```code
     Entertainment
     ```
+
+    ![](../media/17022025(12).png)
 
 13. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
 

@@ -97,7 +97,7 @@ To chat with the Azure OpenAI, you must first deploy a model to use through the 
     - **Deployment name**: **text-turbo (1)**
     - **Deployment type**: **Standard (2)**
     - **Model version**: **0125 (3)** ( Check the Deployement name after changing the model version, if it is changed please update it to **text-turbo**)
-    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: **10K (4)**
+    - Click on customize to reduce **Tokens per Minute Rate Limit (thousands)**: **20K (4)**
     - Click on **Deploy (5)**
   
       ![](../media/u5.png)

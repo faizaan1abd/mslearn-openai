@@ -292,30 +292,81 @@ In this task, you will use a short command-line application running in Cloud She
 
 ### Task 7: Configure your application
 
-In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
+For this exercise, you'll complete some key parts of the application to enable using your Azure OpenAI resource.
 
 1. In the code editor, expand the language folder for your preferred language.
 
-2. Open the configuration file for your language.
+1. Open the configuration file for your language.
 
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include:
-    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **my-gpt-model**).
-    - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
-    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
-    - The name of the search index (which should be `margiestravel`).
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
 
-         ![](../media/x676.png)
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+     ![](../media/u47.png)    
+
+1. Navigate to the folder for your preferred language and install the necessary packages.
 
      **C#**:
 
     ```
     cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+1.  Run the following command to install the required SDK version locally:     
+
+     ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+     ```
+
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+1. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+    
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+    ```
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
@@ -324,12 +375,31 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     cd Python
     pip install python-dotenv
-    pip install openai==1.56.2
+    pip install openai==1.55.3
     ```
 
-5. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
+1. In the code editor from the left navigation pane, in the **CSharp** or **Python** folder, open the configuration file for your preferred language
 
-    **C#**: ownData.cs
+    - **C#**: appsettings.json
+    - **Python**: .env
+
+1. Update the configuration values to include:
+    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task alternatively it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal)
+    
+    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **text-turbo**).
+    
+    - The endpoint for your AI search service (Which you copied in the previous task alternatively it is available in the **Url** value on the overview page for your AI search resource in the Azure portal).
+    
+    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
+    - The name of the search index (which should be `margiestravel`).
+
+    - Press **Ctrl + S** on your keyboard to save the file.
+
+      ![](../media/x676.png)
+
+1. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
+
+    **C#**: OwnData.cs
 
     ```csharp
     // Configure your data source
@@ -356,10 +426,11 @@ In this task, you will complete key parts of the application to enable it to use
             }]
         )
     ```
+      >**Note**: Ensure that the indentation is correct after pasting the code into the editor; it should align with the previous line.
 
-6. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
+1. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.
 
-7. Save the changes to the code file.
+1. Press **Ctrl + S** on your keyboard to save the file.
 
 ## Task 8: Run your application
 

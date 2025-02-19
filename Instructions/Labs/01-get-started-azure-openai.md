@@ -100,7 +100,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-        ![](../media/image1b.png)
+      ![](../media/image1b.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 

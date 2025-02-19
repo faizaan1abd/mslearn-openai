@@ -69,7 +69,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 5. Search for **gpt-4o-mini**, click on **Confirm**
 
-   ![](../media/gpt-4-mini.png)
+     ![](../media/gpt-4-mini.png)
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
@@ -81,17 +81,17 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (6)
       - Click on **Deploy** (7)
   
-           ![](../media/gpt-4omini.png)
+      ![](../media/gpt-4omini.png)
 
-           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+   >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
 7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
-      ![](../media/ui1.png)
+     ![](../media/ui1.png)
 
 9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
 
-   ![](../media/ui4b.png)
+     ![](../media/ui4b.png)
    
 9. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: gpt-35-turbo-instruct (1)

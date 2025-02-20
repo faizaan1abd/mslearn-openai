@@ -23,7 +23,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+1. On **Azure AI Services | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
 
    ![](../media/tel-10.png)
 
@@ -33,7 +33,8 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
     - **Region**: Select **Sweden Central (3)**
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
     - **Pricing tier**: Standard S0 **(5)**
-  
+    - Click on **Next**.
+      
          ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
@@ -53,11 +54,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
       ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**
+3. In **Overview (1)** section, click on **Go to Azure AI Foundry portal (2)**, it will navigate to **Azure AI Foundry portal**.
 
       ![](../media/update08.png)
 

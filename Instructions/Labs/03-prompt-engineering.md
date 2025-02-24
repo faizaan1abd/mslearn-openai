@@ -205,7 +205,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     </Project>
     ```    
 
-     ![](../media/u47.png)    
+     ![](../media/u47upd.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 

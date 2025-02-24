@@ -58,12 +58,13 @@ In this task, you will observe how the base model responds to queries without an
 4. Create a **Storage Account** resource with the following settings:
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select <inject key="Region" enableCopy="false" />
-    - **Redundancy**: Locally-redundant storage (LRS)
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>(1)
+    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>(2)
+    - **Region**: Select <inject key="Region" enableCopy="false" />(3)
+    - **Primary Service**: Azure Blob Storage or Azure Data Lake Storage Gen 2(4)
+    - **Redundancy**: Locally-redundant storage (LRS)(5)
   
-      ![](../media/openai-lab06_t4_s4.png "Create storage account")
+      ![](../media/openai-lab06_t4_s4upd.png "Create storage account")
 
     - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
 
@@ -101,7 +102,7 @@ In this task, you will observe how the base model responds to queries without an
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Change the Pricing tier to **Basic**
 
-      ![](../media/openai-lab06_t4_s5.png "Create cognitive search resource")
+      ![](../media/openai-lab06_t4_s5upd.png "Create cognitive search resource")
 
 13. Wait until your search resource has been deployed.
 
@@ -242,7 +243,7 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-     ![](../media/u47.png)    
+     ![](../media/u47upd.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 

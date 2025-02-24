@@ -43,7 +43,7 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
 6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3**, and leave the rest of the settings as default and click on **Deploy**.
 
-      ![](../media/dalle32.png)
+      ![](../media/dalle32upd.png)
               
 4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
@@ -150,7 +150,7 @@ In this task, you will use a configuration file in the application to store the 
     </Project>
     ```    
 
-     ![](../media/u47.png)    
+     ![](../media/u47upd.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 

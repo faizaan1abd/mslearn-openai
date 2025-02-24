@@ -121,11 +121,12 @@ In this task, you will use a simple Python or C# app to generate images by calli
       ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
-      - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-      - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
-      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **File share**: Create a new file share named **none**
+      - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+      - **CloudShell region**: Select <inject key="Region" enableCopy="false" /> (2)
+      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
+      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+      - **File share**: Create a new file share named **none** (5)
+      - Click on **Create** (6)
 
            ![](../media/lab04-1.png "Create storage advanced settings")
 

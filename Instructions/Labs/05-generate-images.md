@@ -123,6 +123,74 @@ In this task, you will use a configuration file in the application to store the 
    pip install python-dotenv
     ```
 
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+     ![](../media/u47.png)    
+
+1. Navigate to the folder for your preferred language and install the necessary packages.
+
+     **C#**:
+
+    ```
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+1.  Run the following command to install the required SDK version locally:     
+
+     ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+     ```
+
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+1. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+    
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+    ```
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    ```
+
 #### Task 2.3: View application code
 
 In this task, you will explore the code used to call the REST API and generate an image.
@@ -157,33 +225,6 @@ In this task, you will explore the code used to call the REST API and generate a
 In this task, you will run the reviewed code to generate some images.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-
-2. If your using as **C#** language kindly open **generate_image.csproj** file replace with following code and save the file.
-
-   ```
-      <Project Sdk="Microsoft.NET.Sdk">
-      
-      <PropertyGroup>
-      <OutputType>Exe</OutputType>
-      <TargetFramework>net8.0</TargetFramework>
-      <ImplicitUsings>enable</ImplicitUsings>
-      <Nullable>enable</Nullable>
-      </PropertyGroup>
-      
-       <ItemGroup>
-       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-       </ItemGroup>
-      
-       <ItemGroup>
-         <None Update="appsettings.json">
-           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          </None>
-        </ItemGroup>
-      
-       </Project>
-      ```
 
 3. In the console prompt pane, enter the appropriate command to run your application:
 

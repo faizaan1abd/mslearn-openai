@@ -82,7 +82,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo-16k** and click on **Confirm**
+5. Search for **gpt-35-turbo** and click on **Confirm**
 
       ![](../media/new04.png)
 
@@ -90,14 +90,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment name**: text-turbo(1)
       - **Deployment type**: Standard(2)
       - **Click on Customize**
-      - **Model version**: 0613 (Default)(3)      
+      - **Model version**: 0125 (Default)(3)      
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i2-1.png)
+           ![](../media/i2-2.png)
 
-           >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -292,19 +291,19 @@ In this task, you will complete key parts of the application to enable it to use
 
 10.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
-    **C#**: Program.cs
+      **C#**: Program.cs
 
-    ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+   ```csharp
+     // Initialize the Azure OpenAI client
+     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     
     // System message to provide context to the model
     string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
-    ```
+   ```
 
-    **Python**: test-openai-model.py
+   **Python**: test-openai-model.py
 
-    ```python
+   ```python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
             azure_endpoint = azure_oai_endpoint, 
@@ -318,9 +317,9 @@ In this task, you will complete key parts of the application to enable it to use
         I will then provide three suggestions for nearby hikes that vary in length. 
         I will also share an interesting fact about the local nature on the hikes when making a recommendation.
         """
-    ```
+   ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
 11. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 

@@ -83,20 +83,18 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-5. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+5. Search for **GPT-35-TURBO**, click on **Confirm**
 
 6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
       - Click on customize
-      - Model version: 0613(Default)(3)
+      - Model version: 0125(Default)(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i2.png)
-
-           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+           ![](../media/i2-2.png)
 
           > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
@@ -118,7 +116,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant` under Give the model instructions and context and click on **Apply changes** and subsequently click on **Continue**.
 
-    ![](../media/openai1.png)
+    ![](../media/openai1-1.png)
 
     >**Note**: If the **Setup** option is not visible, click on **Show set** to display it.
 
@@ -159,7 +157,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 11. In the **Setup** section near the Give the model instructions and context, select the **+ Add section** button. then click on **Examples** Add the following example.
 
-    ![](../media/example1.png)
+    ![](../media/example1-1.png)
 
        **User:**
 
@@ -295,10 +293,74 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     - C#: `appsettings.json`
     - Python: `.env`
-    
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+
+3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+    ![](../media/u47.png)
+
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
+
+    **C#**:
+
+    ```
+    cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+    > **Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+5. Run the following command to install the required SDK version locally:     
+
+    ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+    ```
+
+    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+6. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+
+7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+
+8. Navigate to the folder for your preferred language and install the necessary packages.
 
     **C#**
 
@@ -315,7 +377,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+9. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -331,28 +393,29 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and add the necessary code for configuring the client.
+10. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#**: Program.cs
-
+    
     ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
     **Python**: prompt-engineering.py
 
    ```python
-    # Configure the Azure OpenAI client
-    client = AsyncAzureOpenAI(
+        # Configure the Azure OpenAI client
+        client = AsyncAzureOpenAI(
         azure_endpoint = azure_oai_endpoint, 
         api_key=azure_oai_key,  
         api_version="2024-02-15-preview"
         )
-    ```
+   ```
+   
    >**Note :** Ensure that the indentation is correct when copying and pasting any Python code. This applies to all Python code.
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+11. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**: Program.cs
 
@@ -391,10 +454,10 @@ In this task, you will complete key parts of the provided C# or Python applicati
         messages=messages,
         temperature=0.7,
         max_tokens=800
-    )
-    ```
+    )    
+```
 
-8. The  modified code should look like as shown below:
+12. The  modified code should look like as shown below:
 
     **C#**
       
@@ -496,7 +559,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
    
      **Python**
    
-      ```python
+```python
    import os
    import asyncio
    from dotenv import load_dotenv
@@ -575,7 +638,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
        asyncio.run(main())
       ```
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+13. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
 ### Task 6: Run your application
 

@@ -85,9 +85,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
    
 11. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
-   ```bash
-   code .
-   ```
+    ```bash
+    code .
+    ```
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -109,14 +109,76 @@ In this task, you will complete key parts of the application to enable it to use
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
 
-    **C#** : 
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
 
-    ```bash
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+     ![](../media/u47.png)    
+
+1. Navigate to the folder for your preferred language and install the necessary packages.
+
+     **C#**:
+
+    ```
     cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+1.  Run the following command to install the required SDK version locally:     
+
+     ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+     ```
+
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+1. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+    
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+    ```
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
+
+4. Navigate to the folder for your preferred language and install the necessary packages.
 
     **Python** : 
 
@@ -230,34 +292,6 @@ In this task, you will complete key parts of the application to enable it to use
 In this task, you will run your configured app to send a request to your model and observe the response.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-
-2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
-
-   ```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project> 
-
-   ```
    
 3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 

@@ -82,6 +82,12 @@ The architecture for this lab involves the following key components:
 1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
 
      ![](../media/rg.png "Resource groups")
+
+## Lab Guide Zoom In/Zoom Out
+
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![Manage Your Virtual Machine](../media/labzoom-1.png)
    
 1. Use **Next** button from lower right corner to move on to the next page.
 

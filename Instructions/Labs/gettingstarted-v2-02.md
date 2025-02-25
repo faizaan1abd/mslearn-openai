@@ -44,70 +44,55 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises of the lab guide.
+1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
-   ![](../media/Intro.png)
-
-## Exploring Your Lab Resources
-
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
-
-![](../media/env-01.png)
-
-## Utilizing the Split Window Feature
-
-For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the top right corner.
-
-![](../media/split-01.png)
-
-## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![](../media/n21.png)  
-
-## Managing Your Virtual Machine
-
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
-
-![](../media/resourses.png)
-    
-    
-## Login to Azure Portal and verify the pre-deployed resources
-
-1. Open Azure Portal from the desktop by double-clicking on it.
-    
-   ![](../media/azure-portal-edge.png)
+   ![](../media/getting-started1.png "Lab Environment")
    
-1. On the **Sign into Microsoft Azure** tab, you will see the login screen, enter the following username, and, then click on **Next**.
+1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
 
-   * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+   ![](../media/envdetails.png "Lab Environment")
 
-     ![](../media/user-email.png)
+## Login to Azure Portal
+1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
+
+   ![](../media/azureportal_icon1.png "Lab Environment")
    
+1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   
+     ![](../media/image7.png "Enter Email")
+     
 1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject>
-   
-     ![](../media/user-pass.png "Enter Password")
+     ![](../media/image8.png "Enter Password")
+     
+1. If you see the pop-up **Action Required**, click **Ask Later**.
 
-1. If you see the pop-up Action Required, click **Ask Later**.
-
-    ![](../media/asklater%20(1).png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
-
-1. If you see the pop-up **Stay Signed in?**, click on **No**.
+     ![](../media/asklater.png "Action required window")
+     
+    > If you are getting popup **save password**, then select **Save & Turn on** option.
+       
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-1. Now you can see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+1. Now you will see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](../media/select-rg.png)
- 
-1. We have already pre-deployed all the required resources, which you will be using throughout the lab.
+     ![](../media/select-rg.png "Resource groups")
+
+1. Confirm you have a resource group **openai-<inject key="Deployment-id" enableCopy="false"/>** present as shown in the below screenshot. You need to use the **openai-<inject key="Deployment-id" enableCopy="false"/>** resource group throughout the entire process of lab execution.
+
+     ![](../media/rg.png "Resource groups")
+   
+1. Use **Next** button from lower right corner to move on to the next page.
+
+   ![](../media/next1.png "Resource groups")
+
+
+This hands-on lab empowers participants to master Azure OpenAI Service by guiding them through setup, SDK integration, and prompt engineering. It also covers code generation, image creation with DALL-E, RAG data integration, and content filtering for comprehensive learning.
  
 ## Support Contact
  

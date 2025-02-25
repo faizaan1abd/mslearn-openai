@@ -53,6 +53,12 @@ The architecture for this lab involves the following key components:
 
    ![](../media/envdetails.png "Lab Environment")
 
+## Lab Guide Zoom In/Zoom Out
+
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![Manage Your Virtual Machine](../media/labzoom-1.png)
+
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 

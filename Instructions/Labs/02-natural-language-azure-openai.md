@@ -25,7 +25,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI (1)** blade, click on **Create (2)**.
+2. On **Azure AI Services | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
 
    ![](../media/tel-10.png)
 
@@ -44,7 +44,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-6. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
       - Click on **Show Keys (2)**.
       - Copy **Key 1 (3)** and ensure to paste it in a text editor such as notepad for future reference.
@@ -82,22 +82,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo-16k** and click on **Confirm**
+5. Search for **gpt-35-turbo (1)** and click on **Confirm (2)**
 
-      ![](../media/new04.png)
+      ![](../media/new04-1.png)
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: text-turbo(1)
       - **Deployment type**: Standard(2)
       - **Click on Customize**
-      - **Model version**: 0613 (Default)(3)      
+      - **Model version**: 0125 (Default)(3)      
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i2-1.png)
+           ![](../media/i2-2.png)
 
-           >**Note** : if the **gpt-35-turbo-16k(1)** model isn't available, choose **gpt-35-turbo(2)**
 
 7. This will deploy a model that you will be playing around with as you proceed.
 
@@ -190,10 +189,74 @@ In this task, you will complete key parts of the application to enable it to use
 
     - C#: `appsettings.json`
     - Python: `.env`
-    
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-4. Navigate to the folder for your preferred language and install the necessary packages
+3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+    ![](../media/u47.png)
+
+
+4. Navigate to the folder for your preferred language and install the necessary packages.
+
+    **C#**:
+
+    ```
+    cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+    > **Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+5. Run the following command to install the required SDK version locally:     
+
+    ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+    ```
+
+    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+6. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+
+7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+
+8. Navigate to the folder for your preferred language and install the necessary packages
 
     **C#** : 
 
@@ -210,7 +273,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+9. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -226,21 +289,21 @@ In this task, you will complete key parts of the application to enable it to use
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+10.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
-    **C#**: Program.cs
+      **C#**: Program.cs
 
-    ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+   ```csharp
+     // Initialize the Azure OpenAI client
+     OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     
     // System message to provide context to the model
     string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
-    ```
+   ```
 
-    **Python**: test-openai-model.py
+   **Python**: test-openai-model.py
 
-    ```python
+   ```python
     # Initialize the Azure OpenAI client
     client = AzureOpenAI(
             azure_endpoint = azure_oai_endpoint, 
@@ -254,11 +317,11 @@ In this task, you will complete key parts of the application to enable it to use
         I will then provide three suggestions for nearby hikes that vary in length. 
         I will also share an interesting fact about the local nature on the hikes when making a recommendation.
         """
-    ```
+   ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+   >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+11. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
 
@@ -305,7 +368,7 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
+12. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
@@ -314,47 +377,19 @@ In this task, you will complete key parts of the application to enable it to use
 In this task, you will run your configured app to send a request to your model and observe the response.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-
-2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
-
-   ```
-   <Project Sdk="Microsoft.NET.Sdk">
    
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project> 
-
-   ```
-   
-3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+2. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python test-openai-model.py`
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-4. When prompted, enter the text `What hike should I do near Rainier?`.
-5. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
-6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
-7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
-8. Run the application again using the prompts above, and observe the output.
+3. When prompted, enter the text `What hike should I do near Rainier?`.
+4. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+5. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+6. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
+7. Run the application again using the prompts above, and observe the output.
 
    >**Note :** Increasing the temperature often causes the response to vary, even when provided the same text, due to the increased randomness. You can run it several times to see how the output may change. Try using different values 
     for your temperature with the same input.

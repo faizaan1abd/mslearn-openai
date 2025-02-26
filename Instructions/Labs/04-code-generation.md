@@ -81,24 +81,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       ![](../media/ui1.png "Create a new deployment")         
    
 
-1. Search for **GPT-35-TURBO-16K (1)**, click on **Confirm (2)**
+1. Search for **GPT-35-TURBO (1)**, click on **Confirm (2)**
 
-      ![](../media/new04.png)
+      ![](../media/new04-1.png)
 
 1. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: **35turbo (1)**
       - Deployment type: **Standard (2)**
       - Click on **Customize**
-      - Model version: **0613(Default) (3)**
+      - Model version: **0125(Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **10K (4)**
       - Enable dynamic quota: **Enabled (5)**
       - Click on Deploy **(6)**
   
-           ![](../media/i3.png)     
+           ![](../media/i3-1.png)     
         
-
-   > **Note**: if the **GPT-35-TURBO-16K** model isn't available, choose **gpt-35-turbo**
-
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
    > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **35 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
@@ -233,9 +230,74 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+    ![](../media/u47.png)
+
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
+
+    **C#**:
+
+    ```
+    cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+    > **Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+5. Run the following command to install the required SDK version locally:     
+
+    ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+    ```
+
+    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+6. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+
+
+7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+
+8. Navigate to the folder for your preferred language and install the necessary packages.
 
     **C#**
 
@@ -252,7 +314,7 @@ In this task, you will complete key parts of the application to enable it to use
     pip install openai==1.56.2
     ```
 
-5. Add the necessary code for configuring the client.
+9. Add the necessary code for configuring the client.
 
     **C#**
     `Program.cs`
@@ -299,7 +361,7 @@ In this task, you will complete key parts of the application to enable it to use
    > **Note**: Ensure that the indentation is correct when copying and pasting the Python code.
  
 
-6. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
+10. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
 
 ### Task 6: Run your application
 
@@ -310,66 +372,40 @@ In this task, you will run your configured app to generate code for each use cas
 1. In the code editor, expand the `sample-code` folder and briefly observe the function and the app for your language. These files will be used for the tasks in the app.
    
 2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-
-3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
-
-    ```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project>
-    ```  
-4. Run the application.
+  
+3. Run the application.
 
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
-5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
+4. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 
     ```prompt
     Add comments to the following function. Return only the commented code.\n---\n
     ```
-6. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
+5. Next, choose option **2** to write unit tests for that same function and enter the following prompt.
 
     ```prompt
     Write four unit tests for the following function.\n---\n
     ```
 
-7. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
+6. Next, choose option **3** to fix bugs in an app for playing Go Fish. Enter the following prompt.
 
     ```prompt
     Fix the code below for an app to play Go Fish with the user. Return only the corrected code.\n---\n
     ```
-8. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
+7. The results will replace what was in `result/app.txt`, and should have very similar code with a few things corrected.
 
     - **C#**: Fixes are made on line 30 and 59
     - **Python**: Fixes are made on line 18 and 31
 
-9. To check the results paste the following code in the terminal:
+8. To check the results paste the following code in the terminal:
 
     ```
    cd result
     ```
 
-10. Copy the below command in the terminal to see the contents of the app.txt file.
+9. Copy the below command in the terminal to see the contents of the app.txt file.
 
     ```
     cat app.txt

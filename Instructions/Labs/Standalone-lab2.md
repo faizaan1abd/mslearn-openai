@@ -172,6 +172,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
+1. 8. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+
+   ![](../media/classic-cloudshell.png)
+
 7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
@@ -195,10 +199,6 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
       ```bash
       code .
       ```
- 
-    > **Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 8 and 9** to make sure you are on the correct project path.
-
-      ![](../media/classic-cloudshell-prompt.png) 
    
 ### Validation
 
@@ -228,16 +228,44 @@ In this task, you will complete key parts of the application to enable it to use
 
    > **Note:** The above image shows the example for the Python folder. For further steps, you can use ↕ to minimize and maximize the editor.
 
-5. Navigate to the folder for your preferred language and install the necessary packages
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
 
-    **C#** : 
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
 
-    ```bash
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+     ![](../media/u47upd.png)    
+
+1. Navigate to the folder for your preferred language and install the necessary packages.
+
+     **C#**:
+
+    ```
     cd CSharp
     export DOTNET_ROOT=$HOME/.dotnet
     export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```
 
     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here You're creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      
@@ -266,10 +294,15 @@ In this task, you will complete key parts of the application to enable it to use
     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.   
+
     
-    ```bash
+1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+    ```
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
+
+1. Navigate to the folder for your preferred language and install the necessary packages for python
 
     **Python** : 
 

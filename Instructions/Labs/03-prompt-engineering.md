@@ -83,20 +83,20 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png "Create a new deployment")
 
-5. Search for **GPT-35-TURBO-16K**, click on **Confirm**
+5. Search for **GPT-35-TURBO (1)**, click on **Confirm (2)**
+
+    ![](../media/new04-1.png)
 
 6. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
       - Click on customize
-      - Model version: 0613(Default)(3)
+      - Model version: 0125(Default)(3)
       - Tokens per Minute Rate Limit (thousands): 10K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i2.png)
-
-           >**Note**: If **GPT-35-TURBO-16K** is not available, please choose **GPT-35-Turbo**.
+           ![](../media/i2-2.png)
 
           > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
    
@@ -118,7 +118,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 2. In the **Setup** section at the top, enter `You are a helpful AI assistant` under Give the model instructions and context and click on **Apply changes** and subsequently click on **Continue**.
 
-    ![](../media/openai1.png)
+    ![](../media/openai1-1.png)
 
     >**Note**: If the **Setup** option is not visible, click on **Show set** to display it.
 
@@ -159,7 +159,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 11. In the **Setup** section near the Give the model instructions and context, select the **+ Add section** button. then click on **Examples** Add the following example.
 
-    ![](../media/example1.png)
+    ![](../media/example1-1.png)
 
        **User:**
 
@@ -295,10 +295,74 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     - C#: `appsettings.json`
     - Python: `.env`
-    
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+
+3. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+     <ItemGroup>
+     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+     </ItemGroup>
+
+     <ItemGroup>
+       <None Update="appsettings.json">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+     </ItemGroup>
+
+    </Project>
+    ```    
+
+    ![](../media/u47.png)
+
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
+
+    **C#**:
+
+    ```
+    cd CSharp
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$PATH
+    mkdir -p $DOTNET_ROOT
+    ```     
+
+    > **Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
+    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+    - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
+
+5. Run the following command to install the required SDK version locally:     
+
+    ```
+     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+     chmod +x dotnet-install.sh
+     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+    ```
+
+    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+
+6. Enter the following command to restore the workload.
+
+    ```
+    dotnet workload restore
+    ```
+
+     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+
+7. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+
+8. Navigate to the folder for your preferred language and install the necessary packages.
 
     **C#**
 
@@ -315,7 +379,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+9. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -331,28 +395,29 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and add the necessary code for configuring the client.
+10. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#**: Program.cs
-
+    
     ```csharp
-   // Initialize the Azure OpenAI client
-   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+    // Initialize the Azure OpenAI client
+    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
     **Python**: prompt-engineering.py
 
    ```python
-    # Configure the Azure OpenAI client
-    client = AsyncAzureOpenAI(
+        # Configure the Azure OpenAI client
+        client = AsyncAzureOpenAI(
         azure_endpoint = azure_oai_endpoint, 
         api_key=azure_oai_key,  
         api_version="2024-02-15-preview"
         )
-    ```
+   ```
+   
    >**Note :** Ensure that the indentation is correct when copying and pasting any Python code. This applies to all Python code.
 
-7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
+11. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
     **C#**: Program.cs
 
@@ -391,191 +456,190 @@ In this task, you will complete key parts of the provided C# or Python applicati
         messages=messages,
         temperature=0.7,
         max_tokens=800
-    )
-    ```
+    )    
+```
 
-8. The  modified code should look like as shown below:
+12. The modified code should look like as shown below:
 
     **C#**
       
-      ```csharp
-        // Implicit using statements are included
-         using System.Text;
-         using System.Text.Json;
-         using Microsoft.Extensions.Configuration;
-         using Microsoft.Extensions.Configuration.Json;
-         using Azure;
+    ```csharp
+    // Implicit using statements are included
+     using System.Text;
+     using System.Text.Json;
+     using Microsoft.Extensions.Configuration;
+     using Microsoft.Extensions.Configuration.Json;
+     using Azure;
+     
+     // Add Azure OpenAI package
+     // Add Azure OpenAI package
+     using Azure.AI.OpenAI;
+     
+     // Build a config object and retrieve user settings.
+     IConfiguration config = new ConfigurationBuilder()
+         .AddJsonFile("appsettings.json")
+         .Build();
+     string? oaiEndpoint = config["AzureOAIEndpoint"];
+     string? oaiKey = config["AzureOAIKey"];
+     string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+     
+     bool printFullResponse = false;
+     
+     do {
+         // Pause for system message update
+         Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
+         Console.ReadKey();
          
-         // Add Azure OpenAI package
-         // Add Azure OpenAI package
-         using Azure.AI.OpenAI;
+         Console.WriteLine("\nUsing system message from system.txt");
+         string systemMessage = System.IO.File.ReadAllText("system.txt"); 
+         systemMessage = systemMessage.Trim();
+     
+         Console.WriteLine("\nEnter user message or type 'quit' to exit:");
+         string userMessage = Console.ReadLine() ?? "";
+         userMessage = userMessage.Trim();
          
-         // Build a config object and retrieve user settings.
-         IConfiguration config = new ConfigurationBuilder()
-             .AddJsonFile("appsettings.json")
-             .Build();
-         string? oaiEndpoint = config["AzureOAIEndpoint"];
-         string? oaiKey = config["AzureOAIKey"];
-         string? oaiDeploymentName = config["AzureOAIDeploymentName"];
+         if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
+         {
+             break;
+         }
+         else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
+         {
+             Console.WriteLine("Please enter a system and user message.");
+             continue;
+         }
+         else
+         {
+             await GetResponseFromOpenAI(systemMessage, userMessage);
+         }
+     } while (true);
+     
+     async Task GetResponseFromOpenAI(string systemMessage, string userMessage)  
+     {   
+         Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
+     
+         if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
+         {
+             Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
+             return;
+         }
          
-         bool printFullResponse = false;
+         // Configure the Azure OpenAI client
+         // Initialize the Azure OpenAI client
+         OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
+     
+         // Format and send the request to the model
+         // Format and send the request to the model
+         var chatCompletionsOptions = new ChatCompletionsOptions()
+         {
+             Messages =
+             {
+                 new ChatRequestSystemMessage(systemMessage),
+                 new ChatRequestUserMessage(userMessage)
+             },
+             Temperature = 0.7f,
+             MaxTokens = 800,
+             DeploymentName = oaiDeploymentName
+         };
+     
+     // Get response from Azure OpenAI
+     Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
          
-         do {
-             // Pause for system message update
-             Console.WriteLine("-----------\nPausing the app to allow you to change the system prompt.\nPress any key to continue...");
-             Console.ReadKey();
+         ChatCompletions completions = response.Value;
+         string completion = completions.Choices[0].Message.Content;
+         
+         // Write response full response to console, if requested
+         if (printFullResponse)
+         {
+             Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+         }
+     
+         // Write response to console
+         Console.WriteLine($"\nResponse:\n{completion}\n\n");
+     }  
+    ```
+   
+    **Python**
+   
+    ```python
+     import os
+     import asyncio
+     from dotenv import load_dotenv
+     
+     # Add Azure OpenAI package
+     # Add Azure OpenAI package
+     from openai import AsyncAzureOpenAI
+     
+     # Set to True to print the full response from OpenAI for each call
+     printFullResponse = False
+     
+     async def main(): 
              
-             Console.WriteLine("\nUsing system message from system.txt");
-             string systemMessage = System.IO.File.ReadAllText("system.txt"); 
-             systemMessage = systemMessage.Trim();
+         try: 
          
-             Console.WriteLine("\nEnter user message or type 'quit' to exit:");
-             string userMessage = Console.ReadLine() ?? "";
-             userMessage = userMessage.Trim();
+             # Get configuration settings 
+             load_dotenv()
+             azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+             azure_oai_key = os.getenv("AZURE_OAI_KEY")
+             azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
              
-             if (systemMessage.ToLower() == "quit" || userMessage.ToLower() == "quit")
-             {
-                 break;
-             }
-             else if (string.IsNullOrEmpty(systemMessage) || string.IsNullOrEmpty(userMessage))
-             {
-                 Console.WriteLine("Please enter a system and user message.");
-                 continue;
-             }
-             else
-             {
-                 await GetResponseFromOpenAI(systemMessage, userMessage);
-             }
-         } while (true);
-         
-         async Task GetResponseFromOpenAI(string systemMessage, string userMessage)  
-         {   
-             Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
-         
-             if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiDeploymentName) )
-             {
-                 Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
-                 return;
-             }
-             
-             // Configure the Azure OpenAI client
-             // Initialize the Azure OpenAI client
-             OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-         
-             // Format and send the request to the model
-             // Format and send the request to the model
-             var chatCompletionsOptions = new ChatCompletionsOptions()
-             {
-                 Messages =
-                 {
-                     new ChatRequestSystemMessage(systemMessage),
-                     new ChatRequestUserMessage(userMessage)
-                 },
-                 Temperature = 0.7f,
-                 MaxTokens = 800,
-                 DeploymentName = oaiDeploymentName
-             };
-         
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-             
-             ChatCompletions completions = response.Value;
-             string completion = completions.Choices[0].Message.Content;
-             
-             // Write response full response to console, if requested
-             if (printFullResponse)
-             {
-                 Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
-             }
-         
-             // Write response to console
-             Console.WriteLine($"\nResponse:\n{completion}\n\n");
-         }  
-            
-      ```
-   
-     **Python**
-   
-      ```python
-   import os
-   import asyncio
-   from dotenv import load_dotenv
-   
-   # Add Azure OpenAI package
-   # Add Azure OpenAI package
-   from openai import AsyncAzureOpenAI
-   
-   # Set to True to print the full response from OpenAI for each call
-   printFullResponse = False
-   
-   async def main(): 
-           
-       try: 
-       
-           # Get configuration settings 
-           load_dotenv()
-           azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
-           azure_oai_key = os.getenv("AZURE_OAI_KEY")
-           azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
-           
-           # Configure the Azure OpenAI client
-           # Configure the Azure OpenAI client
-           client = AsyncAzureOpenAI(
-               azure_endpoint = azure_oai_endpoint, 
-               api_key=azure_oai_key,  
-               api_version="2024-02-15-preview"
-               )
-   
-           while True:
-               # Pause the app to allow the user to enter the system prompt
-               print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
-               input()
-   
-               # Read in system message and prompt for user message
-               system_text = open(file="system.txt", encoding="utf8").read().strip()
-               user_text = input("Enter user message: ")
-               if user_text.lower() == 'quit' or system_text.lower() == 'quit':
-                   print('Exiting program...')
-                   break
-               
-               await call_openai_model(system_message = system_text, 
-                                       user_message = user_text, 
-                                       model=azure_oai_deployment, 
-                                       client=client
-                                       )
-   
-       except Exception as ex:
-           print(ex)
-   
-   async def call_openai_model(system_message, user_message, model, client):
-       # Format and send the request to the model
-       # Format and send the request to the model
-       messages =[
-           {"role": "system", "content": system_message},
-           {"role": "user", "content": user_message},
-       ]
-   
-       print("\nSending request to Azure OpenAI model...\n")
-   
-       # Call the Azure OpenAI model
-       response = await client.chat.completions.create(
-           model=model,
-           messages=messages,
-           temperature=0.7,
-           max_tokens=800
-       )
-   
-   
-       if printFullResponse:
-           print(response)
-   
-       print("Response:\n" + response.choices[0].message.content + "\n")
-   
-   if __name__ == '__main__': 
-       asyncio.run(main())
-      ```
+             # Configure the Azure OpenAI client
+             # Configure the Azure OpenAI client
+             client = AsyncAzureOpenAI(
+                 azure_endpoint = azure_oai_endpoint, 
+                 api_key=azure_oai_key,  
+                 api_version="2024-02-15-preview"
+                 )
+     
+             while True:
+                 # Pause the app to allow the user to enter the system prompt
+                 print("------------------\nPausing the app to allow you to change the system prompt.\nPress anything then enter to continue...")
+                 input()
+     
+                 # Read in system message and prompt for user message
+                 system_text = open(file="system.txt", encoding="utf8").read().strip()
+                 user_text = input("Enter user message: ")
+                 if user_text.lower() == 'quit' or system_text.lower() == 'quit':
+                     print('Exiting program...')
+                     break
+                 
+                 await call_openai_model(system_message = system_text, 
+                                         user_message = user_text, 
+                                         model=azure_oai_deployment, 
+                                         client=client
+                                         )
+     
+         except Exception as ex:
+             print(ex)
+     
+     async def call_openai_model(system_message, user_message, model, client):
+         # Format and send the request to the model
+         # Format and send the request to the model
+         messages =[
+             {"role": "system", "content": system_message},
+             {"role": "user", "content": user_message},
+         ]
+     
+         print("\nSending request to Azure OpenAI model...\n")
+     
+         # Call the Azure OpenAI model
+         response = await client.chat.completions.create(
+             model=model,
+             messages=messages,
+             temperature=0.7,
+             max_tokens=800
+         )
+     
+     
+         if printFullResponse:
+             print(response)
+     
+         print("Response:\n" + response.choices[0].message.content + "\n")
+     
+     if __name__ == '__main__': 
+         asyncio.run(main())
+    ```
 
-9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
+13. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
 ### Task 6: Run your application
 

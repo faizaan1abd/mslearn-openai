@@ -23,17 +23,18 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+1. On **Azure AI Services | Azure OpenAI** blade, select **Azure OpenAI (1)** from left pane and click on **Create (2)**.
 
    ![](../media/tel-10.png)
 
 1. Create an **Azure OpenAI** resource with the following settings then click on **Next** thrice and then click on **Create**.
     - **Subscription**: Default - Pre-assigned subscription. **(1)**
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
-    - **Region**: Select **East US (3)**
+    - **Region**: Select **Sweden Central (3)**
     - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(4)**
     - **Pricing tier**: Standard S0 **(5)**
-  
+    - Click on **Next**.
+      
          ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
@@ -49,48 +50,62 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 
       ![](../media/tel-11.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
-      ![](../media/tel-1.png)
+      ![](../media/update07.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
+3. In **Overview (1)** section, click on **Go to Azure AI Foundry portal (2)**, it will navigate to **Azure AI Foundry portal**.
 
-      ![](../media/new01.png)
-   
-1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
+      ![](../media/update08.png)
+
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
       ![](../media/ui1.png)
 
-      > **Note**: Click on the **Expand** button, if you dont see the left side navigation pane.
+5. Search for **gpt-4o-mini**, click on **Confirm**
 
-      ![](../media/code2.png "Keys and Endpoints")           
-
-1. Search for **GPT-35-TURBO**, click on **Confirm**
-
-      ![](../media/pg-09.jpg)
+   ![](../media/gpt-4-mini.png)
    
-1. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
-      - **Deployment type**: Standard (2)
-      - **Click on Customize**      
-      - **Model version**: 0301 (Default) (3)
+      - **Deployment type**: Standard(2)
+      - Click on **Customize**
+      - **Model version**:2024-07-18(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
+  
+           ![](../media/gpt-4omini.png)
+
+           >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+
+7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+
+      ![](../media/ui1.png)
+
+9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+
+   ![](../media/ui4b.png)
+   
+9. Within the **Deploy model** pop-up interface, enter the following details:
+      - **Deployment name**: gpt-35-turbo-instruct (1)
+      - **Deployment type**: Standard(2)
+      - Click on **Customize**.
+      - **Model version**: 0914 (Default) (3)
+      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
       - **Enable dynamic quota**: Enabled (5)
       - Click on **Deploy** (6)
   
-           ![](../media/i1.png)
+      ![](../media/image1b.png)
 
-           >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.
-          
-1. This will deploy a model which you will be playing around with as you proceed.
+10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
-   
-      > **Note**: Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **GPT-35-Turbo** model, which is a good general model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
    <validation step="0afa9e73-8b9e-4edf-b61b-fa953a5d5b23" />
    

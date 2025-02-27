@@ -26,7 +26,7 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       ![](../media/tel-11.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On the **Azure AI Services** page, select **Azure OpenAI (1)** from the left pane, then click **+ Create (2)**.
 
       ![](../media/tel-10.png)
 
@@ -82,6 +82,8 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
 1. In select a model pop up, search and select **dall-e-3** then click on **Confirm**.
 
+   ![](../media/dalle31.png)
+
 1. In Deploy model dall-e-3 Provide the following details and click on **Deploy**.
 
    - **Deployment name**: Dalle3
@@ -121,11 +123,12 @@ In this task, you will use a simple Python or C# app to generate images by calli
       ![](../media/cloudshell-mount-strg-account.png)
 
 5. Within the **Create storage account** pane, enter the following details and then click on **Create**:
-      - **Subscription**: Default- Choose the only existing subscription assigned for this lab.
-      - **CloudShell region**: Select <inject key="Region" enableCopy="false" />
-      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject>
-      - **File share**: Create a new file share named **none**
+      - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+      - **CloudShell region**: Select <inject key="Region" enableCopy="false" /> (2)
+      - **Resource group**: Select openai-<inject key="Deployment-ID" enableCopy="false"></inject> (3)
+      - **Storage account Name**: storage<inject key="Deployment-ID" enableCopy="false"></inject> (4)
+      - **File share**: Create a new file share named **none** (5)
+      - Click on **Create** (6)
 
            ![](../media/lab04-1.png "Create storage advanced settings")
 

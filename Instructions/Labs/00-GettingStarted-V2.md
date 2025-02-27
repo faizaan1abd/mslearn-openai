@@ -38,7 +38,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
  
 Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
-![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/labguide-1.png)
+![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/labguideupd.png)
 
 ### Máquina Virtual & Guía de Laboratorio
  
@@ -48,19 +48,19 @@ Su máquina virtual es su caballo de batalla durante todo el taller. La guía de
  
 Para obtener una mejor comprensión de sus recursos de laboratorio y credenciales, navegue a la pestaña **Ambiente**.
  
-![Explore los Recursos de Laboratorio](../media/env-1.png)
+![Explore los Recursos de Laboratorio](../media/env-2.png)
  
 ## Utilizando la Función de Ventana Dividida
  
 Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana Dividida** de la esquina superior derecha.
  
-![Utilice la Función de Ventana Dividida](../media/spl.png)
+![Utilice la Función de Ventana Dividida](../media/splupd.png)
  
 ## Administrando Su Máquina Virtual
  
 Siéntase libre de iniciar, detener o reiniciar su máquina virtual cuando lo necesite desde la pestaña **Recursos**. ¡Su experiencia está en sus manos!
  
-![Administre Su Máquina Virtual](../media/res.png)
+![Administre Su Máquina Virtual](../media/resupd.png)
 
 ## **Extendiendo la Duración del Laboratorio**
 

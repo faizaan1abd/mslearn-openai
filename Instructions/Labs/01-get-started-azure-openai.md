@@ -220,13 +220,13 @@ El sistema es un profesor de IA que ayuda a las personas a aprender sobre la IA.
 Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de generar la respuesta que necesita.
 
 1. En el panel **Configuración**, seleccione **Parámetro (1)** y configure los siguientes valores de parámetro:
+   
     - **Respuesta máxima (tokens)**: 500 **(2)**
     - **Temperatura**: 0 **(3)**
 
-
-        ![](../media/nlp16.png)
+      ![](../media/nlp16.png)
    
-2. Envíe **(2)** el siguiente mensaje en la sesión de chat **(1)**
+3. Envíe **(2)** el siguiente mensaje en la sesión de chat **(1)**
 
     ```
    Escribe tres preguntas de opción múltiple basadas en el siguiente texto.
@@ -242,11 +242,11 @@ Puede utilizar el mensaje y los parámetros para maximizar la probabilidad de ge
 
      ![](../media/nlp17.png)    
 
-3. Revise los resultados, que deben consistir en preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión por computadora en el mensaje. La respuesta total debe ser menor que la longitud máxima especificada como parámetro.
+4. Revise los resultados, que deben consistir en preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión por computadora en el mensaje. La respuesta total debe ser menor que la longitud máxima especificada como parámetro.
 
       ![](../media/nls319.png)
 
-4. Revise los resultados, los cuales deben consistir de preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión artificial en el prompt. La respuesta total debe ser menor que la longitud máxima que especificó como parámetro.
+5. Revise los resultados, los cuales deben consistir de preguntas de opción múltiple que un maestro podría usar para evaluar a los estudiantes sobre los temas de visión artificial en el prompt. La respuesta total debe ser menor que la longitud máxima que especificó como parámetro.
 
     Observe lo siguiente sobre el prompt y los parámetros que utilizó:
 

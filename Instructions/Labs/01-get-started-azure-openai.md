@@ -29,11 +29,11 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
 3. Cree un recurso **Azure OpenAI** con la siguiente configuración. Haga clic en **Siguiente (6)** tres veces
    
-    - **Suscripción**: Predeterminada - Suscripción preasignada (1)
-    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **Región**: Seleccione <inject key="Region" enableCopy="false" /> (3)
-    - **Nombre**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **Plan de tarifa**: Standard S0 (5)
+    - **Suscripción**: Predeterminada - Suscripción preasignada **(1)**
+    - **Grupo de recursos**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Región**: Seleccione **<inject key="Region" enableCopy="false" /> (3)**
+    - **Nombre**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Plan de tarifa**: **Standard S0 (5)**
   
       ![](../media/nls302-1.png)
 
@@ -80,13 +80,13 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
-    - **Nombre de implementación**: my-gpt-model (1) 
-    - **Tipo de implementación**: Estendar (2)
-    - **Versión de modelo**: 2024-07-18 (Predetermindado) (3)
-    - **Tokens por límite de velocidad por minuto (miles)**: 8K (4)
-    - **Filtro de conteudo**: DefaultV2 (5)
-    - **Habilitar cuota dinámica**: Habilitado (6)
-    - Haga clic en **Implementar** (7)
+    - Nombre de implementación: **my-gpt-model (1)** 
+    - Tipo de implementación: **Estendar (2)**
+    - Versión de modelo: **2024-07-18 (Predetermindado) (3)**
+    - Tokens por límite de velocidad por minuto (miles): **8K (4)**
+    - Filtro de conteudo: **DefaultV2 (5)**
+    - Habilitar cuota dinámica: **Habilitado (6)**
+    - Haga clic en **Implementar** **(7)**
   
       ![](../media/nlp3.png)
 
@@ -106,12 +106,12 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
-    - **Nombre de implementación**: gpt-35-turbo-instruct (1) 
-    - **Tipo de implementación**: Estendar (2)
-    - **Versión de modelo**: 0914(Predetermindado) (3)
-    - **Tokens por límite de velocidad por minuto (miles)**: 20K (4)
-    - **Filtro de conteudo**: DefaultV2 (5)
-    - **Habilitar cuota dinámica**: Habilitado (6)
+    - Nombre de implementación: **gpt-35-turbo-instruct (1)** 
+    - Tipo de implementación: **Estendar (2)**
+    - Versión de modelo: **0914(Predetermindado) (3)**
+    - Tokens por límite de velocidad por minuto (miles): **20K (4)**
+    - Filtro de conteudo: **DefaultV2 (5)**
+    - Habilitar cuota dinámica: **Habilitado (6)**
     - Haga clic en **Implementar** (7)
 
        ![](../media/nlp6.png)

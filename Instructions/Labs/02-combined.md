@@ -434,11 +434,11 @@ Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitu
 
 2. Cuando se le solicite, ingrese el texto `What hike should I do near Rainier?`.
 
-    - C#:
+    - **C#**:
 
       ![](../media/nlp34.png)     
 
-    - Python:
+    - **Python**:
 
       ![](../media/nlp36.png)          
 
@@ -448,11 +448,11 @@ Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitu
 
 5. En el archivo de código de su lenguaje preferido, cambie el valor del parámetro *temperature* en su solicitud a **1.0** y guarde el archivo.
 
-    - C#:
+    - **C#**:
 
       ![](../media/nlp35.png) 
 
-    - Python:
+    - **Python**:
 
       ![](../media/nlp37.png)           
 

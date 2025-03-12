@@ -48,7 +48,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 > - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
 > - Si necesita ayuda, comuníquese con nosotros a cloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
 
-   <validation step="69bfb683-a534-4536-9e79-88457292ac2a" />
+   <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
 ### Tarea 2: Implementar un modelo
 
@@ -116,7 +116,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 #### Validación
 
-   <validation step="f8efe6f5-3031-4de1-b71f-29d736051af2" />
+   <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
 > ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
 > - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 

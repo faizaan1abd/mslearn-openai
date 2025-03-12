@@ -38,7 +38,13 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
  
 Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
-![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/labguideupd.png)
+![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/nlsg1.png)
+
+### Guía de laboratorio Acercar/alejar
+
+Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
+
+   ![Manage Your Virtual Machine](../media/nlsg2.png)
 
 ### Máquina Virtual & Guía de Laboratorio
  
@@ -48,39 +54,19 @@ Su máquina virtual es su caballo de batalla durante todo el taller. La guía de
  
 Para obtener una mejor comprensión de sus recursos de laboratorio y credenciales, navegue a la pestaña **Ambiente**.
  
-![Explore los Recursos de Laboratorio](../media/env-2.png)
+![Explore los Recursos de Laboratorio](../media/nlsg3.png)
  
 ## Utilizando la Función de Ventana Dividida
  
 Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana Dividida** de la esquina superior derecha.
  
-![Utilice la Función de Ventana Dividida](../media/splupd.png)
+![Utilice la Función de Ventana Dividida](../media/nlsg4.png)
  
 ## Administrando Su Máquina Virtual
  
-Siéntase libre de iniciar, detener o reiniciar su máquina virtual cuando lo necesite desde la pestaña **Recursos**. ¡Su experiencia está en sus manos!
+Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
  
-![Administre Su Máquina Virtual](../media/resupd.png)
-
-## **Extendiendo la Duración del Laboratorio**
-
-1. Para extender la duración del laboratorio, haga clic en el ícono **Reloj de arena** en la esquina superior derecha del entorno del laboratorio.
-
-    ![Administre Su Máquina Virtual](../media/gext.png)
-
-    >**Nota:** Verá el ícono **Reloj de arena** cuando queden 10 minutos en el laboratorio.
-
-2. Haga clic en **Aceptar** para extender la duración de su laboratorio.
- 
-   ![Administre Su Máquina Virtual](../media/gext2.png)
-
-3. Si no ha extendido la duración antes de que el laboratorio esté por terminar, aparecerá una ventana emergente que le dará la opción de extenderla. Haga clic en **Aceptar** para continuar.
-
-## Guía de laboratorio Acercar/alejar
-
-1. Para ajustar el nivel de zoom de la página del entorno, haga clic en el icono **A↕: 100%** ubicado junto al temporizador en el entorno del laboratorio.
-
-   ![Manage Your Virtual Machine](../media/labzoom-1.png)
+![Administre Su Máquina Virtual](../media/nlsg5.png)
 
 ## Comenzando con el Portal de Azure
  

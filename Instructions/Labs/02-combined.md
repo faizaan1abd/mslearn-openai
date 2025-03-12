@@ -19,30 +19,21 @@ En este laboratorio, completará las siguientes tareas:
 
 Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azure OpenAI en su suscripción de Azure.
 
-1. En el **Portal de Azure**, busque **OpenAI** y seleccione **Azure OpenAI**.
+1. En el **Portal de Azure**, busque **OpenAI (1)** y seleccione **Azure OpenAI (2)**.
 
-   ![](../media/nls300.png)
+   ![](../media/nlp1.png)
 
 2. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/nls303.png)
 
-3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **openai-<inject key="DeploymentID" enableCopy="false"></inject>**:
+3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
       - Finalmente, copie la URL del **Punto de conexión (4)** de la API haciendo clic en copiar al portapapeles. Péguelo en un editor de texto como el Bloc de notas para usarlo más adelante.
 
-        ![](../media/openai-endpoint-new.png "Keys and Endpoints")
-
-#### Validación
-
-> ¡**Felicitaciones** por completar la tarea! Ahora es momento de validarla. Estos son los pasos:
-> - Presione el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, puede continuar con la siguiente tarea. 
-> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio.
-> - Si necesita ayuda, comuníquese con nosotros a cloudcloudlabs-support@spektrasystems.com. Estamos disponibles las 24 horas del día, los 7 días de la semana para ayudarlo.
-
-   <validation step="8d0ea9cb-8ab4-4fa7-81a6-3642e4534d68" />
+        ![](../media/nlp19.png "Keys and Endpoints")
 
 ### Tarea 2: Configurar una aplicación en Cloud Shell
 
@@ -50,36 +41,34 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
 
 1. En el [portal de Azure](https://portal.azure.com?azure-portal=true), seleccione el botón **[>_]** (*Cloud Shell*) en la parte superior de la página a la derecha del cuadro de búsqueda. Se abrirá un panel de Cloud Shell en la parte inferior del portal.
 
-    ![Captura de pantalla de cómo iniciar Cloud Shell haciendo clic en el ícono a la derecha del cuadro de búsqueda superior.](../media/cloudshell-launch-portal.png#lightbox)
+   ![](../media/nlp20.png)
 
 2. La primera vez que abra Cloud Shell, es posible que se le solicite que elija el tipo de shell que desea usar (*Bash* o *PowerShell*). Seleccione **Bash**. Si no ve esta opción, omita el paso.
 
-3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento**, seleccione su **Suscripción de la cuenta de almacenamiento** en el menú desplegable y haga clic en **Aplicar**.
+3. En el panel Comenzar, seleccione **Montar cuenta de almacenamiento (1)**, seleccione su **Suscripción de la cuenta de almacenamiento (2)** en el menú desplegable y haga clic en **Aplicar (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. En el panel **Montar cuenta de almacenamiento**, seleccione **Quiero crear una cuenta de almacenamiento** y haga clic en **Siguiente**.
+4. En el panel **Montar cuenta de almacenamiento**, seleccione **Quiero crear una cuenta de almacenamiento (1)** y haga clic en **Siguiente (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
 5. En el panel **Configuración avanzada**, ingrese los siguientes detalles:
 
-    - **Suscripción**: Predeterminada - Elija la única suscripción existente asignada para este laboratorio (1).
-    - **Región**: <inject key="Region" enableCopy="false" /> (2)
-    - **Grupo de recursos**: Seleccione **Usar existente** (3)
-      - openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Cuenta de almacenamiento**: Seleccione **Crear nueva** (4)
-      - storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Suscripción**: Predeterminada - Elija la única suscripción existente asignada para este laboratorio **(1)**.
+    - **Región**: **<inject key="Region" enableCopy="false" />** **(2)**
+    - **Grupo de recursos**: Seleccione Usar existente **openai-<inject key="DeploymentID" enableCopy="false"></inject>** **(3)**
+    - **Cuenta de almacenamiento**: Ingresar **storage<inject key="DeploymentID" enableCopy="false"></inject>** **(4)**
     - **Recurso compartido de archivos**: Cree un nuevo recurso compartido de archivos llamado **none** (5)
     - Haga clic en **Crear** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Crear almacenamiento - configuración avanzada")
+      ![](../media/nlp21.png "Crear almacenamiento - configuración avanzada")
 
 6. Tenga en cuenta que puede cambiar el tamaño del Cloud Shell arrastrando la barra separadora en la parte superior de la página o usando los íconos **&#8212;**, **&#9723;** y **X** en la parte superior derecha de la página para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-7. Una vez que se abra la terminal, haga clic en **Configuración** y seleccione **Ir a la versión clásica**.
+7. Una vez que se abra la terminal, haga clic en **Configuración (1)** y seleccione **Ir a la versión clásica (2)**.
 
-   ![](../media/nls323.png)
+   ![](../media/nlp22.png)
 
 8. Una vez que se inicie la terminal, ingrese el siguiente comando para descargar la aplicación de muestra y guárdela en una carpeta llamada `azure-openai`.
 
@@ -87,6 +76,8 @@ Para mostrar cómo integrar con un modelo de Azure OpenAI, usaremos una aplicaci
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
+
+    ![](../media/nlp24.png)    
   
 9. Los archivos se descargan en una carpeta llamada **azure-openai**. Navegue hasta los archivos de laboratorio para este ejercicio con el siguiente comando.
 
@@ -117,15 +108,52 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
 1. En el editor de código, expanda la carpeta **CSharp** or **Python**, según su lenguaje de preferencia.
 
-2. Abra el archivo de configuración de su lenguaje:
+1. Abra el archivo de configuración de su lenguaje:
 
     - C#: `appsettings.json`
     
     - Python: `.env`
-    
-3. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `text-turbo`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**
 
-4. Navegue hasta la carpeta de su lenguaje preferido e instale los paquetes necesarios.
+1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+   ```
+
+    ![](../media/nlp25.png)   
+    
+1. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
+
+    - C#:
+     
+      ![](../media/nlp26.png)   
+
+    - Python:
+     
+      ![](../media/nlp27.png)           
+
+1. Navegue hasta la carpeta de su lenguaje preferido e instale los paquetes necesarios.
 
     **C#** : 
 
@@ -142,7 +170,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     pip install openai==1.56.2
     ```
 
-5. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.
+1. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.
 
     **C#**: Program.cs
 
@@ -151,6 +179,8 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     using Azure.AI.OpenAI;
     ```
 
+     ![](../media/nlp31.png)    
+
     **Python**: test-openai-model.py
 
     ```python
@@ -158,7 +188,9 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     from openai import AzureOpenAI
     ```
 
-6. En el código de la aplicación para su lenguaje, reemplace el comentario ***Initialize the Azure OpenAI client...*** con el siguiente código para inicializar el cliente y definir nuestro mensaje del sistema.
+     ![](../media/nlp28.png)      
+
+1. En el código de la aplicación para su lenguaje, reemplace el comentario ***Initialize the Azure OpenAI client...*** con el siguiente código para inicializar el cliente y definir nuestro mensaje del sistema.
 
     **C#**: Program.cs
 
@@ -169,6 +201,8 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     // System message to provide context to the model
     string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
     ```
+
+     ![](../media/nlp32.png)    
 
     **Python**: test-openai-model.py
 
@@ -188,9 +222,11 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
         """
     ```
 
+     ![](../media/nlp29.png)     
+
       >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
     
-7. Reemplace el comentario ***Add code to build request...*** con el código necesario para generar la solicitud; especificando los distintos parámetros para su modelo, como `prompt` y `temperatura`.
+1. Reemplace el comentario ***Add code to build request...*** con el código necesario para generar la solicitud; especificando los distintos parámetros para su modelo, como `prompt` y `temperatura`.
 
     **C#**: Program.cs
 
@@ -217,6 +253,8 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     Console.WriteLine("Response: " + completion + "\n");
     ```
 
+     ![](../media/nlp33.png)    
+
     **Python**: test-openai-model.py
 
     ```python
@@ -237,7 +275,9 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     print("Response: " + generated_text + "\n")
     ```
 
-8. Antes de guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
+     ![](../media/nlp30.png)     
+
+1. Antes de guardar el archivo, asegúrese de que su código se parezca al código que se proporciona a continuación.
 
     **C#**: Program.cs
       
@@ -376,7 +416,7 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
           main()
       ```
     
-9. Para guardar los cambios realizados en el archivo, haga clic derecho en el archivo desde el panel izquierdo en la ventana de código y presione **Guardar**
+1. Para guardar los cambios realizados en el archivo, haga clic derecho en el archivo desde el panel izquierdo en la ventana de código y presione **Guardar**
 
    >**Nota**: Asegúrese de indentar el código eliminando los espacios en blanco adicionales después de pegarlo en el editor de código.
 
@@ -394,11 +434,27 @@ Ahora que su aplicación ha sido configurada, ejecútela para enviar su solicitu
 
 2. Cuando se le solicite, ingrese el texto `What hike should I do near Rainier?`.
 
+    - C#:
+
+      ![](../media/nlp34.png)     
+
+    - Python:
+
+      ![](../media/nlp36.png)          
+
 3. Observe el resultado, teniendo en cuenta que la respuesta sigue las pautas proporcionadas en el mensaje del sistema que agregó al arreglo *messages*.
 
 4. Proporcione el prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` y observe la salida.
 
 5. En el archivo de código de su lenguaje preferido, cambie el valor del parámetro *temperature* en su solicitud a **1.0** y guarde el archivo.
+
+    - C#:
+
+      ![](../media/nlp35.png) 
+
+    - Python:
+
+      ![](../media/nlp37.png)           
 
 6. Vuelva a ejecutar la aplicación siguiendo los prompts anteriores y observe el resultado.
 

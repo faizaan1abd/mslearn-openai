@@ -92,9 +92,9 @@ Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuan
  
 6. ¡Haga clic en "Siguiente" en la esquina inferior derecha para comenzar su recorrido de laboratorio.
  
-    ![Start Your Azure Journey](../media/sc900-image(3).png)
+   ![Start Your Azure Journey](../media/nlsg6.png)
  
-Este laboratorio le brindará las habilidades para implementar y personalizar los modelos de Azure OpenAI, permitiéndole crear aplicaciones de IA avanzadas como chatbots y sistemas de recomendación.
+   Este laboratorio le brindará las habilidades para implementar y personalizar los modelos de Azure OpenAI, permitiéndole crear aplicaciones de IA avanzadas como chatbots y sistemas de recomendación.
 
 ## Contacto de Soporte
 

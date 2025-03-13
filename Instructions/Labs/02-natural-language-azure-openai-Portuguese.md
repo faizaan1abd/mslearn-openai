@@ -61,8 +61,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
     - Assinatura: Default- Escolha a única assinatura existente atribuída para este laboratório **(1)**
     - Grupo de recursos: Selecione Usar existente **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Região: **<inject key="Region" enableCopy="false" /> (3)**
-    - Nome da Conta de armazenamento:
-**storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Nome da Conta de armazenamento: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Comp. de arquivos: Crie um novo compartilhamento de arquivo chamado **none (5)**
     - Clique em **Criar (6)**
 

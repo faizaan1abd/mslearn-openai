@@ -27,7 +27,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
    ![](../media/nls303.png)
 
-3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-<inject key="DeploymentID" enableCopy="false"></inject>**:
+3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.

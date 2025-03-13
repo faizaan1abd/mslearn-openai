@@ -29,11 +29,11 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
 3. Crie um recurso **Azure OpenAI** com as seguintes configurações e Clique em **Próxima (6)** três vezes:
    
-    - **Assinatura**: Padrão - Assinatura pré-atribuída **(1)**
-    - **Grupo de recursos**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - **Região**:  **<inject key="Region" enableCopy="false" /> (3)**
-    - **Nome**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    - **Tipo de preço**: **Standard S0 (5)**
+    - Assinatura: Padrão - Assinatura pré-atribuída **(1)**
+    - Grupo de recursos: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Região:  **<inject key="Region" enableCopy="false" /> (3)**
+    - Nome: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Tipo de preço: **Standard S0 (5)**
   
       ![](../media/nlpp1.png)
 

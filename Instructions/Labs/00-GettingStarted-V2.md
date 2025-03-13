@@ -90,10 +90,6 @@ Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuan
  
 5. Si aparece una ventana emergente de **Bienvenido a Microsoft Azure**, simplemente haga clic en **Cancelar** para omitir la visita guiada.
  
-6. ¡Haga clic en "Siguiente" en la esquina inferior derecha para comenzar su recorrido de laboratorio.
- 
-   ![Start Your Azure Journey](../media/nlsg6.png)
- 
    Este laboratorio le brindará las habilidades para implementar y personalizar los modelos de Azure OpenAI, permitiéndole crear aplicaciones de IA avanzadas como chatbots y sistemas de recomendación.
 
 ## Contacto de Soporte
@@ -106,5 +102,7 @@ Contactos de Soporte para Estudiantes:
 - Soporte por Chat en Vivo: https://cloudlabs.ai/labs-support
 
 Ahora, haga clic en Siguiente en la esquina inferior derecha para pasar a la página siguiente.
+
+![Start Your Azure Journey](../media/nlsg6.png)
 
 ## ¡¡Feliz aprendizaje!!

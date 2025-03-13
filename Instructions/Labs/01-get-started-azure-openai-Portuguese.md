@@ -27,17 +27,17 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
    ![](../media/8-10-24(11).png)
 
-3. Crie um recurso **Azure OpenAI** com as seguintes configurações:
+3. Crie um recurso **Azure OpenAI** com as seguintes configurações e Clique em **Próxima (6)** três vezes:
    
-    - **Assinatura**: Padrão - Assinatura pré-atribuída.
-    - **Grupo de recursos**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Região**: **Swedencentral**
-    - **Nome**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Tipo de preço**: Standard S0
+    - **Assinatura**: Padrão - Assinatura pré-atribuída **(1)**
+    - **Grupo de recursos**: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - **Região**:  **<inject key="Region" enableCopy="false" /> (3)**
+    - **Nome**: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - **Tipo de preço**: **Standard S0 (5)**
   
-      ![](../media/8-10-24(12).png)
+      ![](../media/nlpp1.png)
 
-4. Clique em **Próxima** três vezes e clique em **Criar**.
+4. Clique em **Criar**.
 
    ![](../media/8-10-24(13).png)
 
@@ -56,27 +56,31 @@ Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azur
 
 O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry portal**, que você pode usar para Implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure AI Foundry portal para Implementar um modelo.
 
-1. No **portal do Azure**, pesquise por **OpenAI** e selecione **OpenAI**.
+1. No **portal do Azure**, pesquise por **OpenAI (1)** e selecione **OpenAI (2)**.
 
    ![](../media/8-10-24(10).png)
 
-2. Na tela **Azure AI services | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. Na tela **Azure AI services | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/8-10-24(15).png)
 
-3. No painel de recursos do Azure OpenAI, clique em **Go to Azure AI Foundry portal** para navegar até o **Azure AI Foundry portal**.
+1. No painel de recursos do Azure OpenAI, clique em **Go to Azure AI Foundry portal** para navegar até o **Azure AI Foundry portal**.
 
     ![](../media/portugeseai.png)
 
-4. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
+1. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
    ![](../media/portugesemodel.png)
 
-5. Na janela **Selecionar um modelo**, selecione **gpt-4o-mini** e clique em **Confirmar**.
+1. Na janela **Selecionar um modelo**, procure por **gpt-4o-mini (1)** selecione **gpt-4o-mini (2)** e clique em **Confirmar (3)**.
 
-   ![](../media/gpt-4-portuguese.png)
+   ![](../media/nlpp4.png)
 
-6. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
+1. Clique em **Personalizar**.
+
+   ![](../media/nlpp5.png)
+
+1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
     - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
     
@@ -86,7 +90,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Versão do modelo: **2024-07-18(default) (3)**
     
-    - Limite de Taxa de Tokens por Minuto: **10K (4)**
+    - Limite de Taxa de Tokens por Minuto: **8K (4)**
 
     - Filtro de conteudo: **DefaultV2 (5)** 
     
@@ -94,17 +98,21 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Clique em **Implantar (7)**
       
-      ![](../media/nls600.png)
+      ![](../media/nlpp6.png)
 
-5. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
+1. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
    ![](../media/portugesemodel.png)
 
-7. Na janela **Selecionar um modelo**, selecione **gpt-35-turbo-instruct** e clique em **Confirmar**.
+1. Na janela **Selecionar um modelo**, procure por **gpt-35-turbo-instruct (1)**, selecione **gpt-35-turbo-instruct (2)** e clique em **Confirmar (3)**.
 
-      ![](../media/nls601.png)
+      ![](../media/nlpp2.png)
+
+1. Clique em **Personalizar**.
+
+   ![](../media/nlpp7.png)
    
-8. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
+1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
     - Nome da implantação: **gpt-35-turbo-instruct (1)**
 
@@ -122,7 +130,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
       
          ![](../media/nls602.png)
 
-10. Eles implantarão modelos que você pode experimentar tanto para tarefas de bate-papo quanto para tarefas de conclusão à medida que avança.
+1. Eles implantarão modelos que você pode experimentar tanto para tarefas de bate-papo quanto para tarefas de conclusão à medida que avança.
 
       > **Observação**: você pode ignorar qualquer erro relacionado à atribuição de funções para visualizar os limites de cota.
 
@@ -141,9 +149,11 @@ Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pod
 
 1. No Azure OpenAI Foundry, no painel esquerdo em **Playgrounds**, selecione **Conclusões**.
 
-2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct** esteja selecionada, digite `Gerar um questionário de 5 perguntas Para cada pergunta, forneça as opções de resposta e a resposta correta` no campo prompt e clique em **Gerar**.
+   ![](../media/nlpp8.png)
 
-      ![](../media/nls603.png)
+2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct (1)** esteja selecionada, digite `Gerar um questionário de 5 perguntas Para cada pergunta, forneça as opções de resposta e a resposta correta (2)` no campo prompt e clique em **Generate (3)**.
+
+      ![](../media/nlpp9.png)
 
       > **Observação:** O exemplo de texto resumido consiste em um *prompt* que fornece algum texto para informar ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
@@ -169,17 +179,19 @@ Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pod
 
 O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e superiores. Ele usa a API *ChatCompletions* em vez da antiga API *Completions*.
 
-1. Na seção **Playground**, selecione **Chat** e certifique-se de que o modelo **my-gpt-model** esteja selecionado no painel de configuração.
+1. Na seção **Playground**, selecione **Chat (1)** e certifique-se de que o modelo **my-gpt-model (2)** esteja selecionado no painel de configuração.
 
-2. Na seção **Configuração**, na caixa **Forneça instruções e contexto ao modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA`, clique em * *Aplique as alterações** e clique em **Continuar**.
+   ![](../media/nlpp10.png)
 
-      ![](../media/nls607.png)
+1. Na seção **Configuração**, na caixa **Forneça instruções e contexto ao modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA (1)`, clique em **Aplique as alterações (2)** e clique em **Continuar**.
+
+      ![](../media/nlpp11.png)
 
 3. Na seção **Configuração**, clique na caixa **Adicionar seção** e, em seguida, clique em **Exemplos**.
 
       ![](../media/nls608.png)
 
-4. Digite a seguinte mensagem e resposta nas caixas designadas:
+1. Digite a seguinte mensagem e resposta nas caixas designadas:
 
     - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?`
     
@@ -189,19 +201,25 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
       > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-5. Salve as alterações clicando em **Aplicar alterações** e posteriormente clique em **Continuar** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
+1. Salve as alterações clicando em **Aplicar alterações** e posteriormente clique em **Continuar** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
 
       ![](../media/nls610.png)
 
-7. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial?`. Use o botão **Enviar** para enviar a mensagem e visualizar a resposta.
+1. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial? (1)`. Use o botão **Enviar (2)** para enviar a mensagem e visualizar a resposta.
+
+     ![](../media/nlpp12.png)
 
       > **Observação**: você pode receber uma resposta informando que a implantação da API ainda não está pronta. Nesse caso, aguarde alguns minutos e tente novamente.
 
-8. Revise a resposta e envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
+1. Revise a resposta.
 
-9. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que “isso” se refere à inteligência artificial).
+   ![](../media/nlpp13.png)
 
-10. Use o botão **Ver código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens do *usuário* e do *assistente* e na sequência de mensagens do *usuário* e do *assistente* na sessão de bate-papo até o momento.
+1. envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
+
+1. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que “isso” se refere à inteligência artificial).
+
+1. Use o botão **Ver código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens do *usuário* e do *assistente* e na sequência de mensagens do *usuário* e do *assistente* na sessão de bate-papo até o momento.
 
       ![](../media/nls611.png)
 
@@ -216,7 +234,7 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
       ![](../media/imag3.png)
 
-2. Envie a seguinte mensagem na sessão de chat 
+2. **Envie (2)** a seguinte mensagem na sessão de chat **(1)**
 
       ```
       Escreva três questões de múltipla escolha com base no texto a seguir.
@@ -229,6 +247,8 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
       
       - A segmentação semântica é uma técnica avançada de aprendizado de máquina na qual pixels individuais da imagem são classificados de acordo com o objeto ao qual pertencem. Por exemplo, uma solução de monitoramento de tráfego pode sobrepor imagens de tráfego com camadas de “máscara” para destacar diferentes veículos usando cores específicas.
       ```
+
+      ![](../media/nlpp14.png)      
 
 3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
 
@@ -244,23 +264,23 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
 Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
 
-1. No **painel Configuração**, em **Mensagem do sistema**, insira a mensagem do sistema: `Você é um desenvolvedor Python.` e salve as alterações clicando em **Aplicar alterações** e clique em **Continuar ** quando solicitado.
+1. No **painel Configuração**, em **Mensagem do sistema**, insira a mensagem do sistema: `Você é um desenvolvedor Python. (1)` e salve as alterações clicando em **Aplicar alterações (2)** e clique em **Continuar** quando solicitado.
   
-      ![](../media/nls613.png)
+      ![](../media/nlpp15.png)
 
-3. No painel **Sessão de chat**, selecione **Limpar chat** para limpar o histórico de chat e iniciar uma nova sessão.
+1. No painel **Sessão de chat**, clique no ícone **limpar** e selecione **Limpar** para limpar o histórico de chat e iniciar uma nova sessão.
 
       ![](../media/nls614.png)
 
-4. Envie a seguinte mensagem do usuário:
+1. Envie a seguinte mensagem do usuário:
 
     ```
     Write a Python function named Multiply that multiplies two numeric parameters.
     ```
     
-5. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
+1. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
 
-     ![](../media/8-10-24(35).png)
+     ![](../media/nlpp16.png)
 
 ## Resumo
 

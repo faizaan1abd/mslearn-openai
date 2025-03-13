@@ -23,7 +23,7 @@ Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso A
 
    ![](../media/8-10-24(10).png)
 
-1. Na página **Azure AI Services**, certifique-se de que **Azure OpenAI (1)** esteja selecionado na lâmina esquerda. Em seguida, selecione **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. Na página **Azure AI Services**, certifique-se de que **Azure OpenAI (1)** esteja selecionado na lâmina esquerda. Em seguida, selecione **OpenAI-Lab01-<inject key="<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
    ![](../media/nlpp19.png)
 

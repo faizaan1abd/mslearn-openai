@@ -108,12 +108,6 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
 1. En el editor de código, expanda la carpeta **CSharp** or **Python**, según su lenguaje de preferencia.
 
-1. Abra el archivo de configuración de su lenguaje:
-
-    - C#: `appsettings.json`
-    
-    - Python: `.env`
-
 1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
 
    ```
@@ -141,7 +135,13 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     </Project> 
    ```
 
-    ![](../media/nlp25.png)   
+    ![](../media/nlp25.png) 
+
+1. Abra el archivo de configuración de su lenguaje:
+
+    - C#: `appsettings.json`
+    
+    - Python: `.env`
     
 1. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
 

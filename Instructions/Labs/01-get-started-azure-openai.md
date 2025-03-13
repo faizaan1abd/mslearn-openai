@@ -18,27 +18,27 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/tel-11.png)
+   ![](../media/nlp1.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/tel-10.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
+3. Create an **Azure OpenAI** resource with the following settings and then click on **Next (6)** thrice by keeping others default
    
-    - **Subscription**: Default - Pre-assigned subscription.
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Region**: Select **Swedencentral**
-    - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Pricing tier**: Standard S0
+    - Subscription: Default - Pre-assigned subscription **(1)**
+    - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Pricing tier: **Standard S0 (5)**
   
-      ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      ![](../media/nlpe1.png "Create Azure OpenAI resource")
 
       >**Note** : **Please deploy Openai resource in Swedencentral Region**.
 
-4. Click on **Next** thrice by keeping others default and click on **Create**.
+4. Click on **Create**.
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -53,60 +53,68 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/tel-11.png)
+   ![](../media/nlp1.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
+1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
 
    ![](../media/update07.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
       ![](../media/ui1.png)
 
-5. Search for **gpt-4o-mini**, click on **Confirm**
+1. Search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)** and then click on **Confirm (3)**
 
-   ![](../media/gpt-4-mini.png)
+   ![](../media/nlep2.png)
+
+1. Click on **Customize**.
    
-6. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name**: my-gpt-model (1)
-      - **Deployment type**: Standard(2)
-      - Click on **Customize**
-      - **Model version**:2024-07-18(default) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Content Filter**: DefaultV2 (5)
-      - **Enable dynamic quota**: Enabled (6)
-      - Click on **Deploy** (7)
+   ![](../media/nlpe3.png)   
+
+1. Within the **Deploy model** pop-up interface, enter the following details:
+
+      - Deployment name: **my-gpt-model (1)**
+      - Deployment type: **Standard(2)**
+      - Model version: **2024-07-18(default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **8K (4)**
+      - Content Filter: **DefaultV2 (5)**
+      - Enable dynamic quota: **Enabled (6)**
+      - Click on **Deploy** **(7)**
   
-           ![](../media/gpt-4omini.png)
+           ![](../media/nlpe4.png)
 
            >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
-7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
       ![](../media/ui1.png)
 
-9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+1. Search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)** and then click on **Confirm (3)**.
 
-   ![](../media/ui4b.png)
+   ![](../media/nlpe5.png)
+
+1. Click on **Customize**.
+
+   ![](../media/nlpe6.png)
    
-9. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name**: gpt-35-turbo-instruct (1)
-      - **Deployment type**: Standard(2)
-      - Click on **Customize**.
-      - **Model version**: 0914 (Default) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+1. Within the **Deploy model** pop-up interface, enter the following details:
+      - Deployment name: **gpt-35-turbo-instruct (1)**
+      - Deployment type: **Standard(2)**
+      - Model version: **0914 (Default) (3)**
+      - Tokens per Minute Rate Limit (thousands): **20K (4)**
+      - Content Filter: **DefaultV2 (5)**      
+      - Enable dynamic quota: **Enabled (6)**
+      - Click on **Deploy** (7)
   
-        ![](../media/image1b.png)
+        ![](../media/nlpe-3.png)
 
-10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
+1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
 
@@ -124,9 +132,11 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In Azure OpenAI Foundry, in the left pane under **Playgrounds**, select **Completions**.
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct** deployment is selected , type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the prompt and click on **Generate**.
+   ![](../media/nlpe7.png)
 
-      ![](../media/generate_01a.png)
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected , type `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer (2)` in the prompt and click on **Generate (3)**.
+
+      ![](../media/nlpe8.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -152,39 +162,47 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat** , and ensure that the **my-gpt-model** model is selected in the configuration pane.
+1. In the **Playground** section, select the **Chat (1)** , and ensure that the **my-gpt-model (2)** model is selected in the configuration pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`, click on **Apply changes** and subsequently click on **Continue**.
+   ![](../media/nlpe9.png)
 
-      ![](../media/nls201.png)
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI  (1)`, click on **Apply changes (2)** and subsequently click on **Continue**.
+
+      ![](../media/nlpe10.png)
    
-4. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
+1. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
       ![](../media/nls200.png)
 
-5. Enter the following message and response in the designated boxes:
+1. Enter the following message and response in the designated boxes:
 
-      - **User**: `What are different types of artificial intelligence?`
+      - **User**: `What are different types of artificial intelligence?` **(1)**
     
-      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
+      - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
 
-         ![](../media/NO-5.png)
+         ![](../media/nlpe11.png)
    
          > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-6. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
-      ![](../media/nls202.png)
+      ![](../media/nlpe12.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
+
+   ![](../media/nlpe13.png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
-8. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
+1. Review the response.
 
-9. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+   ![](../media/nlpe14.png)
 
-10. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
+1. Then submit the following message to continue the conversation: `How is it related to machine learning?`
+
+1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
+
+1. Use the **View Code** button to view the code for the interaction. The prompt consists of the *system* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
 
       ![](../media/image5a.png)
 
@@ -192,15 +210,15 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Chat Configuration** pane select **Parameter** , set the following parameter values:
+1. In the **Chat Configuration** pane select **ParameterS (1)** , set the following parameter values:
       
-      - **Max response**: 500
+      - **Max response**: 500 **(2)**
      
-      - **Temperature**: 0
+      - **Temperature**: 0 **(3)**
    
           ![](../media/image6.png)
       
-2. Submit the following message in a chat session
+2. **Submit (1)** the following message in a chat session **(1)**
 
       ```
       Write three multiple choice questions based on the following text.
@@ -214,6 +232,8 @@ In this task, you'll explore prompts and parameters by experimenting with differ
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       
       ```
+
+      ![](../media/nlpe15.png)
 
 3. Review the results, which should consist of multiple-choice questions that a teacher could use to test students on the computer vision topics in the prompt. The total response should be smaller than the maximum length you specified as a parameter.
 
@@ -229,9 +249,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` then save the changes by clicking on **Apply changes** and click on **Continue** when prompted.
+1. In the **Setup pane**, under the **System message**, enter the system message: `You are a Python developer.` **(1)** then save the changes by clicking on **Apply changes (2)** and click on **Continue** when prompted.
 
-      ![](../media/nls203.png)
+      ![](../media/nlpe16.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 

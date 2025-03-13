@@ -19,9 +19,9 @@ In this lab, you will complete the following tasks:
 
 Before you can use Azure OpenAI models, you must provision an Azure OpenAI resource in your Azure subscription.
 
-1. In the **Azure portal**, search for **OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/tel-11.png)
+   ![](../media/nlp1.png)
 
 2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="Deployment-id" enableCopy="false"></inject> (2)**
 
@@ -33,7 +33,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/keys.png "Keys and Endpoints")
+        ![](../media/nlpe17.png "Keys and Endpoints")
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -43,41 +43,43 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
+1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Advanced settings** pane, enter the following details:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select **Use openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-    - **Region**: <inject key="Region" enableCopy="false" /> (3)
-    - **Storage account name**: storage<inject key="DeploymentID" enableCopy="false"></inject> (4)
-    - **File share**: Create a new file share named **none** (5)
+    - Subscription: Default- Choose the only existing subscription assigned for this lab **(1)**.
+    - Resource group: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+    - Region: **<inject key="Region" enableCopy="false" /> (3)**
+    - Storage account name: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - File share: Create a new file share named **none** **(5)**
     - Click **Create** (6)
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+        ![](../media/nlpe18.png "Create storage advanced settings")
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-7. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
 
-    ![](../media/classic-cloudshell.png)
+    ![](../media/nlpe19.png)
 
-8. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
    rm -r azure-openai -f
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
+
+    ![](../media/nlp24.png)    
   
-9. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/02-azure-openai-api
@@ -85,7 +87,7 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-10. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
     ```bash
     code .
@@ -103,18 +105,52 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-2. Open the configuration file for your language
+1. If you are using **C#** language kindly open **CSharp.csproj** file and replace it with the following code and save the file.
+
+   ```
+   <Project Sdk="Microsoft.NET.Sdk">
+   
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
+   
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
+    </ItemGroup>
+   
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+   
+    </Project> 
+   ```
+
+1. Open the configuration file for your language
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in file text editor and hit **Save**
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in file text editor and hit **Save**.
 
-    > **Note**: You can get the Azure OpenAI endpoint and key values from Azure openai resource's **Key and Endpoint** section under **Resource Management**.
+    - C#:
+     
+      ![](../media/nlp26.png)   
 
+    - Python:
+     
+      ![](../media/nlp27.png) 
 
-4. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
+       > **Note**: You can get the Azure OpenAI endpoint and key values from Azure openai resource's **Key and Endpoint** section under **Resource Management**.
+
+1. Navigate back to the Cloudshell and install the necessary packages for your preferred language:
 
     **C#** : 
 
@@ -131,7 +167,7 @@ For this exercise, you'll complete some key parts of the application to enable u
     pip install openai==1.56.2
     ```
 
-5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
+1. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
     **C#**: Program.cs
 
@@ -140,6 +176,8 @@ For this exercise, you'll complete some key parts of the application to enable u
     using Azure.AI.OpenAI;
     ```
 
+     ![](../media/nlp31.png) 
+
     **Python**: test-openai-model.py
 
     ```python
@@ -147,7 +185,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     from openai import AzureOpenAI
     ```
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+     ![](../media/nlp28.png)      
+
+1.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 
@@ -158,6 +198,8 @@ For this exercise, you'll complete some key parts of the application to enable u
     // System message to provide context to the model
     string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature on the hikes when making a recommendation.";
     ```
+
+     ![](../media/nlp32.png)  
 
     **Python**: test-openai-model.py
 
@@ -177,9 +219,11 @@ For this exercise, you'll complete some key parts of the application to enable u
         """
     ```
 
+     ![](../media/nlp29.png)   
+
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
     
-7. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+1. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
 
     **C#**: Program.cs
 
@@ -206,6 +250,8 @@ For this exercise, you'll complete some key parts of the application to enable u
     Console.WriteLine("Response: " + completion + "\n");
     ```
 
+     ![](../media/nlp33.png)      
+
     **Python**: test-openai-model.py
 
     ```python
@@ -226,7 +272,9 @@ For this exercise, you'll complete some key parts of the application to enable u
     print("Response: " + generated_text + "\n")
     ```
 
-8. Before saving the file , please ensure your code looks similar to the code provided below.
+     ![](../media/nlp30.png)  
+
+1. Before saving the file , please ensure your code looks similar to the code provided below.
 
     **C#**: Program.cs
       
@@ -366,7 +414,7 @@ For this exercise, you'll complete some key parts of the application to enable u
           main()
       ```
     
-9. To save the changes made to the file, right click on the blank space in file text editor and hit **Save**
+1. To save the changes made to the file, right click on the blank space in file text editor and hit **Save**
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
@@ -374,42 +422,23 @@ For this exercise, you'll complete some key parts of the application to enable u
 
 Now that your app has been configured, run it to send your request to your model and observe the response.
 
-1. If you are using **C#** language kindly open **CSharp.csproj** file and replace it with the following code and save the file.
-
-   ```
-   <Project Sdk="Microsoft.NET.Sdk">
-   
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project> 
-   ```
-
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#**: `dotnet run`
     
     - **Python**: `python test-openai-model.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+      > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 2. When prompted, enter the text `What hike should I do near Rainier?`.
+
+    - **C#**:
+
+      ![](../media/nlp34.png)     
+
+    - **Python**:
+
+      ![](../media/nlp36.png)   
 
 3. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
 
@@ -417,8 +446,13 @@ Now that your app has been configured, run it to send your request to your model
 
 5. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and save the file.
 
-- **C#**: Program.cs
-- **Python**: test-openai-model.py
+    - **C#**: Program.cs
+
+      ![](../media/nlp35.png) 
+
+    - **Python**: test-openai-model.py
+
+      ![](../media/nlp37.png)      
 
 6. Run the application again using the prompts above, and observe the output.
 

@@ -40,7 +40,13 @@ Welcome to the "Get Started With OpenAI and Build Natural Language Solutions" la
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/01upd.png)
+![Access Your VM and Lab Guide](../media/nleg1.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![Manage Your Virtual Machine](../media/nleg2.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -50,26 +56,20 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/envupd.png)
- 
+![Explore Lab Resources](../media/nleg3.png)
+
+
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/04upd.png)
+![Use the Split Window Feature](../media/nleg4.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/03upd.png)
-
-## Lab Guide Zoom In/Zoom Out
-
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-   ![Manage Your Virtual Machine](../media/labzoom-1.png)
-
+![Manage Your Virtual Machine](../media/nleg5.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -113,6 +113,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Start Your Azure Journey](../media/sc900-image(3).png)
+![Start Your Azure Journey](../media/nleg6.png)
 
 ## Happy Learning!!

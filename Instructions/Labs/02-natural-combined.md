@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Set up an application in Cloud Shell
 - Task 3: Configure your application
-- Task 4: Run your application
+- Task 4: Test your application
 
 ## Task 1: Provision an Azure OpenAI resource
 

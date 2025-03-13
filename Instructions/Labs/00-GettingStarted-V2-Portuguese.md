@@ -40,7 +40,13 @@ Bem-vindo ao laboratório "Introdução ao OpenAI e criação de soluções de l
 
 Uma vez pronto para começar, sua máquina virtual e o guia do laboratório estarão ao seu alcance diretamente no seu navegador web.
 
-![Acesse sua VM e Guia do Laboratório](../media/8-10-24(1).png)
+![Acesse sua VM e Guia do Laboratório](../media/nlppg1.png)
+
+### Guia de laboratório Aumentar/diminuir zoom
+
+Para ajustar o nível de zoom da página do ambiente, clique no ícone **A↕ : 100%** localizado junto ao temporizador no ambiente de laboratório.
+
+![Manage Your Virtual Machine](../media/nlppg2.png)
 
 ### Máquina Virtual & Guia do Laboratório
 
@@ -50,26 +56,25 @@ Sua máquina virtual é seu principal recurso durante o workshop. O guia do labo
 
 Para entender melhor seus recursos e credenciais de laboratório, navegue até a tab **Ambiente**.
 
-![Acesse sua VM e Guia do Laboratório](../media/8-10-24(2).png)
+![Acesse sua VM e Guia do Laboratório](../media/nlppg3.png)
 
 ### Utilizando o Recurso de Janela Dividida
 
 Para conveniência, você pode abrir o tab do laboratório em uma janela separada selecionando o botão **Janela Dividida** no canto superior direito.
 
-![Acesse sua VM e Guia do Laboratório](../media/8-10-24(3).png)
+![Acesse sua VM e Guia do Laboratório](../media/nlppg4.png)
 
 ### Gerenciando Sua Máquina Virtual
 
-Sinta-se à vontade para iniciar, parar ou reiniciar sua máquina virtual conforme necessário na tab **Recursos**. Sua experiência está nas suas mãos!
+Sinta-se à vontade para **iniciar, parar ou reiniciar (2)** sua máquina virtual conforme necessário na tab **Recursos (1)**. Sua experiência está nas suas mãos!
 
-![Acesse sua VM e Guia do Laboratório](../media/8-10-24(4).png)
+![Acesse sua VM e Guia do Laboratório](../media/nlppg5.png)
 
-## Guia de laboratório Aumentar/diminuir zoom
+### Validação de laboratório
 
-1. Para ajustar o nível de zoom da página do ambiente, clique no ícone **A↕ : 100%** localizado junto ao temporizador no ambiente de laboratório.
+Após concluir a tarefa, clique no botão **Validar** na aba Validation integrada ao seu guia de laboratório. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa, caso contrário, leia atentamente a mensagem de erro e repita a etapa, seguindo as instruções no guia de laboratório.
 
-   ![Manage Your Virtual Machine](../media/labzoom-1.png)
-
+![Acesse sua VM e Guia do Laboratório](../media/nlppg6.png)
 
 ## Vamos Começar com o Portal do Azure
 

@@ -27,7 +27,7 @@ Antes de poder usar modelos de Azure OpenAI, debe aprovisionar un recurso de Azu
 
    ![](../media/nls303.png)
 
-3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-<inject key="DeploymentID" enableCopy="false"></inject>**:
+3. Para capturar los valores de las Claves y Punto de conexión, en la hoja **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
       - Seleccione **Claves y puntos de conexión (1)** debajo de **Administración de recursos**.
       - Haga clic en **Mostrar claves (2)**.
       - Copie la **Clave 1 (3)** y asegúrese de pegarla en un editor de texto como el Bloc de notas para referencia futura.
@@ -108,12 +108,6 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
 1. En el editor de código, expanda la carpeta **CSharp** or **Python**, según su lenguaje de preferencia.
 
-1. Abra el archivo de configuración de su lenguaje:
-
-    - C#: `appsettings.json`
-    
-    - Python: `.env`
-
 1. Si está utilizando el lenguaje **C#**, abra el archivo **CSharp.csproj** y reemplácelo con el siguiente código y **guarde** el archivo.   
 
    ```
@@ -141,7 +135,13 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
     </Project> 
    ```
 
-    ![](../media/nlp25.png)   
+    ![](../media/nlp25.png) 
+
+1. Abra el archivo de configuración de su lenguaje:
+
+    - C#: `appsettings.json`
+    
+    - Python: `.env`
     
 1. Actualice los valores de configuración para incluir el **punto de conexión** y la **clave** del recurso de Azure OpenAI que creó, así como el nombre del modelo que implementó, `my-gpt-model`. Luego, guarde el archivo haciendo clic derecho en el archivo desde el panel izquierdo y presione **Guardar**.
 

@@ -720,4 +720,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure OpenAI studio
 -   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
-### You have successfully completed the lab.
+### You have successfully completed the lab, Click on **Next** to continue.

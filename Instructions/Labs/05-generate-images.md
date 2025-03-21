@@ -150,7 +150,7 @@ In this task, you will use a configuration file in the application to store the 
     </Project>
     ```    
 
-     ![](../media/u47upd.png)    
+     ![](../media/u47-1.png)    
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 

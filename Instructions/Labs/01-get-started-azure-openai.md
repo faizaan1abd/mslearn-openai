@@ -99,10 +99,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Click on **Customize**.
       - **Model version**: 0914 (Default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
-      - **Enable dynamic quota**: Enabled (5)
-      - Click on **Deploy** (6)
+      - **Content Filter**: DefaultV2 (5)
+      - **Enable dynamic quota**: Enabled (6)
+      - Click on **Deploy** (7)
   
-        ![](../media/image1b.png)
+        ![](../media/image1b-1.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 

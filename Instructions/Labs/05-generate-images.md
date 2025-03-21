@@ -41,9 +41,9 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/dalle31.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3**, and leave the rest of the settings as default and click on **Deploy**.
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, and leave the rest of the settings as default and click on **Deploy (2)**.
 
-      ![](../media/dalle32upd.png)
+      ![](../media/dalle32_1.png)
               
 4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
    
@@ -123,7 +123,7 @@ In this task, you will use a configuration file in the application to store the 
    pip install python-dotenv
     ```
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+1. If your using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">

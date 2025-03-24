@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of three main sections:
+1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of two main sections:
 
      - **Setup** - used to set the context for the model's responses.
      - **Chat session** - used to submit chat messages and view responses.

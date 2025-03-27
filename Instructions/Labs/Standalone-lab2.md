@@ -40,11 +40,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - **Pricing tier (5)**: Standard S0
     
-    -  Click on **Next (6)**
+    -  Click on **Next (6)** thrice
   
        ![](../media/openai3.png "Create Azure OpenAI resource")
 
-4. Click **Next** three times, then click **Create**.
+4. Then click **Create**.
 
 5. Once the deployment is complete, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
@@ -83,7 +83,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     ![](../media/imagee.png)
 
-1. In the prompt titled **Discover an even better Azure AI Studio experience**, click **Close**.
+1. If prompted, **Discover an even better Azure AI Studio experience**, click **Close**.
 
       ![](../media/pop-upclose.png)
 
@@ -111,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     
     - Click on **Deploy (6)**
   
-        ![](../media/DeployModel.png)
+        ![](../media/it1.png)
 
       >**Note:** If the options shown in the above screenshot are not visible, click on **Customize**.
 
@@ -144,17 +144,17 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/open1.png)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
+1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
+1. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Advanced settings** pane, enter the following details:
 
     - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab
     
@@ -170,13 +170,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
        ![](../media/openai2.png "Create storage advanced settings")
 
-6. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
-1. 8. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
+1. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
    ![](../media/classic-cloudshell.png)
 
-7. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
+1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
     rm -r azure-openai -f
@@ -186,7 +186,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
     ```
   
-8. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
     cd azure-openai/Labfiles/02-azure-openai-api
@@ -194,11 +194,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-9. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
 
       ```bash
       code .
       ```
+
+      ![](../media/it2.png)      
    
 ### Validation
 
@@ -216,13 +218,13 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
 
-2. Open the configuration file for your language
+1. Open the configuration file for your language
 
     - **C#:** `appsettings.json`
     
     - **Python:** `.env`
     
-3. Update the configuration values to include the **Endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
+1. Update the configuration values to include the **Endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
 
    ![](../media/EditorMin.png "Minimise the editor")
 
@@ -255,8 +257,8 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-     ![](../media/u47upd.png)    
-
+     ![](../media/it3.png)    
+     
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
      **C#**:
@@ -266,6 +268,7 @@ In this task, you will complete key parts of the application to enable it to use
     export DOTNET_ROOT=$HOME/.dotnet
     export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
+    ```
 
     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here You're creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      
@@ -293,9 +296,6 @@ In this task, you will complete key parts of the application to enable it to use
 
     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
-1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.   
-
-    
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
     ```
@@ -357,10 +357,11 @@ In this task, you will complete key parts of the application to enable it to use
             )
     
     # Create a system message
-    system_message = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
         If no area is specified, I will default to near Rainier National Park. 
         I will then provide three suggestions for nearby hikes that vary in length. 
-        I will also share an interesting fact about the local nature on the hikes when making a recommendation".
+        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
+        """
     ```
 
       >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
@@ -421,51 +422,36 @@ In this task, you will complete key parts of the application to enable it to use
 In this task, you will run your configured app to send a request to your model and observe the response.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
-
-2. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file.
-
-   ```
-   <Project Sdk="Microsoft.NET.Sdk">
    
-   <PropertyGroup>
-   <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
-   <ImplicitUsings>enable</ImplicitUsings>
-   <Nullable>enable</Nullable>
-   </PropertyGroup>
-   
-    <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-    </ItemGroup>
-   
-    <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-       </None>
-     </ItemGroup>
-   
-    </Project>
-   ```
-   
-3. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
     - **C#:** `dotnet run`
+
+      ![](../media/it4.png "Minimise the editor")    
     
     - **Python:** `python test-openai-model.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+      ![](../media/it5.png "Minimise the editor")    
 
-   ![](../media/OpenPython.png) 
+       > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-    > **Note:** The above image shows the example for the Python.  
+        ![](../media/OpenPython.png) 
 
-4. When prompted, enter the text `What hike should I do near Rainier?`.
+        > **Note:** The above image shows the example for the Python.  
 
-5. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+1. When prompted, enter the text `What hike should I do near Rainier?`.
 
-6. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
+    - **C#**:
+
+      ![](../media/it6.png "Minimise the editor") 
+
+    - **Python**:
+
+      ![](../media/it5.png "Minimise the editor")       
+
+1. Observe the output, taking note that the response follows the guidelines provided in the system message you added to the *messages* array.
+
+1. Provide the prompt `Where should I hike near Boise? I'm looking for something of easy difficulty, between 2 to 3 miles, with moderate elevation gain.` and observe the output.
 
 7. In the code file for your preferred language, change the *temperature* parameter value in your request to **1.0** and Save the file.
 

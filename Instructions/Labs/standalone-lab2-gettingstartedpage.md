@@ -50,9 +50,9 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **lab guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/IMGa2.png)
+![Access Your VM and Lab Guide](../media/itg1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -62,19 +62,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](../media/IMG4.png)
+   ![Explore Lab Resources](../media/itg2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-   ![Use the Split Window Feature](../media/new-mslearn-gettingstarted-01.png)
+   ![Use the Split Window Feature](../media/itg3.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/IMG5.png)
+![Manage Your Virtual Machine](../media/itg-4.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -86,7 +86,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/IMG1.png)
+   ![Inline Validation](../media/itg5.png)
 
 1. If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com.
 

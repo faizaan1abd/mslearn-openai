@@ -1,5 +1,7 @@
 # Lab 01: Generate and improve code with Azure OpenAI Service
 
+### Estimated Duration: 120 minutes
+
 ## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
 
@@ -11,9 +13,7 @@ In this lab, you will complete the following tasks:
 - Task 3: Set up an application in Cloud Shell
 - Task 4: Configure your application
 - Task 5: Run your application
-
-## Estimated time: 60 minutes
-
+  
 ### Task 1: Deploy a model
 
 To use the Azure OpenAI API for code generation, you must first deploy a model to use through the **Azure OpenAI Studio**. Once deployed, we will use the model with the playground and reference that model in our app.

@@ -1,6 +1,6 @@
 # Lab 01: Use your own data with Azure OpenAI
 
-### Estimated Duration: 45 minutes
+### Estimated Duration: 120 minutes
 
 ## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.

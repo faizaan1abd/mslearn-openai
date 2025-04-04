@@ -1,4 +1,4 @@
-# Lab 06:  Add your data for RAG with Azure OpenAI Service
+![image](https://github.com/user-attachments/assets/4600faca-194b-4177-b904-63c51afe40d8)# Lab 06:  Add your data for RAG with Azure OpenAI Service
 
 ## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
@@ -78,22 +78,22 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 5. Click on **Deployments (1)** under **Shared 
    Resources**, then select **+ Deploy Model**. Next, choose **Deploy Base Model (2).**
 
-      ![](../media/ui1.png "Create a new deployment")
+      ![](../media/T2S5.png "Create a new deployment")
 
-6. Search for **GPT-35-TURBO**, click on **Confirm**
+6. Search for **gpt-4o-mini**, click on **Confirm**
 
-      ![](../media/new04-1.png)
+      ![](../media/T2S6.png)
    
 7. Within the Deploy model pop-up interface, enter the following details:
       - Deployment name: text-turbo(1)
       - Deployment type: Standard(2)
       - Click on Customize
-      - Model version: 0125(Default)(3)
-      - Tokens per Minute Rate Limit (thousands): 10K (4)
+      - Model version: 2024-07-18 (Default)(3)
+      - Tokens per Minute Rate Limit (thousands): 8K (4)
       - Enable dynamic quota: Enabled (5)
       - Click on Deploy (6)
   
-           ![](../media/i2-2.png)
+           ![](../media/T2S7.png)
 
      
       >**Note:** Ensure to set the **Tokens per Minute Rate Limit** to atleast **5K**. Select the Rate Limit scroll bar, and use your keyboard's arrow keys to pinpoint specific token limits.
@@ -180,7 +180,7 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/image4.7.png "upload files")
 
-10. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
+10. In the **Azure portal**, search for **Azure AI search** and select **Azure AI search**.
 
 11.  On **Azure AI services | AI search** blade, click on **+ Create**.
 

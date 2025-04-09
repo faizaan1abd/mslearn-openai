@@ -1,6 +1,6 @@
-# Get started with Azure OpenAI Service
+# Lunch and Learn: Get started with Azure OpenAI Service
 
-## Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 minutes
 
 ## Overview
 
@@ -94,7 +94,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
 4. If prompted to stay signed in, you can click **No**.
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe Later** to skip the tour.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
  
 ## Support Contact
 

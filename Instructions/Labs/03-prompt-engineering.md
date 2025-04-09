@@ -1,5 +1,7 @@
 # Lab 03: Utilize prompt engineering in your app
 
+### Estimated Duration: 60 minutes
+
 ## Lab scenario
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
@@ -13,8 +15,6 @@ In this lab, you will complete the following tasks:
 - Task 2: Set up an application in Cloud Shell
 - Task 3: Configure your application
 - Task 4: Run your application
-
-## Estimated time: 60 minutes
 
 ### Task 1: Apply prompt engineering in chat playground
 

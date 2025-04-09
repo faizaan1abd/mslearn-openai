@@ -1,6 +1,8 @@
 # Develop Generative AI solutions with Azure OpenAI Service
+
 ### Overall Estimated Duration: 8 Hours
-### Overview
+
+## Overview
 
 This hands-on labs offer a comprehensive introduction to Azure OpenAI Service. You will begin by configuring the service and integrating Azure OpenAI SDKs into your application. Techniques in prompt engineering will refine interactions, and you'll also gain skills in generating and enhancing code. The DALL-E model will be utilized for image generation, and you will explore the use of your own data for retrieval-augmented generation (RAG). Additionally, you will delve into content filtering to manage and regulate generated outputs. Throughout the labs, you'll gain practical experience with real-world AI applications, learn best practices for deploying and scaling these services in a production environment, and understand how to integrate various Azure services to develop resilient, scalable, and secure AI-powered applications.
 
@@ -24,22 +26,25 @@ Participants will learn:
 
 7. **Explore content filters in Azure OpenAI**: This hands-on exercise demonstrates how to construct and maintain content filters in Azure OpenAI to control and refine generated outputs. Participants will learn about and implement content filters in Azure OpenAI to control and refine created material.
 
-### Prerequisites
+## Prerequisites
+
 Participants should have:
 
 1. **Development Skills**: Basic programming knowledge and experience with APIs and SDKs.
 2. **AI Concepts**: Understanding prompt engineering, code development, and image generation using models such as DALL-E.
 3. **Content Management**: Understanding data integration for RAG and content filtering techniques.
    
-### Architecture
+## Architecture
 
 This lab provides robust functionalities for leveraging AI within Azure. Azure OpenAI integrates your data with large language models, enabling customized and secure interactions tailored to your needs. Azure OpenAI Models offer pre-trained and customizable models for various applications, such as text generation and language translation. Azure CloudShell provides an online, browser-based shell for managing Azure resources and running scripts, streamlining cloud management. DALL-E generates images from textual descriptions using advanced AI technology, enhancing creative capabilities. Finally, prompt engineering refines input prompts to optimize AI model responses, ensuring accuracy and relevance in outputs.
 
-### Architecture Diagram
+## Architecture Diagram
 
 ![](../media/blank_diagram_1.JPG "Lab Environment")
 
-### Explanation of Components
+## Explanation of Components
+
+The architecture for this lab involves the following key components:
 
 - **Azure OpenAI**: Integrates your data with massive language models, allowing for personalized and secure interactions.Allows for fine-tuning of AI models with your own datasets, resulting in specialized and relevant outputs for your business needs.
 - **Azure OpenAI Models**: Provides pre-trained and customisable big language models for a variety of AI applications, including text generation, sentiment analysis, and language translation, with the option to tailor models to specific use cases.
@@ -48,7 +53,7 @@ This lab provides robust functionalities for leveraging AI within Azure. Azure O
 - **Prompt Engineering**: Prompt engineering fine-tunes input prompts to improve AI model replies, ensuring accurate and relevant outputs by optimizing how prompts are produced and delivered to AI models.
 - **AI chat**: AI chat also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
 
-# Getting Started with the lab
+## Getting Started with the lab
  
 Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
@@ -66,19 +71,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![Explore Lab Resources](../media/env-1.png)
+   ![Explore Lab Resources](../media/environment.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../media/spl.png)
+ ![Use the Split Window Feature](../media/nleg4.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/res.png)
+![Manage Your Virtual Machine](../media/resources-vm-manage.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -86,7 +91,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ![Manage Your Virtual Machine](../media/labzoom-1.png)
 
-## Login to Azure Portal
+## Let's Get Started with Azure Portal
 
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
@@ -124,7 +129,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 This hands-on lab empowers participants to master Azure OpenAI Service by guiding them through setup, SDK integration, and prompt engineering. It also covers code generation, image creation with DALL-E, RAG data integration, and content filtering for comprehensive learning.
 
-### Support Contact
+## Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
@@ -135,6 +140,6 @@ Learner Support Contacts:
 
 Click on **Next** button from lower right corner to move on to the next page.
 
-![](../media/next1.png "Resource groups")
+![](../media/next-page.png "Resource groups")
 
-### Happy learning !
+### Happy learning !!

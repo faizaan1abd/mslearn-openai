@@ -1,5 +1,7 @@
 # Lab 06:  Add your data for RAG with Azure OpenAI Service
 
+### Estimated Duration: 75 minutes
+
 ## Lab scenario
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
 
@@ -12,8 +14,6 @@ In this lab, you will complete the following tasks:
 - Task 4: Set up an application in Cloud Shell
 - Task 5: Configure your application
 - Task 6: Run your application
-
-## Estimated time: 60 minutes
 
 ### Task 1: Observe normal chat behavior without adding your own data
 

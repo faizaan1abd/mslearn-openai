@@ -37,23 +37,23 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../natural_language_query/images/17-12-24(1).png)
+   ![](../media/17-12-24(1).png)
 
 1. On **Azure AI services | Azure OpenAI** blade, select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../natural_language_query/images/17022025(1).png)
+   ![](../media/17022025(1).png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
-   ![](../natural_language_query/images/17022025(2).png)
+   ![](../media/17022025(2).png)
 
 1. In the **Azure AI Foundry | Azure OpenAI Service**, click on **Chat** under play **Playgrounds** from the left menu.
 
-   ![](../natural_language_query/images/17022025(3).png)
+   ![](../media/17022025(3).png)
 
 1. In the **Chat** section, give any query from the **Chat session** to get the response from the openai. 
 
-   ![](../natural_language_query/images/17022025(5).png)
+   ![](../media/17022025(5).png)
    
    > **Note**: Chat may not respond with the exact output as shown in the screenshots. Following are the examples of what you'll most likely see in this exercise, but the response may vary.
 

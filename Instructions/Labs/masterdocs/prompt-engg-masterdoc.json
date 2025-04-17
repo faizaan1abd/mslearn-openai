@@ -9,7 +9,7 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenAIWorkshop/main/scenarios/prompt_engineering/prompt-engg-intro.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/prompt-engg-intro.md",
         "Order": 2
       },
       {
@@ -17,11 +17,11 @@
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenAIWorkshop/main/scenarios/prompt_engineering/advanced-concepts.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/advanced-concepts.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenAIWorkshop/main/scenarios/prompt_engineering/fine-tuning.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/fine-tuning.md",
         "Order": 5
       }
     ]

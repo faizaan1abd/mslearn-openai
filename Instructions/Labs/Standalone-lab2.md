@@ -427,7 +427,7 @@ In this task, you will run your configured app to send a request to your model a
 
         > **Note:** The above image shows the example for the Python.  
 
-1. When prompted, enter the text `What hike should I do near Rainier?`.
+1. When prompted, enter the text `What hike should I do near Rainier?` and click on `Enter`.
 
     - **C#**:
 

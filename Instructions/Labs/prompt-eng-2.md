@@ -784,7 +784,7 @@ In this task, you will run your configured app to send a request to your model a
 
 In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure OpenAI studio
+- Deploy an OpenAI model within the Azure OpenAI Foundry
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.

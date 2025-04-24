@@ -1,4 +1,4 @@
-# Lab-01: Introduction to Prompt Engineering & Azure OpenAI Studio [Read-Only]
+# Lab-01: Introduction to Prompt Engineering & Azure OpenAI Foundry
 
 ### Estimated Duration: 60 minutes
 
@@ -25,10 +25,10 @@ One way to think of a prompt is as a piece of text that is used to initiate or p
 ## What is prompt engineering?
 Prompt engineering is a relatively [new discipline](https://www.businessinsider.com/prompt-engineering-ai-chatgpt-jobs-explained-2023-3) for developing and optimizing prompts to efficiently use language models (LMs) across a wide variety of business applications. Prompt engineering skills help to better understand the capabilities and limitations of large language models (LLMs) and refine the completions (outputs) of LLMs. Prompt engineering is used to improve the capacity of LLMs on a wide range of common and complex tasks, such as question answering and arithmetic reasoning. Developers use prompt engineering to design robust and effective prompting techniques that interface with LLMs and other tools.
 
-This guide covers the basics of standard prompts to provide a rough idea of how to interact with and instruct the LLMs found on [Azure OpenAI Studio's Playground](https://oai.azure.com/portal/playground). 
+This guide covers the basics of standard prompts to provide a rough idea of how to interact with and instruct the LLMs found on [Azure OpenAI Foundry's Playground](https://oai.azure.com/portal/playground). 
 
 ###  Trying out Prompt Engineering with Azure OpenAI Playground
-Azure OpenAI Studio provides access to model management, deployment, experimentation, customization, and learning resources. The Chat playground within Azure OpenAI Studio is based on a conversation-in, message-out interface. You can initialize the session with a system message to set up the chat context.
+Azure OpenAI Foundry provides access to model management, deployment, experimentation, customization, and learning resources. The Chat playground within Azure OpenAI Foundry is based on a conversation-in, message-out interface. You can initialize the session with a system message to set up the chat context.
 
 In the Chat playground, you're able to add a few-shot examples. The term few-shot refers to providing a few examples to help the model learn what it needs to do. You can think of it in contrast to zero-shot, which refers to providing no examples.
 
@@ -60,7 +60,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 ---
 ## Basic Prompt Examples
 
-> **Note:** Please feel free to enter anything listed in the `Prompt:` box into a `gpt-35-tubro` model in the [Azure OpenAI Studio's Playground](https://oai.azure.com/portal/playground) to follow along with these prompt examples. Be aware that you may receive different outputs than what is listed in the `Output:` box, given the nature of generative models
+> **Note:** Please feel free to enter anything listed in the `Prompt:` box into a `gpt-35-tubro` model in the [Azure OpenAI Foundry's Playground](https://oai.azure.com/portal/playground) to follow along with these prompt examples. Be aware that you may receive different outputs than what is listed in the `Output:` box, given the nature of generative models
 
 You can achieve a lot with prompts, but the quality of results depends on how much information you provide in the prompt without being overly descriptive. A prompt can contain information like instructions or questions. As we will learn later with more advanced prompts, we can also supply examples of required outputs as well as context for our instructions.
 
@@ -232,7 +232,7 @@ The Current token count is viewable from the Chat playground. Since the API call
 Here are some tips to keep in mind while you are designing your prompts:
 
 ### Start Simple
-As you get started with designing prompts, you should keep in mind that it is an iterative process that requires experimentation to get optimal results. Using a simple playground like [Azure's OpenAI Studio's Playground](https://oai.azure.com/portal/playground) will allow you to test out ideas quickly and easily. The model won't be offended if you ask it to do very similar things over and over again!
+As you get started with designing prompts, you should keep in mind that it is an iterative process that requires experimentation to get optimal results. Using a simple playground like [Azure's OpenAI Foundry's Playground](https://oai.azure.com/portal/playground) will allow you to test out ideas quickly and easily. The model won't be offended if you ask it to do very similar things over and over again!
 
 You can start with simple prompts and keep adding more elements and context as you aim for better results. Versioning your prompt along the way is vital for this reason. As we read the guide, you will see many examples where specificity, simplicity, and conciseness will often give you better results. Begin with a hardcoded prompt and move into more dynamically generated prompts as you refine your results.
 

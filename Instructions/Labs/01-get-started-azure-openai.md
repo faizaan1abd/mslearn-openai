@@ -132,7 +132,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. In the **Completions (1)** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Type **Generate a quiz (3)** in the prompt and then click on **Generate (4)**
 
-      ![](../media/completion1.png)
+      ![](../media/completion01.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -146,7 +146,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 1. Use the **View Code** button to view the code that a client application would use to submit the prompt. 
 
-      ![](../media/completion2.jpg)
+      ![](../media/completion02.jpg)
 
 1. You can select your preferred programming language **(1)** then naviage to the **Key authentication (2)**.The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.      
 

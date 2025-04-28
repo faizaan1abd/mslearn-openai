@@ -37,6 +37,10 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
       
          ![](../media/open-ai9.png "Create Azure OpenAI resource")
 
+    - On the **Network tab** select the **All networks, including the internet, can access this resource (1)** and click on **Next**.
+    - On the **Tags tab** click on **Next**.
+    - On the **Review + Submit tab**, after validation passes, click on **Create**. 
+
 1. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
    <validation step="917cb723-2d65-4411-90f9-0150a7636494" />

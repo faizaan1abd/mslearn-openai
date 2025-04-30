@@ -158,7 +158,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     
     - Click on **Create (6)**
 
-       ![](../media/openai2.png "Create storage advanced settings")
+       ![](../media/task3step5.png "Create storage advanced settings")
 
 1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -249,7 +249,7 @@ In this task, you will complete key parts of the application to enable it to use
 
      ![](../media/it3.png)    
      
-1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages using below commands in Azure Cloud Shell.
 
      **C#**:
 

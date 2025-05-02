@@ -166,8 +166,8 @@ Para este ejercicio, completará algunas partes clave de la aplicación para hab
 
     ```bash
     cd Python
-    pip install python-dotenv
-    pip install openai==1.56.2
+    pip install python-dotenv --user
+    pip install openai==1.56.2 --user
     ```
 
 1. Navegue hasta la carpeta de su lenguaje preferido, seleccione el archivo de código y agregue las bibliotecas necesarias.

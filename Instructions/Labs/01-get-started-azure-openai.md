@@ -68,7 +68,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-    ![](../media/spansih_model.png)
+    ![](../media/get-started-openai-spanish-lab1-1.png)
 
 1. En la ventana **Seleccionar un modelo**, busque **gpt-4o-mini (1)**, luego seleccione **gpt-4o-mini (2)** y haga clic en **Confirmar (3)**.
 
@@ -76,25 +76,25 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. Haga clic en **Personalizar**.   
 
-   ![](../media/nlp23.png)
+   ![](../media/get-started-openai-spanish-lab1-2.png)
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
     - Nombre de implementación: **my-gpt-model (1)** 
-    - Tipo de implementación: **Estendar (2)**
+    - Tipo de implementación: **Estándar (2)**
     - Versión de modelo: **2024-07-18 (Predetermindado) (3)**
     - Tokens por límite de velocidad por minuto (miles): **8K (4)**
     - Filtro de conteudo: **DefaultV2 (5)**
     - Habilitar cuota dinámica: **Habilitado (6)**
     - Haga clic en **Implementar** **(7)**
   
-      ![](../media/nlp3.png)
+      ![](../media/get-started-openai-spanish-lab1-3.png)
 
          > **Note**: gpt-4o-mini solo se admite para la finalización del chat y no para la API de finalización.
 
 1.  Haga clic en **Implementaciones (1)** en el panel de navegación izquierdo, haga clic en **+ Implementar modelo (2)** y seleccione **Implementación del modelo base (3)**.
 
-    ![](../media/spansih_model.png)
+    ![](../media/get-started-openai-spanish-lab1-1.png)
 
 1. En la ventana **Seleccionar un modelo**, busque **gpt-35-turbo-instruct (1)**, luego seleccione **gpt-35-turbo-instruct (2)** y haga clic en **Confirmar (3)**.
 
@@ -102,7 +102,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
 
 1. Haga clic en **Personalizar**.   
 
-   ![](../media/nlp5.png)    
+   ![](../media/get-started-openai-spanish-lab1-4.png)    
 
 1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
     
@@ -114,7 +114,7 @@ Azure OpenAI ofrece un portal basado en la web llamado **Azure AI Foundry portal
     - Habilitar cuota dinámica: **Habilitado (6)**
     - Haga clic en **Implementar** (7)
 
-       ![](../media/nlp6.png)
+       ![](../media/get-started-openai-spanish-lab1-6.png)
 
 
 11. Estos implementarán modelos con los que puede experimentar tanto para el chat como para completar tareas a medida que avanza.

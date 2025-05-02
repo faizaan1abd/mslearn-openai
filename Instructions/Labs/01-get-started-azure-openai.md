@@ -1,6 +1,6 @@
 # Laboratorio 01: Comenzar a usar el Servicio Azure OpenAI
 
-### Duración Estimada: 40 minutos
+### Duración Estimada: 120 minutos
 
 ## Escenario del Laboratorio
 El Servicio Azure OpenAI incorpora los modelos de IA generativa desarrollados por OpenAI a la plataforma Azure, lo que le permite desarrollar potentes soluciones de IA que se benefician de la seguridad, la escalabilidad y la integración de los servicios que ofrece la plataforma de nube de Azure. En este ejercicio, aprenderá cómo comenzar con Azure OpenAI mediante el aprovisionamiento del servicio como un recurso de Azure y el uso de Azure AI Foundry portal para implementar y explorar los modelos de OpenAI. 

@@ -1,6 +1,6 @@
 # Laboratório 01: Iniciar com o Serviço Azure OpenAI
 
-### Duração Estimada: 40 minutos
+### Duração Estimada: 120 minutos
 
 ## Cenário do Laboratório
 O Serviço Azure OpenAI traz os modelos de IA generativa desenvolvidos pela OpenAI para a plataforma Azure, permitindo que você desenvolva soluções de IA poderosas que se beneficiam da segurança, escalabilidade e integração dos serviços fornecidos pela plataforma de nuvem Azure. Neste exercício, você aprenderá como começar a usar o Azure OpenAI provisionando o serviço como um recurso do Azure e usando o Azure AI Foundry portal para implantar e explorar modelos OpenAI.
@@ -70,7 +70,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
 1. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
-   ![](../media/portugesemodel.png)
+   ![](../media/get-started-openai-portuguese-lab1-1.png)
 
 1. Na janela **Selecionar um modelo**, procure por **gpt-4o-mini (1)** selecione **gpt-4o-mini (2)** e clique em **Confirmar (3)**.
 
@@ -78,7 +78,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
 1. Clique em **Personalizar**.
 
-   ![](../media/nlpp5.png)
+   ![](../media/get-started-openai-portuguese-lab1-2.png)
 
 1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
@@ -98,11 +98,11 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Clique em **Implantar (7)**
       
-      ![](../media/nlpp6.png)
+      ![](../media/get-started-openai-portuguese-lab1-4.png)
 
 1. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
-   ![](../media/portugesemodel.png)
+   ![](../media/get-started-openai-portuguese-lab1-1.png)
 
 1. Na janela **Selecionar um modelo**, procure por **gpt-35-turbo-instruct (1)**, selecione **gpt-35-turbo-instruct (2)** e clique em **Confirmar (3)**.
 
@@ -110,7 +110,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
 1. Clique em **Personalizar**.
 
-   ![](../media/nlpp7.png)
+   ![](../media/get-started-openai-portuguese-lab1-3.png)
    
 1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
     
@@ -128,7 +128,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Clique em **Implantar (7)**
       
-         ![](../media/nls602.png)
+         ![](../media/get-started-openai-portuguese-lab1-6.png)
 
 1. Eles implantarão modelos que você pode experimentar tanto para tarefas de bate-papo quanto para tarefas de conclusão à medida que avança.
 
@@ -171,7 +171,7 @@ Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pod
 
       ![](../media/nls605.png)
 
-      ![](../media/8-10-24(23).png)
+      ![](../media/get-started-openai-portuguese-lab1-5.png)
 
 6. Feche o **Código de Amostra**.
 

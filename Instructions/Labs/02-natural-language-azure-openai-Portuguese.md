@@ -1,6 +1,6 @@
 # Laboratório 02: Use SDKs do Azure OpenAI na sua Aplicação
 
-### Duração Estimada: 40 minutos
+### Duração Estimada: 120 minutos
 
 ## Cenário do laboratório
 Com o Serviço Azure OpenAI, os desenvolvedores podem criar chatbots, modelos de linguagem e outras aplicações que se destacam na compreensão da linguagem humana natural. O Azure OpenAI fornece acesso a modelos de IA pré-treinados, bem como um conjunto de APIs e ferramentas para personalizar e ajustar esses modelos para atender aos requisitos específicos da sua aplicação. Neste exercício, você aprenderá como implementar um modelo no Azure OpenAI e usá-lo na sua aplicação.
@@ -173,8 +173,8 @@ Para este exercício, você completará algumas partes-chave do aplicativo para 
 
     ```bash
     cd Python
-    pip install python-dotenv
-    pip install openai==1.56.2
+    pip install python-dotenv --user
+    pip install openai==1.56.2 --user
     ```
 
 1. Navegue até a pasta da sua linguagem preferida, selecione o arquivo de código e adicione as bibliotecas necessárias.

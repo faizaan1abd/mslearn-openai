@@ -67,23 +67,25 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/ui1.png)
 
-5. Search for **gpt-4o-mini**, click on **Confirm**
+5. Search for **gpt-4o**, click on **Confirm**
 
-     ![](../media/gpt-4-mini.png)
+     ![](../media/oai01.png)
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
-      - **Model version**:2024-07-18(default) (3)
+      - **Model version**:2024-08-06(default) (3)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
       - **Content Filter**: DefaultV2 (5)
       - **Enable dynamic quota**: Enabled (6)
       - Click on **Deploy** (7)
   
-      ![](../media/gpt-4omini.png)
+      ![](../media/oai03.png)
 
-   >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+      ![](../media/oai02.png)
+
+   >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
 7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 

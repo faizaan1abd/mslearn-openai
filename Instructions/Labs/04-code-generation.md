@@ -180,6 +180,12 @@ In this task, you will complete key parts of the application to enable it to use
     pip install python-dotenv
     pip install openai==1.56.2
     ```
+   ![](../media/L2T3S9python-0205.png)
+      > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
+      > ```bash
+      > pip install --user python-dotenv
+      > pip install --user openai==1.56.2
+      > ```
 
 5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
 

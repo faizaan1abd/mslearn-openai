@@ -49,52 +49,54 @@ In this task, you will observe how the base model responds to queries without an
    
 2. In the **Azure portal**, search for **Storage Account** and select **Storage Account**.
 
-   ![](../media/1.png)
+   ![](../media/L6T2S2-0205.png)
 
 3. On **Storage Account** page, click on **Create**.
 
-   ![](../media/2.png)
+   ![](../media/L6T2S3-0205.png)
 
-4. Create a **Storage Account** resource with the following settings:
+4. To create a **Storage Account** resource enter the following details and click on **Next (7)**:
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>(1)
-    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>(2)
-    - **Region**: Select <inject key="Region" enableCopy="false" />(3)
-    - **Primary Service**: Azure Blob Storage or Azure Data Lake Storage Gen 2(4)
-    - **Redundancy**: Locally-redundant storage (LRS)(5)
+    - **Subscription**: Default - Pre-assigned subscription (1)
+    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>(2)
+    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>(3)
+    - **Region**: Select <inject key="Region" enableCopy="false" />(4)
+    - **Primary Service**: Azure Blob Storage or Azure Data Lake Storage Gen 2(5)
+    - **Redundancy**: Locally-redundant storage (LRS)(6)
   
-      ![](../media/openai-lab06_t4_s4upd.png "Create storage account")
+      ![](../media/L6T2S4.1-0205.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers**: check in the box to enable under advance section. Click on **Review + Create**  and subsequently click on **Create**
+    - **Allow enable anonymous access on individual containers (1)**: check in the box to enable under advance section. Click on **Review + Create (2)**  and subsequently click on **Create**
 
-      ![](../media/image4.5.png "allow blob access")
+      ![](../media/L6T2S4.2-0205.png "allow blob access")
 
 5. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
 6. On the deployment blade, click Go to resource.
 
-    ![](../media/3.png "upload files")
+    ![](../media/L6T2S6-0205.png "upload files")
 
-7. On **Storage Account | Container** blade, click on **Create**.
+7. On **Storage Account**, go to **Container (1)** blade under Data Storage and click on **+ Container (2)** to create a new container.
 
-     ![](../media/4.png "upload files")
+     ![](../media/L6T2S7-0205.png "upload files")
 
-8. Create a container with the name **openaidatasource** and enable Anonymous access level for container.
+8. Create a container with the name **openaidatasource (1)**, enable **Anonymous access level for container (2)** and click on **Create (3)**.
 
-      ![](../media/image4.6.png "create container")
+      ![](../media/L6T2S8-0205.png "create container")
 
-9. Upload all the files into the container which are downlaoded and extracted during the first step of Task 4.
+9. On the openaidatasource container click on Upload and go to location C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data. Upload all the pdf files into the container. 
 
-      ![](../media/image4.7.png "upload files")
+      ![](../media/L6T2S9-0205.png "upload files")
+   
+      ![](../media/L6T2S9.1-0205.png "upload files")
 
-10. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
+11. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
 
-11.  On **Azure AI services | AI search** blade, click on **Create**.
+12.  On **Azure AI services | AI search** blade, click on **+ Create**.
 
-     ![](../media/5.png "upload files")
+     ![](../media/L6T2S11-0205.png "upload files")
 
-12. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+13. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
@@ -102,23 +104,23 @@ In this task, you will observe how the base model responds to queries without an
     - **Location**:Select <inject key="Region" enableCopy="false" />
     - **Pricing tier**: Change the Pricing tier to **Basic**
 
-      ![](../media/openai-lab06_t4_s5upd.png "Create cognitive search resource")
+      ![](../media/L6T2S12-0205.png "Create cognitive search resource")
 
-13. Wait until your search resource has been deployed.
+14. Wait until your search resource has been deployed.
 
-14. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
+15. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-       ![](../media/x689.png)
+       ![](../media/L6T2S14-0205.png)
 
-15. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
+16. From the left navigation pane,click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-      ![](../media/x690.png)
+      ![](../media/L6T2S15-0205.png)
 
-16. In **Azure AI Foundry portal**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+17. In **Azure AI Foundry portal**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
 
     ![](../media/chat_playground.png)
    
-17. In the **Add data**, enter the following values for your data source and then click on **Next**.
+18. In the **Add data**, enter the following values for your data source and then click on **Next**.
 
     - **Select data source**: Azure Blob Storage
     - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
@@ -129,13 +131,13 @@ In this task, you will observe how the base model responds to queries without an
    
        ![](../media/image4.8.png "Add data configurations")
 
-18. Click on next to proceed with "Data Management"
+19. Click on next to proceed with "Data Management"
    
-19. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+20. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
 
       ![](../media/lab6-g4.png "Add data")
 
-20. On the **Data connection** page select the **API key** , Click on the **Next**
+21. On the **Data connection** page select the **API key** , Click on the **Next**
 
        ![](../media/API_key.jpg "Add data")
    
@@ -294,6 +296,12 @@ In this task, you will complete key parts of the application to enable it to use
     pip install python-dotenv
     pip install openai==1.56.2
     ```
+      > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the below command for installation.
+      >    ![](../media/L2T3S9python-0205.png)
+      > ```bash
+      > pip install --user python-dotenv
+      > pip install --user openai==1.56.2
+      > ```
 
 5. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 

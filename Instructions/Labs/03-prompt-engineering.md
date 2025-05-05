@@ -22,6 +22,8 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat** playground in the left pane and that the **my-gpt-model** model is selected in the Deployment pane.
 
+   ![](../media/L3T1S1-0205.png)
+
 1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 
 1. In the **Chat session**, submit the following query:
@@ -88,6 +90,8 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 8. Use the **Apply changes** button to save your changes.
+
+   ![](../media/L3T1S7-0205.png)
 
 9. In the **Chat session** section, resubmit the following prompt:
 
@@ -256,6 +260,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install python-dotenv
     pip install openai==1.56.2
     ```
+   ![](../media/L2T3S9python-0205.png)
+      > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
+      > ```bash
+      > pip install --user python-dotenv
+      > pip install --user openai==1.56.2
+      > ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 

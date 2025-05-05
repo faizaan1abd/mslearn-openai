@@ -45,13 +45,13 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/dalle32_1.png)
               
-4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Prompt (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image.
+4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image (4).
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/image_gen.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/L5T1S7-0205.png)
 
 5. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/new_1.jpg)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/L5T1S8-0205.png)
 
       > **Note**: The image may appear differently than shown in the screenshot. 
 
@@ -122,6 +122,11 @@ In this task, you will use a configuration file in the application to store the 
     ```bash
    pip install python-dotenv
     ```
+      > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the below command for installation/
+      >    ![](../media/L2T3S9python-0205.png)
+      > ```bash
+      > pip install --user python-dotenv
+      > ```
 
 1. If your using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
 
@@ -234,6 +239,10 @@ In this task, you will run the reviewed code to generate some images.
    pip install requests
    python generate-image.py
     ```
+      > **Note:** If you receive a permission error after executing the pip install command, please use the below command to install.
+      > ```
+      > pip install --user requests
+      > ```
 
     **C#**
 

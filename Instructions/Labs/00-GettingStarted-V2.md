@@ -38,7 +38,7 @@ El flujo de arquitectura para esta tarea comienza con el aprovisionamiento de un
  
 Una vez que esté listo para comenzar, su máquina virtual y la guía de laboratorio estarán al alcance de su mano dentro de su navegador web.
  
-![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/nlsg1.png)
+![Acceda a su Máquina Virtual y Guía de Laboratorio](../media/getting-started-spanish-openai-1.png)
 
 ### Guía de laboratorio Acercar/alejar
 
@@ -54,19 +54,19 @@ Su máquina virtual es su caballo de batalla durante todo el taller. La guía de
  
 Para obtener una mejor comprensión de sus recursos de laboratorio y credenciales, navegue a la pestaña **Ambiente**.
  
-![Explore los Recursos de Laboratorio](../media/nlsg3.png)
+![Explore los Recursos de Laboratorio](../media/getting-started-spanish-openai-5.png)
  
 ## Utilizando la Función de Ventana Dividida
  
 Para mayor comodidad, puede abrir la guía de laboratorio en una ventana separada seleccionando el botón **Ventana Dividida** de la esquina superior derecha.
  
-![Utilice la Función de Ventana Dividida](../media/nlsg4.png)
+![Utilice la Función de Ventana Dividida](../media/getting-started-spanish-openai-2.png)
  
 ## Administrando Su Máquina Virtual
  
 Siéntase libre de **iniciar, detener o reiniciar (2)** su máquina virtual cuando lo necesite desde la pestaña **Recursos (1)**. ¡Su experiencia está en sus manos!
  
-![Administre Su Máquina Virtual](../media/nlsg5.png)
+![Administre Su Máquina Virtual](../media/getting-started-spanish-openai-3.png)
 
 ## Comenzando con el Portal de Azure
  

@@ -226,16 +226,17 @@ For this exercise, you'll complete some key parts of the application to enable u
         **C#**
    
         ```bash
+        cd azure-openai/Labfiles/04-code-generation
         cd CSharp
-        dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+        dotnet add package Azure.AI.OpenAI --version 2.1.0
         ```
 
         **Python**
    
         ```bash
+        cd ..
         cd Python
-        pip install python-dotenv
-        pip install openai==1.13.3
+        pip install --user openai==1.65.2
         ```
 
 1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.
@@ -245,45 +246,42 @@ For this exercise, you'll complete some key parts of the application to enable u
         **C#**
         `Program.cs`
    
-           ```csharp
-           // Format and send the request to the model
-             var chatCompletionsOptions = new ChatCompletionsOptions()
-             {
-                 Messages =
-                 {
-                     new ChatRequestSystemMessage(systemPrompt),
-                     new ChatRequestUserMessage(userPrompt)
-                 },
-                 Temperature = 0.7f,
-                 MaxTokens = 1000,
-                 DeploymentName = oaiDeploymentName
-             };
-         
-             // Get response from Azure OpenAI
-             Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-         
-             ChatCompletions completions = response.Value;
-             string completion = completions.Choices[0].Message.Content;
+         ```csharp
+          // Format and send the request to the model
+          var chatCompletionsOptions = new ChatCompletionOptions()
+          {
+              Temperature = 0.7f,
+              MaxOutputTokenCount = 800
+          };
+      
+          // Get response from Azure OpenAI
+          ChatCompletion response = await chatClient.CompleteChatAsync(
+              [
+                  new SystemChatMessage(systemPrompt),
+                  new UserChatMessage(userPrompt),
+              ],
+              chatCompletionsOptions);
           ```
 
         **Python**
         `code-generation.py`
    
-          ```python
-          # Format and send the request to the model
-          messages =[
-              {"role": "system", "content": system_message},
-              {"role": "user", "content": user_message},
-          ]
-          
-          # Call the Azure OpenAI model
-          response = client.chat.completions.create(
-              model=model,
-              messages=messages,
-              temperature=0.7,
-              max_tokens=1000
-          )
-          ```
+        ```python
+        # Format and send the request to the model
+        messages =[
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_message},
+        ]
+    
+        # Call the Azure OpenAI model
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0.7,
+            max_tokens=1000
+        )
+    
+        ```
           >**Note**: Please make sure the indentation is correct and matches the code above before moving to the next task.
           
 1. To save the changes made to the file, right-click on the file from the left pane, and hit **Save**
@@ -301,32 +299,9 @@ run in any order.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-1. If your using **C#** language kindly open **CSharp.csproj** file and replace with the following code and save the file.
+   - **C#**: `CSharp` (Folder Name)
+   - **Python**: `Python` (Folder Name)
 
-      ```
-      <Project Sdk="Microsoft.NET.Sdk">
-      
-      <PropertyGroup>
-      <OutputType>Exe</OutputType>
-      <TargetFramework>net8.0</TargetFramework>
-      <ImplicitUsings>enable</ImplicitUsings>
-      <Nullable>enable</Nullable>
-      </PropertyGroup>
-      
-       <ItemGroup>
-       <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-       <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.*" />
-       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.*" />
-       </ItemGroup>
-      
-       <ItemGroup>
-         <None Update="appsettings.json">
-           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          </None>
-        </ItemGroup>
-      
-       </Project>
-      ```  
 1. Run the application.
 
       - **C#**: `dotnet run`

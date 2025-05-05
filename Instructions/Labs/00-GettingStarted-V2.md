@@ -10,7 +10,7 @@ Azure OpenAI Service brings the generative AI models developed by OpenAI to the 
 
 In this lab, you will learn how to use OpenAI to create natural language solutions. You’ll start by setting up the OpenAI environment in Azure and explore the basic features of OpenAI models for language processing. By the end of the lab, you’ll build and deploy a simple application that can process and respond to user input, while also learning how to enhance the model’s performance and output quality.
 
-- **Get started with Azure OpenAI Servic**e: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
+- **Get started with Azure OpenAI Service**: This hands-on exercise aims to provision an Azure OpenAI resource and deploying a model. Explore the model's capabilities in the Completions playground, then interact with it using the Chat playground. Fine-tune responses by adjusting prompts and parameters, and leverage code-generation to automate tasks.
 - **Use Azure OpenAI SDKs in your app**: This hands-on exercise aims to provision an Azure OpenAI resource, deploy a model, set up and configure an application in Cloud Shell, and then run the application, demonstrating the full lifecycle from resource creation to application deployment and execution.
 
 ## Pre-requisites
@@ -40,7 +40,7 @@ Welcome to the "Get Started With OpenAI and Build Natural Language Solutions" la
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/nleg1.png)
+![Access Your VM and Lab Guide](../media/getting-started-eng-openai-1.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -56,26 +56,26 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/nleg3.png)
+![Explore Lab Resources](../media/getting-started-eng-openai-5.png)
 
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/nleg4.png)
+![Use the Split Window Feature](../media/getting-started-eng-openai-2.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/nleg5.png)
+![Manage Your Virtual Machine](../media/getting-started-eng-openai-3.png)
 
 ## Lab Validation
 
 1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/inline-validation.png)
+   ![Inline Validation](../media/getting-started-eng-openai-4.png)
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 

@@ -81,11 +81,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Enable dynamic quota**: Enabled (6)
       - Click on **Deploy** (7)
   
-      ![](../media/oai03.png)
+         ![](../media/oai03.png)
 
-      ![](../media/oai02.png)
+         ![](../media/oai02.png)
 
-   >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
+         >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
 7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
@@ -168,7 +168,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
       ![](../media/lab1-g4.png)
 
-   >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 6. Save the changes by clicking on **Apply changes** and On Update system message? pop-up, click on **Continue**.
 

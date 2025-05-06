@@ -299,7 +299,7 @@ In this task, you will complete key parts of the application to enable it to use
     print("Response: " + generated_text + "\n")
     ```
 
-      ![](../media/L2T3S12.2-0205.png)
+      ![](../media/L2T3S12-python20605.png)
 
 8. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**
 

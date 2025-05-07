@@ -76,13 +76,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment type (2)**: Standard
       - Click on **Customize**
       - **Model version upgrade policy (3)**: Upgrade once new default version becomes available
-      - **Model version (4)**: 2024-07-18(default)
+      - **Model version (4)**: 2024-08-06(default)
       - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
       - **Content Filter (6)**: DefaultV2
-      - **Enable dynamic quota (7)**: Enabled 
+      - **Enable dynamic quota(7)**: Enabled 
       - Click on **Deploy (8)** 
   
-         ![](../media/dev-09.png)
+         ![](../media/gpt-4o-1.png)
 
          >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 

@@ -122,7 +122,6 @@ In this task, you will complete key parts of the application to enable it to use
     **Python**
 
       ```bash
-    cd ..
     cd Python
     pip install openai==1.65.2
     ```

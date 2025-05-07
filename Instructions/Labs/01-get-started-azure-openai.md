@@ -72,16 +72,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
      ![](../media/oai01.png)
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name**: my-gpt-model (1)
-      - **Deployment type**: Standard(2)
+      - **Deployment name (1)**: my-gpt-model 
+      - **Deployment type (2)**: Standard(2)
       - Click on **Customize**
-
-      - **Model version upgrade policy:** keep it default (3)
-      - **Model version**:2024-07-18(default) (4)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
-      - **Content Filter**: DefaultV2 (6)
-      - **Enable dynamic quota**: Enabled (7)
-      - Click on **Deploy** (8)
+      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available
+      - **Model version (4)**: 2024-07-18(default)
+      - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
+      - **Content Filter (6)**: DefaultV2
+      - **Enable dynamic quota (7)**: Enabled 
+      - Click on **Deploy (8)** 
   
          ![](../media/dev-09.png)
 
@@ -96,15 +95,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
      ![](../media/ui4b.png)
    
 9. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name**: gpt-35-turbo-instruct (1)
-      - **Deployment type**: Standard(2)
+      - **Deployment name (1)**: gpt-35-turbo-instruct 
+      - **Deployment type (2)**: Standard
       - Click on **Customize**.
-      - **Model version upgrade policy:** keep it default (3)
-      - **Model version**: 0914 (Default) (4)
-      - **Tokens per Minute Rate Limit (thousands)**: 20K (5)
-      - **Content Filter**: DefaultV2 (6)
-      - **Enable dynamic quota**: Enabled (7)
-      - Click on **Deploy** (8)
+      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available 
+      - **Model version (4)**: 0914 (Default) 
+      - **Tokens per Minute Rate Limit (thousands) (5)**: 20K 
+      - **Content Filter (6)**: DefaultV2 
+      - **Enable dynamic quota (7)**: Enabled
+      - Click on **Deploy (8)** 
   
         ![](../media/dev-10.png)
 

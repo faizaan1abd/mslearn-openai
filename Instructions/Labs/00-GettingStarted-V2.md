@@ -54,7 +54,7 @@ The architecture for this lab involves the following key components:
 - **Prompt Engineering**: Prompt engineering fine-tunes input prompts to improve AI model replies, ensuring accurate and relevant outputs by optimizing how prompts are produced and delivered to AI models.
 - **AI chat**: AI chat also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
 
-# Getting Started with Your Develop Generative AI Solutions with Azure OpenAI Service Workshop
+# Getting Started with the lab
  
 Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  

@@ -45,9 +45,12 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/dalle31.png)
 
-6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, and leave the rest of the settings as default and click on **Deploy (2)**.
+6. Within the **Deploy model** pop-up interface, enter the *Deployment name* as **Dalle3 (1)**, Click on **customize(2)** and make the **capacity 1K(Tokens per minute)(3)**
+and click on **Deploy (4)**.
 
-      ![](../media/dalle32_1.png)
+      ![](../media/dalle32_1-1.png)
+
+      ![](../media/1K-1.png)
               
 4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image (4).
    

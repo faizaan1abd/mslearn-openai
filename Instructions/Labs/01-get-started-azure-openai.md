@@ -253,4 +253,4 @@ In this lab, you have accomplished the following:
 - Deploy an Azure OpenAI model within the Azure AI Foundry portal
 - Use the chat playground to utilize the functionalities of prompts, parameters and code-generation
 
-## You have successfully completed the lab.
+### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

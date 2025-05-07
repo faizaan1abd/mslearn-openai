@@ -360,4 +360,4 @@ In this lab, you have accomplished the following:
 
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
-### You have successfully completed the lab.
+### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

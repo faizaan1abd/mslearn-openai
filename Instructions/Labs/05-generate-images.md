@@ -289,4 +289,4 @@ In this lab, you have accomplished the following:
 -   understand the concepts of image generation via the DALL-E model.
 -   Implement image-generation into your applications using this model
 
-### You have successfully completed the lab.
+### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

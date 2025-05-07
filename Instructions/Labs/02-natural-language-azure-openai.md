@@ -593,4 +593,4 @@ In this lab, you have accomplished the following:
 -   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Integrate Azure OpenAI models into your applications
 
-### You have successfully completed the lab.
+### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

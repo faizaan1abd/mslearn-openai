@@ -1,4 +1,4 @@
-# Lab 05: Generate images with a DALL-E model
+# Lab 05: Generate images with a DALL-E model (READ-ONLY)
 
 ### Estimated Duration: 75 minutes
 
@@ -20,6 +20,10 @@ In this lab, you will complete the following tasks:
 ### Task 1: Explore image generation in the DALL-E playground
 
 In this task, you will use the DALL-E playground in Azure AI Foundry portal to experiment with image generation.
+
+> **Note:** This task relies on the DALL·E quota limit available in your Azure OpenAI resource. If the deployment fails, it may be due to quota restrictions on the existing resource. 
+
+> To resolve this, create a new Azure OpenAI resource (as done in **Lab 01**) in a supported region such as **East US** or **Australia East**, and then attempt to deploy the DALL·E model again.
 
 1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
 

@@ -172,7 +172,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
 6. Save the changes by clicking on **Apply changes** and On Update system message? pop-up, click on **Continue**.
 
-    ![](../media/image7u.png)
+    ![](../media/my-gpt-model-022-1.png)
    
 7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
@@ -230,7 +230,7 @@ In this task, you'll explore code-generation by testing the AI model’s ability
 
 1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
 
-   ![](../media/lab1-g7u.png)
+   ![](../media/python-1.png)
 
 2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
 

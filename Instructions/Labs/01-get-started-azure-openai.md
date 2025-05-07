@@ -73,7 +73,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name (1)**: my-gpt-model 
-      - **Deployment type (2)**: Standard(2)
+      - **Deployment type (2)**: Standard
       - Click on **Customize**
       - **Model version upgrade policy (3)**: Upgrade once new default version becomes available
       - **Model version (4)**: 2024-07-18(default)

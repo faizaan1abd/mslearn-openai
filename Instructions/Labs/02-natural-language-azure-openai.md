@@ -305,7 +305,10 @@ In this task, you will complete key parts of the application to enable it to use
 
    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-9. Python code.
+9. The final code should look like as shown below:
+
+    **Python**: test-openai-model.py
+   
       ```
       import os
       from dotenv import load_dotenv

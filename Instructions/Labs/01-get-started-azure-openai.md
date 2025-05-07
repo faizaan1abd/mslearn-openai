@@ -19,24 +19,24 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/tel-11.png)
+   ![](../media/dev-07.png)
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
    ![](../media/tel-10.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
-      - **Subscription**: Default - Pre-assigned subscription.
-      - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Region**: **Swedencentral**
-      - **Name**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Pricing tier**: Standard S0
-  
-           ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+      - **Subscription (1)**: Default - Pre-assigned subscription.
+      - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **Region (3)**: **Swedencentral**
+      - **Name (4)**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+      - **Pricing tier (5)**: Standard S0
 
-4. Click on **Next** thrice and click on **Create**.
+4. Click on **Next (6)** thrice and click on **Create**.
+
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -51,11 +51,11 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI** and select **Azure OpenAI**.
+1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
-      ![](../media/tel-11.png)
+      ![](../media/dev-07.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
       ![](../media/update07.png)
 
@@ -63,9 +63,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/update08.png)
 
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
-      ![](../media/ui1.png)
+      ![](../media/dev-08.png)
 
 5. Search for **gpt-4o**, click on **Confirm**
 
@@ -75,21 +75,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
-      - **Model version**:2024-08-06(default) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-      - **Content Filter**: DefaultV2 (5)
-      - **Enable dynamic quota**: Enabled (6)
-      - Click on **Deploy** (7)
-  
-         ![](../media/oai03.png)
 
-         ![](../media/oai02.png)
+      - **Model version upgrade policy:** keep it default (3)
+      - **Model version**:2024-07-18(default) (4)
+      - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
+      - **Content Filter**: DefaultV2 (6)
+      - **Enable dynamic quota**: Enabled (7)
+      - Click on **Deploy** (8)
+  
+         ![](../media/dev-09.png)
 
          >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
-7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
+7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
-     ![](../media/ui1.png)
+     ![](../media/dev-08.png)
 
 9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
 
@@ -99,13 +99,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment name**: gpt-35-turbo-instruct (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**.
-      - **Model version**: 0914 (Default) (3)
-      - **Tokens per Minute Rate Limit (thousands)**: 20K (4)
-      - **Content Filter**: DefaultV2 (5)
-      - **Enable dynamic quota**: Enabled (6)
-      - Click on **Deploy** (7)
+      - **Model version upgrade policy:** keep it default (3)
+      - **Model version**: 0914 (Default) (4)
+      - **Tokens per Minute Rate Limit (thousands)**: 20K (5)
+      - **Content Filter**: DefaultV2 (6)
+      - **Enable dynamic quota**: Enabled (7)
+      - Click on **Deploy** (8)
   
-        ![](../media/image1b-1.png)
+        ![](../media/dev-10.png)
 
 10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
@@ -149,21 +150,21 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model** model is selected in the Deployment pane.
+1. In the **Playground** section, select the **Chat** page, and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
 
-2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`.
+2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI` **(2)**.
 
-      ![](../media/setup.png)
+      ![](../media/dev-11.png)
 
-3. Below the **+ Add section** box, click on **Examples**. enter the following message and response in the designated boxes:
+3. Below the **+ Add section (1)** box, click on **Examples (2)**. enter the following message and response in the designated boxes:
 
-      ![](../media/imag8u.png)
+      ![](../media/dev-12.png)
 
 4.  Enter the following message and response in the designated boxes:
 
-    - **User**: `What are different types of artificial intelligence?`
+    - **User (1)**: `What are different types of artificial intelligence?`
     
-    - **Assistant**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
+    - **Assistant (2)**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can 
 perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).`
 
       ![](../media/lab1-g4.png)
@@ -174,7 +175,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
     ![](../media/image7u.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?`. Use the **Send** button to submit the message and view the response.
+7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
    ![](../media/openai-12.png)
 

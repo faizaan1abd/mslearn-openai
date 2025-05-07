@@ -244,7 +244,6 @@ In this task, you will run the reviewed code to generate some images.
 
     ```bash
    pip install requests
-   python generate-image.py
     ```
       > **Note:** If you receive a permission error after executing the pip install command, please use the below command to install.
       > ```
@@ -257,6 +256,11 @@ In this task, you will run the reviewed code to generate some images.
    dotnet run
     ```
 
+    **Python**
+
+    ```bash
+    python generate-image.py
+    ```
 2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
 
     >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:

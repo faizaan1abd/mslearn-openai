@@ -89,7 +89,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-8. Use the **Apply changes** button to save your changes.
+8. Use the **Apply changes** button to save your changes and Click on **Continue**.
 
    ![](../media/L3T1S7-0205.png)
 

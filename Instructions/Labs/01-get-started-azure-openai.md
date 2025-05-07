@@ -67,14 +67,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/dev-08.png)
 
-5. Search for **gpt-4o-mini**, click on **Confirm**
+5. Search for **gpt-4o**, click on **Confirm**
 
-     ![](../media/gpt-4-mini.png)
+     ![](../media/oai01.png)
    
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: my-gpt-model (1)
       - **Deployment type**: Standard(2)
       - Click on **Customize**
+
       - **Model version upgrade policy:** keep it default (3)
       - **Model version**:2024-07-18(default) (4)
       - **Tokens per Minute Rate Limit (thousands)**: 10K (5)
@@ -84,7 +85,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
          ![](../media/dev-09.png)
 
-   >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
+         >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
 7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
@@ -168,7 +169,7 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
       ![](../media/lab1-g4.png)
 
-   >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
+      >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
 6. Save the changes by clicking on **Apply changes** and On Update system message? pop-up, click on **Continue**.
 

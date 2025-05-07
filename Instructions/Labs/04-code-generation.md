@@ -100,73 +100,19 @@ In this task, you will complete key parts of the application to enable it to use
 
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+    ![](../media/oai06.png)
 
-    ```
-    <Project Sdk="Microsoft.NET.Sdk">
+    ![](../media/oai04.png)
 
-    <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    </PropertyGroup>
+    >**Note:** You can get the **endpoint** and **Key** details under the Home.
 
-     <ItemGroup>
-     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
-     </ItemGroup>
-
-     <ItemGroup>
-       <None Update="appsettings.json">
-         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-     </ItemGroup>
-
-    </Project>
-    ```    
-
-     ![](../media/u47upd.png)    
-
-1. Navigate to the folder for your preferred language and install the necessary packages.
-
-     **C#**:
-
-    ```
-    cd CSharp
-    export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
-    mkdir -p $DOTNET_ROOT
-    ```     
-
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
-
-1.  Run the following command to install the required SDK version locally:     
-
-     ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-     chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ```
-
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
-
-1. Enter the following command to restore the workload.
-
-    ```
-    dotnet workload restore
-    ```
-
-     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+    ![](../media/oai05.png)
     
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
     ```
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    cd CSharp
+    dotnet add package Azure.AI.OpenAI --version 2.1.0
     ```
 
 4. Navigate to the folder for your preferred language and install the necessary packages.
@@ -176,10 +122,15 @@ In this task, you will complete key parts of the application to enable it to use
     **Python**
 
       ```bash
+    cd ..
     cd Python
-    pip install python-dotenv
-    pip install openai==1.56.2
+    pip install openai==1.65.2
     ```
+   ![](../media/L2T3S9python-0205.png)
+      > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
+      > ```bash
+      > pip install --user openai==1.65.2
+      > ```
 
 5. In the application code for your language, replace the comment **Format and send the request to the model..** with the following code to configuring the client.
 
@@ -187,24 +138,20 @@ In this task, you will complete key parts of the application to enable it to use
     `Program.cs`
 
    ```csharp
-     // Format and send the request to the model
-       var chatCompletionsOptions = new ChatCompletionsOptions()
-       {
-           Messages =
-           {
-               new ChatRequestSystemMessage(systemPrompt),
-               new ChatRequestUserMessage(userPrompt)
-           },
-           Temperature = 0.7f,
-           MaxTokens = 1000,
-           DeploymentName = oaiDeploymentName
-       };
-   
-       // Get response from Azure OpenAI
-       Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
-   
-       ChatCompletions completions = response.Value;
-       string completion = completions.Choices[0].Message.Content;
+    // Format and send the request to the model
+    var chatCompletionsOptions = new ChatCompletionOptions()
+    {
+        Temperature = 0.7f,
+        MaxOutputTokenCount = 800
+    };
+
+    // Get response from Azure OpenAI
+    ChatCompletion response = await chatClient.CompleteChatAsync(
+        [
+            new SystemChatMessage(systemPrompt),
+            new UserChatMessage(userPrompt),
+        ],
+        chatCompletionsOptions);
     ```
 
     **Python**
@@ -216,7 +163,7 @@ In this task, you will complete key parts of the application to enable it to use
         {"role": "system", "content": system_message},
         {"role": "user", "content": user_message},
     ]
-    
+
     # Call the Azure OpenAI model
     response = client.chat.completions.create(
         model=model,
@@ -224,6 +171,7 @@ In this task, you will complete key parts of the application to enable it to use
         temperature=0.7,
         max_tokens=1000
     )
+
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 

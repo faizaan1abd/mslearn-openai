@@ -17,11 +17,11 @@
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/03-prompt-engineering.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/ms-innovation/Instructions/Labs/03-prompt-engineering.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/ms-innovation/Instructions/Labs/04-code-generation.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/ms-innovation/Instructions/Labs/04-code-generation.md",
         "Order": 5
       },
       {

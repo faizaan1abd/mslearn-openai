@@ -51,12 +51,12 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 5. Within the **Advanced settings** pane, enter the following details:
 
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-    - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)
-    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (3)
-    - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
-    - **File share**: Create a new file share named **none** (5)
-    - Click **Create** (6)
+    - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab .
+    - **Resource group (2)**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> 
+    - **CloudShell region (3)**: <inject key="Region" enableCopy="false" /> 
+    - **Storage Account Name (4)**: storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **File share  (5)**: Create a new file share named **none**
+    - Click **Create (6)** 
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 

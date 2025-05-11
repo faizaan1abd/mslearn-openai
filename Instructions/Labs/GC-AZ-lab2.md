@@ -61,7 +61,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
         ![](../media/openge6.png)
 
-1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard (1)*. Then select **Generate (2)** and view the image that is generated.
 
     ![](../media/openge7.png)
 

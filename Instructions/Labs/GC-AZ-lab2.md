@@ -37,9 +37,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
    ![](../media/openai-endpoint-new.png "Keys and Endpoints")
 
-1. In the **Overiew** pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure OpenAI Studio**.
-
-    ![](../media/msi-image4.png)
+1. In the **Overiew** pane, click on **Go to Azure AI Foundry Portal** and it will navigate to **Azure AI Foundry portal**.
 
 1. From the left navigation pane, click on **Images (1)** and select **+ Create a deployment (2)**.
 

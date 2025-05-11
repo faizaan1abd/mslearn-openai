@@ -36,19 +36,23 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** and it will navigate to **Azure AI Foundry portal**.
 
-    > **Note:** Select **Close** on **Discover an even better Azure AI Studio experience** if prompted. 
+      ![](../media/openaige8.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 
       ![](../media/Openai-04.png)
 
-1. Search and select **gpt-4o-mini**, click on **Confirm**
+1. Search **gpt-4o-mini**, **select (2)** it and click on **Confirm (3)**.
+
+      ![](../media/openge1.png)
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
 
     - **Deployment name**: gpt-4o-mini **(1)**
     - **Deployment type**: Standard **(2)**
     -  Select **Customize** **(3)**
+
+        ![](../media/openge2.png)
        
 1. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: gpt-4o-mini **(1)**
@@ -58,7 +62,9 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
     - **Content Filter**: Default **(5)**
     - **Enable dynamic quota**: Enabled **(6)**
     - Click on **Deploy** (7)
-      
+
+        ![](../media/openge3.png)
+
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:

@@ -41,13 +41,21 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
     ![](../media/msi-image4.png)
 
-1. From the left navigation pane, select the **DALL-E Playground** and ensure Delpoyment is **Dalle3**.
+1. From the left navigation pane, click on **Images (1)** and select **+ Create a deployment (2)**.
 
-    ![](../media/codedalle1.png)
+1. Search for **dall-e (1)**, select **dall-e-3 (2)** and click on **Confirm (3)**.
+
+1. Provide the following details:
+
+   - Deployment name: **dall-e-3 (1)**
+   - Deployment type: **Standard (2)**
+   - Model version: **3.0 (Default) (3)**
+   - Tokens per Minute Rate Limit: **1K (4)**
+   - Content Filter: **Default (5)**
+   - Enable dynamic quota: **Enabled (6)**
+   - Click on **Deploy (7)**
 
 1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
-
-    ![](../media/eleskate.png)
 
     > **NOTE:** The image of an elephant on a skateboard can vary in appearance.
 
@@ -124,7 +132,7 @@ The application uses a configuration file to store the details needed to connect
    image-generation/Python**. Then enter this command:
 
     ```bash
-    pip install python-dotenv
+    pip install --user python-dotenv
     ```
 
 #### Task 2.3: View application code
@@ -188,7 +196,7 @@ Now that you've reviewed the code, it's time to run it and generate some images.
     **Python**
 
     ```bash
-   pip install requests
+   pip install --user requests
    python generate-image.py
     ```
 

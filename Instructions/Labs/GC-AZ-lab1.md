@@ -44,54 +44,37 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
       ![](../media/Openai-04.png)
 
-1. Search and select **GPT-35-TURBO-16K**, click on **Confirm**
-
-      ![](../media/Openai-05.png)
+1. Search and select **gpt-4o-mini**, click on **Confirm**
 
 1. Within the **Deploy model** pop-up interface, enter the following details:
 
-    - **Deployment name**: 35turbo
-    - **Deployment type**: Standard
-    -  Select **Customize**
-
-       ![](../media/msi-image5.png)
+    - **Deployment name**: gpt-4o-mini **(1)**
+    - **Deployment type**: Standard **(2)**
+    -  Select **Customize** **(3)**
        
 1. Within the **Deploy model** pop-up interface, enter the following details:
-    - **Deployment name**: 35turbo (1)
-    - **Deployment type**: Standard (2)
-    - **Model Version**: accept default (3)
-      
-        >**Note** : gpt-35-turbo-16k is supported only for chat completions and it is not supported for completions API.<br>
-    - **Tokens per Minute Rate Limit (thousands)**: 10K (4)
-    - **Enable dynamic quota**: Enabled (5)
-    - Click on **Deploy** (6)
-
-       ![](../media/msi-image6.png)
+    - **Deployment name**: gpt-4o-mini **(1)**
+    - **Deployment type**: Standard **(2)**
+    - **Model Version**: 2024-07-18(Default) **(3)**
+    - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
+    - **Content Filter**: Default **(5)**
+    - **Enable dynamic quota**: Enabled **(6)**
+    - Click on **Deploy** (7)
       
    > **Note**:You can ignore the "Failed to fetch deployments quota information" notification.
 
-   > **Note**: Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable for both language and code understanding.
-
-<validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
-   
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+  <validation step="4a0f2d4d-175a-4dc9-8700-484bc47d1f3f" />
+  
 ### Task 2: Generate code in chat playground
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
-1. In [Azure OpenAI Studio](https://oai.azure.com/?azure-portal=true), from top menu ture on the **Toggle** to **Switch to the old look** and click on **skip** and then navigate to the **Chat** playground in the left pane.
-
-      ![](../media/msi-image7.png)
-
-1. In the **Setup** section at the top, select the **Default** (1) system message template and click on **continue**.
-
-      ![](../media/msi-image8.png)
-
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. Scroll down and in the left pane & navigate to the **Chat session** section, enter the following prompt and press *Enter*.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string

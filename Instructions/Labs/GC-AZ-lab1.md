@@ -36,7 +36,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** and it will navigate to **Azure AI Foundry portal**.
 
-1. In the prompt select **Close** on **Discover an even better Azure AI Studio experience**. 
+    > **Note:** Select **Close** on **Discover an even better Azure AI Studio experience** if prompted. 
 
 1. In the **Deployments (1)** page, click on **+ Deploy model** , Choose **Deploy base Model (2)**.
 

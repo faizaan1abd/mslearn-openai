@@ -39,9 +39,15 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. In the **Overiew** pane, click on **Go to Azure AI Foundry Portal** and it will navigate to **Azure AI Foundry portal**.
 
+    ![](../media/openaige8.png)
+
 1. From the left navigation pane, click on **Images (1)** and select **+ Create a deployment (2)**.
 
+    ![](../media/openge4.png)
+
 1. Search for **dall-e (1)**, select **dall-e-3 (2)** and click on **Confirm (3)**.
+
+    ![](../media/openge5.png)
 
 1. Provide the following details:
 
@@ -53,7 +59,11 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
    - Enable dynamic quota: **Enabled (6)**
    - Click on **Deploy (7)**
 
-1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard*. Then select **Generate** and view the image that is generated.
+        ![](../media/openge6.png)
+
+1. In the **Prompt** box, enter a description of an image you'd like to generate. For example, *An elephant on a skateboard (1)*. Then select **Generate (2)** and view the image that is generated.
+
+    ![](../media/openge7.png)
 
     > **NOTE:** The image of an elephant on a skateboard can vary in appearance.
 

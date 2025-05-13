@@ -263,9 +263,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     - **Subscription**: Default- Choose the only existing subscription assigned for this lab **(1)**.
     - **Resource group**: Select **Use existing** **(2)**
-      - openai-<inject key="Deployment-ID" enableCopy="false"></inject>  
+         - **openai-<inject key="Deployment-ID" enableCopy="false"></inject>**  
     - **Region**: <inject key="Region" enableCopy="false" /> **(3)**
-    - **Storage account**: Create a new Stroage account named storage<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
+    - **Storage account**: Create a new Storage account named **storage<inject key="Deployment-ID" enableCopy="false"></inject>****(4)**
     - **File share**: Create a new file share named **none** **(5)**
     - Click **Create** **(6)**
 

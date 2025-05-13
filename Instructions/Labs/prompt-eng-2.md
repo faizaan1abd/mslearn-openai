@@ -28,7 +28,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/17-12-24(2).png)
+   ![](../media/create-openai.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 

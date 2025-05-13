@@ -368,9 +368,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```
 
     **Python**
-   ```bash
-    cd ..
-   ```
     ```bash
     cd Python
     pip install python-dotenv

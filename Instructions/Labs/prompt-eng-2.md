@@ -323,6 +323,10 @@ In this task, you will complete key parts of the provided C# or Python applicati
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
+   - **C#**: 
+
+     ![](../media/app-settings.png) 
+
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
      **C#**:

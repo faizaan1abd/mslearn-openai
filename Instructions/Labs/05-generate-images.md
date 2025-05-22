@@ -238,7 +238,7 @@ In this task, you will run the reviewed code to generate some images.
 
 1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-3. In the console prompt pane, enter the appropriate command to run your application:
+1. In the console prompt pane, enter the appropriate command to run your application:
 
     **Python**
 
@@ -261,31 +261,13 @@ In this task, you will run the reviewed code to generate some images.
     ```bash
     python generate-image.py
     ```
-2. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
-
-    >**Note**: If you encounter an issue after entering prompts kindly follow the below steps:
-
-     - Navigate back to **Azure AI Foundry portal**. From the top menu bar, turn on the toggle for **Switch to the old look**. click on **Skip** when **Feedback** window prompted.
-
-        ![](../media/iss1.png)
-
-     - In **Deployment**, ensure that **Dalle 3** is selected.
-
-        ![](../media/iss2.png)
-
-     - Enter a description of an image you'd like to generate in the **Prompt** box (for example, *An elephant on a skateboard*), and then select **Generate** to view the resulting image.
-
-       >**Note**: if you encounter error **The API deployment for this resource does not exist**, kindly wait 2 mins and try again to generate. 
-       
-       >**Note**: It might take 10–15 minutes for the old version to come up.
-
-     - Navigate back to CloudShell and reperform step no 3. 
+1. When prompted, enter a description for an image. For example, *A giraffe flying a kite*.
     
-3. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
+1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](../media/link.jpg "Keys and Endpoints")
    
-5. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
+1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary
 

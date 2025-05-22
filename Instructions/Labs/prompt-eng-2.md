@@ -41,7 +41,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
   
        ![](../media/1302024(6).png "Create Azure OpenAI resource")
 
-       >**Note**: **Please deploy Openai resource in France Central Region**
+       >**Note**: Please deploy the OpenAI resource in **France Central** Region.
 
 4. Click on **Next** again and subsequently click on **Create**.
 
@@ -59,7 +59,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/keys.png "Keys and Endpoints")
+        ![](../media/keysupd.png "Keys and Endpoints")
 
 #### Validation
 
@@ -84,7 +84,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
-   ![](../media/17-12-24(4).png)
+   ![](../media/aifoundry.png)
 
 5. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
@@ -104,7 +104,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         >**Note**: Click on customize and collapse button to expand the other options.
 
-        ![](../media/17022025(7).png)
+        ![](../media/model.png)
 
         >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
@@ -200,7 +200,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Sports
     ```
 
-    ![](../media/17022025(12).png)
+    ![](../media/example1.png)
 
 12. Click **+ Add section (1)** again, select **Example (2)** from the dropdown, and add another example with the provided text.
 
@@ -223,7 +223,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-    ![](../media/17022025(12).png)
+    ![](../media/example2.png)
 
 13. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
 
@@ -238,6 +238,7 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 14. This time the model should respond with an appropriate classification, even without instructions.
+    > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
 ### Task 4: Set up an application in Cloud Shell
 
@@ -327,7 +328,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
      ![](../media/app-settings.png) 
 
-1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the folder for your preferred language and install the necessary packages from the terminal.
 
      **C#**:
 
@@ -372,6 +373,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
     cd Python
     pip install python-dotenv
     pip install openai==1.55.3
+    ```
+
+    >**Note** If you encounter any errors during package installation, try using the following code to install them.
+    ```
+    pip install --user python-dotenv
+    pip install --user openai==1.55.3
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.

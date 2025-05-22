@@ -41,6 +41,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
+    ![](../media/select-bash.png)
+
 3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
 
    ![](../media/cloudshell-getting-started.png)
@@ -61,6 +63,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+    ![](../media/switch-to-bash.png)
 
 7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 

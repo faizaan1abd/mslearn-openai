@@ -525,8 +525,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
           asyncio.run(main())
       ```
 
-
->**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 

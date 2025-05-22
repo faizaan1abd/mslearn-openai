@@ -19,10 +19,12 @@ In this lab, you will complete the following tasks:
 
 Before connecting Azure OpenAI to your data, first observe how the base model responds to queries without any grounding data.
 
-1. In the **Playground** section, select the **Chat** page. The **Chat** playground page consists of two main sections:
+1. In the **Playgrounds** section, select the **Chat (1)** page. The **Chat** playground page consists of two main sections:
 
-     - **Setup** - used to set the context for the model's responses.
-     - **Chat session** - used to submit chat messages and view responses.
+     - **Setup (2)** - used to set the context for the model's responses.
+     - **Chat session (3)** - used to submit chat messages and view responses.
+
+    ![](../media/openai-playground-info.png)
 
 2. In the **deployment** section, ensure that your model deployment **my-gpt-model** is selected.
 
@@ -78,23 +80,35 @@ In this task, you will observe how the base model responds to queries without an
 
 7. On **Storage Account**, go to **Container (1)** blade under Data Storage and click on **+ Container (2)** to create a new container.
 
-     ![](../media/L6T2S7-0205.png "upload files")
+     ![](../media/L6T2S7-0205-1.png "upload files")
 
 8. Create a container with the name **openaidatasource (1)**, enable **Anonymous access level for container (2)** and click on **Create (3)**.
 
       ![](../media/L6T2S8-0205.png "create container")
 
-9. On the openaidatasource container click on Upload and go to location C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data. Upload all the pdf files into the container. 
+9. On the **openaidatasource** container, click on **Upload**. 
 
-      ![](../media/L6T2S9-0205.png "upload files")
-   
-      ![](../media/L6T2S9.1-0205.png "upload files")
+      ![](../media/L6T2S9-0205-1.png "upload files")
 
-11. In the **Azure portal**, search for **Azure AI search** and select **Azure Ai search**.
+1. From the right pane, Click on **Browse for files**.
 
-12.  On **Azure AI services | AI search** blade, click on **+ Create**.
+      ![](../media/L6T2S9-0205-5.png)
 
-     ![](../media/L6T2S11-0205.png "upload files")
+1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **pdf files (2)** and click on **Open (3)**. Then click on **Upload** to upload all pdf files. 
+
+    ![](../media/L6T2S9-0205-3.png)
+
+1. Verify **openaidatasource** container after all files are uploaded.
+
+    ![](../media/L6T2S9.1-0205.png "upload files")
+
+11. In the **Azure portal**, search for **Azure AI search (1)** and select **Azure Ai search (2)**.
+
+    ![](../media/L6T2S9-0205-4.png)
+
+12.  On **AI Foundry | AI search** blade, click on **+ Create**.
+
+     ![](../media/L6T2S11-0205-1.png "upload files")
 
 13. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
 
@@ -116,34 +130,42 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/L6T2S15-0205.png)
 
-17. In **Azure AI Foundry portal**, Navigate to the **Chat** playground followed by select *Add your data* in the setup pane and click on **+ Add a data source**.
+17. In **Azure AI Foundry portal**, Navigate to the **Chat (1)** playground followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
-    ![](../media/chat_playground.png)
+    ![](../media/chat_playground-1.png)
    
-18. In the **Add data**, enter the following values for your data source and then click on **Next**.
+18. In the **Add data**, enter the following values for your data source and then click on **Next (7)**.
 
-    - **Select data source**: Azure Blob Storage
-    - **Select Azure Blob storage resouce**: *Choose the storage resource you created*
-    - **Select Storage container**: openaidatasource
-    - **Select Azure AI Search resource**: *Choose the search resource you created*
-    - **Enter the index name**: margiestravel
-    - **Indexer schedule**: Once
+    - **Select data source (1)**: Azure Blob Storage
+    - **Select Azure Blob storage resouce (2)**: *Choose the storage resource you created*
+    - **Select Storage container (3)**: openaidatasource
+    - **Select Azure AI Search resource (4)**: *Choose the search resource you created*
+    - **Enter the index name (5)**: margiestravel
+    - **Indexer schedule (6)**: Once
    
-       ![](../media/image4.8.png "Add data configurations")
+       ![](../media/image4-8-1.png "Add data configurations")
 
 19. Click on next to proceed with "Data Management"
    
-20. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
+20. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
-      ![](../media/lab6-g4.png "Add data")
+      ![](../media/lab6-g4-1.png "Add data")
 
-21. On the **Data connection** page select the **API key** , Click on the **Next**
+21. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
 
-       ![](../media/API_key.jpg "Add data")
+       ![](../media/API_key-1.png "Add data")
    
-22. On the **Review and finish** page select **Save and close**, which will add your data. This may take a few minutes, during which you need to leave your window open. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
+22. On the **Review and finish** page select **Save and close**, which will add your data. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
 
-       ![](../media/review.jpg "Add data")
+       ![](../media/review-1.png "Add data")
+
+ - This may take a few minutes, during which you need to leave your window open.
+       
+    ![](../media/review-2.png)
+  
+ - Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data** tab in **Assistant setup** pane.
+
+    ![](../media/review-3.png)   
 
 ### Task 3: Chat with a model grounded in your data
 
@@ -172,6 +194,8 @@ In this task, you will use a short command-line application running in Cloud She
       ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png)
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+    ![](../media/switch-to-bash.png)
 
 3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
@@ -218,7 +242,7 @@ In this task, you will complete key parts of the application to enable it to use
 
          ![](../media/x676.png)
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -247,7 +271,7 @@ In this task, you will complete key parts of the application to enable it to use
 
      ![](../media/u47upd.png)    
 
-1. Navigate to the folder for your preferred language and install the necessary packages.
+1. Navigate to the **CSharp** folder and install the necessary packages.
 
      **C#**:
 
@@ -287,23 +311,112 @@ In this task, you will complete key parts of the application to enable it to use
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
+1. If your using **Python**, navigate to `ownData.py`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
+
+    ```
+    import os
+    import json
+    from dotenv import load_dotenv
+    import openai
+    
+    def main():
+        try:
+            # Flag to show citations
+            show_citations = False
+    
+            # Load configuration settings from .env file
+            load_dotenv()
+            azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+            azure_oai_key = os.getenv("AZURE_OAI_KEY")
+            azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+            azure_search_endpoint = os.getenv("AZURE_SEARCH_ENDPOINT")
+            azure_search_key = os.getenv("AZURE_SEARCH_KEY")
+            azure_search_index = os.getenv("AZURE_SEARCH_INDEX")
+    
+            # Configure OpenAI for Azure
+            openai.api_type = "azure"
+            openai.api_base = azure_oai_endpoint
+            openai.api_key = azure_oai_key
+            openai.api_version = "2023-09-01-preview"
+    
+            # Get user input
+            text = input('\nEnter a question:\n')
+    
+            # Define the request payload with extension (Cognitive Search)
+            headers = {
+                "Content-Type": "application/json",
+                "api-key": azure_oai_key
+            }
+    
+            # "extensions" is not supported directly by openai SDK
+            # Instead, construct the request using requests module
+            import requests
+    
+            endpoint_url = f"{azure_oai_endpoint}/openai/deployments/{azure_oai_deployment}/extensions/chat/completions?api-version=2023-09-01-preview"
+    
+            payload = {
+                "messages": [
+                    {"role": "system", "content": "You are a helpful travel agent."},
+                    {"role": "user", "content": text}
+                ],
+                "temperature": 0.5,
+                "max_tokens": 1000,
+                "dataSources": [
+                    {
+                        "type": "AzureCognitiveSearch",
+                        "parameters": {
+                            "endpoint": azure_search_endpoint,
+                            "key": azure_search_key,
+                            "indexName": azure_search_index
+                        }
+                    }
+                ]
+            }
+    
+            print("\n...Sending request to Azure OpenAI with data source...\n")
+            response = requests.post(endpoint_url, headers=headers, json=payload)
+            response.raise_for_status()
+            result = response.json()
+    
+            print("Response:\n")
+            print(result["choices"][0]["message"]["content"])
+    
+            if show_citations and "citations" in result["choices"][0]["message"]:
+                print("\nCitations:")
+                for citation in result["choices"][0]["message"]["citations"]:
+                    print(f"  Title: {citation.get('title', 'N/A')}")
+                    print(f"  URL: {citation.get('url', 'N/A')}")
+    
+        except Exception as ex:
+            print("Error:", ex)
+    
+    if __name__ == '__main__':
+        main()            
+    ```    
+
+     ![](../media/x676-1.png)
+
+
+1. Navigate to the **Python** folder and install the necessary packages.
 
     **Python**:
 
     ```
+    cd ..
     cd Python
     pip install python-dotenv
     pip install openai==1.56.2
+    pip install openai requests python-dotenv
     ```
       > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the below command for installation.
       >    ![](../media/L2T3S9python-0205.png)
       > ```bash
       > pip install --user python-dotenv
       > pip install --user openai==1.56.2
+      > pip install --user openai requests python-dotenv
       > ```
 
-5. Open the code file for your preferred language, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
+1. Open the code file for **C#**, and replace the comment ***Configure your data source*** with code to add the Azure OpenAI SDK library:
 
     **C#**: ownData.cs
 
@@ -315,22 +428,6 @@ In this task, you will complete key parts of the application to enable it to use
             Authentication = new OnYourDataApiKeyAuthenticationOptions(azureSearchKey),
             IndexName = azureSearchIndex
     };
-    ```
-
-    **Python**: ownData.py
-
-    ```python
-    # Configure your data source
-    extension_config = dict(dataSources = [  
-            { 
-                "type": "AzureCognitiveSearch", 
-                "parameters": { 
-                    "endpoint":azure_search_endpoint, 
-                    "key": azure_search_key, 
-                    "indexName": azure_search_index,
-                }
-            }]
-        )
     ```
 
 6. Review the rest of the code, noting the use of the *extensions* in the request body that is used to provide information about the data source settings.

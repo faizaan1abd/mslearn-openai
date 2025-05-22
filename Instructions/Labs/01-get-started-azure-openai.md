@@ -23,9 +23,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/dev-07.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
+2. On **AI Foundry | Azure OpenAI** blade, click on **Create**.
 
-   ![](../media/tel-10.png)
+   ![](../media/tel-10-2.png)
 
 3. Create an **Azure OpenAI** resource with the following settings:
       - **Subscription (1)**: Default - Pre-assigned subscription.
@@ -40,12 +40,12 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
+<validation step="9ab1a143-84ef-420e-8713-2cacb6c0a63a" />
 
 ### Task 2: Deploy a model
 
@@ -57,11 +57,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
-      ![](../media/update07.png)
+      ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**
 
-      ![](../media/update08.png)
+      ![](../media/goto-foundry-portal.png)
 
 4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
 
@@ -112,28 +112,28 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
 
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
+<validation step="f0c29243-24d0-4f47-a237-0e8982262203" />
 
 ### Task 3: Explore a model in the Completions playground
 
 In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
-1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions**.
+1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions (1)**.
 
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
-   ![](../media/aicompletionmodel.png)
+   ![](../media/aicompletionmodel-1.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
 3. Use the **Generate** button to submit the prompt to the model and retrieve a response (you may need to scroll down). The response consists of a quiz based on the example in the prompt.
 
-      ![](../media/lab1-g2upd.png)
+      ![](../media/lab1-g2upd-1.png)
 
       >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
 
@@ -141,7 +141,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](../media/codeviewcompletionupd.png)
 
-      ![](../media/openai-7uu.png)
+      ![](../media/openai-7uu-1.png)
     
 5. Close the **Sample Code**.
 

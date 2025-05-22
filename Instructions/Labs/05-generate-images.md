@@ -29,13 +29,13 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
+2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
 
-      ![](../media/update07.png)
+      ![](../media/update07-1.png)
 
 3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
 
-      ![](../media/update08.png)
+      ![](../media/goto-foundry-portal.png)
 
 4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
@@ -77,6 +77,8 @@ In this task, you will use a simple Python or C# app to generate images by calli
     > **Note**: If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
 2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+
+    ![](../media/switch-to-bash.png)
 
 3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 

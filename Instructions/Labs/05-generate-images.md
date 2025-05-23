@@ -29,7 +29,7 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/tel-11.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
+2. On the **AI Foundry** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> **(2)**
 
       ![](../media/update07-1.png)
 

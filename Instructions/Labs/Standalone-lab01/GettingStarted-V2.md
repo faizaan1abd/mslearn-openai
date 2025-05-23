@@ -10,14 +10,14 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Get started with Azure OpenAI Service** - Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-35-turbo-instruct), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
+- **Get started with Azure OpenAI Service:** Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-3.5-turbo-instruct), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
 
 ## Pre-Requisites
 
 Participants should have: Basic knowledge and understanding of the following
 
-- **Azure Portal**: For managing and provisioning Azure resources.
-- **Azure AI Foundry**: For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
+- **Azure Portal:** For managing and provisioning Azure resources.
+- **Azure AI Foundry:** For deploying models and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
 
 ## Architecture
 
@@ -29,15 +29,15 @@ This architecture allows users to leverage Azure's cloud infrastructure to deplo
 
 ## Explanation of Components
 
-- **Azure Portal**: Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
+- **Azure Portal:** Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
 
-- **Azure OpenAI Service**: Hosts and manages OpenAI models like GPT-35-Turbo, providing scalable access for tasks such as text completion and code generation.
+- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-3.5-Turbo, providing scalable access for tasks such as text completion and code generation.
 
-- **Azure AI Foundry**: Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
+- **Azure AI Foundry:** Interactive environment for deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
 ## Getting Started with the Lab
 
-Welcome to your Get started with Azure OpenAI Service Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
+Welcome to your Get Started with Azure OpenAI Service Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
  
 ## Accessing Your Lab Environment
  
@@ -45,7 +45,7 @@ Once you're ready to dive in, your virtual machine and the guide will be right a
  
 ![Access Your VM and Lab Guide](./media/ll1.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -91,7 +91,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
        ![Enter Your Password](./media/sc900-image-2.png)
 
-      > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
+      > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
  
 4. If prompted to stay signed in, you can click **No**.
  
@@ -123,8 +123,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
  
-1. Now, click on the **Next** from the lower right corner to move to the next page.
- 
 ## Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
@@ -139,4 +137,4 @@ Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![Start Your Azure Journey](./media/sc900-image(3).png)
 
-### Happy Learning!!
+## Happy Learning!!

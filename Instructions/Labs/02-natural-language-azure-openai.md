@@ -199,8 +199,8 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```bash
     cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
+    pip install python-dotenv --user
+    pip install openai==1.13.3 --user
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.

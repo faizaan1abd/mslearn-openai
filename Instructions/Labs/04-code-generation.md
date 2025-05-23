@@ -252,8 +252,8 @@ In this task, you will complete key parts of the application to enable it to use
 
       ```bash
     cd Python
-    pip install python-dotenv
-    pip install openai==1.13.3
+    pip install python-dotenv --user
+    pip install openai==1.13.3 --user
     ```
 
 5. open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.

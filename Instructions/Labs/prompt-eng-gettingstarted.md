@@ -48,7 +48,7 @@ The architecture for this lab involves the following key components:
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-   ![](../media/1302024(1).png)
+   ![](../media/guide1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -58,19 +58,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../media/1302024(2).png)
+   ![](../media/env1.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](../media/1302024(5).png)
+![](../media/split1.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![](../media/1302024(4).png)
+![](../media/resources1.png)
 
 ## Lab Validation
 

@@ -45,7 +45,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
-   ![](../media/17022025(2).png)
+   ![](../media/aifoundry.png)
 
 1. In the **Azure AI Foundry | Azure OpenAI Service**, click on **Chat** under play **Playgrounds** from the left menu.
 

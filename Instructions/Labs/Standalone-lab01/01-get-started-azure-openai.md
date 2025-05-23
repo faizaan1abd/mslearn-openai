@@ -66,7 +66,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry**.
 
-    ![](./media/go-to-foundry.png)
+    ![](./media/T2S3.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
@@ -96,7 +96,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (7)**
   
-      ![](./media/g22.png)
+      ![](./media/T2S7.png)
         
       >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
         
@@ -127,7 +127,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - Enable dynamic quota: **Enabled (5)**
       - Click on **Deploy** **(6)**
   
-        ![](./media/g23.png)
+        ![](./media/T2S12.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Hit the Validate button for the corresponding task.

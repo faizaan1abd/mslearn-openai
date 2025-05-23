@@ -43,11 +43,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![](../media/select-bash.png)
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+4. Within the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
    ![](../media/cloudshell-mount-strg-account.png)
 
@@ -633,7 +633,8 @@ In this task, you will provide a history of the conversation in your prompt to e
       if __name__ == '__main__':
           main()
       ```
-   **Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    
+    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 7. Save the file. In the code you added, notice we now append the previous input and response to the prompt array which allows the model to understand the history of our conversation.
 8. In the terminal pane, enter the following command to run the application.

@@ -106,17 +106,17 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S9-0205-4.png)
 
-12.  On **AI Foundry | AI search** blade, click on **+ Create**.
+12.  On **AI Foundry | AI search** blade,Select **AI Search (1)** from left pane and click on **+ Create (2)**.
 
-     ![](../media/L6T2S11-0205-1.png "upload files")
+     ![](../media/L6T2S11-0205-2.png "upload files")
 
-13. Create an **AI Search** resource with the following settings and click on **Review + Create** and subsequenly click on **Create**
+13. Create an **AI Search** resource with the following settings and click on **Review + Create (5)** and subsequenly click on **Create**
 
     - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Service name**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Location**:Select <inject key="Region" enableCopy="false" />
-    - **Pricing tier**: Change the Pricing tier to **Basic**
+    - **Resource group (1)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Service name (2)**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Location (3)**:Select <inject key="Region" enableCopy="false" />
+    - **Pricing tier (4)**: Change the Pricing tier to **Basic**
 
       ![](../media/L6T2S12-0205.png "Create cognitive search resource")
 

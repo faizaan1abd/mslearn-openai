@@ -1,6 +1,6 @@
 # Lab 02: Generate images with a DALL-E model
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 90 minutes
 
 ## Lab scenario
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
@@ -25,7 +25,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
     ![](../media/msi-image2.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
     ![](../media/msi-image3.png)
 
@@ -142,7 +142,20 @@ The application uses a configuration file to store the details needed to connect
     ```bash
     pip install --user python-dotenv
     ```
+4. In the code editor, select the configuration file for your app - depending on your language preference and **replace** the existing model name `dalle3` to `dall-e-3`.
 
+    - C#: `Program.cs`
+
+      - image
+     
+      - image
+
+    - Python: `generate-image.py`
+  
+      - image
+     
+      - image
+      
 #### Task 2.3: View application code
 
 Now you're ready to explore the code used to call the REST API and generate an image.

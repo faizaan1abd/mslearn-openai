@@ -1,6 +1,6 @@
 # Lab 01: Generate and improve code with Azure OpenAI Service
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 90 minutes
 
 ## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
@@ -22,9 +22,9 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
    ![](../media/msi-image2.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/msi-image3.png)
+   ![](../media/ai-foundry-openai.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -78,13 +78,17 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 Before using in your app, examine how Azure OpenAI can generate and explain code in the chat playground.
 
-1. Scroll down and in the left pane & navigate to the **Chat session** section, enter the following prompt and press *Enter*.
+1. On your **gpt-4o-mini** model, click on **Open in playground**.
+
+      ![](../media/gpt-4-open-in-playground.png)
+
+1. In the **Chat session**, enter the following prompt and press *Enter*.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
       ```
 
-      ![](../media/msi-image9.png)
+      ![](../media/gpt-4-chat-session.png)
         
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    
@@ -206,7 +210,7 @@ For this exercise, you'll complete some key parts of the application to enable u
       - **C#**: `appsettings.json`
       - **Python**: `.env`
 
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `35turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `gpt-4o-mini`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
 
       - Navigate to the folder for your preferred language and install the necessary packages.
 
@@ -221,9 +225,10 @@ For this exercise, you'll complete some key parts of the application to enable u
         **Python**
    
         ```bash
-        cd ..
+        cd azure-openai/Labfiles/04-code-generation
         cd Python
         pip install --user openai==1.65.2
+        pip install python-dotenv --user
         ```
 
 1. Open the code file for your preferred language. In the function that calls the Azure OpenAI model, under the comment **Format and send the request to the model**, add the code to format and send the request to the model.

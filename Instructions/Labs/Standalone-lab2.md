@@ -24,7 +24,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/openai8.png)
 
-2. On the Azure AI Services page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
+2. On the AI Foundry page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
    ![](../media/openai_create1.png)
 
@@ -32,7 +32,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
     - **Subscription (1)**: Default - Pre-assigned subscription
     
-    - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Resource group (2)**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** from the drop-down.
     
     - **Region (3)**: Select <inject key="Region" enableCopy="false" />
     
@@ -50,11 +50,11 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    > **Note:** If prompted to the **openai-<inject key="DeploymentID" enableCopy="false"></inject>** RG, scroll down & select the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** resource from the Resources section.
 
-6. On the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** blade to capture the Keys and Endpoint values:
+6. In the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**, blade to capture the Keys and Endpoint values:
 
-   - Go to **Keys and Endpoint (1)** under **Resource Management**.  
+   - Navigate to **Keys and Endpoint (1)** under **Resource Management**.  
    
-   - Click **Show Keys (2)** and copy **Key 1 (3)**. Save it in a text editor like Notepad.  
+   - Click **Show Keys (2)** and copy **Key 1 (3)**. Save it in a text editor like **Notepad**.  
    
    - Copy the **Endpoint (4)** and save it in Notepad for future reference.
 
@@ -144,7 +144,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-1. Within the **Advanced settings** pane, enter the following details:
+1. Within the **Create Storage account** pane, enter the following details:
 
     - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab
     
@@ -301,11 +301,11 @@ In this task, you will complete key parts of the application to enable it to use
     ```
     
     ```bash
-    pip install python-dotenv
+    pip install --user python-dotenv
     ```
     
     ```bash
-    pip install openai==1.56.2
+    pip install --user openai==1.56.2
     ```
 
 6. Navigate to your preferred language folder, select the code file given below, and replace the comment ***Add Azure OpenAI package*** with the following code to add the necessary libraries.

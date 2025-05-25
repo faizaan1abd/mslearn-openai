@@ -24,7 +24,7 @@ To use the Azure OpenAI API for code generation, you must first deploy a model t
 
 1. On **AI Foundry | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/msi-image3.png)
+   ![](../media/ai-foundry-openai.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -80,13 +80,15 @@ Before using in your app, examine how Azure OpenAI can generate and explain code
 
 1. On your **gpt-4o-mini** model, click on **Open in playground**.
 
+      ![](../media/gpt-4-open-in-playground.png)
+
 1. In the **Chat session**, enter the following prompt and press *Enter*.
 
       ```code
       Write a function in python that takes a character and string as input, and returns how many times that character appears in the string
       ```
 
-      ![](../media/msi-image9.png)
+      ![](../media/gpt-4-chat-session.png)
         
 1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
    

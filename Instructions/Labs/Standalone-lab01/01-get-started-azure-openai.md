@@ -24,7 +24,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On **Azure AI Services | Azure OpenAI** blade, click on **Create**.
 
-   ![](./media/tel-10.png)
+   ![](./media/create_ai.png)
 
 3. Create an **Azure OpenAI** resource with the following settings and click on **Next (6)** thrice by keeping others default.
     
@@ -38,7 +38,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/g21.png "Create Azure OpenAI resource")
+      ![](./media/ai_foundry1.png)
       
       >**Note:** **Please deploy OpenAI resource in EAST US Region**.
 
@@ -60,17 +60,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
-
-    ![](./media/g1.png)
-
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**.
-
-    ![](./media/update07.png)
-
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to **Azure AI Foundry**.
 
-    ![](./media/T2S3.png)
+    ![](./media/openai_resource1.png)
 
 1. In the **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base Model (3)**.
 
@@ -124,19 +116,21 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 1. Within the **Deploy model gpt-35-turbo-instruct** pop-up interface, enter the following details:
 
-      - Deployment type: **Standard (1)**
-      
-      - Deployment name: **gpt-35-turbo-instruct (2)**
+      - Deployment name: **gpt-35-turbo-instruct (1)**
+
+      - Deployment type: **Standard (2)**
       
       - Model version: **0914 (Default) (3)**
       
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
+
+      - Content Filter: **DefaultV2 (5)**
       
-      - Enable dynamic quota: **Enabled (5)**
+      - Enable dynamic quota: **Enabled (6)**
       
-      - Click on **Deploy** **(6)**
+      - Click on **Deploy** **(7)**
   
-        ![](./media/T2S12.png)
+        ![](./media/ai_model2.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Hit the Validate button for the corresponding task.
@@ -222,7 +216,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 1. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
-      ![](./media/g17.png)
+      ![](./media/model_response.png)
 
 1. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
 

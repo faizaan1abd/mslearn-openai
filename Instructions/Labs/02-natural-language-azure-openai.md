@@ -77,13 +77,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    >**Note :** If the pop-up **Discover an even better Azure AI Studio experience** appears, click **Close** to dismiss it.
 
-4. Click on **Deployments (1)**, click on **+ Deploy Model**, choose **Deploy Base Model (2).**
+4. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
-      ![](../media/ui1.png "Create a new deployment")
+    ![](../media/itp2.png "Create a new deployment")
 
-5. Search for **gpt-35-turbo (1)** and click on **Confirm (2)**
+5. On the **Select a Model** pane, search for **gpt-35-turbo (1)**, select it from the results **(2)**, and click **Confirm (3)** to proceed.
 
-      ![](../media/new04-1.png)
+    ![](../media/itp3.png "Create a new deployment")
+
+    >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
 6. Within the **Deploy model** pop-up interface, enter the following details:
       - **Deployment name**: text-turbo(1)

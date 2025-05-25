@@ -39,7 +39,7 @@ In this hands-on lab, you will follow an architecture flow that begins with expl
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
-   ![](../media/getting-started1.png "Lab Environment")
+   ![](../media/getting-started-page.png "Lab Environment")
    
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can start, stop, and restart virtual machines from the **Resources** tab.
 
@@ -66,16 +66,19 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    ![Manage Your Virtual Machine](../media/timer.png)
 
 ## Login to Azure Portal
+
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
    ![](../media/azureportal_icon1.png "Lab Environment")
    
-1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
+1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**.
+   
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
      ![](../media/image7.png "Enter Email")
      
 1. Now enter the following password and click on **Sign in**.
+   
    * Password: <inject key="AzureAdUserPassword"></inject>
    
      ![](../media/image8.png "Enter Password")
@@ -100,9 +103,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
      ![](../media/rg.png "Resource groups")
    
-1. Use **Next** button from lower right corner to move on to the next page.
-
-    ![](../media/msi-image1.png)
 
 In this hands-on-lab, you will learn how Azure OpenAI models can generate and refine code and use the DALL-E model to create images from text prompts, showcasing AI's versatility in coding and creativity.
 
@@ -114,5 +114,9 @@ Learner Support Contacts:
 
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
+
+Click on the **Next** button from lower right corner to move on to the next page.
+
+![](../media/msi-image1.png)
 
 ### Happy learning !

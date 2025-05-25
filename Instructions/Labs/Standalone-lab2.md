@@ -26,7 +26,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On the AI Foundry page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
-   ![](../media/openai_create1.png)
+   ![](../media/itp1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -83,11 +83,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
-    ![](../media/04022025(1).png "Create a new deployment")
+    ![](../media/itp2.png "Create a new deployment")
 
 1. On the **Select a Model** pane, search for **gpt-35-turbo (1)**, select it from the results **(2)**, and click **Confirm (3)** to proceed.
 
-    ![](../media/turboselection.png "Create a new deployment")
+    ![](../media/itp3.png "Create a new deployment")
 
     >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
@@ -105,8 +105,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     
     - Click on **Deploy (6)**
   
-        ![](../media/it1.png)
+        ![](../media/itp4.png)
 
+        ![](../media/itp5.png)
+
+        ![](../media/itp6.png)
 8. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**: You can ignore the **Failed to fetch deployments quota information** notification.
@@ -135,6 +138,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     ![](../media/open1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+
+   ![](../media/itp7.png)
 
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 

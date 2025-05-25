@@ -27,7 +27,7 @@ You can use the DALL-E playground in **Azure OpenAI Studio** to experiment with 
 
 1. On **AI Foundry | Azure OpenAI** blade, select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-    ![](../media/msi-image3.png)
+    ![](../media/ai-foundry-openai.png)
 
 1. To capture the Keys and Endpoints values, on **openai-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -142,19 +142,19 @@ The application uses a configuration file to store the details needed to connect
     ```bash
     pip install --user python-dotenv
     ```
-4. In the code editor, select the configuration file for your app - depending on your language preference and **replace** the existing model name `dalle3` to `dall-e-3`.
+4. In the code editor, select the configuration file for your app - depending on your language preference and **replace** the existing model name `dalle3` to `dall-e-3`. Then **save** the file by right-clicking the file from the left pane.
 
     - C#: `Program.cs`
 
-      - image
+      - ![](../media/csharp-dalle3.png)
      
-      - image
+      - ![](../media/csharp-dall-e-3.png)
 
     - Python: `generate-image.py`
   
-      - image
+      - ![](../media/python-dalle3.png)
      
-      - image
+      - ![](../media/python-dall-e-3.png)
       
 #### Task 2.3: View application code
 

@@ -27,7 +27,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
 
-   ![](../media/itp1.png)
+   ![](../media/itp1n.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 

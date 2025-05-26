@@ -1,4 +1,4 @@
-# Lab-01: Introduction to Prompt Engineering & Azure OpenAI Foundry
+# Lab-01: Introduction to Prompt Engineering & Azure OpenAI Foundry [Read-Only]
 
 ### Estimated Duration: 60 minutes
 
@@ -41,7 +41,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. On **Azure AI services | Azure OpenAI** blade, select **OpenAIService-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/17022025(1).png)
+   ![](../media/17022025(21).png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
@@ -357,3 +357,4 @@ Some of the examples above were adopted from the ["Best practices for prompt eng
 **Summary:** In this exercise, You learned how to create powerful prompts for AI models by examining the idea of prompt engineering in this assignment. Using Azure OpenAI Playground, you gained practical experience by experimenting with various prompt types and comprehending their components and design advice.
 
 ## You have successfully completed the lab.
+### Click on Next >> to proceed to the next exercise.

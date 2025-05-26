@@ -1,4 +1,4 @@
-# Lab-03: Advanced Concepts
+# Lab-03: Advanced Concepts [Read-Only]
 
 ### Estimated Duration: 30 minutes
 
@@ -205,3 +205,4 @@ JSON:
 ```
 
 ## You have successfully completed the lab.
+### Click on Next >> to proceed to the next exercise.

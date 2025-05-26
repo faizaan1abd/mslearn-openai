@@ -76,7 +76,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../media/inline-validation.png)
+   ![Inline Validation](../media/inline-validationupd.png)
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
@@ -84,7 +84,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../media/gext.png)
+    ![Manage Your Virtual Machine](../media/gextupd.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
@@ -141,6 +141,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Launch Azure Portal](../media/sc900-image(3).png)
+![Launch Azure Portal](../media/sc900-imageupd.png)
 
 ### Happy Learning!!

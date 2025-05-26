@@ -80,7 +80,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 2. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/lab-03.png)
+   ![](../media/lab-03upd.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
@@ -145,6 +145,8 @@ In this task, you will examine how prompt engineering improves model responses i
    
    >**Note:** Kindly refresh the screen in case you encounter any error message and perform the above step again.
 
+   > **Note**: If you notice a delay in chat responses, go to deployments and increase the TPM to 20K.
+   
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
    ![](../media/17022025(10).png)
@@ -797,4 +799,6 @@ In this lab, you have accomplished the following:
 - Deploy an OpenAI model within the Azure OpenAI Foundry
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
-### You have successfully completed the lab.
+## You have successfully completed the lab.
+### Click on Next >> to proceed to the next exercise.
+

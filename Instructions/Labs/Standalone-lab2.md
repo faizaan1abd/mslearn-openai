@@ -212,7 +212,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
-  >**Note**: Due to time constraints, please complete either the CSharp or Python subtask based on your preference. If time permits, feel free to explore the other one as well.
+  >**Note**: Due to time constraints, please proceed with either the CSharp or Python subtask based on your preference. If time allows, you are encouraged to explore the other option as well.
 
 ### Subtask 4.1: Configure the CSharp application
 

@@ -107,7 +107,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
         ![](../media/itp4n.png)
 
-        ![](../media/itp5n.png)
+        ![](../media/itp5nn.png)
 
 8. This will deploy a model that you will be playing around with as you proceed.
 

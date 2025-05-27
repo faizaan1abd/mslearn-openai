@@ -211,206 +211,156 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.
+### Subtask 4.1: Configure the CSharp application
 
-1. Open the configuration file for your language
+1. In the **code editor**, expand the **CSharp** folder.
 
-    - **C#:** `appsettings.json`
-    
-    - **Python:** `.env`
-    
-1. Update the configuration values to include the **Endpoint** and **key** **(1)** from the Azure OpenAI resource created and saved in Task 1. Also, add the model name **text-turbo** that you deployed. Save the file by right-clicking it in the left pane and selecting **Save**, then minimize the lab files in the code editor using **↕ (2)**.
+2. Open the `appsettings.json` file and update the configuration values to include the **Endpoint**, **Key**, and the **model name** `text-turbo` from the Azure OpenAI resource created and saved in Task 1. Save the file by right-clicking it in the left pane and selecting **Save**.
 
-   ![](../media/EditorMin.png "Minimise the editor")
+3. Open the `CSharp.csproj` file, delete the existing code, and replace it with the following:
 
-   > **Note:** The above image shows the example for the Python folder. For further steps, you can use ↕ to minimize and maximize the editor.
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+   <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net8.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+   </PropertyGroup>
 
-    ```
-    <Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+    </ItemGroup>
 
-    <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    </PropertyGroup>
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+    </ItemGroup>
 
-     <ItemGroup>
-     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
-     </ItemGroup>
+   </Project>
+   ```
 
-     <ItemGroup>
-       <None Update="appsettings.json">
-         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-     </ItemGroup>
+   > ![](../media/it3.png)
 
-    </Project>
-    ```    
+4. In the **Azure Cloud Shell**, run the following commands to set up the local .NET SDK:
 
-     ![](../media/it3.png)    
-     
-1. Navigate to the folder for your preferred language and install the necessary packages using below commands in Azure Cloud Shell.
+   ```bash
+   cd CSharp
+   export DOTNET_ROOT=$HOME/.dotnet
+   export PATH=$DOTNET_ROOT:$PATH
+   mkdir -p $DOTNET_ROOT
+   wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
+   chmod +x dotnet-install.sh
+   ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+   ```
 
-     **C#**:
+5. Restore the workload:
 
-    ```
-    cd CSharp
-    export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
-    mkdir -p $DOTNET_ROOT
-    ```
+   ```bash
+   dotnet workload restore
+   ```
 
-    >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here You're creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-     
-    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     
-    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     
-    - `mkdir -p $DOTNET_ROOT` creates the directory where the .NET runtime and SDK will be installed.
+6. Add the required NuGet package:
 
-1.  Run the following command to install the required SDK version locally:     
+   ```bash
+   dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+   ```
 
-    ```
-    wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-    chmod +x dotnet-install.sh
-    ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-    ```
+7. Open `Program.cs`, and replace the comment `// Add Azure OpenAI package` with the following:
 
-    >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+   ```csharp
+   using Azure.AI.OpenAI;
+   ```
 
-1. Enter the following command to restore the workload.
+8. Replace the comment `// Initialize the Azure OpenAI client...` with the following code:
 
-    ```
-    dotnet workload restore
-    ```
+   ```csharp
+   OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
 
-    >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+   string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature of the hikes when making a recommendation.";
+   ```
 
-1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+9. Replace the comment `// Add code to send request...` with:
 
-    ```
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
-    ```
+   ```csharp
+   ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
+   {
+       Messages =
+       {
+           new ChatRequestSystemMessage(systemMessage),
+           new ChatRequestUserMessage(inputText),
+       },
+       MaxTokens = 400,
+       Temperature = 0.7f,
+       DeploymentName = oaiDeploymentName
+   };
 
-1. Navigate to the folder for your preferred language and install the necessary packages for python
+   ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
+   string completion = response.Choices[0].Message.Content;
+   Console.WriteLine("Response: " + completion + "\n");
+   ```
 
-    **Python** : 
+10. Save your changes by right-clicking on the file and selecting **Save**.
 
-    ```bash
-    cd Python
-    ```
-    
-    ```bash
-    pip install --user python-dotenv
-    ```
-    
-    ```bash
-    pip install --user openai==1.56.2
-    ```
+### Subtask 4.2: Configure the Python application
 
-6. Navigate to your preferred language folder, select the code file given below, and replace the comment ***Add Azure OpenAI package*** with the following code to add the necessary libraries.
+1. In the **code editor**, expand the **Python** folder.
 
-    **C#**: Program.cs
+2. Open the `.env` file and update the configuration values with the **Endpoint**, **Key**, and **model name** `text-turbo` from Task 1. Save the file by right-clicking it in the left pane and selecting **Save**.
 
-    ```csharp
-    // Add Azure OpenAI package
-    using Azure.AI.OpenAI;
-    ```
+   > 💡 You can use the ↕ icon to minimize the lab files in the code editor.
+   > ![](../media/EditorMin.png)
 
-    **Python**: test-openai-model.py
+3. In the **Azure Cloud Shell**, run the following commands to install necessary packages:
 
-    ```python
-    # Add Azure OpenAI package
-    from openai import AzureOpenAI
-    ```
+   ```bash
+   cd Python
+   pip install --user python-dotenv
+   pip install --user openai==1.56.2
+   ```
 
-7. In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+4. Open `test-openai-model.py` and replace the comment `# Add Azure OpenAI package` with:
 
-    **C#**: Program.cs
+   ```python
+   from openai import AzureOpenAI
+   ```
 
-    ```csharp
-    // Initialize the Azure OpenAI client
-    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
-    
-    // System message to provide context to the model
-    string systemMessage = "I am a hiking enthusiast named Forest who helps people discover hikes in their area. If no area is specified, I will default to near Rainier National Park. I will then provide three suggestions for nearby hikes that vary in length. I will also share an interesting fact about the local nature of the hikes when making a recommendation.";
-    ```
+5. Replace the comment `# Initialize the Azure OpenAI client...` with:
 
-    **Python**: test-openai-model.py
+   ```python
+   client = AzureOpenAI(
+       azure_endpoint=azure_oai_endpoint,
+       api_key=azure_oai_key,
+       api_version="2024-02-15-preview"
+   )
 
-    ```python
-    # Initialize the Azure OpenAI client
-    client = AzureOpenAI(
-            azure_endpoint = azure_oai_endpoint, 
-            api_key=azure_oai_key,  
-            api_version="2024-02-15-preview"
-            )
-    
-    # Create a system message
-    system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
-        If no area is specified, I will default to near Rainier National Park. 
-        I will then provide three suggestions for nearby hikes that vary in length. 
-        I will also share an interesting fact about the local nature on the hikes when making a recommendation.
-        """
-    ```
+   system_message = """I am a hiking enthusiast named Forest who helps people discover hikes in their area. 
+       If no area is specified, I will default to near Rainier National Park. 
+       I will then provide three suggestions for nearby hikes that vary in length. 
+       I will also share an interesting fact about the local nature on the hikes when making a recommendation."""
+   ```
 
-      >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-    
-8. Replace the comment ***Add code to send request...*** with the necessary code for building the request; specifying the various parameters for your model such as `messages` and `temperature`.
+6. Replace the comment `# Add code to send request...` with:
 
-    **C#**: Program.cs
+   ```python
+   response = client.chat.completions.create(
+       model=azure_oai_deployment,
+       temperature=0.7,
+       max_tokens=400,
+       messages=[
+           {"role": "system", "content": system_message},
+           {"role": "user", "content": input_text}
+       ]
+   )
+   generated_text = response.choices[0].message.content
+   print("Response: " + generated_text + "\n")
+   ```
 
-    ```csharp
-    // Add code to send request...
-    // Build completion options object
-    ChatCompletionsOptions chatCompletionsOptions = new ChatCompletionsOptions()
-    {
-        Messages =
-        {
-            new ChatRequestSystemMessage(systemMessage),
-            new ChatRequestUserMessage(inputText),
-        },
-        MaxTokens = 400,
-        Temperature = 0.7f,
-        DeploymentName = oaiDeploymentName
-    };
-
-    // Send request to Azure OpenAI model
-    ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
-
-    // Print the response
-    string completion = response.Choices[0].Message.Content;
-    Console.WriteLine("Response: " + completion + "\n");
-    ```
-
-    **Python**: test-openai-model.py
-
-    ```python
-    # Add code to send request...
-    # Send request to Azure OpenAI model
-    response = client.chat.completions.create(
-        model=azure_oai_deployment,
-        temperature=0.7,
-        max_tokens=400,
-        messages=[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": input_text}
-        ]
-    )
-    generated_text = response.choices[0].message.content
-
-    # Print the response
-    print("Response: " + generated_text + "\n")
-    ```
-
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
-
-9. To save the changes made to the file, right-click on the file from the left pane in the code window and hit **Save**.
+7. Save your changes by right-clicking on the file and selecting **Save**.
 
 ## Task 5: Test your application
 

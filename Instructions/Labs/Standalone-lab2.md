@@ -105,11 +105,10 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     
     - Click on **Deploy (6)**
   
-        ![](../media/itp4.png)
+        ![](../media/itp4n.png)
 
-        ![](../media/itp5.png)
+        ![](../media/itp5n.png)
 
-        ![](../media/itp6.png)
 8. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**: You can ignore the **Failed to fetch deployments quota information** notification.

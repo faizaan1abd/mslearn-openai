@@ -189,14 +189,16 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
 
-1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab files in the code editor.
+1. Open the built-in code editor using the following command to view the lab files, including the CSharp and Python folders, which contain the application code for each language:
 
       ```bash
       code .
       ```
 
       ![](../media/it2.png)      
-   
+ 
+   💡 Use the left pane in the editor to explore the CSharp and Python folders. You will be updating configuration files and application logic in these directories in the upcoming steps.  
+
 ### Validation
 
 <validation step="a9ae28f4-8e25-42f3-b7bd-5372ab99091f" />
@@ -210,6 +212,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 ## Task 4: Configure your application
 
 In this task, you will complete key parts of the application to enable it to use your Azure OpenAI resource.
+
+  >**Note**: Due to time constraints, please complete either the CSharp or Python subtask based on your preference. If time permits, feel free to explore the other one as well.
 
 ### Subtask 4.1: Configure the CSharp application
 

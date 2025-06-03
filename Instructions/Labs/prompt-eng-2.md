@@ -26,9 +26,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/17-12-24(1).png)
 
-2. On the **AI Foundry** page, select **Azure OpenAI (1)** from the menu on the left, then click **+ Create (2)**.
+2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/itp1n.png)
+   ![](../media/create-openai.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -63,12 +63,12 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 #### Validation
 
-<validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="500ab73f-41d7-4883-ab2c-110281939c65" />
 
 ### Task 2: Deploy a model
 
@@ -80,11 +80,14 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 2. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/lab-03upd.png)
+   ![](../media/lab-03.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/aifoundry.png)
+
+   > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry. 
+   ![](../media/update08.png)   
 
 5. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
@@ -114,12 +117,12 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
 #### Validation
 
-<validation step="5b357640-1ad5-4345-a277-affb04231f21" />
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="5b357640-1ad5-4345-a277-affb04231f21" />
 
 ### Task 3: Apply prompt engineering in chat playground
 
@@ -145,8 +148,6 @@ In this task, you will examine how prompt engineering improves model responses i
    
    >**Note:** Kindly refresh the screen in case you encounter any error message and perform the above step again.
 
-   > **Note**: If you notice a delay in chat responses, go to deployments and increase the TPM to 20K.
-   
 4. The model will likely respond with an answer to satisfy the prompt, split into a numbered list. This is a good response, but not what we're looking for.
 
    ![](../media/17022025(10).png)
@@ -798,6 +799,8 @@ In this lab, you have accomplished the following:
 - Provision an Azure OpenAI resource
 - Deploy an OpenAI model within the Azure OpenAI Foundry
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
+
+### You have successfully completed the lab.
 
 ## You have successfully completed the lab.
 ### Click on Next >> to proceed to the next exercise.

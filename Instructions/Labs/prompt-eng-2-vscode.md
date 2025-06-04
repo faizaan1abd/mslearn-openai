@@ -26,9 +26,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
+2. On **Azure AI foundry | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/create-openai.png)
+   ![](../media/lab-03upd1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -78,9 +78,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **Azure AI foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/lab-03.png)
+   ![](../media/lab-03upd2.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
@@ -267,11 +267,11 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Click on **File (1)** and select **Open Folder (2)**.
 
-      ![](../../Scenario/Media/sem1.png)
+      ![](../media/sem1.png)
 
 1. Navigate to **`C:/Users/azureuser` (1)**, select **azure-openai (2)** and click on **Select Folder (3)**.
 
-   ![](../../Scenario/Media/sem2.png)
+   ![](../media/sem2.png)
 
 ### Task 5: Configure your application
 
@@ -279,7 +279,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. Navigate to `Labfiles/03-prompt-engineering` from the left navigation pane.
 
-   ![](../../Scenario/Media/app1.png)
+   ![](../media/app1.png)
    > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
@@ -315,8 +315,18 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```bash
     cd Python
     choco install python --force
+    pip install python-dotenv
+    [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python313;C:\Python313\Scripts", "Machine")
     ```
-    > **Note:** Restart the VScode once python packages are installed
+    > **Note:** Once the Python packages are installed and the environment variables are configured, restart VS Code.
+
+1. After restarting VS Code following the installation of Python packages, open a new terminal and run the following command to install the dotenv package.
+
+    **Python**
+
+    ```bash
+    pip install python-dotenv
+    ```
 
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -686,6 +696,7 @@ In this task, you will run your configured app to send a request to your model a
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
     > **Note:** You will see a pop-up, click on **Paste as one line**
+    ![](../media/email1.png)
 
 10. Observe the output, and see how the email has changed based on your clear instructions.
 11. Next, enter the following prompts where we add details about tone to the system message:

@@ -78,9 +78,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(1).png)
 
-2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** **(2)**
 
-   ![](../media/lab-03.png)
+   ![](../media/lab-03upd2.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 

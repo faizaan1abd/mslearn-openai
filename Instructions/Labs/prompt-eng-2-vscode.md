@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
 - Task 3: Apply prompt engineering in chat playground
-- Task 4: Set up an application in Cloud Shell
+- Task 4: Set up an application
 - Task 5: Configure your application
 - Task 6: Run your application
 
@@ -243,79 +243,44 @@ In this task, you will examine how prompt engineering improves model responses i
 14. This time the model should respond with an appropriate classification, even without instructions.
     > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
-### Task 4: Set up an application in Cloud Shell
+### Task 4: Set up the application
 
-In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
+In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Visual Studi Code and Powershell on Azure.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the **LabVM desktop**, search for **Powershell** in the windows search bar and select it.
 
-    ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
+1. Click on **Run as Administrator**.
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+1. Navigate to the directory `C:/Users/azureuser`.
+ 
+   ``` 
+   cd C:/Users/azureuser
+   ```   
 
-   ![](../media/cloudshell-bash.png)
+1. Clone the given repository.
 
-3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
-
-   ![](../media/cloudshell-getting-started.png)
-
-4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
-
-   ![](../media/cloudshell-mount-strg-account.png)
-
-5. Within the **Advanced settings** pane, enter the following details:
-
-    - **Subscription**: Default- Choose the only existing subscription assigned for this lab **(1)**.
-    - **Resource group**: Select **Use existing** **(2)**
-         - **openai-<inject key="Deployment-ID" enableCopy="false"></inject>**  
-    - **Region**: **<inject key="Region" enableCopy="false" />** **(3)**
-    - **Storage account**: Create a new Storage account named **storage<inject key="Deployment-ID" enableCopy="false"></inject>** **(4)**
-    - **File share**: Create a new file share named **none** **(5)**
-    - Click **Create** **(6)**
-
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
-   
-7. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
-
-8. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
-
-9. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
-
-    ```bash
-   rm -r azure-openai -f
+   ```
    git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-    ```
+   ```
 
-10. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. Once the repository has been cloned, open **Visual Studio Code** from the desktop.
 
-    ```bash
-    cd azure-openai/Labfiles/03-prompt-engineering
-    ```
+1. Click on **File (1)** and select **Open Folder (2)**.
 
-    Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
+      ![](../../Scenario/Media/sem1.png)
 
-11. Open the built-in code editor, and you can observe the prompt files that you'll be using in `prompts`. Use the following command to open the lab files in the code editor.
+1. Navigate to **`C:/Users/azureuser` (1)**, select **azure-openai (2)** and click on **Select Folder (3)**.
 
-    ```
-    code .     
-    ```
-
-    >**Note**: If you receive a popup to **Switch to Classic Cloud Shell** while running the **code .** command, click **Confirm**. Re-run commands from **steps 9 and 10** to and make sure you are in the correct project path.
-
-    ![](../media/classic-cloudshell-prompt.png) 
-   
-#### Validation
-
-<validation step="8d41eaac-eee1-47ac-8bf3-ea2e2e5b3343" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   ![](../../Scenario/Media/sem2.png)
 
 ### Task 5: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
+
+1. Navigate to `Labfiles/03-prompt-engineering` from the left navigation pane.
+
+   ![](../../Scenario/Media/app1.png)
+   > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
 1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
 
@@ -329,59 +294,42 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
    - **C#**: 
 
-     ![](../media/app-settings.png) 
+     ![](../media/appsettingsvscode.png) 
 
-1. Navigate to the folder for your preferred language and install the necessary packages from the terminal.
+   - **Python**: 
+
+     ![](../media/dotenv.png) 
+
+1. Navigate to **03-prompt-engineering (1)** and click on **Open in Integrated Terminal (2)** and enter the below commands
+
+     ![](../media/terminal.png) 
 
      **C#**:
 
     ```
     cd CSharp
-    export DOTNET_ROOT=$HOME/.dotnet
-    export PATH=$DOTNET_ROOT:$PATH
-    mkdir -p $DOTNET_ROOT
-    ```     
-
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
-
-1.  Run the following command to install the required SDK version locally:     
-
-     ```
-     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-     chmod +x dotnet-install.sh
-     ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ```
-
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
-
-1. Enter the following command to restore the workload.
-
-    ```
-    dotnet workload restore
+    irm https://dot.net/v1/dotnet-install.ps1 | iex
     ```
 
-     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
-    
+    **Python**
+    ```bash
+    cd Python
+    choco install python --force
+    ```
+    > **Note:** Restart the VScode once python packages are installed
+
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
+
+     **C#**:
 
     ```
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
     **Python**
-    ```bash
-    cd Python
-    pip install python-dotenv
-    pip install openai==1.55.3
-    ```
 
-    >**Note** If you encounter any errors during package installation, try using the following code to install them.
-    ```
-    pip install --user python-dotenv
-    pip install --user openai==1.55.3
+    ```bash
+    pip install openai==1.55.3
     ```
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
@@ -644,7 +592,7 @@ In this task, you will run your configured app to send a request to your model a
 
 1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+2. In the VScode terminal, navigate to the folder for your preferred language.
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file with **CTRL+S**.
 
@@ -679,19 +627,17 @@ In this task, you will run your configured app to send a request to your model a
     
     - **Python**: `python prompt-engineering.py`
 
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
-
     >**Note:** If you see a message like *"Press any key to continue..."*, please press **Enter**.
 
 5. For the first iteration, enter the following prompts:
 
-    **System message**
+    **System message (system.txt)**
 
     ```prompt
     You are an AI assistant
     ```
      
-    ![](../media/system-1.png)
+    ![](../media/system-1upd.png)
 
     **User message:**
 
@@ -699,12 +645,12 @@ In this task, you will run your configured app to send a request to your model a
     Write an intro for a new wildlife Rescue
     ```
     
-    ![](../media/x233.png)
+    ![](../media/x233upd.png)
 
 6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 7. Next, enter the following prompts which specify a format for the response:
 
-    **System message**
+    **System message (system.txt)**
 
     ```prompt
     You are an AI assistant helping to write emails
@@ -717,10 +663,14 @@ In this task, you will run your configured app to send a request to your model a
        - It specializes in elephants 
        - Call for donations to be given at our website
     ```
+    > **Note:** You will see a pop-up, click on **Paste as one line**
+    ![](../media/email1.png)
+
 8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
+
 9. Next, enter the following prompts that additionally specify the content:
 
-    **System message**
+    **System message (system.txt)**
 
     ```prompt
     You are an AI assistant helping to write emails
@@ -735,11 +685,12 @@ In this task, you will run your configured app to send a request to your model a
     - Call for donations to be given at our website 
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
+    > **Note:** You will see a pop-up, click on **Paste as one line**
 
 10. Observe the output, and see how the email has changed based on your clear instructions.
 11. Next, enter the following prompts where we add details about tone to the system message:
 
-    **System message**
+    **System message (system.txt)**
 
     ```prompt
     You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
@@ -754,8 +705,10 @@ In this task, you will run your configured app to send a request to your model a
     - Call for donations to be given at our website 
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
+    > **Note:** You will see a pop-up, click on **Paste as one line**
 
 12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
+
 13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
@@ -778,10 +731,12 @@ In this task, you will run your configured app to send a request to your model a
     user_message = grounding_text + user_message
     ```
 
+    > **Note:** Ensure that all indentation errors are corrected before moving forward.
+
 16. Save the file with **CTRL+S** and rerun your app.
 17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
-    **System message**
+    **System message (system.txt)**
 
     ```prompt
     You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
@@ -801,7 +756,4 @@ In this lab, you have accomplished the following:
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
 ### You have successfully completed the lab.
-
-## You have successfully completed the lab.
-### Click on Next >> to proceed to the next exercise.
 

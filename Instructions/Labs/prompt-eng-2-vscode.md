@@ -26,7 +26,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI foundry | Azure OpenAI** blade, click on **+ Create**.
+2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/lab-03upd1.png)
 
@@ -78,7 +78,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
    ![](../media/lab-03upd2.png)
 

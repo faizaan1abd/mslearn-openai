@@ -87,7 +87,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    ![](../media/aifoundry.png)
 
    > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry. 
-   ![](../media/update08.png)   
+        ![](../media/update08.png)   
 
 5. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
 
@@ -802,6 +802,5 @@ In this lab, you have accomplished the following:
 
 ### You have successfully completed the lab.
 
-## You have successfully completed the lab.
 ### Click on Next >> to proceed to the next exercise.
 

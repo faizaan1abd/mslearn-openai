@@ -12,9 +12,8 @@ In this lab, you will complete the following tasks:
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
 - Task 3: Apply prompt engineering in chat playground
-- Task 4: Set up an application
-- Task 5: Configure your application
-- Task 6: Run your application
+- Task 4: Configure your application
+- Task 5: Run your application
 
 ## Estimated time: 60 minutes
 
@@ -26,9 +25,9 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI services | Azure OpenAI** blade, click on **+ Create**.
+2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/create-openai.png)
+   ![](../media/lab-03upd1.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -78,9 +77,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/17-12-24(1).png)
 
-2. On **Azure AI services | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
+2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/lab-03.png)
+   ![](../media/lab-03upd2.png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
@@ -243,46 +242,27 @@ In this task, you will examine how prompt engineering improves model responses i
 14. This time the model should respond with an appropriate classification, even without instructions.
     > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
-### Task 4: Set up the application
-
-In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Visual Studi Code and Powershell on Azure.
-
-1. In the **LabVM desktop**, search for **Powershell** in the windows search bar and select it.
-
-1. Click on **Run as Administrator**.
-
-1. Navigate to the directory `C:/Users/azureuser`.
- 
-   ``` 
-   cd C:/Users/azureuser
-   ```   
-
-1. Clone the given repository.
-
-   ```
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
-   ```
-
-1. Once the repository has been cloned, open **Visual Studio Code** from the desktop.
-
-1. Click on **File (1)** and select **Open Folder (2)**.
-
-      ![](../../Scenario/Media/sem1.png)
-
-1. Navigate to **`C:/Users/azureuser` (1)**, select **azure-openai (2)** and click on **Select Folder (3)**.
-
-   ![](../../Scenario/Media/sem2.png)
-
-### Task 5: Configure your application
+### Task 4: Configure your application
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
-1. Navigate to `Labfiles/03-prompt-engineering` from the left navigation pane.
+1. Open **Visual Studio Code** from the desktop.
 
-   ![](../../Scenario/Media/app1.png)
+1. Click on **File (1)** and select **Open Folder (2)**.
+
+      ![](../media/sem1.png)
+
+1. Navigate to **`C:/Users/azureuser` (1)**, select **azure-openai (2)** and click on **Select Folder (3)**.
+
+   ![](../media/sem2.png)
+
+1. After opening the folder, go to `Labfiles/03-prompt-engineering` using the left navigation pane in **Visual Studio Code**.
+
+
+   ![](../media/app1.png)
    > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
+1. After navigating to **03-prompt-engineering** in the left navigation pane, expand either the **CSharp** or **Python** folder based on your preferred programming language. Each folder contains language-specific files for an app where you'll integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
 
@@ -294,11 +274,11 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
    - **C#**: 
 
-     ![](../media/appsettingsvscode.png) 
+     ![](../media/appsettingsvscode1.png) 
 
    - **Python**: 
 
-     ![](../media/dotenv.png) 
+     ![](../media/dotenv1.png) 
 
 1. Navigate to **03-prompt-engineering (1)** and click on **Open in Integrated Terminal (2)** and enter the below commands
 
@@ -316,7 +296,15 @@ In this task, you will complete key parts of the provided C# or Python applicati
     cd Python
     choco install python --force
     ```
-    > **Note:** Restart the VScode once python packages are installed
+    > **Note:** Once the Python packages are installed, restart VS Code.
+
+1. After restarting VS Code following the installation of Python packages, open a new terminal and run the following command to install the dotenv package.
+
+    **Python**
+
+    ```bash
+    pip install python-dotenv
+    ```
 
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -586,7 +574,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 9. To save the changes made to the file, right-click on the file and hit **Save** or press **CTRL+S**.
 
-### Task 6: Run your application
+### Task 5: Run your application
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
@@ -686,6 +674,7 @@ In this task, you will run your configured app to send a request to your model a
     \n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
     > **Note:** You will see a pop-up, click on **Paste as one line**
+    ![](../media/email1.png)
 
 10. Observe the output, and see how the email has changed based on your clear instructions.
 11. Next, enter the following prompts where we add details about tone to the system message:

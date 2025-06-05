@@ -259,19 +259,18 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. After opening the folder, go to `Labfiles/03-prompt-engineering` using the left navigation pane in **Visual Studio Code**.
 
-
    ![](../media/app1.png)
    > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
 1. After navigating to **03-prompt-engineering** in the left navigation pane, expand either the **CSharp** or **Python** folder based on your preferred programming language. Each folder contains language-specific files for an app where you'll integrate Azure OpenAI functionality.
 
-2. Open the configuration file for your language.
+1. Open the configuration file for your language.
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
    - **C#**: 
 
@@ -295,7 +294,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
     **Python**
     ```bash
     cd Python
-    choco install python --force
     ```
     > **Note:** Once the Python packages are installed, restart VS Code.
 

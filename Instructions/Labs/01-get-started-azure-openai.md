@@ -38,7 +38,10 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       >**Note** : **Please deploy Openai resource in Swedencentral Region**.
 
-4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
+4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create (1)** button to begin the deployment of your Azure OpenAI resource.
+
+     ![](../media/review-01.png "Create Azure OpenAI resource")
+     
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
 
@@ -166,9 +169,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/get-started-openai-lab1-5.png)
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI  (1)`, click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI ` **(1)**, click on **Apply changes (2)** and subsequently click on **Continue** in **Update system message?** pop-up window.
 
       ![](../media/nlpe10.png)
+
+      ![](../media/continuee.png)
    
 1. In the **Setup** section, Click on **Add section** box, then click on **Examples**.
 
@@ -187,6 +192,8 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](../media/nlpe12.png)
+
+      ![](../media/continuee.png)
    
 1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
@@ -253,9 +260,13 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](../media/nlpe16.png)
 
+      ![](../media/continuee.png)
+
 2. In the **Chat session** pane, select **Clear chat** button then select **Clear** from the pop-up window to clear the chat history and start a new session.
 
       ![](../media/openai-14a.png)
+
+      ![](../media/clear-chat.png)
 
 3. Submit the following user message:
 

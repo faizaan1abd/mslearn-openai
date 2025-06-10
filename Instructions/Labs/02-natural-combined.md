@@ -42,6 +42,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
+    >**Note**: If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
+
+    ![](../media/cloud-shell.png)
+
+
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
@@ -91,6 +96,11 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
     ```bash
     code .
     ```
+1. On switch to classic Cloudshell, Click on confirm
+
+    ![](../media/confirm.png)
+
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.

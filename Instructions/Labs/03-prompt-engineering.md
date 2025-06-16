@@ -22,7 +22,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and that the **my-gpt-model (2)** model is selected in the Deployment pane.
 
-   ![](../media/L3T1S1-0205.png)
+   ![](../media/dev-genai-june-5.png)
 
 1. Review the default **Give the model instructions and context**, which should be *You are an AI assistant that helps people find information.*
 
@@ -89,7 +89,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-8. Use the **Apply changes** button to save your changes and Click on **Continue**.
+8. Use the **Apply changes** button to save your changes and click on **Continue**.
 
    ![](../media/L3T1S7-0205.png)
 

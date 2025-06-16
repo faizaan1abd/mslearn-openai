@@ -19,7 +19,7 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and make sure that **my-gpt-model (2)** is selected.
 
-    ![](../media/L3T1S1-0205-1.png)
+   ![](../media/dev-genai-june-5.png)
    
 1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
 

@@ -33,9 +33,9 @@ In this task, you will use the DALL-E playground in Azure AI Foundry portal to e
 
       ![](../media/update07-1.png)
 
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navaigate to **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**.
 
-      ![](../media/goto-foundry-portal.png)
+      ![](../media/dev-genai-june-1.png)
 
 4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy Base Model (2)**.
 
@@ -50,15 +50,15 @@ and click on **Deploy (4)**.
 
       ![](../media/dalle32_1-1.png)
 
-      ![](../media/1K-1.png)
+      ![](../media/dev-genai-june-7.png)
               
-4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the resulting image (4).
+4. From the left navigation pane, select **Images (1)**, enter a description of an image you'd like to generate in the **Describe the image you want to generate (2)** box (for example, *An elephant on a skateboard*), and then select **Generate (3)** to view the **resulting image (4)**.
    
-      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/L5T1S7-0205.png)
+      ![The DALL-E Playground in Azure OpenAI Studio with a generated image.](../media/dev-genai-june-8.png)
 
 5. Modify the prompt to provide a more specific description. For example *An elephant on a skateboard in the style of Picasso*. Then generate the new image and review the results.
 
-      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/L5T1S8-0205.png)
+      ![The DALL-E Playground in Azure OpenAI Studio with two generated images.](../media/dev-genai-june-9.png)
 
       > **Note**: The image may appear differently than shown in the screenshot. 
 
@@ -76,9 +76,9 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     > **Note**: If a **Cloud Shell timed out** pop-up appears, click **Reconnect**.
 
-2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+2. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop up box.
 
-    ![](../media/switch-to-bash.png)
+    ![](../media/dev-genai-june-4.png)
 
 3. Once the terminal opens, click on **Settings** and select **Go to Classic Version**.
 
@@ -216,7 +216,7 @@ In this task, you will explore the code used to call the REST API and generate a
 
 2. Review the code that the file contains, noting the following key features:
 
-   >**Note** : right-click on the file from the left pane, and hit **Save**
+   >**Note** : Right-click on the file from the left pane, and hit **Save**
    
     - The code makes https requests to the endpoint for your service, including the key for your service in the header. Both of these values are obtained from the configuration file.
     - The process consists of <u>two</u> REST requests: One to initiate the image-generation request, and another to retrieve the results.
@@ -268,7 +268,9 @@ In this task, you will run the reviewed code to generate some images.
 1. Wait for the image to be generated - a hyperlink will be displayed in the console pane. Then select the hyperlink to open a new browser tab and review the image that was generated.
 
    ![](../media/link.jpg "Keys and Endpoints")
-   
+
+   ![](../media/dev-genai-june-10.png)
+
 1. Close the tab containing the generated image and re-run the app to generate a new image with a different prompt.
 
 ## Summary

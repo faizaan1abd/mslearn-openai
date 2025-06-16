@@ -119,11 +119,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
        ![Enter Your Password](../media/sc900-image-2.png)
  
-1. If prompted to stay signed in, you can click "No."
+1. If prompted to **Stay signed in?** , you can click **Yes**.
  
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
+1. Click **Next** from the bottom right corner to embark on your Lab journey!
 
    ![Launch Azure Portal](../media/sc900-image(3).png)
 

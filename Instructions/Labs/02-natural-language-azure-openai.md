@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
 
-1. In the Azure portal, search for **Azure OpenAI** and select Azure OpenAI.
+1. In the Azure portal, search for **Azure OpenAI** and select **Azure OpenAI**.
 
 1. Select the existing Azure OpenAI resource and follow the below steps to copy the keys and Endpoint of the OpenAI resource.
 
@@ -39,11 +39,13 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+     >**Note**: If you don't see the **[>_]** button, try zooming out in your browser.
+
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash** button. If you don't see this option, skip the step.
 
     ![](../media/select-bash.png)
 
-3. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
+3. Within the Getting Started pane, select **Mount storage account (1)**, select the only existing subscription in **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
    ![](../media/cloudshell-getting-started.png)
 
@@ -51,20 +53,21 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Advanced settings** pane, enter the following details:
+5. Within the **Create storage account** pane, enter the following details:
 
     - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab .
-    - **Resource group (2)**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject> 
-    - **CloudShell region (3)**: <inject key="Region" enableCopy="false" /> 
-    - **Storage Account Name (4)**: storage<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Resource group (2)**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
+    - **Region (3)**: **<inject key="Region" enableCopy="false" />**
+    - **Storage account name (4)**: **storage<inject key="DeploymentID" enableCopy="false"></inject>**
     - **File share  (5)**: Create a new file share named **none**
-    - Click **Create (6)** 
+    - Click **Create (6)**
+    - Wait for the deployment to complete, followed by the start of the Cloud Shell session
 
         ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
-6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
+6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop up box.
 
-    ![](../media/switch-to-bash.png)
+    ![](../media/dev-genai-june-4.png)
 
 7. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
@@ -153,7 +156,7 @@ In this task, you will complete key parts of the application to enable it to use
     mkdir -p $DOTNET_ROOT
     ```     
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
@@ -166,7 +169,7 @@ In this task, you will complete key parts of the application to enable it to use
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 

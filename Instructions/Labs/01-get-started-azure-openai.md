@@ -1,6 +1,6 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-### Estimated Duration: 80 minutes
+## Estimated Duration: 80 minutes
 
 ## Lab scenario
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
@@ -67,7 +67,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment name (1)**: my-gpt-model 
       - **Deployment type (2)**: Standard
       - If the Deployment Details tab doesn't open automatically, click on **Customize**.
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available
+      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available.
       - **Model version (4)**: 2024-11-20
       - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
       - **Content Filter (6)**: DefaultV2
@@ -76,7 +76,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
          ![](../media/dev-genai-june-2.png)
 
-         >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
+         > **Note:** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
 1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
@@ -90,7 +90,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       - **Deployment name (1)**: gpt-35-turbo-instruct 
       - **Deployment type (2)**: Standard
       -  If the Deployment Details tab doesn't open automatically, click on **Customize**.
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available 
+      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available.
       - **Model version (4)**: 0914 (Default) 
       - **Tokens per Minute Rate Limit (thousands) (5)**: 20K 
       - **Content Filter (6)**: DefaultV2 
@@ -113,11 +113,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ### Task 3: Explore a model in the Completions playground
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+In this task, you'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions (1)**.
 
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Copy and paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected, Copy and paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
    ![](../media/dev-genai-june-3.png)
 
@@ -186,7 +186,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
    - **Max response**: 500
 
-   >Note: You may need to scrolldown to see the parameters option
+   > **Note:** You may need to scroll down to see the parameters option.
 
    ![](../media/lab1-g6.png)
       
@@ -199,7 +199,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
    - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.
 
-   - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.
+   - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.
 
    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors. 
    ```

@@ -1,6 +1,6 @@
 # Lab 02: Use Azure OpenAI SDKs in your app
 
-### Estimated Duration: 70 minutes
+## Estimated Duration: 70 minutes
 
 ## Lab scenario
 With the Azure OpenAI Service, developers can create chatbots, language models, and other applications that excel at understanding natural human language. The Azure OpenAI provides access to pre-trained AI models, as well as a suite of APIs and tools for customizing and fine-tuning these models to meet the specific requirements of your application. In this exercise, you'll learn how to deploy a model in Azure OpenAI and use it in your own application.
@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Retrieve the keys and Endpoint of Azure OpenAI resource
 
-In this task , you'll retrieve the keys and Endpoint of Azure OpenAI resource
+In this task, you'll retrieve the keys and Endpoint of Azure OpenAI resource.
 
 1. In the Azure portal, search for **Azure OpenAI** and select **Azure OpenAI**.
 
@@ -89,8 +89,8 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     ```
 
     Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
-   
-11. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
+
+11. Open the built-in code editor and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
     ```bash
     code .
@@ -116,7 +116,7 @@ In this task, you will complete key parts of the application to enable it to use
     
 3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -426,7 +426,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
    ![](../media/L2T5S4.2-0205.png)
 
-5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same, but now using the messages array to store the conversation history.
+5. Under the comment ***Add code to send request...***, replace all the code from the comment until the  **while** loop command at the end for C# and until the **except** command in python with the following code then save the file. The code is mostly the same but now using the messages array to store the conversation history.
 
     **C#**: Program.cs
 
@@ -654,8 +654,8 @@ In this task, you will provide a history of the conversation in your prompt to e
 ## Summary
 
 In this lab, you have accomplished the following:
--   Retrive the keys and endpoint of Azure OpenAI resource.
+-   Retrieve the keys and endpoint of Azure OpenAI resource.
 -   Deploy an OpenAI model within the Azure AI Foundry portal
 -   Integrate Azure OpenAI models into your applications
 
-### Congratulations on successfully completing the lab! Click Next>> to continue to the next lab.
+## Congratulations on successfully completing the lab! Click Next>> to continue to the next lab.

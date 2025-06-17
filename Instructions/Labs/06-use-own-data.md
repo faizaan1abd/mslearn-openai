@@ -1,11 +1,12 @@
 # Lab 06:  Add your data for RAG with Azure OpenAI Service
 
-### Estimated Duration: 75 minutes
+## Estimated Duration: 75 minutes
 
 ## Lab scenario
-The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics, or blend it with results from the pre-trained model.
+The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics or blend it with results from the pre-trained model.
 
 ## Lab objectives
+
 In this lab, you will complete the following tasks:
 
 - Task 1: Observe normal chat behavior without adding your own data
@@ -28,7 +29,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
 
 2. In the **deployment** section, ensure that your model deployment **my-gpt-model** is selected.
 
-3. In the **Setup** area, The default system message is set to *You are an AI assistant that helps people find information*.
+3. In the **Setup** area, the default system message is set to *You are an AI assistant that helps people find information*.
 
 4. In the **Chat session**, submit the following queries, and review the responses:
 
@@ -40,7 +41,7 @@ Before connecting Azure OpenAI to your data, first observe how the base model re
     What are some facts about New York?
     ```
 
-    Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighborhoods, and some general facts about the city.
+    Try similar questions about tourism and places to stay for other locations that will be included in our grounding data, such as London, or San Francisco. You'll likely get complete responses about areas or neighbourhoods, and some general facts about the city.
 
 
 ### Task 2: Connect your data in the chat playground
@@ -90,7 +91,7 @@ In this task, you will observe how the base model responds to queries without an
 
       ![](../media/L6T2S9-0205-1.png "upload files")
 
-1. From the right pane, Click on **Browse for files**.
+1. From the right pane, click on **Browse for files**.
 
       ![](../media/L6T2S9-0205-5.png)
 
@@ -110,12 +111,12 @@ In this task, you will observe how the base model responds to queries without an
 
      ![](../media/L6T2S11-0205-2.png "upload files")
 
-1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequenly click on **Create**.
+1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequently click on **Create**.
 
     - **Subscription**: Default - Pre-assigned subscription
     - **Resource group (1)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
     - **Service name (2)**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Location (3)**:Select <inject key="Region" enableCopy="false" />
+    - **Location (3)**: Select <inject key="Region" enableCopy="false" />
     - **Pricing tier (4)**: Change the Pricing tier to **Basic**
 
       ![](../media/L6T2S12-0205.png "Create cognitive search resource")
@@ -137,7 +138,7 @@ In this task, you will observe how the base model responds to queries without an
 1. In the **Add data**, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
 
     - **Select data source (1)**: Azure Blob Storage (preview)
-    - **Select Azure Blob storage resouce (2)**: *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject>** you created* (If it isn’t visible, try clicking Refresh next to the storage account)
+    - **Select Azure Blob storage resource (2)**: *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject>** you created* (If it isn’t visible, try clicking Refresh next to the storage account)
     - **Select Storage container (3)**: openaidatasource
     - **Select Azure AI Search resource (4)**: *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** search resource you created*
     - **Enter the index name (5)**: margiestravel
@@ -280,7 +281,7 @@ In this task, you will complete key parts of the application to enable it to use
     mkdir -p $DOTNET_ROOT
     ```     
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
@@ -293,7 +294,7 @@ In this task, you will complete key parts of the application to enable it to use
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -455,4 +456,4 @@ In this lab, you have accomplished the following:
 
 -   Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

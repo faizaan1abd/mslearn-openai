@@ -1,6 +1,6 @@
 # Lab 04: Generate and improve code with Azure OpenAI Service
 
-### Estimated Duration: 60 minutes
+## Estimated Duration: 60 minutes
 
 ## Lab scenario
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code to help you understand what it does and how to improve it.
@@ -216,7 +216,7 @@ In this task, you will run your configured app to generate code for each use cas
     - **Python**: Fixes are made on line 18 and 31
     >**Note**: Click on Ctrl+C to stop the project.
 
-9. To check the results paste the following code in the terminal:
+9. To check the results, paste the following code in the terminal:
 
     ```
    cd result
@@ -230,13 +230,13 @@ In this task, you will run your configured app to generate code for each use cas
 
 The app for Go Fish in `sample-code` can be run, if you replace the lines with bugs with the response from Azure OpenAI. If you run it without the fixes, it will not work correctly.
 
-It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation, but can't be trusted as correct and need to be verified by the developer.
+It's important to note that even though the code for this Go Fish app was corrected for some syntax, it's not a strictly accurate representation of the game. If you look closely, there are issues with not checking if the deck is empty when drawing cards, not removing pairs from the players hand when they get a pair, and a few other bugs that require understanding of card games to realize. This is a great example of how useful generative AI models can be to assist with code generation but can't be trusted as correct and need to be verified by the developer.
 
 If you would like to see the full response from Azure OpenAI, you can set the `printFullResponse` variable to `True`, and rerun the app.
 
 ## Summary
 
 In this lab, you have accomplished the following:
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+-   Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

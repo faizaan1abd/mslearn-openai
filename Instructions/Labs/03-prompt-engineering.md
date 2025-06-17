@@ -173,16 +173,16 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 In this task, you will complete key parts of the provided C# or Python application to enable it to use your Azure OpenAI resource with asynchronous API calls, as both apps feature the same functionality.
 
-1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference.Each folder contains the language-specific files for an app into which you're you're going to integrate Azure OpenAI functionality.
+1. In the code editor, expand the **CSharp** or **Python** folder, depending on your language preference. Each folder contains the language-specific files for an app into which you're going to integrate Azure OpenAI functionality.
 
 2. Open the configuration file for your language.
 
     - C#: `appsettings.json`
     - Python: `.env`
     
-3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+3. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
 
-1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the foolowing code and then press **Ctrl+S** to save the file.
+1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
@@ -222,7 +222,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     mkdir -p $DOTNET_ROOT
     ```     
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
@@ -235,7 +235,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -283,7 +283,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     from openai import AsyncAzureOpenAI
     ```
 
-6. Open up the application code for your language and Replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
+6. Open the application code for your language and replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
 
     **C#**: Program.cs
 
@@ -347,7 +347,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     ```
     >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
-8. The  modified code should look like as shown below:
+8. The modified code should look like as shown below:
 
     **C#**
       
@@ -588,7 +588,7 @@ In this task, you will run your configured app to send a request to your model a
     Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
     ```
 
-10. Observe the output, and see how the email has changed based on your clear instructions.
+10. Observe the output and see how the email has changed based on your clear instructions.
 11. Next, enter the following prompts where we add details about tone to the system message:
 
     **System message**
@@ -604,7 +604,7 @@ In this task, you will run your configured app to send a request to your model a
     ```
 
 12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message, and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
+13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
 15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
 
@@ -632,7 +632,7 @@ In this task, you will run your configured app to send a request to your model a
     **System message**
 
     ```prompt
-    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
+    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt and respond concisely.
     ```
 
     **User message:**
@@ -640,13 +640,12 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     What animal is the favorite of children at Contoso?
     ```
-   
 
 ## Summary
 
 In this lab, you have accomplished the following:
--   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure AI Foundry portal
--   Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
+- Provision an Azure OpenAI resource
+- Deploy an OpenAI model within the Azure AI Foundry portal
+- Use the functionalites of the Azure OpenAI to generate and improvise code for your production applications.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

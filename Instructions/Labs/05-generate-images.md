@@ -1,6 +1,6 @@
 # Lab 05: Generate images with a DALL-E model (READ-ONLY)
 
-### Estimated Duration: 75 minutes
+## Estimated Duration: 75 minutes
 
 ## Lab scenario
 The Azure OpenAI Service includes an image-generation model named DALL-E. You can use this model to submit natural language prompts that describe a desired image, and the model will generate an original image based on the description you provide.
@@ -93,7 +93,7 @@ In this task, you will use a simple Python or C# app to generate images by calli
 
     The files are downloaded to a folder named **azure-openai**. Applications for both C# and Python have been provided. Both apps feature the same functionality.
 
-5. Navigate to the folder for the language of your preference  by running the appropriate command.
+5. Navigate to the folder for the language of your preference by running the appropriate command.
 
       **Python**
 
@@ -124,7 +124,7 @@ In this task, you will use a configuration file in the application to store the 
     
 2. Update the configuration values to include the **Endpoint** and **Key1** for your Azure OpenAI service. Then save the file by right-clicking the file from the left pane.
 
-    > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal, and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
+    > **Tip**: You can adjust the split at the top of the cloud shell pane to see the Azure portal and get the endpoint and key values from the **Keys and Endpoint** page for your Azure OpenAI service.
 
 3. If you are using **Python**, you'll also need to install the **python-dotenv** package used to read the configuration file. In the console prompt pane, ensure the current folder is **~/azure-openai/Labfiles/05-image-generation/Python**. Then enter this command:
 
@@ -176,7 +176,7 @@ In this task, you will use a configuration file in the application to store the 
     mkdir -p $DOTNET_ROOT
     ```     
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here Your creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
@@ -189,7 +189,7 @@ In this task, you will use a configuration file in the application to store the 
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we dont have the admin privileges to install it globally.
+      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 

@@ -24,7 +24,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 
-   ![](../media/update07.png)
+   ![](../media/180625(12).png)
 
 3. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -32,7 +32,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/nlpe17.png "Keys and Endpoints")
+        ![](../media/180625(13).png "Keys and Endpoints")
 
 ## Task 2: Set up an application in Cloud Shell
 
@@ -44,10 +44,12 @@ To show how to integrate with an Azure OpenAI model, we'll use a short command-l
 
     >**Note**: If you can't find Cloud Shell, click on the **ellipsis (1)** and then select **Cloud Shell (2)** from the menu.
 
-    ![](../media/cloud-shell.png)
+    ![](../media/180625(14).png)
 
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
+
+    ![](../media/180625(15).png)
 
 1. Within the Getting Started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
@@ -443,7 +445,7 @@ Now that your app has been configured, run it to send your request to your model
 
     - **C#**:
 
-      ![](../media/nlp34.png)     
+      ![](../media/180625(16).png)     
 
     - **Python**:
 

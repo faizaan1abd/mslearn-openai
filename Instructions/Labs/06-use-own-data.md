@@ -88,19 +88,19 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **Storage Account**, go to **Container (1)** blade under Data Storage and click on **+ Container (2)** to create a new container.
 
-     ![](../media/L6T2S7-0205-1.png "upload files")
+    ![](../media/L6T2S7-0205-1.png "upload files")
 
 1. Create a container with the name **openaidatasource (1)**, enable **Anonymous access level for container (2)** and click on **Create (3)**.
 
-      ![](../media/L6T2S8-0205.png "create container")
+    ![](../media/L6T2S8-0205.png "create container")
 
 1. Select the **openaidatasource** container, on the **openaidatasource** container blade, click on **Upload**. 
 
-      ![](../media/L6T2S9-0205-1.png "upload files")
+    ![](../media/L6T2S9-0205-1.png "upload files")
 
 1. From the right pane, click on **Browse for files**.
 
-      ![](../media/L6T2S9-0205-5.png)
+    ![](../media/L6T2S9-0205-5.png)
 
 1. Search for and go to location `C:\AllFiles\mslearn-openai-main\Labfiles\06-use-own-data\data` (1). Select all the **pdf files (2)** and click on **Open (3)**. Then click on **Upload** to upload all pdf files. 
 
@@ -120,7 +120,6 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequently click on **Create**.
 
-
    | Settings | Action |
    | -- | -- |
    | **Subscription** | Default - Pre-assigned subscription |
@@ -139,7 +138,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. From the left navigation pane, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
-      ![](../media/L6T2S15-0205.png)
+    ![](../media/L6T2S15-0205.png)
 
 1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** playground followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
@@ -251,7 +250,7 @@ In this task, you will complete key parts of the application to enable it to use
     - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
     - The name of the search index (which should be `margiestravel`).
 
-         ![](../media/x676.png)
+        ![](../media/x676.png)
 
 1. If your using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
 
@@ -280,7 +279,7 @@ In this task, you will complete key parts of the application to enable it to use
     </Project>
     ```    
 
-     ![](../media/u47upd.png)    
+    ![](../media/u47upd.png)    
 
 1. Navigate to the **CSharp** folder and install the necessary packages.
 
@@ -406,7 +405,6 @@ In this task, you will complete key parts of the application to enable it to use
     ```    
 
     ![](../media/x676-1.png)
-
 
 1. Navigate to the **Python** folder and install the necessary packages.
 

@@ -1,7 +1,7 @@
 
 # Develop Generative AI solutions with Azure OpenAI Service
 
-### Overall Estimated Duration: 8 Hours
+## Overall Estimated Duration: 8 Hours
 
 ## Overview
 

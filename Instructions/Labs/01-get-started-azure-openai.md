@@ -1,6 +1,6 @@
 # Lab 01: Get started with Azure OpenAI Service
 
-### Estimated Duration: 80 minutes
+## Estimated Duration: 80 minutes
 
 ## Lab scenario
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure AI Foundry portal to deploy and explore OpenAI models.
@@ -17,28 +17,31 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Provision an Azure OpenAI resource
 
-In this task , you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
+In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
 1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
 
    ![](../media/dev-07.png)
 
-2. On **AI Foundry | Azure OpenAI** blade, click on **Create**.
+1. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
 
    ![](../media/tel-10-2.png)
 
-3. Create an **Azure OpenAI** resource with the following settings:
-      - **Subscription (1)**: Default - Pre-assigned subscription.
-      - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Region (3)**: **Swedencentral**
-      - **Name (4)**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Pricing tier (5)**: Standard S0
+1. Create an **Azure OpenAI** resource with the following settings:
 
-4. Click on **Next (6)** thrice and click on **Create**.
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription (1)** | Default - Pre-assigned subscription. |
+   | **Resource group (2)** | openai-<inject key="DeploymentID" enableCopy="false"></inject> |
+   | **Region (3)** | **Swedencentral** |
+   | **Name (4)** | OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> |
+   | **Pricing tier (5)** | Standard S0 |
 
    ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
-5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
+1. Click on **Next (6)** thrice and then click on **Create**.
+
+1. Wait for the deployment to complete. Once it's finished, click the **Go to resource** button to navigate to the deployed Azure OpenAI resource in the Azure portal.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -51,65 +54,61 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**.
 
-      ![](../media/dev-07.png)
+      ![](../media/dev-genai-june-1.png)
 
-2. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
-
-      ![](../media/update07-1.png)
-
-3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, it will navigate to **Azure AI Foundry portal**
-
-      ![](../media/goto-foundry-portal.png)
-
-4. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared Resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
+11. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
       ![](../media/dev-08.png)
 
-5. Search for **gpt-4o**, click on **Confirm**
+1. Search for **gpt-4o** model, select it from the list, and then click on **Confirm**.
 
      ![](../media/oai01.png)
    
-6. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name (1)**: my-gpt-model 
-      - **Deployment type (2)**: Standard
-      - Click on **Customize**
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available
-      - **Model version (4)**: 2024-08-06(default)
-      - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
-      - **Content Filter (6)**: DefaultV2
-      - **Enable dynamic quota(7)**: Enabled 
-      - Click on **Deploy (8)** 
+1. Within the **Deploy gpt-4o** pop-up interface, enter the following details then click on **Deploy (8)** :
+
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name (1)** | my-gpt-model |
+   | **Deployment type (2)** | Standard |
+   | If the Deployment Details tab doesn't open automatically, click on **Customize**. |
+   | **Model version upgrade policy (3)** | Upgrade once new default version becomes available. |
+   | **Model version (4)** | 2024-11-20 |
+   | **Tokens per Minute Rate Limit (thousands) (5)** | 10K |
+   | **Content Filter (6)** | DefaultV2 |
+   | **Enable dynamic quota(7)** | Enabled |
   
-         ![](../media/gpt-4o-1.png)
+   ![](../media/dev-genai-june-2.png)
 
-         >**Note** : gpt-4o is supported only for chat completions and it is not supported for completions API.
+   > **Note:** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
-7. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy Base Model (3)**.
+1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
      ![](../media/dev-08.png)
 
-9. Search for **gpt-35-turbo-instruct**, click on **Confirm**.
+1. Search for **gpt-35-turbo-instruct** model, select it from the list, and then click on **Confirm**.
 
      ![](../media/ui4b.png)
    
-9. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name (1)**: gpt-35-turbo-instruct 
-      - **Deployment type (2)**: Standard
-      - Click on **Customize**.
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available 
-      - **Model version (4)**: 0914 (Default) 
-      - **Tokens per Minute Rate Limit (thousands) (5)**: 20K 
-      - **Content Filter (6)**: DefaultV2 
-      - **Enable dynamic quota (7)**: Enabled
-      - Click on **Deploy (8)** 
-  
-        ![](../media/dev-10.png)
+1. Within the **Deploy model** pop-up interface, enter the following details then  click on **Deploy (8)** :
 
-10. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name (1)** | gpt-35-turbo-instruct |
+   | **Deployment type (2)** | Standard |
+   | If the Deployment Details tab doesn't open automatically, click on **Customize**. |
+   | **Model version upgrade policy (3)** | Upgrade once new default version becomes available. |
+   | **Model version (4)** | 0914 (Default) |
+   | **Tokens per Minute Rate Limit (thousands) (5)** | 20K |
+   | **Content Filter (6)** | DefaultV2 |
+   | **Enable dynamic quota(7)** | Enabled |
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+   ![](../media/dev-10.png)
+
+1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
+
+      > **Note**: You can ignore any error related to assignment of roles to view the quota limits.
 
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
@@ -121,13 +120,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ### Task 3: Explore a model in the Completions playground
 
-In this task ,You'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
+In this task, you'll Explore a model in the Completions playground involves interacting with the AI model to test and refine its responses using real-time input and output examples.
 
 1. In Azure AI Foundry portal, in the left pane under **Playground**, select **Completions (1)**.
 
-2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected , Copy paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
+2. In the **Completions playground** page, ensure your **gpt-35-turbo-instruct (2)** deployment is selected, Copy and paste `Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer` in the Prompt.
 
-   ![](../media/aicompletionmodel-1.png)
+   ![](../media/dev-genai-june-3.png)
 
       >**Note:** The summarize text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and include some contextual information.
 
@@ -135,7 +134,7 @@ In this task ,You'll Explore a model in the Completions playground involves inte
 
       ![](../media/lab1-g2upd-1.png)
 
-      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt - essentially words or word-parts in the text.
+      >**Note**: You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called. At the bottom of the page, note the number of *tokens* detected in the text. Tokens are the basic units of a prompt essentially words or word-parts in the text.
 
 4. Use the **View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
 
@@ -155,11 +154,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/my-gpt-model-1.png)
 
-3. Below the **+ Add section (1)** box, click on **Examples (2)**. enter the following message and response in the designated boxes:
+3. Select the **+ Add section (1)** box, then click on **Examples (2)**. Enter the following message and response in the designated boxes:
 
       ![](../media/dev-12.png)
 
-4.  Enter the following message and response in the designated boxes:
+4. Enter the following message and response in the designated boxes:
 
     - **User (1)**: `What are different types of artificial intelligence?`
     
@@ -170,11 +169,11 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 
       >**Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-6. Save the changes by clicking on **Apply changes** and On Update system message? pop-up, click on **Continue**.
+6. Save the changes by clicking on **Apply changes** and on **Update system message?** pop-up, click on **Continue**.
 
     ![](../media/my-gpt-model-022-1.png)
    
-7. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
+7. In the query box on the right side of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
    ![](../media/openai-12.png)
 
@@ -183,10 +182,6 @@ perform tasks that are beyond human comprehension. This type of AI is also purel
 9. Review the response and then submit the following message to continue the conversation: `How is it related to machine learning?`
 
 10. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
-
-11. Use the **View Code** button to view the code for the interaction. The prompt consists of the *model instruction* message, the few-shot examples of *user* and *assistant* messages, and the sequence of *user* and *assistant* messages in the chat session so far.
-
-    ![](../media/lab1-g5.png)
 
 ### Task 5: Explore prompts and parameters
 
@@ -198,7 +193,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
     
    - **Max response**: 500
 
-   >Note: You may need to scrolldown to see the parameters option
+   > **Note:** You may need to scroll down to see the parameters option.
 
    ![](../media/lab1-g6.png)
       
@@ -207,11 +202,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    ```
    Write three multiple choice questions based on the following text.
 
-   Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
+   Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.
 
-   - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+   - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.
 
-   - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+   - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.
 
    - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors. 
    ```
@@ -228,11 +223,11 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code-generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` for Give the model instructions and context and save the changes by clicking on **Apply Changes** when prompted click on **Continue**.
+1. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` and save the changes by clicking on **Apply Changes**. When prompted with **Update system message?**, click **Continue** to proceed.
 
    ![](../media/python-1.png)
 
-2. In the **Chat session** pane, select **Clear chat** to clear the chat history and start a new session.
+2. In the **Chat session** pane, select **Clear chat** button then select **Clear** in the **Clear chat?** pop up window to clear the chat history and start a new session.
 
    ![](../media/openai-14u.png)
 

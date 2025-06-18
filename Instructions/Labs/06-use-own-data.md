@@ -116,7 +116,7 @@ In this task, you will observe how the base model responds to queries without an
 
 1. On **AI Foundry | AI search (1)** blade, click on **+ Create (2)**.
 
-     ![](../media/L6T2S11-0205-2.png "upload files")
+    [](../media/L6T2S11-0205-2.png "upload files")
 
 1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequently click on **Create**.
 
@@ -405,7 +405,7 @@ In this task, you will complete key parts of the application to enable it to use
         main()            
     ```    
 
-     ![](../media/x676-1.png)
+    ![](../media/x676-1.png)
 
 
 1. Navigate to the **Python** folder and install the necessary packages.

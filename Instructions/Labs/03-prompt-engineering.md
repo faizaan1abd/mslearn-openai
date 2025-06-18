@@ -140,7 +140,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ![Screenshot of starting Cloud Shell by clicking on the icon to the right of the top search box.](../media/cloudshell-launch-portal.png#lightbox)
 
-2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.  
+2. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
    ![](../media/cloudshell-bash.png)
 
@@ -227,7 +227,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
 
-1.  Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally:     
 
      ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh

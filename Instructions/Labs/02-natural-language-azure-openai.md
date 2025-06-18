@@ -53,17 +53,18 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
    ![](../media/cloudshell-mount-strg-account.png)
 
-5. Within the **Create storage account** pane, enter the following details:
+5. Within the **Create storage account** pane, enter the following details then click on **Create (6)**:
 
-    - **Subscription (1)**: Default- Choose the only existing subscription assigned for this lab .
-    - **Resource group (2)**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>**
-    - **Region (3)**: **<inject key="Region" enableCopy="false" />**
-    - **Storage account name (4)**: **storage<inject key="DeploymentID" enableCopy="false"></inject>**
-    - **File share  (5)**: Create a new file share named **none**
-    - Click **Create (6)**
-    - Wait for the deployment to complete, followed by the start of the Cloud Shell session
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription (1)** | Default- Choose the only existing subscription assigned for this lab. |
+   | **Resource group (2)** | Select **openai-<inject key="DeploymentID" enableCopy="false"></inject>** |
+   | **Region (3)** | **<inject key="Region" enableCopy="false" />** |
+   | **Storage account name (4)** | **storage<inject key="DeploymentID" enableCopy="false"></inject>** |
+   | **File share  (5)** | Create a new file share named **none** |
+   | Wait for the deployment to complete, followed by the start of the Cloud Shell session |
 
-        ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+    ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
 
 6. Make sure the type of shell indicated on the top left of the Cloud Shell pane is **Switch to PowerShell**. If it's *Bash*, select **Switch to Bash** and choose **Confirm** from the pop up box.
 
@@ -161,7 +162,7 @@ In this task, you will complete key parts of the application to enable it to use
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
 
-1.  Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally:     
 
      ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
@@ -221,7 +222,7 @@ In this task, you will complete key parts of the application to enable it to use
 
    ![](../media/L2T3S10.2-0205.png)
 
-6.  In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
+6. In the application code for your language, replace the comment ***Initialize the Azure OpenAI client...*** with the following code to initialize the client and define our system message.
 
     **C#**: Program.cs
 

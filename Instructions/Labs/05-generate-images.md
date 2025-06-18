@@ -181,7 +181,7 @@ In this task, you will use a configuration file in the application to store the 
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
 
-1.  Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally:     
 
      ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh

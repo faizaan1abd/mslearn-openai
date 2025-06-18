@@ -28,13 +28,16 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    ![](../media/tel-10-2.png)
 
 1. Create an **Azure OpenAI** resource with the following settings:
-      - **Subscription (1)**: Default - Pre-assigned subscription.
-      - **Resource group (2)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Region (3)**: **Swedencentral**
-      - **Name (4)**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
-      - **Pricing tier (5)**: Standard S0
 
-         ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription (1)** | Default - Pre-assigned subscription. |
+   | **Resource group (2)** | openai-<inject key="DeploymentID" enableCopy="false"></inject> |
+   | **Region (3)** | **Swedencentral** |
+   | **Name (4)** | OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> |
+   | **Pricing tier (5)** | Standard S0 |
+
+   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
 
 1. Click on **Next (6)** thrice and then click on **Create**.
 
@@ -63,20 +66,22 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/oai01.png)
    
-1. Within the **Deploy gpt-4o** pop-up interface, enter the following details:
-      - **Deployment name (1)**: my-gpt-model 
-      - **Deployment type (2)**: Standard
-      - If the Deployment Details tab doesn't open automatically, click on **Customize**.
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available.
-      - **Model version (4)**: 2024-11-20
-      - **Tokens per Minute Rate Limit (thousands) (5)**: 10K
-      - **Content Filter (6)**: DefaultV2
-      - **Enable dynamic quota(7)**: Enabled 
-      - Click on **Deploy (8)** 
-  
-         ![](../media/dev-genai-june-2.png)
+1. Within the **Deploy gpt-4o** pop-up interface, enter the following details then click on **Deploy (8)** :
 
-         > **Note:** : gpt-4o is supported only for chat completions and it is not supported for completions API.
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name (1)** | my-gpt-model |
+   | **Deployment type (2)** | Standard |
+   | If the Deployment Details tab doesn't open automatically, click on **Customize**. |
+   | **Model version upgrade policy (3)** | Upgrade once new default version becomes available. |
+   | **Model version (4)** | 2024-11-20 |
+   | **Tokens per Minute Rate Limit (thousands) (5)** | 10K |
+   | **Content Filter (6)** | DefaultV2 |
+   | **Enable dynamic quota(7)** | Enabled |
+  
+   ![](../media/dev-genai-june-2.png)
+
+   > **Note:** : gpt-4o is supported only for chat completions and it is not supported for completions API.
 
 1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
@@ -86,22 +91,24 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
      ![](../media/ui4b.png)
    
-1. Within the **Deploy model** pop-up interface, enter the following details:
-      - **Deployment name (1)**: gpt-35-turbo-instruct 
-      - **Deployment type (2)**: Standard
-      -  If the Deployment Details tab doesn't open automatically, click on **Customize**.
-      - **Model version upgrade policy (3)**: Upgrade once new default version becomes available.
-      - **Model version (4)**: 0914 (Default) 
-      - **Tokens per Minute Rate Limit (thousands) (5)**: 20K 
-      - **Content Filter (6)**: DefaultV2 
-      - **Enable dynamic quota (7)**: Enabled
-      - Click on **Deploy (8)** 
-  
-        ![](../media/dev-10.png)
+1. Within the **Deploy model** pop-up interface, enter the following details then  click on **Deploy (8)** :
+
+   | Settings | Action |
+   | -- | -- |
+   | **Deployment name (1)** | gpt-35-turbo-instruct |
+   | **Deployment type (2)** | Standard |
+   | If the Deployment Details tab doesn't open automatically, click on **Customize**. |
+   | **Model version upgrade policy (3)** | Upgrade once new default version becomes available. |
+   | **Model version (4)** | 0914 (Default) |
+   | **Tokens per Minute Rate Limit (thousands) (5)** | 20K |
+   | **Content Filter (6)** | DefaultV2 |
+   | **Enable dynamic quota(7)** | Enabled |
+
+   ![](../media/dev-10.png)
 
 1. These will deploy models that you can experiment with for both chat and completion tasks as you go along.
 
-      > **Note**: You can ignore any error related to assignment of roles to view the quota limits. 
+      > **Note**: You can ignore any error related to assignment of roles to view the quota limits.
 
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
@@ -151,7 +158,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       ![](../media/dev-12.png)
 
-4.  Enter the following message and response in the designated boxes:
+4. Enter the following message and response in the designated boxes:
 
     - **User (1)**: `What are different types of artificial intelligence?`
     

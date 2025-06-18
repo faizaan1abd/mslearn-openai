@@ -60,18 +60,25 @@ In this task, you will observe how the base model responds to queries without an
 
 1. To create a **Storage Account** resource enter the following details and click on **Next (7)**:
 
-    - **Subscription**: Default - Pre-assigned subscription (1)
-    - **Resource group**: openai-<inject key="DeploymentID" enableCopy="false"></inject>(2)
-    - **Storage account name**: storage1<inject key="DeploymentID" enableCopy="false"></inject>(3)
-    - **Region**: Select <inject key="Region" enableCopy="false" />(4)
-    - **Primary Service**: Azure Blob Storage or Azure Data Lake Storage Gen 2(5)
-    - **Redundancy**: Locally-redundant storage (LRS)(6)
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription** | Default - Pre-assigned subscription (1) |
+   | **Resource group** | openai-<inject key="DeploymentID" enableCopy="false"></inject> (2) |
+   | **Region** | Select <inject key="Region" enableCopy="false" /> (4) |
+   | **Storage account name (4)** | storage1<inject key="DeploymentID" enableCopy="false"></inject> (3) |
+   | **Primary Service** | Azure Blob Storage or Azure Data Lake Storage Gen 2 (5) |
+   | **Redundancy** | Locally-redundant storage (LRS) (6) |
   
-      ![](../media/L6T2S4.1-0205.png "Create storage account")
+    ![](../media/dev-genai-june-12.png "Create storage account")
 
-    - **Allow enable anonymous access on individual containers (1)**: check in the box to enable under advance section. Click on **Review + Create (2)**  and subsequently click on **Create**.
+1. Under the **Advanced** section, provide the following details:
 
-      ![](../media/L6T2S4.2-0205.png "allow blob access")
+   | Settings | Action |
+   | -- | -- |
+   | **Allow enable anonymous access on individual containers (1)** | Check in the box to enable under **Advanced** section. |
+   | Click on **Review + create (2)**  and subsequently click on **Create**. |
+
+    ![](../media/dev-genai-june-13.png "allow blob access")
 
 1. Wait until the storage account is created before you proceed to the next task. This should take about a minute.
 
@@ -113,19 +120,22 @@ In this task, you will observe how the base model responds to queries without an
 
 1. Create an **AI Search** resource with the following settings and click on **Review + create (5)** and subsequently click on **Create**.
 
-    - **Subscription**: Default - Pre-assigned subscription
-    - **Resource group (1)**: openai-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Service name (2)**: cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>
-    - **Location (3)**: Select <inject key="Region" enableCopy="false" />
-    - **Pricing tier (4)**: Change the Pricing tier to **Basic**
 
-      ![](../media/L6T2S12-0205.png "Create cognitive search resource")
+   | Settings | Action |
+   | -- | -- |
+   | **Subscription** | Default - Pre-assigned subscription |
+   | **Resource group (1)** | **openai-<inject key="DeploymentID" enableCopy="false"></inject>** |
+   | **Service name (2)** | **cognitive-search-<inject key="DeploymentID" enableCopy="false"></inject>** |
+   | **Location (3)** | Select **<inject key="Region" enableCopy="false" />** |
+   | **Pricing tier (4)** | Change the Pricing tier to **Basic** |
+
+    ![](../media/L6T2S12-0205.png "Create cognitive search resource")
 
 1. Wait until your search resource has been deployed.
 
 1. Navigate to the **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** and in the overview page copy the URL and paste it in a text editor such as notepad for later use.
 
-       ![](../media/L6T2S14-0205.png)
+    ![](../media/L6T2S14-0205.png)
 
 1. From the left navigation pane, click on **Keys** and copy the primary key or secondary key and paste it in a notepad file for later use.
 
@@ -137,26 +147,28 @@ In this task, you will observe how the base model responds to queries without an
    
 1. In the **Add data**, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
 
-    - **Select data source (1)**: Azure Blob Storage (preview)
-    - **Select Azure Blob storage resource (2)**: *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject>** you created* (If it isn’t visible, try clicking Refresh next to the storage account)
-    - **Select Storage container (3)**: openaidatasource
-    - **Select Azure AI Search resource (4)**: *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** search resource you created*
-    - **Enter the index name (5)**: margiestravel
-    - **Indexer schedule (6)**: Once
+   | Setting | Action |
+   | -- | -- |
+   | **Select data source (1)** | Azure Blob Storage (preview) |
+   | **Select Azure Blob storage resource (2)** | *Choose the storage resource **storage1<inject key="DeploymentID" enableCopy="false"></inject>** you created* (If it isn’t visible, try clicking Refresh next to the storage account) |
+   | **Select Storage container (3)** | openaidatasource |
+   | **Select Azure AI Search resource (4)** | *Choose **cognitive-search-<inject key="DeploymentID	" enableCopy="false"></inject>** search resource you created* |
+   | **Enter the index name (5)** | margiestravel |
+   | **Indexer schedule (6)** | Once |
    
-       ![](../media/image4-8-1.png "Add data configurations")
+    ![](../media/image4-8-1.png "Add data configurations")
    
 1. On the **Data management** page select the **Keyword (1)** search type from the drop-down, and then select **Next (2)**.
 
-      ![](../media/lab6-g4-1.png "Add data")
+    ![](../media/lab6-g4-1.png "Add data")
 
 1. On the **Data connection** page select the **API key (1)** , Click on the **Next (2)**
 
-       ![](../media/API_key-1.png "Add data")
+    ![](../media/API_key-1.png "Add data")
    
 1. On the **Review and finish** page select **Save and close**, which will add your data. Once completed, verify if the data source, search resource, and index specified **margiestravel** is present under the **Add your data(preview)** tab in **Assistant setup** pane.
 
-       ![](../media/review-1.png "Add data")
+    ![](../media/review-1.png "Add data")
 
  - This may take a few minutes, during which you need to leave your window open.
        
@@ -286,7 +298,7 @@ In this task, you will complete key parts of the application to enable it to use
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
 
-1.  Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally:     
 
      ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
@@ -450,10 +462,12 @@ In this task, you will run the reviewed code to generate some images.
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
+    ![](../media/dev-genai-june-14.png "upload files")
+
 ## Summary
 
 In this lab, you have accomplished the following:
 
--   Used the power of OpenAI models to generate responses limited to a custom ingested data.
+- Used the power of OpenAI models to generate responses limited to a custom ingested data.
 
 ## Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.

@@ -48,6 +48,8 @@ In this task, you will observe how the model behaves in a conversational interac
 
 9. Observe the output, which should hopefully indicate that the request to be racist and derogative is not supported. This prevention of offensive output is the result of the default content filters in Azure OpenAI.
 
+    ![](../media/dev-genai-june-17.png)
+
 ### Task 2: Explore content filters
 
 In this task, you will apply content filters to prompts and completions to prevent the generation of potentially harmful or offensive language.

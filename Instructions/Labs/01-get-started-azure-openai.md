@@ -22,9 +22,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
    ![](../media/nlp1.png)
 
-2. On **Azure AI Services | Azure OpenAI** blade, click on **+ Create**.
+2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/tel-10.png)
+   ![](../media/180625(01).png)
 
 3. Create an **Azure OpenAI** resource using the specified settings. Leave all other options at their default values, and click **Next (6)** three times to proceed through the remaining steps.
    
@@ -38,9 +38,9 @@ In this task , you'll create an Azure resource in the Azure portal, selecting th
 
       >**Note** : **Please deploy Openai resource in Swedencentral Region**.
 
-4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create (1)** button to begin the deployment of your Azure OpenAI resource.
+4. Review all the configured settings to ensure they are correct. Once confirmed, click on the **Create** button to begin the deployment of your Azure OpenAI resource.
 
-     ![](../media/review-01.png "Create Azure OpenAI resource")
+     ![](../media/180625(02).png "Create Azure OpenAI resource")
      
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal.
@@ -60,21 +60,23 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/nlp1.png)
 
-1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left blade. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
+1. On the **AI Foundry** page,select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-   ![](../media/update07.png)
+   ![](../media/180625(03).png)
 
 1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal** it will navigate to **Azure AI Foundry portal**.
 
    ![](../media/update08.png)
 
-1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model** and choose **Deploy base model (2)**.
+1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
-      ![](../media/get-started-openai-lab1-1.png)
+      ![](../media/180625(04).png)
 
 1. Search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)** and then click on **Confirm (3)**
 
-   ![](../media/nlep2.png)
+   ![](../media/180625(05).png)
+
+   ![](../media/180625(06).png)
 
 1. Click on **Customize**.
    
@@ -94,13 +96,15 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
            >**Note** : gpt-4o-mini is supported only for chat completions and it is not supported for completions API.
 
-1. Click the back arrow on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model** and choose **Deploy base model (2)**.
+1. **Click the back arrow** on the newly created model, then select **Deployments (1)** under **Shared Resources** in the left pane. After that, click **+ Deploy Model (2)** and choose **Deploy base model (3)**.
 
-      ![](../media/get-started-openai-lab1-1.png)
+      ![](../media/180625(07).png)
+
+      ![](../media/180625(08).png)
 
 1. Search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)** and then click on **Confirm (3)**.
 
-   ![](../media/nlpe5.png)
+   ![](../media/180625(09).png)
 
 1. Click on **Customize**.
 
@@ -197,7 +201,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
    
 1. In the query box at the bottom of the page, enter the text `What is artificial intelligence?` **(1)**. Use the **Send (2)** button to submit the message and view the response.
 
-   ![](../media/nlpe13.png)
+   ![](../media/180625(10).png)
    
       > **Note**: You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
 
@@ -225,7 +229,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    
           ![](../media/image6.png)
       
-2. **Submit (1)** the following message in a chat session **(1)**
+2. **Submit (2)** the following message in a chat session **(1)**
 
       ```
       Write three multiple choice questions based on the following text.

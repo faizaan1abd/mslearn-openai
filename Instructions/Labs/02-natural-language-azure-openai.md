@@ -388,6 +388,7 @@ In this task, you will run your configured app to send a request to your model a
     - **Python**: `python test-openai-model.py`
 
      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+     
         ```
         pip install --user --upgrade openai
         ```

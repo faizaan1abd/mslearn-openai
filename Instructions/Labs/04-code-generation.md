@@ -193,6 +193,11 @@ In this task, you will run your configured app to generate code for each use cas
     - **C#**: `dotnet run`
     - **Python**: `python code-generation.py`
 
+      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+        ```
+        pip install --user --upgrade openai
+        ```
+
 
 5. Choose option **1** to add comments to your code and enter the following prompt. Note, the response might take a few seconds for each of these tasks.
 

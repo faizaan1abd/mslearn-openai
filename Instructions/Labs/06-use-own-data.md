@@ -456,6 +456,11 @@ In this task, you will run the reviewed code to generate some images.
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
+     >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+        ```
+        pip install --user --upgrade openai
+        ```
+
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.

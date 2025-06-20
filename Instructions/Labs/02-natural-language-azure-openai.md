@@ -389,9 +389,9 @@ In this task, you will run your configured app to send a request to your model a
 
      >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
      
-        ```
-        pip install --user --upgrade openai
-        ```
+    ```
+    pip install --user --upgrade openai
+    ```
 
     > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 

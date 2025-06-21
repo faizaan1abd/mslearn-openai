@@ -411,7 +411,6 @@ In this task, you will complete key parts of the application to enable it to use
     **Python**:
 
     ```
-    cd ..
     cd Python
     pip install python-dotenv
     pip install openai==1.56.2

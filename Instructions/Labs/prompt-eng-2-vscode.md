@@ -38,7 +38,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier**: Standard S0 **(5)**
     -  Click on **Next** **(6)**
   
-       ![](../media/1302024(6).png "Create Azure OpenAI resource")
+       ![](../media/1302024(6)(upd).png "Create Azure OpenAI resource")
 
        >**Note**: Please deploy the OpenAI resource in **France Central** Region.
 
@@ -81,9 +81,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/lab-03upd2.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource pane, click on **Explore Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
 
-   ![](../media/aifoundry.png)
+   ![](../media/aifoundry(upd-1).png)
 
    > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
     

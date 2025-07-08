@@ -1,6 +1,6 @@
 # Hands-On Lab: Get started with Azure OpenAI Service
 
-## Estimated time: 60 minutes
+## Estimated time: 60 Minutes
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Foundry to deploy and explore OpenAI models.
 

@@ -1,6 +1,6 @@
 # Hands-On Lab: Get started with Azure OpenAI Service
 
-## Estimated time: 60 minutes
+## Estimated time: 60 Minutes
 
 Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. In this exercise, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using Azure OpenAI Foundry to deploy and explore OpenAI models.
 
@@ -38,7 +38,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Pricing tier: **Standard S0 (5)**
   
-      ![](./media/ai_foundry1.png)
+      ![](./media/2025-07-08(3).png)
       
       >**Note:** **Please deploy OpenAI resource in EAST US Region**.
 
@@ -78,9 +78,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Within the **Deploy model gpt-4o-mini** pop-up interface, Enter the following details:
 
-      - Deployment type: **Standard (1)**
-
       - Deployment name: **my-gpt-model (2)**
+
+      - Deployment type: **Standard (1)**
 
       - Model version:**2024-07-18(default) (3)**
 
@@ -92,7 +92,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       - Click on **Deploy (7)**
   
-      ![](./media/T2S7.png)
+      ![](./media/2025-07-08(5).png)
         
       >**Note:** gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
         
@@ -130,7 +130,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
       
       - Click on **Deploy** **(7)**
   
-        ![](./media/ai_model2.png)
+        ![](./media/2025-07-08(6).png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Hit the Validate button for the corresponding task.

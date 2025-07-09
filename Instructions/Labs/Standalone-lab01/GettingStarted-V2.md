@@ -94,8 +94,12 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
       > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
  
 4. If prompted to stay signed in, you can click **No**.
+
+   ![](./media/2025-07-08(1).png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+   ![](./media/2025-07-08(2).png)
 
 ## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
 

@@ -106,8 +106,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     - **Enable dynamic quota (5)**: Enabled
     
     - Click on **Deploy (6)**
-  
-        ![](../media/itp4n.png)
 
         ![](../media/itp5nn.png)
 

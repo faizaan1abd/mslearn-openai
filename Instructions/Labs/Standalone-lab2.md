@@ -52,7 +52,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 6. In the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**, blade to capture the Keys and Endpoint values:
 
-   - Navigate to **Keys and Endpoint (1)** under **Resource Management**.  
+   - Navigate to **Keys and Endpoint (1)** under **Resource Management** from the menu on left.  
    
    - Click **Show Keys (2)** and copy **Key 1 (3)**. Save it in a text editor like **Notepad**.  
    

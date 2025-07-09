@@ -92,7 +92,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     >**Note** : If the **GPT-35-Turbo** model isn't available, choose **GPT-35-Turbo-16k** or select **GPT-4o-mini**, and follow the below steps. 
 
 7. Within the **Deploy model** pop-up interface, click on **Customize** and enter the following details:
-    
+
+    ![](../media/itp4n.png)
+   
     - **Deployment name (1)**: text-turbo
     
     - **Deployment type (2)**: Standard
@@ -109,7 +111,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         ![](../media/itp5nn.png)
 
-8. This will deploy a model that you will be playing around with as you proceed.
+9. This will deploy a model that you will be playing around with as you proceed.
 
    > **Note**: You can ignore the **Failed to fetch deployments quota information** notification.
    

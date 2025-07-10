@@ -9,7 +9,7 @@
   - [Operation Cost Considerations](#operation-cost-considerations)
 
 
-## What is Fine Tuning?
+## What is Fine-Tuning?
 
 Fine-tuning is the process of customizing an existing AI model for a specific task or domain by using additional data. OpenAI offers fine-tuning for its language models, such as GPT-3, which can generate natural language texts for various purposes.
 
@@ -20,14 +20,14 @@ To fine-tune an OpenAI model, users need to prepare their own training and valid
 Fine-tuning can improve the performance and reduce the error rates of OpenAI models significantly.
 
 ---
-## Fine Tuning Training Data
+## Fine-Tuning Training Data
 
-Training data for fine-tuning OpenAI models are pairs of input prompts and desired outputs that reflect the specific task or domain you want to customize the model for. For example, if you want to fine-tune a model for generating product reviews, your training data could look like this:
+Training data for fine-tuning OpenAI models is pairs of input prompts and desired outputs that reflect the specific task or domain you want to customize the model for. For example, if you want to fine-tune a model for generating product reviews, your training data could look like this:
 
 ```
-{"prompt": "Review: I bought this laptop for my online classes and it works great.", "completion": "Rating: 5 stars"}
+{"prompt": "Review: I bought this laptop for my online classes, and it works great.", "completion": "Rating: 5 stars"}
 {"prompt": "Review: The battery life is terrible and the screen is too small.", "completion": "Rating: 2 stars"}
-{"prompt": "Review: This is a scam. The product never arrived and the seller did not respond.", "completion": "Rating: 1 star"}
+{"prompt": "Review: This is a scam. The product never arrived, and the seller did not respond.", "completion": "Rating: 1 star"}
 ```
 
 You can use the OpenAI CLI or Studio to prepare, validate, and format your training data into a JSON file that can be used for fine-tuning.
@@ -36,7 +36,7 @@ You can use the OpenAI CLI or Studio to prepare, validate, and format your train
 It is important to note that to expect better results than using prompt engineering, you will need to have a large and high-quality dataset that is relevant to your task or domain, usually a few hundred high-quality examples.
 
 ---
-## When would you consider Fine Tuning vs Prompt Engineering?
+## When would you consider Fine-Tuning vs Prompt Engineering?
 
 Fine-tuning is a powerful tool that can be used to customize OpenAI models for specific tasks or domains. However, it is not always necessary to fine-tune a model to get the desired results.
 
@@ -44,13 +44,13 @@ Fine-tuning and prompt engineering are two methods of conditioning language mode
 
 Fine-tuning involves retraining an existing model on new data, while prompt engineering involves designing and testing input instructions that elicit the desired output from a model.
 
-### Fine Tuning
+### Fine-Tuning
 
-You might consider fine-tuning when you have a large and high-quality dataset that is relevant to your task or domain and you want to create a customized model that can produce more accurate and consistent outputs than the general model.
+You might consider fine-tuning when you have a large and high-quality dataset that is relevant to your task or domain, and you want to create a customized model that can produce more accurate and consistent outputs than the general model.
 
 ### Prompt Engineering
 
-You might consider prompt engineering when you have a limited or no dataset and you want to leverage the existing knowledge and capabilities of a general model by asking the right questions or providing the right context.
+You might consider prompt engineering when you have a limited or no dataset, and you want to leverage the existing knowledge and capabilities of a general model by asking the right questions or providing the right context.
 
 **IMPORTANT NOTE**: Both methods require some trial and error, but fine-tuning usually takes more time and resources than prompt engineering, and it is not always necessary to fine-tune a model to get the desired results. It is therefore preferable to start with prompt engineering and only consider fine-tuning if you are unable to get the desired results.
 
@@ -58,7 +58,7 @@ You might consider prompt engineering when you have a limited or no dataset and 
 
 ## Operation Cost Considerations
 
-Prompt engineering could be less cost-effective if you need to provide a large number of instructions to accomplish something similar to what you would get with a Fine Tuned model as you'd consume tokens with every request sent.
+Prompt engineering could be less cost-effective if you need to provide a large number of instructions to accomplish something similar to what you would get with a Fine-Tuned model, as you'd consume tokens with every request sent.
 
 Hosting a Fine Tune model also has its cost, but on medium to high volumes, that cost would be mostly irrelevant, so operational cost efficiency could be a driver for Fine Tuning.
 

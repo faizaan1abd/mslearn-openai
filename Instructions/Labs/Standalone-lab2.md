@@ -227,15 +227,16 @@ In this task, you will complete key parts of the application to enable it to use
 
    <PropertyGroup>
    <OutputType>Exe</OutputType>
-   <TargetFramework>net8.0</TargetFramework>
+   <TargetFramework>net9.0</TargetFramework>
    <ImplicitUsings>enable</ImplicitUsings>
    <Nullable>enable</Nullable>
+   <LangVersion>12</LangVersion>
    </PropertyGroup>
 
     <ItemGroup>
     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.14" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.404" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.404" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -258,7 +259,7 @@ In this task, you will complete key parts of the application to enable it to use
    mkdir -p $DOTNET_ROOT
    wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
    chmod +x dotnet-install.sh
-   ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
+   ./dotnet-install.sh --channel 9.0 --install-dir $DOTNET_ROOT
    ```
 
 5. Restore the workload:

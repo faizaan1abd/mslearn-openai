@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
-- Task 3: Apply prompt engineering in chat playground
+- Task 3: Apply prompt engineering in the chat playground
 - Task 4: Configure your application
 - Task 5: Run your application
 
@@ -27,7 +27,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 2. On **AI Foundry | Azure OpenAI** blade, click on **+ Create**.
 
-   ![](../media/lab-03upd1.png)
+   ![](../media/L2T1S2-1007.png)
 
 3. Create an **Azure OpenAI** resource with the following settings 
 
@@ -38,19 +38,17 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - **Pricing tier**: Standard S0 **(5)**
     -  Click on **Next** **(6)**
   
-       ![](../media/1302024(6)(upd).png "Create Azure OpenAI resource")
+       ![](../media/L2T1S3-1007.png "Create Azure OpenAI resource")
 
-       >**Note**: Please deploy the OpenAI resource in **France Central** Region.
+       >**Note**: Make sure you are deploying OpenAI resource in **France Central** Region.
 
-4. Click on **Next** again and subsequently click on **Create**.
+4. Click on **Next** two times and subsequently click on **Create**.
 
-   ![](../media/promptsc1.png)
+   ![](../media/L2T1S4-1007.png)
 
 5. Wait for deployment to complete. Then go to the deployed Azure OpenAI resource in the Azure portal by clicking on **Go to resource** button.
 
-   ![](../media/promptsc2.png)
-
-1. In the **OpenAI-<inject key="Deployment-ID" enableCopy="false"></inject>** resource group, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** to access Azure OpenAI.
+   ![](../media/L2T1S5-1007.png)
 
 6. To capture the Keys and Endpoints values, on **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management**.
@@ -58,7 +56,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       - Copy **Key 1 (3)** and ensure to paste it into a text editor such as Notepad for future reference.
       - Finally, copy the **Endpoint (4)** API URL by clicking on copy to clipboard. Paste it in a text editor such as Notepad for later use.
 
-        ![](../media/keysupd.png "Keys and Endpoints")
+        ![](../media/L2T1S6-1007.png "Keys and Endpoints")
 
 #### Validation
 
@@ -79,35 +77,33 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 2. On **AI Foundry | Azure OpenAI** blade, select **OpenAI-Lab03-<inject key="Deployment-ID" enableCopy="false"></inject>**
 
-   ![](../media/lab-03upd2.png)
+   ![](../media/L2T2S2-1007.png)
 
-1. In the Azure OpenAI resource pane, click on **Explore Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
-
-   ![](../media/aifoundry(upd-1).png)
-
-   > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
+3. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**. It will navigate to the **Azure AI Foundry portal**.
     
-     ![](../media/update08.png)   
+   ![](../media/update08.png)   
 
-5. In the **Deployments (1)** page, click on **+ Deploy model (2)**, Choose **Deploy base Model (3)**.
+4. In the **Deployments (1)** page, click on **+ Deploy model (2)**, choose **Deploy base Model (3)**.
 
    ![](../media/17-12-24(5).png)
 
-6. Search for **gpt-35-turbo (1)**, select it **(2)**, and click on **Confirm (3)**.
+5. Search for **gpt-35-turbo (1)**, select it **(2)**, and click on **Confirm (3)**.
 
-   ![](../media/17022025(6).png)
+   ![](../media/L2T2S5-1007.png)
 
-7. Within the **Deploy model** pop-up interface, enter the following details:
+6. Within the **Deploy model** pop-up interface, enter the following details:
     - **Deployment name**: text-turbo **(1)**
     - **Deployment type**: Standard **(2)**
+   
+      Click on Customize and select the following options:
     - **Model version**: 0125 (Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands)**: 10K **(4)**
     - **Enable dynamic quota**: Enabled **(5)**
     - Click on **Deploy** **(6)**
 
-        >**Note**: Click on customize and collapse button to expand the other options.
+        >**Note**: Click on the customize and collapse button to expand the other options.
 
-        ![](../media/model.png)
+        ![](../media/L2T2S6-1007.png)
 
         >**Note**: If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
@@ -132,7 +128,7 @@ In this task, you will examine how prompt engineering improves model responses i
 
    ![](../media/17022025(3).png)
 
-1. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue**.
+2. In the **Setup** section at the top, select **text-turbo (version:0125)** **(1)**, input `You are a helpful AI assistant` **(2)** as the model's instructions and context, then click on **Apply changes (3)**. Finally, click on **Continue**.
 
    ![](../media/17022025(9).png)
 
@@ -166,9 +162,9 @@ In this task, you will examine how prompt engineering improves model responses i
    # 3. Combine them randomly into a list of 25 animal and name pairs
    ```
 
-7. The model should correctly respond with complete Python code doing what the comments requested.
+7. The model should correctly respond with complete Python code, doing what the comments requested.
 
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes** and subsequently click on **Continue**. This will create a new chat session.
+8. Next, we'll see the impact of a shot prompting when attempting to classify articles. Return to the system message, enter `You are a helpful AI assistant` again, click on **Apply changes**, and subsequently click on **Continue**. This will create a new chat session.
 
 9. Send the following prompt to the model.
 
@@ -183,18 +179,19 @@ In this task, you will examine how prompt engineering improves model responses i
    ```
 
 10. The response will likely be some information about the drought in California. While not a bad response, it's not the classification we're looking for.
-11. In the **Setup** section near the system message, click **+ Add section (1)**, select **Example (2)** from the dropdown, and add the following example.
+
+11. In the **Setup** section near the system message, click **+ Add section (1)**, select **Examples (2)** from the dropdown, and add the following example.
 
     **User:**
 
     ```code
-    New York Baseballers Wins Big Against Chicago
+    New York Baseballers Win Big Against Chicago
 
     New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3-run homerun late in the bottom of the 7th inning.
 
     Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but they were unable to get the runner home to score.
     ```
 
     **Assistant:**
@@ -203,9 +200,9 @@ In this task, you will examine how prompt engineering improves model responses i
     Sports
     ```
 
-    ![](../media/example1.png)
+    ![](../media/L2T3S11-1007.png)
 
-12. Click **+ Add section (1)** again, select **Example (2)** from the dropdown, and add another example with the provided text.
+12. Click **+ Add section (1)** again, select **Examples (2)** from the dropdown, and add another example with the provided text.
 
     **User:**
 
@@ -226,8 +223,6 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-    ![](../media/example2.png)
-
 13. Select **Apply changes** to the assistant setup, click **Continue**, and send the same prompt about the California drought, provided here again for convenience.
 
     ```code
@@ -240,7 +235,7 @@ In this task, you will examine how prompt engineering improves model responses i
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-14. This time the model should respond with an appropriate classification, even without instructions.
+14. This time, the model should respond with an appropriate classification, even without instructions.
     > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
 ### Task 4: Configure your application
@@ -255,11 +250,11 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. Navigate to **`C:/Users/azureuser` (1)**, select **azure-openai (2)** and click on **Select Folder (3)**.
 
-   ![](../media/sem2.png)
+   ![](../media/L2T4S3-1007.png)
 
 1. After opening the folder, go to `Labfiles/03-prompt-engineering` using the left navigation pane in **Visual Studio Code**.
 
-   ![](../media/app1.png)
+   ![](../media/L2T4S3-1007.png)
    > **Note:** Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
 
 1. After navigating to **03-prompt-engineering** in the left navigation pane, expand either the **CSharp** or **Python** folder based on your preferred programming language. Each folder contains language-specific files for an app where you'll integrate Azure OpenAI functionality.
@@ -274,11 +269,11 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
    - **C#**: 
 
-     ![](../media/appsettingsvscode1.png) 
+     ![](../media/L2T4S5C-1007.png) 
 
    - **Python**: 
 
-     ![](../media/dotenv1.png) 
+     ![](../media/L2T4S5Py-1007.png) 
 
 1. Navigate to **03-prompt-engineering (1)** and click on **Open in Integrated Terminal (2)** and enter the below commands
 
@@ -397,7 +392,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     )
     ```
 
-8. The  modified code should look like as shown below:
+8. The  modified code should look as shown below:
 
     **C#**
       
@@ -577,9 +572,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 In this task, you will run your configured app to send a request to your model and observe the response. You'll notice that the only difference between the options is the content of the prompt, while all other parameters (such as token count and temperature) remain consistent across requests.
 
-1. In the folder of your preferred language, open `system.txt` in Cloudshell. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
+1. In the folder of your preferred language, open `system.txt` in VS Code. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
-2. In the VScode terminal, navigate to the folder for your preferred language.
+2. In the VS Code terminal, navigate to the folder for your preferred language.
 
 3. If your using as **C#** language kindly open **CSharp.csproj** file replace with following code and save the file with **CTRL+S**.
 

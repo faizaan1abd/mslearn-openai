@@ -521,6 +521,7 @@ In this task, you will provide a history of the conversation in your prompt to e
    ```csharp
    // Implicit using statements are included
       using System.Text;
+      using System.ClientModel;
       using System.Text.Json;
       using Microsoft.Extensions.Configuration;
       using Microsoft.Extensions.Configuration.Json;

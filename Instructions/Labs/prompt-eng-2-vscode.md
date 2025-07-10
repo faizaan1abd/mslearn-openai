@@ -740,5 +740,5 @@ In this lab, you have accomplished the following:
 
 ### You have successfully completed the lab.
 
-### Click on Next >> to proceed to the next exercise.
+### Click on Next >> to proceed to the next lab.
 

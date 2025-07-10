@@ -296,7 +296,7 @@ In this task, you will complete key parts of the application to enable it to use
        Messages =
        {
            new ChatRequestSystemMessage(systemMessage),
-           new ChatRequestUserMessage(inputText),
+           new ChatRequestUserMessage(userMessage),
        },
        MaxTokens = 400,
        Temperature = 0.7f,

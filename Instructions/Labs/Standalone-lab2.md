@@ -183,7 +183,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-    cd azure-openai/Labfiles/02-azure-openai-api
+    cd azure-openai/Labfiles/01-app-develop
     ```
 
    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
@@ -218,7 +218,7 @@ In this task, you will complete key parts of the application to enable it to use
 
 1. In the **code editor**, expand the **CSharp** folder.
 
-2. Open the `appsettings.json` file and update the configuration values to include the **Endpoint**, **Key**, and the **model name** `text-turbo` from the Azure OpenAI resource created and saved in Task 1. Save the file by right-clicking it in the left pane and selecting **Save**.
+2. Open the `appsettings.json` file and update the configuration values to include the **Endpoint**, **Key**, and the **model name** `text-turbo` from the Azure OpenAI resource created and saved in Task 1. Save the file by right-clicking it in the left pane and selecting **Save or CTRL+S**.
 
 3. Open the `CSharp.csproj` file, delete the existing code, and replace it with the following:
 
@@ -321,18 +321,19 @@ In this task, you will complete key parts of the application to enable it to use
 3. In the **Azure Cloud Shell**, run the following commands to install necessary packages:
 
    ```bash
+   cd ~/azure-openai/Labfiles/01-app-develop
    cd Python
    pip install --user python-dotenv
    pip install --user openai==1.56.2
    ```
 
-4. Open `test-openai-model.py` and replace the comment `# Add Azure OpenAI package` with:
+4. Open `application.py` and replace the comment `# Add Azure OpenAI package` with:
 
    ```python
    from openai import AzureOpenAI
    ```
 
-5. Replace the comment `# Initialize the Azure OpenAI client...` with:
+5. Replace the comment `# Configure the Azure OpenAI client...` with:
 
    ```python
    client = AzureOpenAI(
@@ -347,7 +348,7 @@ In this task, you will complete key parts of the application to enable it to use
        I will also share an interesting fact about the local nature on the hikes when making a recommendation."""
    ```
 
-6. Replace the comment `# Add code to send request...` with:
+6. Replace the comment `# Format and send the request to the model...` with:
 
    ```python
    response = client.chat.completions.create(
@@ -373,11 +374,22 @@ In this task, you will run your configured app to send a request to your model a
    
 1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
-    - **C#:** `dotnet run`
+    - **C#:**
+      ```bash
+      cd ~/azure-openai/Labfiles/01-app-develop
+      cd CSharp
+      ```
+      
+      ` dotnet run`
 
       ![](../media/it4.png "Minimise the editor")    
     
-    - **Python:** `python test-openai-model.py`
+    - **Python:**
+      ```bash
+      cd ~/azure-openai/Labfiles/01-app-develop
+      cd Python
+      ```
+      `python application.py`
 
       ![](../media/it5.png "Minimise the editor")    
 
@@ -405,7 +417,7 @@ In this task, you will run your configured app to send a request to your model a
 
    - **C#:** Program.cs
    
-   - **Python:** test-openai-model.py
+   - **Python:** application.py
 
 8. Run the application again using the prompts above, and observe the output.
 
@@ -435,7 +447,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
     ![](../media/04022025(2).png)
 
-    **Python**: test-openai-model.py
+    **Python**: application.py
 
     ```python
     # Initialize messages array
@@ -478,7 +490,7 @@ In this task, you will provide a history of the conversation in your prompt to e
     Console.WriteLine("Response: " + completion + "\n");
     ```
 
-    **Python**: test-openai-model.py
+    **Python**: application.py
 
     ```python
     # Add code to send request...
@@ -589,7 +601,7 @@ In this task, you will provide a history of the conversation in your prompt to e
       } while (true);
       ```
 
-    **Python**: test-openai-model.py
+    **Python**: application.py
 
    ```python
    # Import modules
@@ -668,7 +680,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
     - **C#:** `dotnet run`
     
-    - **Python:** `python test-openai-model.py`
+    - **Python:** `python application.py`
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 
@@ -678,7 +690,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
     > **Note:** If the response from the model still indicates that it can't understand the hike you're referring to, go to the given below language files and replace the entire code with the one provided in Task 6, Step 6.
        
-    - **Python:** test-openai-model.py and 
+    - **Python:** application.py and 
 
     - **C#:** Program.cs
 

@@ -56,14 +56,19 @@ You might consider prompt engineering when you have a limited or no dataset, and
 
 ---
 
-## Operation Cost Considerations
+### Operation Cost Considerations
 
 Prompt engineering could be less cost-effective if you need to provide a large number of instructions to accomplish something similar to what you would get with a Fine-Tuned model, as you'd consume tokens with every request sent.
 
 Hosting a Fine Tune model also has its cost, but on medium to high volumes, that cost would be mostly irrelevant, so operational cost efficiency could be a driver for Fine Tuning.
 
 ---
-## References
+
+### Summary
+In this lab, we learned that fine-tuning helps make AI models work better for specific tasks by training them with your own data, while prompt engineering is about giving clear and smart instructions to get the results you want. It’s better to begin with prompt engineering and go for fine-tuning only if you need more accurate and customised outputs.
+
+---
+### References
 
 [OpenAI Fine Tuning](https://platform.openai.com/docs/guides/fine-tuning)
 

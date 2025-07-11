@@ -6,7 +6,7 @@
 
 In this hands-on lab, you will explore the concept of prompt engineering, learning how to craft effective prompts for AI models. You'll get hands-on experience with Azure OpenAI Playground, experimenting with different types of prompts and understanding their elements and design tips. The way developers shape their prompts significantly impacts the generative AI model's responses, allowing for tailored and formatted content when requested clearly and concisely. You'll learn how different prompts for similar content can shape the AI model's response to better satisfy your requirements.
 
-You will explore how to use generative AI to improve advertising emails and categorize articles for your team. The prompt engineering techniques used in the exercise are applicable to various use cases. Tuning prompts to achieve the desired results is the core idea behind prompt engineering.
+You will explore how to use generative AI to improve advertising emails and categorize articles for your team. The prompt engineering techniques used in the exercise apply to various use cases. Tuning prompts to achieve the desired results is the core idea behind prompt engineering.
 
 ## Objective
 
@@ -36,7 +36,7 @@ In this hands-on lab, you'll delve into prompt engineering by first grasping the
 
 The architecture for this lab involves the following key components:
 
-1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models and these models integrate with your data, enabling customized and secure interactions.
+1. **Azure OpenAI**: Azure OpenAI Service provides REST API access to OpenAI's powerful language models, and these models integrate with your data, enabling customized and secure interactions.
 
 1. **Azure OpenAI Models**: Offers pre-trained and customizable large language models for various AI applications. These models allow for powerful AI-driven solutions by generating tailored and contextually relevant content based on well-crafted prompts.
 
@@ -50,7 +50,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
 
    ![](../media/guide1.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -58,13 +58,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../media/env1(upd).png)
+   ![](../media/exp-lab-resources.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](../media/split1(upd).png)
+![](../media/split-feature.png)
  
 ## Managing Your Virtual Machine
  
@@ -80,23 +80,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
-## Lab Duration Extension
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../media/gextupd.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
-
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![Manage Your Virtual Machine](../media/timer.png)
 
@@ -117,16 +103,10 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
        ![Enter Your Password](../media/sc900-image-2.png)
-
-1. If **Action required** pop-up window appears, click on **Ask later**.
-
-   ![Ask Later](../media/ask-later-01.png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
     
 1. If prompted to stay signed in, you can click "No".
  
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If a **Welcome to Microsoft Azure** page appears, simply click "Cancel" to skip the tour.
 
 This hands-on lab will help you master prompt engineering by crafting effective prompts with Azure OpenAI Playground to shape AI responses. You'll apply these techniques to enhance advertising emails and categorize articles, learning to optimize AI outputs for various use cases.
 

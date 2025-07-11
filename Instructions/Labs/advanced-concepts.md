@@ -36,7 +36,7 @@ The output seems to be correct, but we could improve it by providing more inform
 
 ## Zero-Shot Prompts
 
-The GPT LLMs are trained on such large amounts of data that they are capable of understanding complex instructions to lead to the desired output in most cases. This is called 'Zero-Shot' prompt.
+The GPT LLMs are trained on such large amounts of data that they are capable of understanding complex instructions to lead to the desired output in most cases. This is called a 'Zero-Shot' prompt.
 
 We could refine the example below by being more descriptive about our instructions.
 
@@ -58,7 +58,7 @@ This is called Zero-Shot. A precise instruction leads to the desired output with
 
 ## One-Shot Prompts
 
-Sometimes it may be easier to provide an example of the model to learn from. This is called 'One-Shot' prompt.
+Sometimes it may be easier to provide an example of the model to learn from. This is called a 'One-Shot' prompt.
 
 First, let's do a Zero Shot prompt.
 
@@ -99,7 +99,7 @@ Here's a Zero-Shot Prompt equivalent.
 
 *Prompt:*
 ```
-Tell me in which city a university is located. Provide the city name, state code and country, comma separated as one line.
+Tell me in which city a university is located. Provide the city name, state code, and country, comma-separated as one line.
 
 University: UCLA
 ```
@@ -113,7 +113,7 @@ City: Los Angeles, CA, USA
 
 ## Few-Shot Prompts
 
-Few-Shot prompts enable you to provide multiple examples of the model to learn from. This is useful when you want to fine-tune the output for more complex scenarios where the output may vary based on the input. It may also be a simpler way to define a task than providing detailed, natural language instructions of what you expect.
+Few-shot prompts enable you to provide multiple examples for the model to learn from. This is useful when you want to fine-tune the output for more complex scenarios where the output may vary based on the input. It may also be a simpler way to define a task than providing detailed, natural language instructions of what you expect.
 
 Here's an example of entity extraction that is well-suited to few-shot prompts.
 
@@ -204,5 +204,8 @@ JSON:
 }
 ```
 
+### Summary
+In this lab, we learned how to use different types of prompts – Zero-Shot, One-Shot, and Few-Shot – to get better outputs from GPT models. We saw how giving clear instructions or a few examples can make the model understand and respond exactly the way we want.
+
 ## You have successfully completed the lab.
-### Click on Next >> to proceed to the next exercise.
+### Click on Next >> to proceed to the next lab.

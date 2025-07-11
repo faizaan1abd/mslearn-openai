@@ -4,7 +4,7 @@
 
 ## Overview
 
-The purpose of the lab is to enable you to effectively integrate Azure OpenAI Service into your applications, focusing on AI-driven functionalities. Through this lab, you will create and configure an Azure OpenAI resource, deploy and interact with a language model, and build a command-line application in Azure Cloud Shell. Additionally, you will learn to manage conversation history to enhance the contextual relevance of AI responses. This lab offers a professional, hands-on approach to understanding and applying Azure OpenAI capabilities in real-world scenarios.
+The purpose of the lab is to enable you to effectively integrate Azure OpenAI Service into your applications, focusing on AI-driven functionalities. Through this lab, you will create and configure an Azure OpenAI resource, deploy and interact with a language model, and build a command line application in Azure Cloud Shell. Additionally, you will learn to manage conversation history to enhance the contextual relevance of AI responses. This lab offers a professional, hands-on approach to understanding and applying Azure OpenAI capabilities in real world scenarios.
 
 ## Objective
 
@@ -14,7 +14,7 @@ Understand how to deploy OpenAI models in Azure, configure them, and secure them
 
 - **Create and Configure Azure OpenAI Resources**: Gain experience in setting up and configuring an Azure OpenAI resource to facilitate the deployment of language models.
 
-- **Deploy and Interact with Language Models**: Successfully deploy a language model and use a command-line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
+- **Deploy and Interact with Language Models**: Successfully deploy a language model and use a command line application in Azure Cloud Shell to interact with it, understanding its role in processing natural language.
 
 - **Manage Conversation History**: Learn how to manage conversation history to ensure that AI responses remain contextually relevant and meaningful.
 
@@ -44,7 +44,7 @@ The architecture for this lab involves the following key components:
 
 - **OpenAI Resource**: An OpenAI resource in Azure supports the deployment and management of OpenAI models. It provides the necessary infrastructure and APIs for utilizing advanced AI capabilities, such as natural language processing and generation.
 
-- **Cloud Shell App**: A Cloud Shell app is an interactive, browser-based command-line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
+- **Cloud Shell App**: A Cloud Shell app is an interactive, browser based command line tool provided by Azure. It enables you to manage and configure Azure resources directly from the portal, offering a convenient environment for executing scripts and commands.
 
 ## Getting Started with the Lab
 

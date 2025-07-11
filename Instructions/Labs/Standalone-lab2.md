@@ -1,4 +1,4 @@
-# Hands-On Lab: Use Azure OpenAI SDKs in your App
+# Lab 01: Use Azure OpenAI SDKs in your App
 
 ## Estimated time: 60 minutes
 
@@ -36,21 +36,21 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - **Region (3)**: Select <inject key="Region" enableCopy="false" />
     
-    - **Name (4)**: OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Name (4)**: OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>
     
     - **Pricing tier (5)**: Standard S0
     
     -  Click on **Next (6)** thrice
   
-       ![](../media/openai3.png "Create Azure OpenAI resource")
+       ![](../media/create-azure-openai.png "Create Azure OpenAI resource")
 
 4. Click on **Create**.
 
 5. Once the deployment is completed, click on **Go to resource** to access the deployed Azure OpenAI resource in the Azure portal.
 
-   > **Note:** If prompted to the **openai-<inject key="DeploymentID" enableCopy="false"></inject>** RG, scroll down & select the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>** resource from the Resources section.
+   > **Note:** If prompted to the **openai-<inject key="DeploymentID" enableCopy="false"></inject>** RG, scroll down & select the **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** resource from the Resources section.
 
-6. In the **OpenAI-Integrate-<inject key="DeploymentID" enableCopy="false"></inject>**, blade to capture the Keys and Endpoint values:
+6. In the **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**, blade to capture the Keys and Endpoint values:
 
    - Navigate to **Keys and Endpoint (1)** under **Resource Management** from the menu on left.  
    
@@ -58,7 +58,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    
    - Copy the **Endpoint (4)** and save it in Notepad for future reference.
 
-        ![](../media/imaged.png "Keys and Endpoints")
+        ![](../media/openai-keys.png "Keys and Endpoints")
 
 ### Validation
 
@@ -75,7 +75,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. From the left navigation pane, click on **Overview (1)** and click on **Go to Azure AI Foundry portal (2)**. 
 
-   ![](../media/openai88.png)
+   ![](../media/openai-aifoundary.png)
 
 1. If prompted, **Discover an even better Azure AI Studio experience**, click **Close**.
 
@@ -383,7 +383,6 @@ In this task, you will run your configured app to send a request to your model a
        ```
        dotnet run
        ```
-
       ![](../media/it4.png "Minimise the editor")    
     
     - **Python:**
@@ -683,9 +682,15 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 8. In the terminal pane, enter the following command to run the application.
 
-    - **C#:** `dotnet run`
+    - **C#:**  
+      ```
+      dotnet run
+      ```
     
-    - **Python:** `python application.py`
+    - **Python:**
+      ```
+      python application.py
+      ```
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 

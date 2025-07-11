@@ -689,7 +689,10 @@ In this task, you will provide a history of the conversation in your prompt to e
       dotnet run
       ```
     
-    - **Python:** `python application.py`
+    - **Python:**
+      ```
+      python application.py
+      ```
 
 9. Run the app again and provide the prompt `Where is a good hike near Boise?`.
 

@@ -42,7 +42,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     -  Click on **Next (6)** thrice
   
-       ![](../media/openai3.png "Create Azure OpenAI resource")
+       ![](../media/create-azure-openai.png "Create Azure OpenAI resource")
 
 4. Click on **Create**.
 

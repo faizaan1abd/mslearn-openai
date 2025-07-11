@@ -58,7 +58,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    
    - Copy the **Endpoint (4)** and save it in Notepad for future reference.
 
-        ![](../media/imaged.png "Keys and Endpoints")
+        ![](../media/openai-keys.png "Keys and Endpoints")
 
 ### Validation
 

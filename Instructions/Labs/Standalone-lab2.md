@@ -684,7 +684,10 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 8. In the terminal pane, enter the following command to run the application.
 
-    - **C#:**  ``` dotnet run ```
+    - **C#:**  
+      ```
+      dotnet run
+      ```
     
     - **Python:** `python application.py`
 

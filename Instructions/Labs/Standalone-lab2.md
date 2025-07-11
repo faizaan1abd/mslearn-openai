@@ -381,7 +381,9 @@ In this task, you will run your configured app to send a request to your model a
       cd CSharp
       ```
       
-      ` dotnet run`
+      ```
+      dotnet run
+      ```
 
       ![](../media/it4.png "Minimise the editor")    
     
@@ -390,7 +392,9 @@ In this task, you will run your configured app to send a request to your model a
       cd ~/azure-openai/Labfiles/01-app-develop
       cd Python
       ```
-      `python application.py`
+      ```
+      python application.py
+      ```
 
       ![](../media/it5.png "Minimise the editor")    
 
@@ -680,7 +684,7 @@ In this task, you will provide a history of the conversation in your prompt to e
 
 8. In the terminal pane, enter the following command to run the application.
 
-    - **C#:** `dotnet run`
+    - **C#:**  ``` dotnet run ```
     
     - **Python:** `python application.py`
 

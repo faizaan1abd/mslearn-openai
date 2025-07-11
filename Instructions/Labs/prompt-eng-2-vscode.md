@@ -1,4 +1,5 @@
 # Lab 02: Utilize prompt engineering in your app
+### Estimated Duration: 60 minutes
 
 ## Lab scenario
 

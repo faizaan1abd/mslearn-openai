@@ -132,4 +132,4 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
  
-### Happy learning !
+### Happy learning!

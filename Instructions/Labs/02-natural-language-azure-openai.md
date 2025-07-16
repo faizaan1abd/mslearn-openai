@@ -1,6 +1,8 @@
 # Lab 02: Use Azure OpenAI SDKs in your app
 
-### Estimated Duration: 70 Minutes
+## Estimated Duration: 70 Minutes
+
+## Lab Overview
 
 In the lab, you will perform the role of a software developer who has been tasked to implement an app that can use generative AI to help provide hiking recommendations. The techniques used in the exercise can be applied to any app that utilizes Azure OpenAI APIs.
 

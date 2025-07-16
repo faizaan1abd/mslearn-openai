@@ -1,8 +1,8 @@
 # Lab 03: Utilize prompt engineering in your app
 
-## Estimated Duration: 60 minutes
+## Estimated Duration: 60 Minutes
 
-## Lab scenario
+## Lab Overview
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 

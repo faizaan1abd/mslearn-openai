@@ -21,7 +21,7 @@ Before you can use Azure OpenAI models, you must provision an Azure OpenAI resou
 
 1. In the **Azure portal**, search for **OpenAI (1)** and select **Azure OpenAI (2)**.
 
-   ![](../media/nlp1.png)
+   ![](../media/select-openai-1607.png)
 
 1. On the **Azure AI Services** page, ensure that **Azure OpenAI (1)** is selected from the left pane. Then, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
 

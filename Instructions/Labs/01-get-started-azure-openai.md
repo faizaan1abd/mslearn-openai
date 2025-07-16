@@ -60,11 +60,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/nlp1.png)
 
-1. On the **AI Foundry** page,select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On the **AI Foundry | Azure OpenAI** page, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/180625(03).png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on **Go to Azure AI Foundry portal**, which will navigate to the **Azure AI Foundry portal**.
 
    ![](../media/L1T2S3-1407.png)
 
@@ -72,7 +72,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/L1T2S4-1407.png)
 
-1. Search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)** and then click on **Confirm (3)**
+1. On the Select a model page, search for **gpt-4o-mini (1)**, then select **gpt-4o-mini (2)**, and then click on **Confirm (3)**
 
    ![](../media/L1T2S5-1407.png)
 
@@ -100,7 +100,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
       ![](../media/L1T2S4-1407.png)
 
-1. Search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)** and then click on **Confirm (3)**.
+1. On the Select a model page, search for **gpt-35-turbo-instruct (1)**, then select **gpt-35-turbo-instruct (2)**, and then click on **Confirm (3)**.
 
    ![](../media/L1T2S9-1407.png)
 
@@ -139,12 +139,12 @@ In this task, you'll explore a model in the Completions playground that involves
 
    ![](../media/L1T3S1-1407.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected  and paste the below prompt in the **Prompt (2)** section and click on **Generate (3)**.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected for the Deployments, and paste the below prompt in the **Prompt (2)** section and click on **Generate (3)**.
 
    ```
    Generate a quiz of 5 questions. For each question, provide me with the answer options and the correct answer
    ```
-      ![](../media/L1T3S1-1407.png)
+      ![](../media/L1T3S2-1407.png)
 
       >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
 
@@ -170,7 +170,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
 In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the **Playground** section, select the **Chat (1)** , and ensure that the **my-gpt-model (2)** model is selected in the configuration pane.
+1. In the **Playground** section from the left pane, select the **Chat (1)** option. Ensure that the **my-gpt-model (2)** model is selected for the Deployments.
 
    ![](../media/get-started-openai-lab1-5.png)
 

@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how prompt engineering improves model responses in the playground by experimenting with prompts, such as writing a Python app for animals with fun names.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and that the **my-gpt-model (2)** model is selected in the Deployment pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** playground in the left pane and that the **my-gpt-model (2)** model is selected in the Deployment.
 
    ![](../media/dev-genai-june-5.png)
 
@@ -97,9 +97,9 @@ In this task, you will examine how prompt engineering improves model responses i
     Entertainment
     ```
 
-1. Use the **Apply changes** button to save your changes and click on **Continue**.
-
    ![](../media/L3T1S7-0205.png)
+
+1. Click on the **Apply changes** button to save your changes and click on **Continue**.
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -169,10 +169,10 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
     ```bash
    rm -r azure-openai -f
-   git clone https://github.com/MicrosoftLearning/mslearn-openai azure-openai
+   git clone https://github.com/CloudLabs-MOC/mslearn-openai
     ```
 
-1. The files are downloaded to a folder named **azure-openai**. Navigate to the lab files for this exercise using the following command.
+1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
    cd azure-openai/Labfiles/03-prompt-engineering

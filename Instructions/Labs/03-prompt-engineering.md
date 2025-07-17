@@ -8,7 +8,7 @@ In this lab, you will perform the role of a software developer working on a wild
 
 When working with the Azure OpenAI Service, how developers shape their prompt greatly impacts how the generative AI model will respond. Azure OpenAI models are able to tailor and format content, if requested, in a clear and concise way. In this exercise, you'll learn how different prompts for similar content help shape the AI model's response to better satisfy your requirements.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 - Task 1: Apply prompt engineering in the chat playground
@@ -168,14 +168,14 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
     ```bash
-   rm -r azure-openai -f
+   rm -r mslearn-openai -f
    git clone https://github.com/CloudLabs-MOC/mslearn-openai
     ```
 
 1. The files are downloaded to a folder named **mslearn-openai**. Navigate to the lab files for this exercise using the following command.
 
     ```bash
-   cd azure-openai/Labfiles/03-prompt-engineering
+    cd mslearn-openai/Labfiles/03-prompt-engineering
     ```
 
     Applications for both C# and Python have been provided, as well as a text files that provide the prompts. Both apps feature the same functionality.
@@ -206,7 +206,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
     <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -230,7 +230,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 1. Navigate to the folder for your preferred language and install the necessary packages.
 
-     **C#**:
+   For **C#:**
 
     ```
     cd CSharp
@@ -239,7 +239,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     mkdir -p $DOTNET_ROOT
     ```     
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
+     >**Note:** Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
      - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory`).
      - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
      - `mkdir -p $DOTNET_ROOT` this creates the directory where the .NET runtime and SDK will be installed.
@@ -252,7 +252,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
      ```
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
+      >**Note:** These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory as we don't have the admin privileges to install it globally.
 
 1. Enter the following command to restore the workload.
 
@@ -260,7 +260,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     dotnet workload restore
     ```
 
-     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
+     >**Note:** Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
     
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -268,8 +268,8 @@ In this task, you will complete key parts of the provided C# or Python applicati
     dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
     ```
 
-4. Navigate to the folder for your preferred language and install the necessary packages.
-
+1. If you are preferring Python, please perform below steps to install the packages
+   
     **Python**
    
     ```bash
@@ -278,6 +278,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
     pip install openai==1.56.2
     ```
    ![](../media/L2T3S9python-0205.png)
+
       > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
       > ```bash
       > pip install --user python-dotenv
@@ -286,14 +287,14 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 5. Navigate to your preferred language folder, select the code file, and add the necessary libraries.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
    // Add Azure OpenAI package
    using Azure.AI.OpenAI;
     ```
 
-    **Python**: prompt-engineering.py
+    **Python:** prompt-engineering.py
 
     ```python
     # Add Azure OpenAI package
@@ -302,14 +303,14 @@ In this task, you will complete key parts of the provided C# or Python applicati
 
 6. Open the application code for your language and replace the comment ***Configure the Azure OpenAI client*** add the necessary code for configuring the client.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
    // Initialize the Azure OpenAI client
    OpenAIClient client = new OpenAIClient(new Uri(oaiEndpoint), new AzureKeyCredential(oaiKey));
     ```
 
-    **Python**: prompt-engineering.py
+    **Python:** prompt-engineering.py
 
    ```python
     # Configure the Azure OpenAI client
@@ -319,31 +320,32 @@ In this task, you will complete key parts of the provided C# or Python applicati
         api_version="2024-02-15-preview"
         )
     ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 7. In the function that calls the Azure OpenAI model, add the code to format and send the request to the model.
 
-    **C#**: Program.cs
+    **C#:** Program.cs
 
     ```csharp
-           // Format and send the request to the model
+    // Format and send the request to the model
          var chatCompletionsOptions = new ChatCompletionsOptions()
-         {
-             Messages =
-             {
-                 new ChatRequestSystemMessage(systemMessage),
-                 new ChatRequestUserMessage(userMessage)
-             },
-             Temperature = 0.7f,
-             MaxTokens = 800,
-             DeploymentName = oaiDeploymentName
-         };
-         
-         // Get response from Azure OpenAI
-         Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+          {
+              Messages =
+              {
+                  new ChatRequestSystemMessage(systemPrompt),
+                  new ChatRequestUserMessage(userPrompt)
+              },
+              Temperature = 0.7f,
+              MaxTokens = 800,
+              DeploymentName = oaiModelName
+          };
+           
+          // Get response from Azure OpenAI
+          Response<ChatCompletions> response = await client.GetChatCompletionsAsync(chatCompletionsOptions);
+          var completions = response.Value;
     ```
 
-    **Python**: prompt-engineering.py
+    **Python:** prompt-engineering.py
 
    ```python
     # Format and send the request to the model
@@ -362,7 +364,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
         max_tokens=800
     )
     ```
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 8. The modified code should look like as shown below:
 
@@ -542,7 +544,7 @@ In this task, you will complete key parts of the provided C# or Python applicati
           asyncio.run(main())
       ```
 
-    >**Note**: Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
+    >**Note:** Make sure to indent the code by eliminating any extra white spaces after pasting it into the code editor.
 
 9. To save the changes made to the file, right-click on the file from the left pane and hit **Save**
 
@@ -552,85 +554,59 @@ In this task, you will run your configured app to send a request to your model a
 
 1. In the folder of your preferred language, open **system.txt** in Cloudshell code editor. For each of the iterations, you'll enter the **System message** in this file and save it. Each iteration will pause first for you to change the system message.
 
-2. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
+1. In the Cloud Shell bash terminal, navigate to the folder for your preferred language.
 
-4. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
+1. In the interactive terminal pane, ensure the folder context is the folder for your preferred language. Then enter the following command to run the application.
 
-    - **C#**: `dotnet run`
-    - **Python**: `python prompt-engineering.py`
+    - **C#:** `dotnet run`
 
-       >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
-        ```
-        pip install --user --upgrade openai
-        ```
+      > **Note:** If you recieve any warning messages, you can ignore those and continue.
+      
+    - **Python:** `python prompt-engineering.py`
 
-       > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+       >**Note:** If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
 
-5. For the first iteration, enter the following prompts:
+       > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
 
-    **System message**
+1. For the first iteration, Type **1** which selects the **Basic prompt (no prompt engineering)**, and press enter for **Enter a number to select a prompt**.
 
-    ```prompt
-    You are an AI assistant
-    ```
-     ![](../media/system-1.png)
+1. The AI tool will take the **System prompt** as `You are an AI assistant` and the **User prompt** as `Write an intro for a new wildlife Rescue`
 
-    **User message:**
-
-    ```prompt
-    Write an intro for a new wildlife Rescue
-    ```
      ![](../media/x233.png)
 
-6. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
-7. Next, enter the following prompts which specify a format for the response:
+1. Observe the output. The model will likely produce a good generic introduction to a wildlife rescue.
 
-    **System message**
+1. Next, enter **2** to select **Prompt with email formatting and basic system message** and press enter for **Enter a number to select a prompt**.
 
-    ```prompt
-    You are an AI assistant helping to write emails
-    ```
-    **User message:**
+1. This time it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, and a call for donations to be given at our website.
-    ```
-8. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
-9. Next, enter the following prompts that additionally specify the content:
+     ![](../media/x233.png)
 
-    **System message**
+1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
-    ```prompt
-    You are an AI assistant helping to write emails
-    ```
+1. Next, enter **3** to select **Prompt with formatting and specifying content** and press enter for **Enter a number to select a prompt**.
 
-    **User message:**
+1. Observe, it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
-    ```
+     ![](../media/x233.png)
 
-10. Observe the output and see how the email has changed based on your clear instructions.
-11. Next, enter the following prompts where we add details about tone to the system message:
+1. Observe the output and see how the email has changed based on your clear instructions.
 
-    **System message**
+1. Next, enter **4** to select **Prompt adjusting system message to be light and use jokes** and press enter for **Enter a number to select a prompt**.
 
-    ```prompt
-    You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.
-    ```
+1. It will take the **System prompt** as `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
 
-    **User message:**
+     ![](../media/x233.png)
 
-    ```prompt
-    Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.
-    ```
+11. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
-12. Observe the output. This time you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
-13. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
-14. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
-15. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+1. For the final iteration, we're deviating from email generation and exploring *grounding context*. Here you provide a simple system message and change the app to provide the grounding context as the beginning of the user prompt. The app will then append the user input, and extract information from the grounding context to answer our user prompt.
 
-    **C#**: Program.cs
+1. Open the file `grounding.txt` and briefly read the grounding context you'll be inserting.
+
+1. In your app immediately after the comment ***Format and send the request to the model*** and before any existing code, add the following code snippet to read text in from `grounding.txt` to augment the user prompt with the grounding context.
+
+    **C#:** Program.cs
 
     ```csharp
     // Format and send the request to the model
@@ -639,7 +615,7 @@ In this task, you will run your configured app to send a request to your model a
     userMessage = groundingText + userMessage;
     ```
 
-    **Python**: prompt-engineering.py
+    **Python:** prompt-engineering.py
 
     ```python
     # Format and send the request to the model
@@ -648,8 +624,9 @@ In this task, you will run your configured app to send a request to your model a
     user_message = grounding_text + user_message
     ```
 
-16. Save the file and rerun your app.
-17. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
+1. Save the file and rerun your app.
+
+1. Enter the following prompts (with the **system message** still being entered and saved in `system.txt`).
 
     **System message**
 

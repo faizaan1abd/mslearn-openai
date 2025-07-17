@@ -60,7 +60,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On the **Azure AI Foundry portal** page, select **Deployments (1)** under **Shared resources** from the left pane. Then, click **+ Deploy model (2)** and choose **Deploy base model (3)**.
 
-   [](../media/dev-08.png)
+     ![](../media/dev-08.png)
 
 1. On the Select a model page, search for **gpt-4o (1)** model, select **gpt-4o (chat completion) (2)** model from the list, and then click on **Confirm (3)**.
 

@@ -62,8 +62,8 @@ async Task GetResponseFromOpenAI(string fileText)
     }
     
     // Initialize the Azure OpenAI client
-
     
+
     // Read text file into system and user prompts
     string[] prompts = System.IO.File.ReadAllLines(fileText);
     string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
@@ -76,17 +76,16 @@ async Task GetResponseFromOpenAI(string fileText)
     // Create chat completion options
 
     
-    // Write response full response to console, if requested
+    // Write full response if needed
     if (printFullResponse)
     {
         Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
     }
 
-    // Write response to console
+    // Write the first choice's message
     foreach (var choice in completions.Choices)
     {
         Console.WriteLine($"\nResponse: {choice.Message.Content}\n\n");
     }
-    
-   
-}  
+}
+

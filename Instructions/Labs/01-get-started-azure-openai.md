@@ -37,7 +37,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
    | **Name (4)** | OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> |
    | **Pricing tier (5)** | Standard S0 |
 
-   ![](../media/openai-lab01_01.png "Create Azure OpenAI resource")
+   ![](../media/create-openai-1707.png "Create Azure OpenAI resource")
 
 1. Click on **Next (6)** thrice and then click on **Create**.
 
